@@ -46,16 +46,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controle_Cliente\Frm_Alterar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Cliente\Frm_Alterar_Cliente.Designer.cs">
+      <DependentUpon>Frm_Alterar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Cliente\Frm_Cadastrar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Cliente\Frm_Cadastrar_Cliente.Designer.cs">
+      <DependentUpon>Frm_Cadastrar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Cliente\Frm_Consultar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Cliente\Frm_Consultar_Cliente.Designer.cs">
+      <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Fornecedor\Frm_Alterar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Fornecedor\Frm_Alterar_Cliente.Designer.cs">
+      <DependentUpon>Frm_Alterar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Fornecedor\Frm_Cadastrar_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Fornecedor\Frm_Cadastrar_Fornecedor.Designer.cs">
+      <DependentUpon>Frm_Cadastrar_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Fornecedor\Frm_Consultar_Fornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Fornecedor\Frm_Consultar_Fornecedor.Designer.cs">
+      <DependentUpon>Frm_Consultar_Fornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Funcionario\Frm_Alterar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Funcionario\Frm_Alterar_Funcionario.Designer.cs">
+      <DependentUpon>Frm_Alterar_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Funcionario\Frm_Cadastra_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Funcionario\Frm_Cadastra_Funcionario.Designer.cs">
+      <DependentUpon>Frm_Cadastra_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Funcionario\Frm_Consultar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Funcionario\Frm_Consultar_Funcionario.Designer.cs">
+      <DependentUpon>Frm_Consultar_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Frm_Alterar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Frm_Alterar_Folha.Designer.cs">
+      <DependentUpon>Frm_Alterar_Folha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Frm_Consultar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Frm_Consultar_Folha.Designer.cs">
+      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Frm_Registrar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Frm_Registrar_Folha.Designer.cs">
+      <DependentUpon>Frm_Registrar_Folha.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSplash.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,6 +159,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controle_compra\" />
+    <Folder Include="Controle_Estoque\" />
+    <Folder Include="Controle_venda\" />
+    <Folder Include="DB\" />
+    <Folder Include="Fluxo_caixa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

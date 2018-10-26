@@ -15,6 +15,27 @@ namespace Software.Digudao
         public frmSplash()
         {
             InitializeComponent();
+
+
+
+            Task.Factory.StartNew(() =>
+            {
+                // Espera 2 segundos para iniciar o sistema
+                System.Threading.Thread.Sleep(4800);
+
+                Invoke(new Action(() =>
+                {
+                    // Abre a tela Inicial
+                    Inicio frm = new Inicio();
+                    frm.Show();
+                    Hide();
+                }));
+            });
+        }
+
+        private void frmSplash_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

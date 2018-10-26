@@ -99,11 +99,11 @@
     <Compile Include="Controle_funcionarios\Consultar_Funcionario.Designer.cs">
       <DependentUpon>Consultar_Funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_funcionarios\Login_Funcionarios.cs">
+    <Compile Include="Controle_funcionarios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_funcionarios\Login_Funcionarios.Designer.cs">
-      <DependentUpon>Login_Funcionarios.cs</DependentUpon>
+    <Compile Include="Controle_funcionarios\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Controle_Usuario\Compra_usuario.cs">
       <SubType>Form</SubType>
@@ -197,8 +197,8 @@
     <EmbeddedResource Include="Controle_funcionarios\Consultar_Funcionario.resx">
       <DependentUpon>Consultar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_funcionarios\Login_Funcionarios.resx">
-      <DependentUpon>Login_Funcionarios.cs</DependentUpon>
+    <EmbeddedResource Include="Controle_funcionarios\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controle_Usuario\Compra_usuario.resx">
       <DependentUpon>Compra_usuario.cs</DependentUpon>
