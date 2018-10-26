@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{213E73B3-3CF9-4090-959E-F73314028978}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Avilabombonieri</RootNamespace>
+    <AssemblyName>Avilabombonieri</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controle_Cliente\Alterar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Cliente\Alterar_Cliente.Designer.cs">
+      <DependentUpon>Alterar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Cliente\Cadastrar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Cliente\Cadastrar_Cliente.Designer.cs">
+      <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Cliente\Consultar_Cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Cliente\Consultar_Cliente.Designer.cs">
+      <DependentUpon>Consultar_Cliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Estoque\Alterar_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Estoque\Alterar_Estoque.Designer.cs">
+      <DependentUpon>Alterar_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Estoque\Cadastro_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Estoque\Cadastro_Estoque.Designer.cs">
+      <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Estoque\Consultar_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Estoque\Consultar_Estoque.Designer.cs">
+      <DependentUpon>Consultar_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Alterar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Alterar_Funcionario.Designer.cs">
+      <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Cadastrar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Cadastrar_Funcionario.Designer.cs">
+      <DependentUpon>Cadastrar_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Consultar_Funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Consultar_Funcionario.Designer.cs">
+      <DependentUpon>Consultar_Funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Login_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_funcionarios\Login_Funcionarios.Designer.cs">
+      <DependentUpon>Login_Funcionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Usuario\Compra_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Usuario\Compra_usuario.Designer.cs">
+      <DependentUpon>Compra_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Usuario\Consultar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Usuario\Consultar_Compra.Designer.cs">
+      <DependentUpon>Consultar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Cliente\ClienteBusiness.cs" />
+    <Compile Include="DB\Cliente\ClienteDataBase.cs" />
+    <Compile Include="DB\Cliente\ClienteDTO.cs" />
+    <Compile Include="DB\Devolução\DevolucaoBusiness.cs" />
+    <Compile Include="DB\Devolução\DevolucaoDataBase.cs" />
+    <Compile Include="DB\Devolução\DevolucaoDTO.cs" />
+    <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
+    <Compile Include="DB\Estoque\EstoqueDataBase.cs" />
+    <Compile Include="DB\Estoque\EstoqueDTO.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioDataBase.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemBusiness.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemDatabase.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoDataBase.cs" />
+    <Compile Include="DB\Pedido\PedidoDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
+    <Compile Include="DB\Produto\ProdutoDataBase.cs" />
+    <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Tb_Fonecedor\Tb_FonecedorDTO.cs" />
+    <Compile Include="DB\Tb_Fonecedor\Tb_FornecedorBusiness.cs" />
+    <Compile Include="DB\Tb_Fonecedor\Tb_FornecedorDataBase.cs" />
+    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraBusiness.cs" />
+    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDataBase.cs" />
+    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDTO.cs" />
+    <Compile Include="Folha_Pagamento\Consultar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Consultar_Folha.Designer.cs">
+      <DependentUpon>Consultar_Folha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Gerar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Folha_Pagamento\Gerar_Folha.Designer.cs">
+      <DependentUpon>Gerar_Folha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_inicio\inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_inicio\inicio.Designer.cs">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_inicio\Tela_Carregar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_inicio\Tela_Carregar.Designer.cs">
+      <DependentUpon>Tela_Carregar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controle_Cliente\Alterar_Cliente.resx">
+      <DependentUpon>Alterar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Cliente\Cadastrar_Cliente.resx">
+      <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Cliente\Consultar_Cliente.resx">
+      <DependentUpon>Consultar_Cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Estoque\Alterar_Estoque.resx">
+      <DependentUpon>Alterar_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Estoque\Cadastro_Estoque.resx">
+      <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Estoque\Consultar_Estoque.resx">
+      <DependentUpon>Consultar_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_funcionarios\Alterar_Funcionario.resx">
+      <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_funcionarios\Cadastrar_Funcionario.resx">
+      <DependentUpon>Cadastrar_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_funcionarios\Consultar_Funcionario.resx">
+      <DependentUpon>Consultar_Funcionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_funcionarios\Login_Funcionarios.resx">
+      <DependentUpon>Login_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Usuario\Compra_usuario.resx">
+      <DependentUpon>Compra_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Usuario\Consultar_Compra.resx">
+      <DependentUpon>Consultar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Folha_Pagamento\Consultar_Folha.resx">
+      <DependentUpon>Consultar_Folha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Folha_Pagamento\Gerar_Folha.resx">
+      <DependentUpon>Gerar_Folha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tela_inicio\inicio.resx">
+      <DependentUpon>inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tela_inicio\Tela_Carregar.resx">
+      <DependentUpon>Tela_Carregar.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\avila logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2018-09-26 at 10.10.09.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loading-gif-transparent-10.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Preto-damasco-Floral-Real-backdrops-Vinil-Fundo-da-parede-de-pano-de-Alta-qualidade-de-impress.jpg_640x640.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
