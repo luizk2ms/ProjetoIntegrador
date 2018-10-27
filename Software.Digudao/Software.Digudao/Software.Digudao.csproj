@@ -64,6 +64,42 @@
     <Compile Include="Controle_Cliente\Frm_Consultar_Cliente.Designer.cs">
       <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controle_compra\Frm_Alterar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_compra\Frm_Alterar_Compra.Designer.cs">
+      <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_compra\Frm_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_compra\Frm_Compra.Designer.cs">
+      <DependentUpon>Frm_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_compra\Frm_Consultar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_compra\Frm_Consultar_Compra.Designer.cs">
+      <DependentUpon>Frm_Consultar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Estoque\Frm_Alterar_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Estoque\Frm_Alterar_Estoque.Designer.cs">
+      <DependentUpon>Frm_Alterar_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Estoque\Frm_Cadastro_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Estoque\Frm_Cadastro_Estoque.Designer.cs">
+      <DependentUpon>Frm_Cadastro_Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controle_Estoque\Frm_Consultar_Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Controle_Estoque\Frm_Consultar_Estoque.Designer.cs">
+      <DependentUpon>Frm_Consultar_Estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controle_Fornecedor\Frm_Alterar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +168,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controle_compra\Frm_Compra.resx">
+      <DependentUpon>Frm_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Estoque\Frm_Alterar_Estoque.resx">
+      <DependentUpon>Frm_Alterar_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Estoque\Frm_Cadastro_Estoque.resx">
+      <DependentUpon>Frm_Cadastro_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_Estoque\Frm_Consultar_Estoque.resx">
+      <DependentUpon>Frm_Consultar_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
     </EmbeddedResource>
@@ -161,9 +209,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controle_compra\" />
-    <Folder Include="Controle_Estoque\" />
-    <Folder Include="Controle_venda\" />
     <Folder Include="DB\" />
     <Folder Include="Fluxo_caixa\" />
   </ItemGroup>
