@@ -45,76 +45,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controle_Cliente\Alterar_Cliente.cs">
+    <Compile Include="Telas\Controle_Cliente\Alterar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Cliente\Alterar_Cliente.Designer.cs">
+    <Compile Include="Telas\Controle_Cliente\Alterar_Cliente.Designer.cs">
       <DependentUpon>Alterar_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Cliente\Cadastrar_Cliente.cs">
+    <Compile Include="Telas\Controle_Cliente\Cadastrar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Cliente\Cadastrar_Cliente.Designer.cs">
+    <Compile Include="Telas\Controle_Cliente\Cadastrar_Cliente.Designer.cs">
       <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Cliente\Consultar_Cliente.cs">
+    <Compile Include="Telas\Controle_Cliente\Consultar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Cliente\Consultar_Cliente.Designer.cs">
+    <Compile Include="Telas\Controle_Cliente\Consultar_Cliente.Designer.cs">
       <DependentUpon>Consultar_Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Estoque\Alterar_Estoque.cs">
+    <Compile Include="Telas\Controle_Estoque\Alterar_Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Estoque\Alterar_Estoque.Designer.cs">
+    <Compile Include="Telas\Controle_Estoque\Alterar_Estoque.Designer.cs">
       <DependentUpon>Alterar_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Estoque\Cadastro_Estoque.cs">
+    <Compile Include="Telas\Controle_Estoque\Cadastro_Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Estoque\Cadastro_Estoque.Designer.cs">
+    <Compile Include="Telas\Controle_Estoque\Cadastro_Estoque.Designer.cs">
       <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Estoque\Consultar_Estoque.cs">
+    <Compile Include="Telas\Controle_Estoque\Consultar_Estoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Estoque\Consultar_Estoque.Designer.cs">
+    <Compile Include="Telas\Controle_Estoque\Consultar_Estoque.Designer.cs">
       <DependentUpon>Consultar_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_funcionarios\Alterar_Funcionario.cs">
+    <Compile Include="Telas\Controle_funcionarios\Alterar_Funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_funcionarios\Alterar_Funcionario.Designer.cs">
+    <Compile Include="Telas\Controle_funcionarios\Alterar_Funcionario.Designer.cs">
       <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_funcionarios\Cadastrar_Funcionario.cs">
+    <Compile Include="Telas\Controle_funcionarios\Cadastrar_Funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_funcionarios\Cadastrar_Funcionario.Designer.cs">
+    <Compile Include="Telas\Controle_funcionarios\Cadastrar_Funcionario.Designer.cs">
       <DependentUpon>Cadastrar_Funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_funcionarios\Consultar_Funcionario.cs">
+    <Compile Include="Telas\Controle_funcionarios\Consultar_Funcionario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_funcionarios\Consultar_Funcionario.Designer.cs">
+    <Compile Include="Telas\Controle_funcionarios\Consultar_Funcionario.Designer.cs">
       <DependentUpon>Consultar_Funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_funcionarios\Login.cs">
+    <Compile Include="Telas\Controle_funcionarios\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_funcionarios\Login.Designer.cs">
+    <Compile Include="Telas\Controle_funcionarios\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Usuario\Compra_usuario.cs">
+    <Compile Include="Telas\Controle_Usuario\Compra_usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Usuario\Compra_usuario.Designer.cs">
+    <Compile Include="Telas\Controle_Usuario\Compra_usuario.Designer.cs">
       <DependentUpon>Compra_usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controle_Usuario\Consultar_Compra.cs">
+    <Compile Include="Telas\Controle_Usuario\Consultar_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Controle_Usuario\Consultar_Compra.Designer.cs">
+    <Compile Include="Telas\Controle_Usuario\Consultar_Compra.Designer.cs">
       <DependentUpon>Consultar_Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="DB\Cliente\ClienteBusiness.cs" />
@@ -144,72 +144,90 @@
     <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraBusiness.cs" />
     <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDataBase.cs" />
     <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDTO.cs" />
-    <Compile Include="Folha_Pagamento\Consultar_Folha.cs">
+    <Compile Include="Telas\Fluxo_Caixa\Frm_Consultar_Fluxo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Folha_Pagamento\Consultar_Folha.Designer.cs">
+    <Compile Include="Telas\Fluxo_Caixa\Frm_Consultar_Fluxo.Designer.cs">
+      <DependentUpon>Frm_Consultar_Fluxo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Fluxo_Caixa\Frm_Fluxo_Caixa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Fluxo_Caixa\Frm_Fluxo_Caixa.Designer.cs">
+      <DependentUpon>Frm_Fluxo_Caixa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Consultar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Consultar_Folha.Designer.cs">
       <DependentUpon>Consultar_Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Folha_Pagamento\Gerar_Folha.cs">
+    <Compile Include="Telas\Folha_Pagamento\Gerar_Folha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Folha_Pagamento\Gerar_Folha.Designer.cs">
+    <Compile Include="Telas\Folha_Pagamento\Gerar_Folha.Designer.cs">
       <DependentUpon>Gerar_Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_inicio\inicio.cs">
+    <Compile Include="Telas\Tela_inicio\inicio.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_inicio\inicio.Designer.cs">
+    <Compile Include="Telas\Tela_inicio\inicio.Designer.cs">
       <DependentUpon>inicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tela_inicio\Tela_Carregar.cs">
+    <Compile Include="Telas\Tela_inicio\Tela_Carregar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tela_inicio\Tela_Carregar.Designer.cs">
+    <Compile Include="Telas\Tela_inicio\Tela_Carregar.Designer.cs">
       <DependentUpon>Tela_Carregar.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Controle_Cliente\Alterar_Cliente.resx">
+    <EmbeddedResource Include="Telas\Controle_Cliente\Alterar_Cliente.resx">
       <DependentUpon>Alterar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Cliente\Cadastrar_Cliente.resx">
+    <EmbeddedResource Include="Telas\Controle_Cliente\Cadastrar_Cliente.resx">
       <DependentUpon>Cadastrar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Cliente\Consultar_Cliente.resx">
+    <EmbeddedResource Include="Telas\Controle_Cliente\Consultar_Cliente.resx">
       <DependentUpon>Consultar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Estoque\Alterar_Estoque.resx">
+    <EmbeddedResource Include="Telas\Controle_Estoque\Alterar_Estoque.resx">
       <DependentUpon>Alterar_Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Estoque\Cadastro_Estoque.resx">
+    <EmbeddedResource Include="Telas\Controle_Estoque\Cadastro_Estoque.resx">
       <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Estoque\Consultar_Estoque.resx">
+    <EmbeddedResource Include="Telas\Controle_Estoque\Consultar_Estoque.resx">
       <DependentUpon>Consultar_Estoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_funcionarios\Alterar_Funcionario.resx">
+    <EmbeddedResource Include="Telas\Controle_funcionarios\Alterar_Funcionario.resx">
       <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_funcionarios\Cadastrar_Funcionario.resx">
+    <EmbeddedResource Include="Telas\Controle_funcionarios\Cadastrar_Funcionario.resx">
       <DependentUpon>Cadastrar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_funcionarios\Consultar_Funcionario.resx">
+    <EmbeddedResource Include="Telas\Controle_funcionarios\Consultar_Funcionario.resx">
       <DependentUpon>Consultar_Funcionario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_funcionarios\Login.resx">
+    <EmbeddedResource Include="Telas\Controle_funcionarios\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Usuario\Compra_usuario.resx">
+    <EmbeddedResource Include="Telas\Controle_Usuario\Compra_usuario.resx">
       <DependentUpon>Compra_usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controle_Usuario\Consultar_Compra.resx">
+    <EmbeddedResource Include="Telas\Controle_Usuario\Consultar_Compra.resx">
       <DependentUpon>Consultar_Compra.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Folha_Pagamento\Consultar_Folha.resx">
+    <EmbeddedResource Include="Telas\Fluxo_Caixa\Frm_Consultar_Fluxo.resx">
+      <DependentUpon>Frm_Consultar_Fluxo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Fluxo_Caixa\Frm_Fluxo_Caixa.resx">
+      <DependentUpon>Frm_Fluxo_Caixa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Folha_Pagamento\Consultar_Folha.resx">
       <DependentUpon>Consultar_Folha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Folha_Pagamento\Gerar_Folha.resx">
+    <EmbeddedResource Include="Telas\Folha_Pagamento\Gerar_Folha.resx">
       <DependentUpon>Gerar_Folha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -222,10 +240,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Tela_inicio\inicio.resx">
+    <EmbeddedResource Include="Telas\Tela_inicio\inicio.resx">
       <DependentUpon>inicio.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tela_inicio\Tela_Carregar.resx">
+    <EmbeddedResource Include="Telas\Tela_inicio\Tela_Carregar.resx">
       <DependentUpon>Tela_Carregar.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
