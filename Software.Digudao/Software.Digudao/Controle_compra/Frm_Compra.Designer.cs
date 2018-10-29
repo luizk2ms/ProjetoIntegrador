@@ -351,7 +351,7 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox2.Location = new System.Drawing.Point(12, 15);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(122, 70);
             this.pictureBox2.TabIndex = 0;
@@ -469,7 +469,7 @@
             // 
             this.radioButton4.AutoSize = true;
             this.radioButton4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton4.Location = new System.Drawing.Point(24, 65);
+            this.radioButton4.Location = new System.Drawing.Point(24, 71);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(41, 17);
             this.radioButton4.TabIndex = 3;
@@ -481,7 +481,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton3.Location = new System.Drawing.Point(24, 42);
+            this.radioButton3.Location = new System.Drawing.Point(24, 48);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(33, 17);
             this.radioButton3.TabIndex = 2;
@@ -493,7 +493,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton2.Location = new System.Drawing.Point(24, 19);
+            this.radioButton2.Location = new System.Drawing.Point(24, 25);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(34, 17);
             this.radioButton2.TabIndex = 1;
@@ -505,7 +505,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton1.Location = new System.Drawing.Point(24, -4);
+            this.radioButton1.Location = new System.Drawing.Point(24, 2);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(32, 17);
             this.radioButton1.TabIndex = 0;
@@ -550,7 +550,7 @@
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.pictureBox2);
-            this.panel4.Location = new System.Drawing.Point(-2, -9);
+            this.panel4.Location = new System.Drawing.Point(0, -3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(149, 100);
             this.panel4.TabIndex = 18;

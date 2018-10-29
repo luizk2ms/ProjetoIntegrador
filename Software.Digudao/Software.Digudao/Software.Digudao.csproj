@@ -136,6 +136,18 @@
     <Compile Include="Controle_Funcionario\Frm_Consultar_Funcionario.Designer.cs">
       <DependentUpon>Frm_Consultar_Funcionario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Fluxo_caixa\Frm_Fluxo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fluxo_caixa\Frm_Fluxo.Designer.cs">
+      <DependentUpon>Frm_Fluxo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fluxo_caixa\Frm_fluxo_consulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fluxo_caixa\Frm_fluxo_consulta.Designer.cs">
+      <DependentUpon>Frm_fluxo_consulta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Folha_Pagamento\Frm_Alterar_Folha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,8 +180,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Controle_compra\Frm_Alterar_Compra.resx">
+      <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Controle_compra\Frm_Compra.resx">
       <DependentUpon>Frm_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controle_compra\Frm_Consultar_Compra.resx">
+      <DependentUpon>Frm_Consultar_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controle_Estoque\Frm_Alterar_Estoque.resx">
       <DependentUpon>Frm_Alterar_Estoque.cs</DependentUpon>
@@ -179,6 +197,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controle_Estoque\Frm_Consultar_Estoque.resx">
       <DependentUpon>Frm_Consultar_Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fluxo_caixa\Frm_Fluxo.resx">
+      <DependentUpon>Frm_Fluxo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fluxo_caixa\Frm_fluxo_consulta.resx">
+      <DependentUpon>Frm_fluxo_consulta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
@@ -210,7 +234,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DB\" />
-    <Folder Include="Fluxo_caixa\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
