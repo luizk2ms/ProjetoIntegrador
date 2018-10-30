@@ -124,3 +124,6 @@ C:\Users\infoa31\Desktop\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonie
 C:\Users\infoa31\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonieri.exe.config
 C:\Users\infoa31\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.exe
 C:\Users\infoa31\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.pdb
+C:\Users\infoa31\Source\Repos\ProjetoIntegrador2\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonieri.exe.config
+C:\Users\infoa31\Source\Repos\ProjetoIntegrador2\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.exe
+C:\Users\infoa31\Source\Repos\ProjetoIntegrador2\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.pdb
