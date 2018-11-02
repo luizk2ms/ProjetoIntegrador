@@ -16,5 +16,10 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
         {
             InitializeComponent();
         }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

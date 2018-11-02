@@ -82,11 +82,11 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.ForeColor = System.Drawing.Color.Indigo;
             this.label19.Location = new System.Drawing.Point(356, 405);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(58, 21);
+            this.label19.Size = new System.Drawing.Size(62, 24);
             this.label19.TabIndex = 89;
             this.label19.Text = "CPF :";
             // 
@@ -99,6 +99,7 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.White;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.Color.Indigo;
             this.button1.Location = new System.Drawing.Point(627, 403);
@@ -106,22 +107,22 @@
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 87;
             this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.Indigo;
             this.label11.Location = new System.Drawing.Point(415, 239);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(113, 21);
+            this.label11.Size = new System.Drawing.Size(133, 24);
             this.label11.TabIndex = 86;
             this.label11.Text = "Observações";
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel4.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label18);
             this.panel4.Controls.Add(this.label9);
@@ -153,17 +154,17 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
             this.label12.Location = new System.Drawing.Point(415, 54);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(182, 21);
+            this.label12.Size = new System.Drawing.Size(194, 24);
             this.label12.TabIndex = 85;
             this.label12.Text = "Trabalho Concluido";
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.label17);
             this.panel3.Controls.Add(this.label16);
@@ -239,17 +240,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
             this.label2.Location = new System.Drawing.Point(30, 239);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(182, 21);
+            this.label2.Size = new System.Drawing.Size(194, 24);
             this.label2.TabIndex = 83;
             this.label2.Text = "Trabalho Concluido";
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label13);
@@ -325,11 +326,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(24, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 21);
+            this.label1.Size = new System.Drawing.Size(261, 24);
             this.label1.TabIndex = 80;
             this.label1.Text = "Consulta Folha Pagamento";
             // 
@@ -353,7 +354,7 @@
             // button13
             // 
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button13.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.Indigo;
             this.button13.Location = new System.Drawing.Point(405, 7);
             this.button13.Name = "button13";
@@ -365,7 +366,7 @@
             // button12
             // 
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button12.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Indigo;
             this.button12.Location = new System.Drawing.Point(291, 7);
             this.button12.Name = "button12";
@@ -377,7 +378,7 @@
             // button14
             // 
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button14.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Indigo;
             this.button14.Location = new System.Drawing.Point(171, 7);
             this.button14.Name = "button14";
@@ -389,7 +390,7 @@
             // button15
             // 
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button15.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Indigo;
             this.button15.Location = new System.Drawing.Point(90, 6);
             this.button15.Name = "button15";
@@ -402,7 +403,7 @@
             // button4
             // 
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Gill Sans Ultra Bold", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Indigo;
             this.button4.Location = new System.Drawing.Point(9, 6);
             this.button4.Name = "button4";
@@ -445,7 +446,7 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.panel5.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.label20);
             this.panel5.Location = new System.Drawing.Point(406, 267);
@@ -457,7 +458,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
             this.ClientSize = new System.Drawing.Size(755, 457);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);

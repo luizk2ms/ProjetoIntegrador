@@ -127,3 +127,33 @@ C:\Users\infoa31\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\
 C:\Users\infoa31\Source\Repos\ProjetoIntegrador2\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonieri.exe.config
 C:\Users\infoa31\Source\Repos\ProjetoIntegrador2\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.exe
 C:\Users\infoa31\Source\Repos\ProjetoIntegrador2\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.pdb
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonieri.exe.config
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonieri.exe
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\bin\Debug\Avilabombonieri.pdb
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.csprojAssemblyReference.cache
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Cadastrar_Produto.Frm_Alterar_Produto.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Cadastrar_Produto.Frm_Cadastrar_Produto.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Cadastrar_Produto.Frm_Consultar_Produto.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Cliente.Alterar_Cliente.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Cliente.Cadastrar_Cliente.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Cliente.Consultar_Cliente.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Estoque.Alterar_Estoque.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Estoque.Cadastro_Estoque.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Estoque.Consultar_Estoque.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_funcionarios.Alterar_Funcionario.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_funcionarios.Cadastrar_Funcionario.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_funcionarios.Consultar_Funcionario.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_funcionarios.Login.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Usuario.Compra_usuario.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Controle_Usuario.Consultar_Compra.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Fluxo_Caixa.Frm_Consultar_Fluxo.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Fluxo_Caixa.Frm_Fluxo_Caixa.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Folha_Pagamento.Consultar_Folha.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Folha_Pagamento.Gerar_Folha.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Properties.Resources.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Tela_inicio.inicio.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Tela_inicio.Tela_Carregar.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.csproj.GenerateResource.cache
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.csproj.CoreCompileInputs.cache
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.exe
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.pdb

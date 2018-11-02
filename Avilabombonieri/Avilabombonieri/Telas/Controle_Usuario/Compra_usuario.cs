@@ -66,5 +66,10 @@ namespace Avilabombonieri.Controle_Usuario
             Inicio.ShowDialog();
             Show();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

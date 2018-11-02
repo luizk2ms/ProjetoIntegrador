@@ -14,5 +14,6 @@ namespace Avilabombonieri.DB.Estoque
         public DateTime dt_data { get; set; }
         public string nm_nome { get; set; }
         public decimal Pc_preco { get; set; }
+        public string Qn_QuantidadeEmKg { get; set; }
     }
 }
