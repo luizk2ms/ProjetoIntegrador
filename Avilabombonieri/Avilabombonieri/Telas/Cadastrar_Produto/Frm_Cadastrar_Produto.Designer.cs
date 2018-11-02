@@ -43,6 +43,9 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,12 +54,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,6 +72,8 @@
             this.button5 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.btnVisualisar = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -245,6 +247,37 @@
             this.button4.Text = "Inicio";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(615, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 23);
+            this.button2.TabIndex = 43;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Avilabombonieri.Properties.Resources.Maximize;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(654, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(26, 23);
+            this.button3.TabIndex = 44;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Avilabombonieri.Properties.Resources.close;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(686, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 23);
+            this.button1.TabIndex = 42;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.White;
@@ -342,62 +375,12 @@
             this.panel1.Size = new System.Drawing.Size(587, 341);
             this.panel1.TabIndex = 82;
             // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(615, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 23);
-            this.button2.TabIndex = 43;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::Avilabombonieri.Properties.Resources.Maximize;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(654, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 23);
-            this.button3.TabIndex = 44;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Avilabombonieri.Properties.Resources.close;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(686, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 23);
-            this.button1.TabIndex = 42;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(156, 36);
-            this.textBox4.MaxLength = 50;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(326, 20);
-            this.textBox4.TabIndex = 83;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label9.ForeColor = System.Drawing.Color.Indigo;
-            this.label9.Location = new System.Drawing.Point(113, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 20);
-            this.label9.TabIndex = 82;
-            this.label9.Text = "Id:";
-            // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.button6);
+            this.panel3.Controls.Add(this.btnVisualisar);
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.textBox5);
@@ -419,6 +402,27 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(587, 341);
             this.panel3.TabIndex = 85;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(156, 36);
+            this.textBox4.MaxLength = 50;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(326, 20);
+            this.textBox4.TabIndex = 83;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.label9.ForeColor = System.Drawing.Color.Indigo;
+            this.label9.Location = new System.Drawing.Point(113, 36);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(25, 20);
+            this.label9.TabIndex = 82;
+            this.label9.Text = "Id:";
             // 
             // textBox5
             // 
@@ -549,11 +553,11 @@
             this.button5.BackColor = System.Drawing.Color.White;
             this.button5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
             this.button5.ForeColor = System.Drawing.Color.Indigo;
-            this.button5.Location = new System.Drawing.Point(389, 280);
+            this.button5.Location = new System.Drawing.Point(295, 303);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 33);
             this.button5.TabIndex = 75;
-            this.button5.Text = "Consultar";
+            this.button5.Text = "Cadastrar";
             this.button5.UseVisualStyleBackColor = false;
             // 
             // textBox10
@@ -570,6 +574,30 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(326, 20);
             this.dateTimePicker1.TabIndex = 72;
+            // 
+            // btnVisualisar
+            // 
+            this.btnVisualisar.BackColor = System.Drawing.Color.White;
+            this.btnVisualisar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.btnVisualisar.ForeColor = System.Drawing.Color.Indigo;
+            this.btnVisualisar.Location = new System.Drawing.Point(390, 301);
+            this.btnVisualisar.Name = "btnVisualisar";
+            this.btnVisualisar.Size = new System.Drawing.Size(92, 35);
+            this.btnVisualisar.TabIndex = 84;
+            this.btnVisualisar.Text = "Consultar";
+            this.btnVisualisar.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.button6.ForeColor = System.Drawing.Color.Indigo;
+            this.button6.Location = new System.Drawing.Point(488, 301);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(88, 33);
+            this.button6.TabIndex = 85;
+            this.button6.Text = "Alterar";
+            this.button6.UseVisualStyleBackColor = false;
             // 
             // Frm_Cadastrar_Produto
             // 
@@ -639,5 +667,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnVisualisar;
+        private System.Windows.Forms.Button button6;
     }
 }
