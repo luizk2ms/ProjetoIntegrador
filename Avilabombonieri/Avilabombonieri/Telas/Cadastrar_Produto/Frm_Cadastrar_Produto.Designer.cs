@@ -43,6 +43,9 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,24 +54,21 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.id = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.nome = new System.Windows.Forms.Label();
+            this.litros = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.descricao = new System.Windows.Forms.Label();
+            this.kg = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
+            this.valor = new System.Windows.Forms.Label();
+            this.ml = new System.Windows.Forms.Label();
+            this.datadeVal = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -245,6 +245,37 @@
             this.button4.Text = "Inicio";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(615, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 23);
+            this.button2.TabIndex = 43;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Avilabombonieri.Properties.Resources.Maximize;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(654, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(26, 23);
+            this.button3.TabIndex = 44;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Avilabombonieri.Properties.Resources.close;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(686, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 23);
+            this.button1.TabIndex = 42;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // btnCadastrar
             // 
             this.btnCadastrar.BackColor = System.Drawing.Color.White;
@@ -342,36 +373,31 @@
             this.panel1.Size = new System.Drawing.Size(587, 341);
             this.panel1.TabIndex = 82;
             // 
-            // button2
+            // panel3
             // 
-            this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(615, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 23);
-            this.button2.TabIndex = 43;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::Avilabombonieri.Properties.Resources.Maximize;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(654, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 23);
-            this.button3.TabIndex = 44;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Avilabombonieri.Properties.Resources.close;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(686, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 23);
-            this.button1.TabIndex = 42;
-            this.button1.UseVisualStyleBackColor = false;
+            this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.textBox4);
+            this.panel3.Controls.Add(this.id);
+            this.panel3.Controls.Add(this.textBox5);
+            this.panel3.Controls.Add(this.nome);
+            this.panel3.Controls.Add(this.litros);
+            this.panel3.Controls.Add(this.textBox6);
+            this.panel3.Controls.Add(this.textBox7);
+            this.panel3.Controls.Add(this.descricao);
+            this.panel3.Controls.Add(this.kg);
+            this.panel3.Controls.Add(this.textBox8);
+            this.panel3.Controls.Add(this.textBox9);
+            this.panel3.Controls.Add(this.valor);
+            this.panel3.Controls.Add(this.ml);
+            this.panel3.Controls.Add(this.datadeVal);
+            this.panel3.Controls.Add(this.button5);
+            this.panel3.Controls.Add(this.textBox10);
+            this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.Location = new System.Drawing.Point(-1, -1);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(587, 341);
+            this.panel3.TabIndex = 85;
             // 
             // textBox4
             // 
@@ -382,43 +408,18 @@
             this.textBox4.TabIndex = 83;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
-            // label9
+            // id
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label9.ForeColor = System.Drawing.Color.Indigo;
-            this.label9.Location = new System.Drawing.Point(113, 36);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(25, 20);
-            this.label9.TabIndex = 82;
-            this.label9.Text = "Id:";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.label9);
-            this.panel3.Controls.Add(this.textBox5);
-            this.panel3.Controls.Add(this.label10);
-            this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.textBox6);
-            this.panel3.Controls.Add(this.textBox7);
-            this.panel3.Controls.Add(this.label12);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.textBox8);
-            this.panel3.Controls.Add(this.textBox9);
-            this.panel3.Controls.Add(this.label14);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label16);
-            this.panel3.Controls.Add(this.button5);
-            this.panel3.Controls.Add(this.textBox10);
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Location = new System.Drawing.Point(-1, -1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(587, 341);
-            this.panel3.TabIndex = 85;
+            this.id.AutoSize = true;
+            this.id.BackColor = System.Drawing.Color.Transparent;
+            this.id.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.id.ForeColor = System.Drawing.Color.Indigo;
+            this.id.Location = new System.Drawing.Point(113, 36);
+            this.id.Name = "id";
+            this.id.Size = new System.Drawing.Size(25, 20);
+            this.id.TabIndex = 82;
+            this.id.Text = "Id:";
+            this.id.Click += new System.EventHandler(this.label9_Click);
             // 
             // textBox5
             // 
@@ -428,29 +429,30 @@
             this.textBox5.Size = new System.Drawing.Size(45, 20);
             this.textBox5.TabIndex = 81;
             // 
-            // label10
+            // nome
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label10.ForeColor = System.Drawing.Color.Indigo;
-            this.label10.Location = new System.Drawing.Point(96, 62);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 20);
-            this.label10.TabIndex = 68;
-            this.label10.Text = "Nome:";
+            this.nome.AutoSize = true;
+            this.nome.BackColor = System.Drawing.Color.Transparent;
+            this.nome.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.nome.ForeColor = System.Drawing.Color.Indigo;
+            this.nome.Location = new System.Drawing.Point(96, 62);
+            this.nome.Name = "nome";
+            this.nome.Size = new System.Drawing.Size(49, 20);
+            this.nome.TabIndex = 68;
+            this.nome.Text = "Nome:";
+            this.nome.Click += new System.EventHandler(this.label10_Click);
             // 
-            // label11
+            // litros
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label11.ForeColor = System.Drawing.Color.Indigo;
-            this.label11.Location = new System.Drawing.Point(93, 192);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 20);
-            this.label11.TabIndex = 80;
-            this.label11.Text = "Litros :";
+            this.litros.AutoSize = true;
+            this.litros.BackColor = System.Drawing.Color.Transparent;
+            this.litros.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.litros.ForeColor = System.Drawing.Color.Indigo;
+            this.litros.Location = new System.Drawing.Point(93, 192);
+            this.litros.Name = "litros";
+            this.litros.Size = new System.Drawing.Size(52, 20);
+            this.litros.TabIndex = 80;
+            this.litros.Text = "Litros :";
             // 
             // textBox6
             // 
@@ -468,29 +470,30 @@
             this.textBox7.Size = new System.Drawing.Size(45, 20);
             this.textBox7.TabIndex = 79;
             // 
-            // label12
+            // descricao
             // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(66, 88);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 20);
-            this.label12.TabIndex = 67;
-            this.label12.Text = "Descrição:";
+            this.descricao.AutoSize = true;
+            this.descricao.BackColor = System.Drawing.Color.Transparent;
+            this.descricao.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.descricao.ForeColor = System.Drawing.Color.Indigo;
+            this.descricao.Location = new System.Drawing.Point(66, 88);
+            this.descricao.Name = "descricao";
+            this.descricao.Size = new System.Drawing.Size(79, 20);
+            this.descricao.TabIndex = 67;
+            this.descricao.Text = "Descrição:";
             // 
-            // label13
+            // kg
             // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(113, 140);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(33, 20);
-            this.label13.TabIndex = 78;
-            this.label13.Text = "KG :";
+            this.kg.AutoSize = true;
+            this.kg.BackColor = System.Drawing.Color.Transparent;
+            this.kg.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.kg.ForeColor = System.Drawing.Color.Indigo;
+            this.kg.Location = new System.Drawing.Point(113, 140);
+            this.kg.Name = "kg";
+            this.kg.Size = new System.Drawing.Size(33, 20);
+            this.kg.TabIndex = 78;
+            this.kg.Text = "KG :";
+            this.kg.Click += new System.EventHandler(this.label13_Click);
             // 
             // textBox8
             // 
@@ -508,41 +511,43 @@
             this.textBox9.Size = new System.Drawing.Size(45, 20);
             this.textBox9.TabIndex = 77;
             // 
-            // label14
+            // valor
             // 
-            this.label14.AutoSize = true;
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label14.ForeColor = System.Drawing.Color.Indigo;
-            this.label14.Location = new System.Drawing.Point(101, 114);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(45, 20);
-            this.label14.TabIndex = 66;
-            this.label14.Text = "Valor:";
+            this.valor.AutoSize = true;
+            this.valor.BackColor = System.Drawing.Color.Transparent;
+            this.valor.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.valor.ForeColor = System.Drawing.Color.Indigo;
+            this.valor.Location = new System.Drawing.Point(101, 114);
+            this.valor.Name = "valor";
+            this.valor.Size = new System.Drawing.Size(45, 20);
+            this.valor.TabIndex = 66;
+            this.valor.Text = "Valor:";
+            this.valor.Click += new System.EventHandler(this.label14_Click);
             // 
-            // label15
+            // ml
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label15.ForeColor = System.Drawing.Color.Indigo;
-            this.label15.Location = new System.Drawing.Point(113, 166);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(32, 20);
-            this.label15.TabIndex = 76;
-            this.label15.Text = "ML :";
+            this.ml.AutoSize = true;
+            this.ml.BackColor = System.Drawing.Color.Transparent;
+            this.ml.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.ml.ForeColor = System.Drawing.Color.Indigo;
+            this.ml.Location = new System.Drawing.Point(113, 166);
+            this.ml.Name = "ml";
+            this.ml.Size = new System.Drawing.Size(32, 20);
+            this.ml.TabIndex = 76;
+            this.ml.Text = "ML :";
             // 
-            // label16
+            // datadeVal
             // 
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.label16.ForeColor = System.Drawing.Color.Indigo;
-            this.label16.Location = new System.Drawing.Point(26, 222);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(119, 20);
-            this.label16.TabIndex = 65;
-            this.label16.Text = "Data de Validade:";
+            this.datadeVal.AutoSize = true;
+            this.datadeVal.BackColor = System.Drawing.Color.Transparent;
+            this.datadeVal.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.datadeVal.ForeColor = System.Drawing.Color.Indigo;
+            this.datadeVal.Location = new System.Drawing.Point(26, 222);
+            this.datadeVal.Name = "datadeVal";
+            this.datadeVal.Size = new System.Drawing.Size(119, 20);
+            this.datadeVal.TabIndex = 65;
+            this.datadeVal.Text = "Data de Validade:";
+            this.datadeVal.Click += new System.EventHandler(this.DatadeVal_Click);
             // 
             // button5
             // 
@@ -555,6 +560,7 @@
             this.button5.TabIndex = 75;
             this.button5.Text = "Consultar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // textBox10
             // 
@@ -623,19 +629,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label id;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label nome;
+        private System.Windows.Forms.Label litros;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label descricao;
+        private System.Windows.Forms.Label kg;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label valor;
+        private System.Windows.Forms.Label ml;
+        private System.Windows.Forms.Label datadeVal;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;

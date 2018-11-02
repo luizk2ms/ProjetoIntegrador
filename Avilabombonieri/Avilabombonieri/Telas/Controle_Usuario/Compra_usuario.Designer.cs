@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.Cpf = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.Endereco = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -50,8 +50,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Cnpj = new System.Windows.Forms.Label();
+            this.Nome = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -82,16 +82,16 @@
             this.textBox3.Size = new System.Drawing.Size(147, 20);
             this.textBox3.TabIndex = 68;
             // 
-            // label13
+            // Cpf
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(381, 35);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 20);
-            this.label13.TabIndex = 67;
-            this.label13.Text = "CPF :";
+            this.Cpf.AutoSize = true;
+            this.Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cpf.ForeColor = System.Drawing.Color.Indigo;
+            this.Cpf.Location = new System.Drawing.Point(381, 35);
+            this.Cpf.Name = "Cpf";
+            this.Cpf.Size = new System.Drawing.Size(48, 20);
+            this.Cpf.TabIndex = 67;
+            this.Cpf.Text = "CPF :";
             // 
             // textBox5
             // 
@@ -100,16 +100,16 @@
             this.textBox5.Size = new System.Drawing.Size(147, 20);
             this.textBox5.TabIndex = 66;
             // 
-            // label12
+            // Endereco
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(353, 80);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(86, 20);
-            this.label12.TabIndex = 65;
-            this.label12.Text = "Endereço :";
+            this.Endereco.AutoSize = true;
+            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Endereco.ForeColor = System.Drawing.Color.Indigo;
+            this.Endereco.Location = new System.Drawing.Point(353, 80);
+            this.Endereco.Name = "Endereco";
+            this.Endereco.Size = new System.Drawing.Size(86, 20);
+            this.Endereco.TabIndex = 65;
+            this.Endereco.Text = "Endereço :";
             // 
             // textBox4
             // 
@@ -302,27 +302,27 @@
             this.label5.Text = "Produto";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // label4
+            // Cnpj
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(64, 81);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 20);
-            this.label4.TabIndex = 61;
-            this.label4.Text = "CNPJ :";
+            this.Cnpj.AutoSize = true;
+            this.Cnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cnpj.ForeColor = System.Drawing.Color.Indigo;
+            this.Cnpj.Location = new System.Drawing.Point(64, 81);
+            this.Cnpj.Name = "Cnpj";
+            this.Cnpj.Size = new System.Drawing.Size(57, 20);
+            this.Cnpj.TabIndex = 61;
+            this.Cnpj.Text = "CNPJ :";
             // 
-            // label2
+            // Nome
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(65, 35);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
-            this.label2.TabIndex = 60;
-            this.label2.Text = "Nome :";
+            this.Nome.AutoSize = true;
+            this.Nome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nome.ForeColor = System.Drawing.Color.Indigo;
+            this.Nome.Location = new System.Drawing.Point(65, 35);
+            this.Nome.Name = "Nome";
+            this.Nome.Size = new System.Drawing.Size(59, 20);
+            this.Nome.TabIndex = 60;
+            this.Nome.Text = "Nome :";
             // 
             // textBox1
             // 
@@ -460,12 +460,12 @@
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label4);
+            this.panel3.Controls.Add(this.Nome);
+            this.panel3.Controls.Add(this.Cpf);
+            this.panel3.Controls.Add(this.Cnpj);
             this.panel3.Controls.Add(this.textBox5);
             this.panel3.Controls.Add(this.textBox4);
-            this.panel3.Controls.Add(this.label12);
+            this.panel3.Controls.Add(this.Endereco);
             this.panel3.ForeColor = System.Drawing.Color.Teal;
             this.panel3.Location = new System.Drawing.Point(23, 66);
             this.panel3.Name = "panel3";
@@ -523,15 +523,15 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label Cpf;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label Endereco;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Cnpj;
+        private System.Windows.Forms.Label Nome;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;

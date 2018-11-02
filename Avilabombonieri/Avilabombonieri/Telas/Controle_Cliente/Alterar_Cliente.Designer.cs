@@ -30,19 +30,19 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.Email = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Numero = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
+            this.Cnpj = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Endereco = new System.Windows.Forms.Label();
+            this.Cpf = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.id_cliente = new System.Windows.Forms.Label();
+            this.Nomecliente = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -64,19 +64,19 @@
             this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.Email);
             this.panel1.Controls.Add(this.textBox5);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Numero);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.Cnpj);
             this.panel1.Controls.Add(this.textBox6);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.Endereco);
+            this.panel1.Controls.Add(this.Cpf);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.id_cliente);
+            this.panel1.Controls.Add(this.Nomecliente);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.ForeColor = System.Drawing.SystemColors.ScrollBar;
@@ -84,6 +84,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(682, 180);
             this.panel1.TabIndex = 44;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // textBox7
             // 
@@ -92,16 +93,16 @@
             this.textBox7.Size = new System.Drawing.Size(163, 20);
             this.textBox7.TabIndex = 52;
             // 
-            // label4
+            // Email
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(71, 141);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(70, 20);
-            this.label4.TabIndex = 51;
-            this.label4.Text = "E-email :";
+            this.Email.AutoSize = true;
+            this.Email.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Email.ForeColor = System.Drawing.Color.Indigo;
+            this.Email.Location = new System.Drawing.Point(71, 141);
+            this.Email.Name = "Email";
+            this.Email.Size = new System.Drawing.Size(70, 20);
+            this.Email.TabIndex = 51;
+            this.Email.Text = "E-email :";
             // 
             // textBox5
             // 
@@ -110,16 +111,16 @@
             this.textBox5.Size = new System.Drawing.Size(198, 20);
             this.textBox5.TabIndex = 50;
             // 
-            // label1
+            // Numero
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(300, 101);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 20);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Numero :";
+            this.Numero.AutoSize = true;
+            this.Numero.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Numero.ForeColor = System.Drawing.Color.Indigo;
+            this.Numero.Location = new System.Drawing.Point(300, 101);
+            this.Numero.Name = "Numero";
+            this.Numero.Size = new System.Drawing.Size(73, 20);
+            this.Numero.TabIndex = 49;
+            this.Numero.Text = "Numero :";
             // 
             // button5
             // 
@@ -147,17 +148,17 @@
             this.button9.Text = "Remover";
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // label6
+            // Cnpj
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Indigo;
-            this.label6.Location = new System.Drawing.Point(313, 61);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 20);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "CNPJ :";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.Cnpj.AutoSize = true;
+            this.Cnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cnpj.ForeColor = System.Drawing.Color.Indigo;
+            this.Cnpj.Location = new System.Drawing.Point(313, 61);
+            this.Cnpj.Name = "Cnpj";
+            this.Cnpj.Size = new System.Drawing.Size(57, 20);
+            this.Cnpj.TabIndex = 46;
+            this.Cnpj.Text = "CNPJ :";
+            this.Cnpj.Click += new System.EventHandler(this.label6_Click);
             // 
             // textBox6
             // 
@@ -173,27 +174,27 @@
             this.textBox2.Size = new System.Drawing.Size(69, 20);
             this.textBox2.TabIndex = 43;
             // 
-            // label3
+            // Endereco
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(65, 102);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 20);
-            this.label3.TabIndex = 42;
-            this.label3.Text = "Endereço :";
+            this.Endereco.AutoSize = true;
+            this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Endereco.ForeColor = System.Drawing.Color.Indigo;
+            this.Endereco.Location = new System.Drawing.Point(65, 102);
+            this.Endereco.Name = "Endereco";
+            this.Endereco.Size = new System.Drawing.Size(86, 20);
+            this.Endereco.TabIndex = 42;
+            this.Endereco.Text = "Endereço :";
             // 
-            // label2
+            // Cpf
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(95, 59);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(48, 20);
-            this.label2.TabIndex = 41;
-            this.label2.Text = "CPF :";
+            this.Cpf.AutoSize = true;
+            this.Cpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cpf.ForeColor = System.Drawing.Color.Indigo;
+            this.Cpf.Location = new System.Drawing.Point(95, 59);
+            this.Cpf.Name = "Cpf";
+            this.Cpf.Size = new System.Drawing.Size(48, 20);
+            this.Cpf.TabIndex = 41;
+            this.Cpf.Text = "CPF :";
             // 
             // textBox3
             // 
@@ -202,27 +203,27 @@
             this.textBox3.Size = new System.Drawing.Size(69, 20);
             this.textBox3.TabIndex = 40;
             // 
-            // label13
+            // id_cliente
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(54, 20);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 20);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "ID Cliente :";
+            this.id_cliente.AutoSize = true;
+            this.id_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_cliente.ForeColor = System.Drawing.Color.Indigo;
+            this.id_cliente.Location = new System.Drawing.Point(54, 20);
+            this.id_cliente.Name = "id_cliente";
+            this.id_cliente.Size = new System.Drawing.Size(87, 20);
+            this.id_cliente.TabIndex = 39;
+            this.id_cliente.Text = "ID Cliente :";
             // 
-            // label12
+            // Nomecliente
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(264, 18);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(112, 20);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Nome Cliente :";
+            this.Nomecliente.AutoSize = true;
+            this.Nomecliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nomecliente.ForeColor = System.Drawing.Color.Indigo;
+            this.Nomecliente.Location = new System.Drawing.Point(264, 18);
+            this.Nomecliente.Name = "Nomecliente";
+            this.Nomecliente.Size = new System.Drawing.Size(112, 20);
+            this.Nomecliente.TabIndex = 37;
+            this.Nomecliente.Text = "Nome Cliente :";
             // 
             // textBox4
             // 
@@ -384,14 +385,14 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Cnpj;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Endereco;
+        private System.Windows.Forms.Label Cpf;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label id_cliente;
+        private System.Windows.Forms.Label Nomecliente;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
@@ -406,8 +407,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Email;
         private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Numero;
     }
 }

@@ -34,15 +34,15 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.btnRemover = new System.Windows.Forms.Button();
             this.btnVisualisar = new System.Windows.Forms.Button();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
@@ -126,70 +126,6 @@
             this.button4.Text = "Inicio";
             this.button4.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Indigo;
-            this.label7.Location = new System.Drawing.Point(213, 57);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(329, 34);
-            this.label7.TabIndex = 52;
-            this.label7.Text = "Consultar  produto de venda";
-            // 
-            // btnRemover
-            // 
-            this.btnRemover.BackColor = System.Drawing.Color.White;
-            this.btnRemover.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.btnRemover.ForeColor = System.Drawing.Color.Indigo;
-            this.btnRemover.Location = new System.Drawing.Point(304, 381);
-            this.btnRemover.Name = "btnRemover";
-            this.btnRemover.Size = new System.Drawing.Size(92, 35);
-            this.btnRemover.TabIndex = 50;
-            this.btnRemover.Text = "Remover";
-            this.btnRemover.UseVisualStyleBackColor = false;
-            // 
-            // btnVisualisar
-            // 
-            this.btnVisualisar.BackColor = System.Drawing.Color.White;
-            this.btnVisualisar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.btnVisualisar.ForeColor = System.Drawing.Color.Indigo;
-            this.btnVisualisar.Location = new System.Drawing.Point(193, 384);
-            this.btnVisualisar.Name = "btnVisualisar";
-            this.btnVisualisar.Size = new System.Drawing.Size(92, 35);
-            this.btnVisualisar.TabIndex = 51;
-            this.btnVisualisar.Text = "Consultar";
-            this.btnVisualisar.UseVisualStyleBackColor = false;
-            // 
-            // dgvProdutos
-            // 
-            this.dgvProdutos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvProdutos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dgvProdutos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvProdutos.Location = new System.Drawing.Point(26, 94);
-            this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.RowHeadersVisible = false;
-            this.dgvProdutos.Size = new System.Drawing.Size(650, 284);
-            this.dgvProdutos.TabIndex = 48;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "nm_Produto";
-            this.Column1.HeaderText = "Produto";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "vl_Venda";
-            this.Column2.HeaderText = "Valor";
-            this.Column2.Name = "Column2";
-            // 
             // button2
             // 
             this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
@@ -220,6 +156,72 @@
             this.button1.Size = new System.Drawing.Size(28, 23);
             this.button1.TabIndex = 42;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Indigo;
+            this.label7.Location = new System.Drawing.Point(213, 57);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(329, 34);
+            this.label7.TabIndex = 52;
+            this.label7.Text = "Consultar  produto de venda";
+            // 
+            // btnRemover
+            // 
+            this.btnRemover.BackColor = System.Drawing.Color.White;
+            this.btnRemover.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.btnRemover.ForeColor = System.Drawing.Color.Indigo;
+            this.btnRemover.Location = new System.Drawing.Point(304, 381);
+            this.btnRemover.Name = "btnRemover";
+            this.btnRemover.Size = new System.Drawing.Size(92, 35);
+            this.btnRemover.TabIndex = 50;
+            this.btnRemover.Text = "Remover";
+            this.btnRemover.UseVisualStyleBackColor = false;
+            this.btnRemover.Click += new System.EventHandler(this.btnRemover_Click);
+            // 
+            // btnVisualisar
+            // 
+            this.btnVisualisar.BackColor = System.Drawing.Color.White;
+            this.btnVisualisar.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
+            this.btnVisualisar.ForeColor = System.Drawing.Color.Indigo;
+            this.btnVisualisar.Location = new System.Drawing.Point(193, 384);
+            this.btnVisualisar.Name = "btnVisualisar";
+            this.btnVisualisar.Size = new System.Drawing.Size(92, 35);
+            this.btnVisualisar.TabIndex = 51;
+            this.btnVisualisar.Text = "Consultar";
+            this.btnVisualisar.UseVisualStyleBackColor = false;
+            this.btnVisualisar.Click += new System.EventHandler(this.btnVisualisar_Click);
+            // 
+            // dgvProdutos
+            // 
+            this.dgvProdutos.BackgroundColor = System.Drawing.Color.White;
+            this.dgvProdutos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
+            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dgvProdutos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dgvProdutos.Location = new System.Drawing.Point(26, 94);
+            this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.RowHeadersVisible = false;
+            this.dgvProdutos.Size = new System.Drawing.Size(650, 284);
+            this.dgvProdutos.TabIndex = 48;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "nm_Produto";
+            this.Column1.HeaderText = "Produto";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "vl_Venda";
+            this.Column2.HeaderText = "Valor";
+            this.Column2.Name = "Column2";
             // 
             // textBox4
             // 

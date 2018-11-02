@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Avilabombonieri.DB.Produto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,17 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
         public Frm_Consultar_Produto()
         {
             InitializeComponent();
+        }
+
+        private void btnVisualisar_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void btnRemover_Click(object sender, EventArgs e)
+        {
+   
         }
     }
 }

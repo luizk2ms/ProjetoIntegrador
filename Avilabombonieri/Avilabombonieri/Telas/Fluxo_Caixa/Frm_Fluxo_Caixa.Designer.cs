@@ -32,8 +32,8 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.Inicio = new System.Windows.Forms.Label();
+            this.Fim = new System.Windows.Forms.Label();
             this.dtpfim = new System.Windows.Forms.DateTimePicker();
             this.dtkinicio = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
@@ -90,27 +90,27 @@
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
-            // label3
+            // Inicio
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(220, 120);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 24);
-            this.label3.TabIndex = 73;
-            this.label3.Text = "Inicio";
+            this.Inicio.AutoSize = true;
+            this.Inicio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Inicio.ForeColor = System.Drawing.Color.Black;
+            this.Inicio.Location = new System.Drawing.Point(220, 120);
+            this.Inicio.Name = "Inicio";
+            this.Inicio.Size = new System.Drawing.Size(54, 24);
+            this.Inicio.TabIndex = 73;
+            this.Inicio.Text = "Inicio";
             // 
-            // label1
+            // Fim
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(220, 162);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 24);
-            this.label1.TabIndex = 72;
-            this.label1.Text = "Fim";
+            this.Fim.AutoSize = true;
+            this.Fim.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Fim.ForeColor = System.Drawing.Color.Black;
+            this.Fim.Location = new System.Drawing.Point(220, 162);
+            this.Fim.Name = "Fim";
+            this.Fim.Size = new System.Drawing.Size(42, 24);
+            this.Fim.TabIndex = 72;
+            this.Fim.Text = "Fim";
             // 
             // dtpfim
             // 
@@ -255,8 +255,8 @@
             this.ClientSize = new System.Drawing.Size(754, 450);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.Inicio);
+            this.Controls.Add(this.Fim);
             this.Controls.Add(this.dtpfim);
             this.Controls.Add(this.dtkinicio);
             this.Controls.Add(this.label2);
@@ -275,8 +275,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Inicio;
+        private System.Windows.Forms.Label Fim;
         private System.Windows.Forms.DateTimePicker dtpfim;
         private System.Windows.Forms.DateTimePicker dtkinicio;
         private System.Windows.Forms.Label label2;
