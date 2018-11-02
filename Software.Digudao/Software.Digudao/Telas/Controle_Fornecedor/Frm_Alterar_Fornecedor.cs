@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Software.Digudao.Controle_Fornecedor
 {
-    public partial class Frm_Alterar_Cliente : Form
+    public partial class Frm_Alterar_Fornecedor : Form
     {
-        public Frm_Alterar_Cliente()
+        public Frm_Alterar_Fornecedor()
         {
             InitializeComponent();
         }
