@@ -55,5 +55,10 @@ namespace Avilabombonieri.Controle_funcionarios
             consultarfuncionario.ShowDialog();
             Show();
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
