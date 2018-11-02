@@ -16,5 +16,10 @@ namespace Software.Digudao.Controle_Fornecedor
         {
             InitializeComponent();
         }
+
+        private void Frm_Cadastrar_Fornecedor_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
