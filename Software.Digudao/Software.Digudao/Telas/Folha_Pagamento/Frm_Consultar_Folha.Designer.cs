@@ -1,6 +1,6 @@
-﻿namespace Software.Digudao.Controle_Funcionario
+﻿namespace Software.Digudao.Folha_Pagamento
 {
-    partial class Frm_Alterar_Funcionario
+    partial class Frm_Consultar_Folha
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Frm_Consultar_Folha
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Frm_Alterar_Funcionario";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "Frm_Consultar_Folha";
+            this.Text = "Frm_Consultar_Folha";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

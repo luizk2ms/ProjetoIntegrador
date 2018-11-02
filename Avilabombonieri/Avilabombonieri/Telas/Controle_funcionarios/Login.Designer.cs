@@ -36,10 +36,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,11 +62,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Mistral", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(43, 56);
+            this.label1.Location = new System.Drawing.Point(58, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 24);
+            this.label1.Size = new System.Drawing.Size(61, 26);
             this.label1.TabIndex = 53;
             this.label1.Text = "LOGIN";
             // 
@@ -76,7 +76,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(3, 55);
+            this.label3.Location = new System.Drawing.Point(5, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 20);
             this.label3.TabIndex = 52;
@@ -84,7 +84,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(66, 53);
+            this.textBox2.Location = new System.Drawing.Point(68, 58);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(211, 20);
             this.textBox2.TabIndex = 51;
@@ -95,7 +95,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(3, 18);
+            this.label2.Location = new System.Drawing.Point(5, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(59, 20);
             this.label2.TabIndex = 50;
@@ -103,7 +103,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(66, 18);
+            this.textBox1.Location = new System.Drawing.Point(68, 23);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 20);
             this.textBox1.TabIndex = 49;
@@ -135,20 +135,6 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(47, 80);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(286, 120);
-            this.panel1.TabIndex = 56;
-            // 
             // button2
             // 
             this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
@@ -179,6 +165,20 @@
             this.button1.Size = new System.Drawing.Size(28, 23);
             this.button1.TabIndex = 42;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.button8);
+            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(47, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(286, 120);
+            this.panel1.TabIndex = 56;
             // 
             // Login
             // 

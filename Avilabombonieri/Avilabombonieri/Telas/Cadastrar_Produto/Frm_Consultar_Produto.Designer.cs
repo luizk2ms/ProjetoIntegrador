@@ -174,7 +174,7 @@
             this.btnRemover.BackColor = System.Drawing.Color.White;
             this.btnRemover.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
             this.btnRemover.ForeColor = System.Drawing.Color.Indigo;
-            this.btnRemover.Location = new System.Drawing.Point(304, 381);
+            this.btnRemover.Location = new System.Drawing.Point(292, 384);
             this.btnRemover.Name = "btnRemover";
             this.btnRemover.Size = new System.Drawing.Size(92, 35);
             this.btnRemover.TabIndex = 50;
