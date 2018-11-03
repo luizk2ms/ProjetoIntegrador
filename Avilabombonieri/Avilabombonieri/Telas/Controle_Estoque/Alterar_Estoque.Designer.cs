@@ -34,7 +34,7 @@
             this.button5 = new System.Windows.Forms.Button();
             this.Tamanho = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.Preço = new System.Windows.Forms.Label();
+            this.Preco = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.QuantidadeEmKg = new System.Windows.Forms.Label();
             this.Quantidade = new System.Windows.Forms.Label();
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.Tamanho);
             this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.Preço);
+            this.panel1.Controls.Add(this.Preco);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.QuantidadeEmKg);
             this.panel1.Controls.Add(this.Quantidade);
@@ -134,17 +134,17 @@
             this.textBox6.Size = new System.Drawing.Size(73, 20);
             this.textBox6.TabIndex = 45;
             // 
-            // Preço
+            // Preco
             // 
-            this.Preço.AutoSize = true;
-            this.Preço.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Preço.ForeColor = System.Drawing.Color.Indigo;
-            this.Preço.Location = new System.Drawing.Point(296, 105);
-            this.Preço.Name = "Preço";
-            this.Preço.Size = new System.Drawing.Size(83, 20);
-            this.Preço.TabIndex = 44;
-            this.Preço.Text = "Preço R$ :";
-            this.Preço.Click += new System.EventHandler(this.label4_Click);
+            this.Preco.AutoSize = true;
+            this.Preco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Preco.ForeColor = System.Drawing.Color.Indigo;
+            this.Preco.Location = new System.Drawing.Point(296, 105);
+            this.Preco.Name = "Preco";
+            this.Preco.Size = new System.Drawing.Size(83, 20);
+            this.Preco.TabIndex = 44;
+            this.Preco.Text = "Preço R$ :";
+            this.Preco.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox2
             // 
@@ -378,7 +378,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label Tamanho;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label Preço;
+        private System.Windows.Forms.Label Preco;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label QuantidadeEmKg;
         private System.Windows.Forms.Label Quantidade;

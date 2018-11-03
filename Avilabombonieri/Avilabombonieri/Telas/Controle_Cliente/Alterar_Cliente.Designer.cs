@@ -134,6 +134,7 @@
             this.button5.TabIndex = 48;
             this.button5.Text = "Alterar";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button9
             // 
@@ -147,6 +148,7 @@
             this.button9.TabIndex = 47;
             this.button9.Text = "Remover";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // Cnpj
             // 

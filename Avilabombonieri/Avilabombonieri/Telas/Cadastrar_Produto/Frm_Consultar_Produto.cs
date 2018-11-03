@@ -20,8 +20,7 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
 
         private void btnVisualisar_Click(object sender, EventArgs e)
         {
-            
-
+         
         }
 
         private void btnRemover_Click(object sender, EventArgs e)

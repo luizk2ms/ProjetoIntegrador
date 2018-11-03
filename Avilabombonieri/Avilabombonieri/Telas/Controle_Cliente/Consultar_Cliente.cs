@@ -34,5 +34,10 @@ namespace Avilabombonieri.Controle_Cliente
             Inicio.ShowDialog();
             Show();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

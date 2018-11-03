@@ -1,4 +1,5 @@
 ﻿using Avilabombonieri.Controle_Usuario;
+using Avilabombonieri.DB.Estoque;
 using Avilabombonieri.Tela_inicio;
 using System;
 using System.Collections.Generic;
@@ -82,6 +83,17 @@ namespace Avilabombonieri.Controle_Estoque
 
         private void button5_Click(object sender, EventArgs e)
         {
+            EstoqueDTO dto = new EstoqueDTO();
+            dto.Id_Estoque = int.Parse(IdProduto.Text);
+            dto.nm_nome = NomeProd.Text;
+            dto.Qn_Quantidade = Quantidade.Text;
+            dto.Tm_tamanho = Tamanho.Text;
+            dto.Qn_QuantidadeEmKg = QuantidadeEmKg.Text;
+            dto.dt_data = DateTime.Parse(DatadeValidade.Text);
+            dto.Pc_preco = decimal.Parse(Preco.Text);
+
+            EstoqueBusiness bussines = new EstoqueBusiness();
+            bussines.Alterar(dto);
 
         }
 

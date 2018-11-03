@@ -157,3 +157,5 @@ C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\ob
 C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.csproj.CoreCompileInputs.cache
 C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.exe
 C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.pdb
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Controle_Estoque.Cadastro_Estoque.resources
+C:\Users\win 7\Source\Repos\ProjetoIntegrador\Avilabombonieri\Avilabombonieri\obj\Debug\Avilabombonieri.Telas.Controle_funcionarios.Alterar_Funcionario.resources

@@ -30,6 +30,9 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
             dto.Vl_Valor = valor.Text;
             dto.Lt_litros = decimal.Parse(litros.Text);
 
+            ProdutoBusiness bussines = new ProdutoBusiness();
+            bussines.Consultar(dto);
+
 
 
 

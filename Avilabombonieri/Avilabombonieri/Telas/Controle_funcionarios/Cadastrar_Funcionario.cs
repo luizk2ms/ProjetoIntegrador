@@ -60,5 +60,10 @@ namespace Avilabombonieri.Controle_funcionarios
         {
 
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
