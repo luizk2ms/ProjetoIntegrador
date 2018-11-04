@@ -119,6 +119,7 @@
             this.dtpfim.Name = "dtpfim";
             this.dtpfim.Size = new System.Drawing.Size(215, 20);
             this.dtpfim.TabIndex = 71;
+            this.dtpfim.ValueChanged += new System.EventHandler(this.dtpfim_ValueChanged);
             // 
             // dtkinicio
             // 
@@ -127,6 +128,7 @@
             this.dtkinicio.Name = "dtkinicio";
             this.dtkinicio.Size = new System.Drawing.Size(215, 20);
             this.dtkinicio.TabIndex = 70;
+            this.dtkinicio.ValueChanged += new System.EventHandler(this.dtkinicio_ValueChanged);
             // 
             // label2
             // 

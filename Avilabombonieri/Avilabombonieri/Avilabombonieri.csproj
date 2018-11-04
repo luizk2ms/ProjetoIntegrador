@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Fluxo_caixa\Fluxo_BUSSINES.cs" />
+    <Compile Include="DB\Fluxo_caixa\Fluxo_DTO.cs" />
+    <Compile Include="DB\Fluxo_caixa\Fluxo_View.cs" />
+    <Compile Include="DB\Fluxo_caixa\Fluxo_DATABASE.cs" />
     <Compile Include="Telas\Cadastrar_Produto\Frm_Alterar_Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,9 +91,7 @@
     <Compile Include="Telas\Controle_Estoque\Alterar_Estoque.Designer.cs">
       <DependentUpon>Alterar_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Controle_Estoque\Cadastro_Estoque.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Controle_Estoque\Cadastro_Estoque.cs" />
     <Compile Include="Telas\Controle_Estoque\Cadastro_Estoque.Designer.cs">
       <DependentUpon>Cadastro_Estoque.cs</DependentUpon>
     </Compile>
@@ -99,9 +101,7 @@
     <Compile Include="Telas\Controle_Estoque\Consultar_Estoque.Designer.cs">
       <DependentUpon>Consultar_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Controle_funcionarios\Alterar_Funcionario.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Controle_funcionarios\Alterar_Funcionario.cs" />
     <Compile Include="Telas\Controle_funcionarios\Alterar_Funcionario.Designer.cs">
       <DependentUpon>Alterar_Funcionario.cs</DependentUpon>
     </Compile>
@@ -314,5 +314,6 @@
   <ItemGroup>
     <None Include="Resources\WhatsApp Image 2018-11-01 at 21.21.12.jpeg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
