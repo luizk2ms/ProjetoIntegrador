@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Avilabombonieri.DB.Fluxo_caixa
 {
     class Fluxo_DATABASE
     {
-        {
+        
         public int Salvar(Fluxo_DTO dto)
         {
             string script = @"insert into tb_fluxo_de_caixa (vl_total_recebido,fluxo_de_caixa_diario,fluxo_de_caixa_mensal,fk_id_funcionario_para_fc)

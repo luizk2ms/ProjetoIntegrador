@@ -1,12 +1,154 @@
-﻿using System;
+﻿using Avilabombonieri.DB.Estoque;
+using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Avilabombonieri.DB.Estoque
+namespace prototipos.DB.Estoque
 {
-    class EstoqueDataBase
+    class EstoqueDatabase
     {
+        public int SalvarEstoque (EstoqueDTO dto)
+        {
+            string Script = @"INSERT INTO Tb_Estoque(Qn_Quantidade,
+                                                     Tm_tamanho,
+                                                     dt_datavl,
+                                                     nm_nome,
+                                                     pc_preçoporcaixa,
+                                                     id_produto_id,
+                                                     kl_kilo)
+                                                     VALUES(@Qn_Quantidade,
+                                                     @Tm_tamanho,
+                                                     @dt_datavl,
+                                                     @nm_nome,
+                                                     @pc_preçoporcaixa,
+                                                     @id_produto_id,
+                                                     @kl_kilo)";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Qn_Quantidade",dto.Qn_Quantidade));
+            parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
+            parms.Add(new MySqlParameter("dt_datavl", dto.dt_datavl));
+            parms.Add(new MySqlParameter("nm_nome", dto.nm_nome));
+            parms.Add(new MySqlParameter("pc_preçoporcaixa", dto.pc_preçoporcaixa));
+            parms.Add(new MySqlParameter("kl_kilo", dto.kl_kilo));
+            parms.Add(new MySqlParameter("id_produto_id", dto.id_produto_id));
+
+            Database db = new Database();
+            db.ExecuteInsertScriptWithPk(Script, parms);
+        }
+        public void Alterar(EstoqueDTO dto)
+        {
+            string Script = @"UPDATE Tb_Estoque SET Qn_Quantidade = @Qn_Quantidade,
+                                                     Tm_tamanho = @Tm_tamanho,
+                                                     dt_datavl = @dt_datavl,
+                                                     nm_nome = @nm_nome,
+                                                     id_produto_id = @id_produto_id,
+                                                     pc_preçoporcaixa = @pc_preçoporcaixa,
+                                                     kl_kilo = @kl_kilo
+                                               WHERE Id_Estoque = @Id_Estoque";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Qn_Quantidade", dto.Qn_Quantidade));
+            parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
+            parms.Add(new MySqlParameter("dt_datavl", dto.dt_data));
+            parms.Add(new MySqlParameter("nm_nome", dto.nm_nome));
+            parms.Add(new MySqlParameter("pc_preçoporcaixa", dto.Pc_preco));
+            parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
+            parms.Add(new MySqlParameter("kl_kilo", dto.Qn_QuantidadeEmKg));
+            parms.Add(new MySqlParameter("id_produto_id", dto.i));
+
+            Database db = new Database();
+            db.ExecuteInsertScriptWithPk(Script, parms);
+
+        }
+
+        public void Remover(int id)
+        {
+            string Script = @"SELECT FROM Tb_Estoque WHERE Id_Estoque = @Id_Estoque";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Id_Estoque", id ));
+            Database db = new Database();
+            db.ExecuteInsertScript(Script, parms);
+        }
+        public List<EstoqueViewDTo> Listar()
+        {
+            string Script = @"SELECT *FROM Tb_Estoque";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
+            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            while (reader.Read)
+            {
+                EstoqueViewDTo dto = new EstoqueViewDTo();
+                dto.Id_Estoque = reader.GetInt32("Id_Cliente");
+                dto.nm_nome = reader.GetString("nm_nome");
+                dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
+                dto.kl_kilo = reader.GetDecimal("kl_kilo");
+                dto.id_produto_id = reader.GetInt32("id_produto_id");
+                dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_datavl = reader.GetDateTime("dt_datavl");
+
+                lista.Add(dto);
+
+            }
+            return lista;
+
+        }
+        public List<EstoqueViewDTo> ConsultarporNome(string Nome)
+        {
+            string script = @"select * from Tb_Estoque where nm_nome like @nm_nome";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            while (reader.Read())
+            {
+                EstoqueViewDTo dto = new EstoqueViewDTo();
+                dto.Id_Estoque = reader.GetInt32("Id_Cliente");
+                dto.nm_nome = reader.GetString("nm_nome");
+                dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
+                dto.kl_kilo = reader.GetDecimal("kl_kilo");
+                dto.id_produto_id = reader.GetInt32("id_produto_id");
+                dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_datavl = reader.GetDateTime("dt_datavl");
+
+                lista.Add(dto);
+
+            }
+            return lista;
+        }
+        public List<EstoqueViewDTo> ConsultarpoID(int id)
+        {
+            string script = @"select * from Tb_Estoque where Id_Estoque like @Id_Estoque";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Id_Estoque", id));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            while (reader.Read())
+            {
+                EstoqueViewDTo dto = new EstoqueViewDTo();
+                dto.Id_Estoque = reader.GetInt32("Id_Cliente");
+                dto.nm_nome = reader.GetString("nm_nome");
+                dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
+                dto.kl_kilo = reader.GetDecimal("kl_kilo");
+                dto.id_produto_id = reader.GetInt32("id_produto_id");
+                dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_datavl = reader.GetDateTime("dt_datavl");
+                lista.Add(dto);
+
+            }
+            return lista;
+
+
+
+        }
     }
 }
