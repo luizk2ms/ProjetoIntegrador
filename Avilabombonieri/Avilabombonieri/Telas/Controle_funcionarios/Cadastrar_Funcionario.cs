@@ -1,5 +1,6 @@
 ﻿using Avilabombonieri.Controle_Usuario;
 using Avilabombonieri.Tela_inicio;
+using Avilabombonieri.Telas.Controle_funcionarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
