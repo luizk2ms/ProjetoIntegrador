@@ -46,6 +46,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Cliente\ClienteBusiness.cs" />
+    <Compile Include="DB\Cliente\ClienteDatabase.cs" />
+    <Compile Include="DB\Cliente\ClienteDTO.cs" />
+    <Compile Include="DB\Cliente\ClienteViewDTO.cs" />
+    <Compile Include="DB\Connection.cs" />
+    <Compile Include="DB\Database.cs" />
+    <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
+    <Compile Include="DB\Estoque\EstoqueDatabase.cs" />
+    <Compile Include="DB\Estoque\EstoqueDTO.cs" />
+    <Compile Include="DB\Estoque\EstoqueViewDTo.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorBusiness.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorDatabase.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorDTO.cs" />
+    <Compile Include="DB\Fornecedor\FornecedorViewDTO.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioViewDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoDatabase.cs" />
+    <Compile Include="DB\Pedido\PedidoDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
+    <Compile Include="DB\Produto\ProdutoDatabase.cs" />
+    <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoViewDTO.cs" />
     <Compile Include="Telas\Controle_Cliente\Frm_Alterar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,9 +295,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DB\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\demo.gif" />
   </ItemGroup>
