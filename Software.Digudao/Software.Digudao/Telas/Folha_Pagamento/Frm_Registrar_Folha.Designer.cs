@@ -240,6 +240,7 @@
             this.button9.TabIndex = 105;
             this.button9.Text = "Consultar Relatorio";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // panel5
             // 

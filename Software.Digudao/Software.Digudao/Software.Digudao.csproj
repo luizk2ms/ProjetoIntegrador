@@ -46,16 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\APIS\CorreioResponde.cs" />
+    <Compile Include="DB\APIS\CorreiosModels.cs" />
     <Compile Include="DB\Cliente\ClienteBusiness.cs" />
     <Compile Include="DB\Cliente\ClienteDatabase.cs" />
     <Compile Include="DB\Cliente\ClienteDTO.cs" />
     <Compile Include="DB\Cliente\ClienteViewDTO.cs" />
-    <Compile Include="DB\Connection.cs" />
-    <Compile Include="DB\Database.cs" />
+    <Compile Include="DB\db\Connection.cs" />
+    <Compile Include="DB\db\Database.cs" />
     <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
     <Compile Include="DB\Estoque\EstoqueDatabase.cs" />
     <Compile Include="DB\Estoque\EstoqueDTO.cs" />
     <Compile Include="DB\Estoque\EstoqueViewDTo.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Desconto_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_Business.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_Database.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_View_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\INSS_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\IR_DTO.cs" />
     <Compile Include="DB\Fornecedor\FornecedorBusiness.cs" />
     <Compile Include="DB\Fornecedor\FornecedorDatabase.cs" />
     <Compile Include="DB\Fornecedor\FornecedorDTO.cs" />
