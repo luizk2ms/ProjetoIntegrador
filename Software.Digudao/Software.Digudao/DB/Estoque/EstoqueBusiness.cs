@@ -8,10 +8,10 @@ namespace prototipos.DB.Estoque
 {
     class EstoqueBusiness
     {
-        public int Salvar(EstoqueDTO dto)
+        public int SalvarEstoque(EstoqueDTO dto)
         {
             EstoqueDatabase db = new EstoqueDatabase();
-            return db.Salvar(dto);
+            return db.SalvarEstoque(dto);
         }
 
         public void Alterar(EstoqueDTO dto)
@@ -37,10 +37,10 @@ namespace prototipos.DB.Estoque
             return db.ConsultarporNome(nome);
         }
 
-        public List<EstoqueDTO> ConsultarpoId(int ID)
+        public List<EstoqueViewDTo> ConsultarpoID(int id)
         {
             EstoqueDatabase db = new EstoqueDatabase();
-            return db.ConsultarporId(ID);
+            return db.ConsultarpoID(id);
         }
     }
 }

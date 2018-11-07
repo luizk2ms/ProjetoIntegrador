@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;

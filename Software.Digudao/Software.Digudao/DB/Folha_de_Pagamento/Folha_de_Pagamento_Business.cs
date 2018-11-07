@@ -32,10 +32,10 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
             return db.AlterarFolha(dto);
         }
 
-        public int RemoverFolha(int idFolha)
+        public int RemoverFolha(int id)
         {
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();
-            return db.RemoverFolha(idFolha);
+            return db.(id);
         }
 
         public List<Folha_de_Pagamento_View_DTO> Consultar()

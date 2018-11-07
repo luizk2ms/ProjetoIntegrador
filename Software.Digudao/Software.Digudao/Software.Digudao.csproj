@@ -252,6 +252,9 @@
     <Compile Include="Telas\Produto\ConsultarProduto.Designer.cs">
       <DependentUpon>ConsultarProduto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validações\CNPJ.cs" />
+    <Compile Include="Validações\CPF.cs" />
+    <Compile Include="Validações\exReg.cs" />
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>

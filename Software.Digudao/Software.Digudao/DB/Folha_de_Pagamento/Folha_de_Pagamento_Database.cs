@@ -106,7 +106,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                 List<MySqlParameter> parms = new List<MySqlParameter>();
                 parms.Add(new MySqlParameter("id_FolhadePagamento", id + "%"));
                 Database db = new Database();
-                MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+                MySqlDataReader reader = db.ExecuteSelectScript(script,parms);
                 List<Folha_de_Pagamento_View_DTO> folha = new List<Folha_de_Pagamento_View_DTO>();
                 while (reader.Read())
                 {
@@ -208,7 +208,6 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                     dto.ob_observacao = reader.GetString("ob_observacao");
                     dto.vl_salarioBruto = reader.GetDecimal("vl_salarioBruto");
                     dto.Nm_Nome = reader.GetString("Nm_Nome");
-
 
 
                 }
