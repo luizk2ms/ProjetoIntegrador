@@ -30,20 +30,18 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dtg_consultarproduto = new System.Windows.Forms.DataGridView();
-            this.NúmeroCaixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QntVendasAVista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QntVendasCartão = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorRecebido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diário = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mensal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -53,6 +51,12 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
+            this.NúmeroCaixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QntVendasAVista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QntVendasCartão = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorRecebido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diário = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mensal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_consultarproduto)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -105,14 +109,14 @@
             this.ValorRecebido,
             this.Diário,
             this.Mensal});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtg_consultarproduto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(213)))), ((int)(((byte)(138)))), ((int)(((byte)(99)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtg_consultarproduto.DefaultCellStyle = dataGridViewCellStyle9;
             this.dtg_consultarproduto.GridColor = System.Drawing.Color.Indigo;
             this.dtg_consultarproduto.Location = new System.Drawing.Point(79, 68);
             this.dtg_consultarproduto.Name = "dtg_consultarproduto";
@@ -120,45 +124,12 @@
             this.dtg_consultarproduto.Size = new System.Drawing.Size(643, 329);
             this.dtg_consultarproduto.TabIndex = 74;
             // 
-            // NúmeroCaixa
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.NúmeroCaixa.DefaultCellStyle = dataGridViewCellStyle3;
-            this.NúmeroCaixa.HeaderText = "NúmeroCaixa";
-            this.NúmeroCaixa.Name = "NúmeroCaixa";
-            // 
-            // QntVendasAVista
-            // 
-            this.QntVendasAVista.HeaderText = "QntVendasAVista";
-            this.QntVendasAVista.Name = "QntVendasAVista";
-            // 
-            // QntVendasCartão
-            // 
-            this.QntVendasCartão.HeaderText = "QntVendasCartão";
-            this.QntVendasCartão.Name = "QntVendasCartão";
-            // 
-            // ValorRecebido
-            // 
-            this.ValorRecebido.HeaderText = "ValorRecebido";
-            this.ValorRecebido.Name = "ValorRecebido";
-            // 
-            // Diário
-            // 
-            this.Diário.HeaderText = "Diário";
-            this.Diário.Name = "Diário";
-            // 
-            // Mensal
-            // 
-            this.Mensal.HeaderText = "Mensal";
-            this.Mensal.Name = "Mensal";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Aquamarine;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
             this.panel2.Controls.Add(this.button8);
             this.panel2.Controls.Add(this.button7);
@@ -171,7 +142,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(816, 36);
+            this.panel2.Size = new System.Drawing.Size(819, 36);
             this.panel2.TabIndex = 85;
             // 
             // button12
@@ -179,22 +150,11 @@
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.Transparent;
-            this.button12.Location = new System.Drawing.Point(697, 5);
+            this.button12.Location = new System.Drawing.Point(729, 5);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(33, 23);
             this.button12.TabIndex = 73;
             this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.ForeColor = System.Drawing.Color.Transparent;
-            this.button13.Location = new System.Drawing.Point(736, 5);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(26, 23);
-            this.button13.TabIndex = 74;
-            this.button13.UseVisualStyleBackColor = true;
             // 
             // button14
             // 
@@ -304,6 +264,48 @@
             this.button9.Text = "Inicio";
             this.button9.UseVisualStyleBackColor = true;
             // 
+            // NúmeroCaixa
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.NúmeroCaixa.DefaultCellStyle = dataGridViewCellStyle3;
+            this.NúmeroCaixa.HeaderText = "NúmeroCaixa";
+            this.NúmeroCaixa.Name = "NúmeroCaixa";
+            // 
+            // QntVendasAVista
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.QntVendasAVista.DefaultCellStyle = dataGridViewCellStyle4;
+            this.QntVendasAVista.HeaderText = "QntVendasAVista";
+            this.QntVendasAVista.Name = "QntVendasAVista";
+            // 
+            // QntVendasCartão
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.QntVendasCartão.DefaultCellStyle = dataGridViewCellStyle5;
+            this.QntVendasCartão.HeaderText = "QntVendasCartão";
+            this.QntVendasCartão.Name = "QntVendasCartão";
+            // 
+            // ValorRecebido
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.ValorRecebido.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ValorRecebido.HeaderText = "ValorRecebido";
+            this.ValorRecebido.Name = "ValorRecebido";
+            // 
+            // Diário
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.Diário.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Diário.HeaderText = "Diário";
+            this.Diário.Name = "Diário";
+            // 
+            // Mensal
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.Mensal.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Mensal.HeaderText = "Mensal";
+            this.Mensal.Name = "Mensal";
+            // 
             // Frm_fluxo_consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -329,15 +331,8 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dtg_consultarproduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NúmeroCaixa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QntVendasAVista;
-        private System.Windows.Forms.DataGridViewTextBoxColumn QntVendasCartão;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ValorRecebido;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Diário;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Mensal;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
@@ -347,5 +342,11 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NúmeroCaixa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QntVendasAVista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn QntVendasCartão;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ValorRecebido;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Diário;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mensal;
     }
 }
