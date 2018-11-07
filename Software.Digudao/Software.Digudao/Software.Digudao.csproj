@@ -52,6 +52,12 @@
     <Compile Include="DB\Cliente\ClienteDatabase.cs" />
     <Compile Include="DB\Cliente\ClienteDTO.cs" />
     <Compile Include="DB\Cliente\ClienteViewDTO.cs" />
+    <Compile Include="DB\Controle_de_Usuario\LoginDatabase.cs" />
+    <Compile Include="DB\Controle_de_Usuario\LoginBusiness.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioBUsiness.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
     <Compile Include="DB\db\Connection.cs" />
     <Compile Include="DB\db\Database.cs" />
     <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
@@ -215,6 +221,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Telas\Controle_Usuario\Frm_Usuario1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Controle_Usuario\Frm_Usuario1.Designer.cs">
+      <DependentUpon>Frm_Usuario1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Alterar_Cliente.resx">
       <DependentUpon>Frm_Alterar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
@@ -290,6 +302,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.resx">
       <DependentUpon>Frm_Registrar_Folha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Controle_Usuario\Frm_Usuario1.resx">
+      <DependentUpon>Frm_Usuario1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
