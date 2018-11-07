@@ -11,7 +11,7 @@ namespace prototipos.DB.Funcionario
         public int Id_Funcionario { get; set; }
         public string Nm_Nome { get; set; }
         public string lg_login { get; set; }
-        public string sn_senha { get; set; }
+        public int sn_senha { get; set; }
         public string ds_endereço { get; set; }
         public int cp_cep { get; set; }
         public int cpf_cpf { get; set; }

@@ -1,4 +1,5 @@
-﻿using prototipos.DB;
+﻿using MySql.Data.MySqlClient;
+using prototipos.DB;
 using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
@@ -90,8 +91,8 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                 {
                     Desconto_DTO desconto = new Desconto_DTO();
                     desconto.id_Descontos = reader.GetInt32("id_Descontos");
-                    desconto.ds_Porcentagem = reader.GetString("ds_Porcentagem");
-                    desconto.ds_Tipo = reader.GetDecimal("ds_Tipo");
+                    desconto.ds_Porcentagem = reader.GetDecimal("ds_Porcentagem");
+                    desconto.ds_Tipo = reader.GetString("ds_Tipo");
 
                     descontos.Add(desconto);
                 }
@@ -113,10 +114,10 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                     dto.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
                     dto.id_Funcionario = reader.GetInt32("id_Funcionario");
                     dto.cr_cargo = reader.GetString("cr_cargo");
-                    dto.ds_diastrabalhados = reader.GetDate("ds_diastrabalhados");
-                    dto.ds_horae = reader.GetDate("ds_horae");
-                    dto.ds_horas = reader.GetIDate("ds_horas");
-                    dto.Dt_Data_de_Registro = reader.GetDate("Dt_Data_de_Registro");
+                    dto.ds_diastrabalhados = reader.GetInt32("ds_diastrabalhados");
+                    dto.ds_horae = reader.GetInt32("ds_horae");
+                    dto.ds_horas = reader.GetInt32("ds_horas");
+                    dto.Dt_Data_de_Registro = reader.GetDateTime("Dt_Data_de_Registro");
                     dto.ob_observacao = reader.GetString("ob_observacao");
                     dto.vl_salarioBruto = reader.GetDecimal("vl_salarioBruto");
                     dto.Nm_Nome = reader.GetString("Nm_Nome");
@@ -200,12 +201,14 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                     dto.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
                     dto.id_Funcionario = reader.GetInt32("id_Funcionario");
                     dto.cr_cargo = reader.GetString("cr_cargo");
-                    dto.ds_diastrabalhados = reader.GetDate("ds_diastrabalhados");
-                    dto.ds_horae = reader.GetDate("ds_horae");
-                    dto.ds_horas = reader.GetIDate("ds_horas");
-                    dto.Dt_Data_de_Registro = reader.GetDate("Dt_Data_de_Registro");
+                    dto.ds_diastrabalhados = reader.GetInt32("ds_diastrabalhados");
+                    dto.ds_horae = reader.GetInt32("ds_horae");
+                    dto.ds_horas = reader.GetInt32("ds_horas");
+                    dto.Dt_Data_de_Registro = reader.GetDateTime("Dt_Data_de_Registro");
                     dto.ob_observacao = reader.GetString("ob_observacao");
                     dto.vl_salarioBruto = reader.GetDecimal("vl_salarioBruto");
+                    dto.Nm_Nome = reader.GetString("Nm_Nome");
+
 
 
                 }

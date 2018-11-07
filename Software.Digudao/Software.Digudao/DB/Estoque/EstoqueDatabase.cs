@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -80,17 +81,17 @@ namespace prototipos.DB.Estoque
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
             List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
-            while (reader.Read)
+            while (reader.Read())
             {
                 EstoqueViewDTo dto = new EstoqueViewDTo();
                 dto.Id_Estoque = reader.GetInt32("Id_Cliente");
                 dto.nm_nome = reader.GetString("nm_nome");
                 dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
                 dto.kl_kilo = reader.GetDecimal("kl_kilo");
-                dto.id_produto_id = reader.GetInt("id_produto_id");
-                dto.Qn_Quantidade = reader.GetInt("Qn_Quantidade");
-                dto.Tm_tamanho = reader.GetInt("Tm_tamanho");
-                dto.dt_datavl = reader.GetDate("dt_datavl");
+                dto.id_produto_id = reader.GetInt32("id_produto_id");
+                dto.Qn_Quantidade = reader.GetInt32("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_datavl = reader.GetDateTime("dt_datavl");
 
                 lista.Add(dto);
 
@@ -113,10 +114,10 @@ namespace prototipos.DB.Estoque
                 dto.nm_nome = reader.GetString("nm_nome");
                 dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
                 dto.kl_kilo = reader.GetDecimal("kl_kilo");
-                dto.id_produto_id = reader.GetInt("id_produto_id");
-                dto.Qn_Quantidade = reader.GetInt("Qn_Quantidade");
-                dto.Tm_tamanho = reader.GetInt("Tm_tamanho");
-                dto.dt_datavl = reader.GetDate("dt_datavl");
+                dto.id_produto_id = reader.GetInt32("id_produto_id");
+                dto.Qn_Quantidade = reader.GetInt32("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_datavl = reader.GetDateTime("dt_datavl"); ;
 
                 lista.Add(dto);
 
@@ -138,11 +139,10 @@ namespace prototipos.DB.Estoque
                 dto.nm_nome = reader.GetString("nm_nome");
                 dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
                 dto.kl_kilo = reader.GetDecimal("kl_kilo");
-                dto.id_produto_id = reader.GetInt("id_produto_id");
-                dto.Qn_Quantidade = reader.GetInt("Qn_Quantidade");
-                dto.Tm_tamanho = reader.GetInt("Tm_tamanho");
-                dto.dt_datavl = reader.GetDate("dt_datavl");
-                lista.Add(dto);
+                dto.id_produto_id = reader.GetInt32("id_produto_id");
+                dto.Qn_Quantidade = reader.GetInt32("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_datavl = reader.GetDateTime("dt_datavl");
 
             }
             return lista;

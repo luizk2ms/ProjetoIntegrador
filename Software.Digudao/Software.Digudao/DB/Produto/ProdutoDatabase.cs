@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,11 +37,11 @@ namespace prototipos.DB.Produto
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GeatInt32("Id_Produto");
-                dto.Nm_Nome = reader.GeatString("Nm_Nome");
-                dto.Pc_Preco = reader.GeaDecimal("Pc_Preco");
-                dto.Ql_Quantidade = reader.GeatInt("Ql_Quantidade");
-                dto.Tm_Tamanho = reader.GeatString("Tm_Tamanho");
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
+                dto.Nm_Nome = reader.GetString("Nm_Nome");
+                dto.Pc_Preco = reader.GetDecimal("Pc_Preco");
+                dto.Ql_Quantidade = reader.GetInt32("Ql_Quantidade");
+                dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
 
                 lista.Add(dto);
             }
@@ -92,11 +93,11 @@ namespace prototipos.DB.Produto
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.Pc_Preco = reader.GetDecimal("Pc_Preco");
-                dto.Ql_Quantidade = reader.GetInt32("Ql_Quantidade");
-                dto.Tm_Tamanho = reader.GeatString("Tm_Tamanho");
+                parms.Add(new MySqlParameter("Id_Produto", dto.Id_Produto));
+                parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
+                parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
+                parms.Add(new MySqlParameter("Pc_Preco", dto.Pc_Preco));
+                parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
 
                 lista.Add(dto);
             }

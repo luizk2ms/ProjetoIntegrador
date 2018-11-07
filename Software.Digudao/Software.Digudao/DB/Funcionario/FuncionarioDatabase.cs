@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,14 +58,14 @@ namespace prototipos.DB.Funcionario
                 dados.Nm_Nome = reader.GetString("Nm_Nome");
                 dados.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dados.dt_datasaida = reader.GetDateTime("dt_datasaida");
-                dados.cpf_cpf = reader.GetString("cpf_cpf");
-                dados.cp_cep = reader.GetString("cp_cep");
+                dados.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dados.cp_cep = reader.GetInt32("cp_cep");
                 dados.ds_endereço = reader.GetString("ds_endereço");
                 dados.cr_cargo = reader.GetString("cr_cargo");
                 dados.lg_login = reader.GetString("lg_login");
-                dados.nm_numero = reader.GetString("nm_numero");
+                dados.nm_numero = reader.GetInt32("nm_numero");
                 dados.sn_senha = reader.GetInt32("sn_senha");
-                dados.tl_empresa = reader.GeatString("tl_empresa");
+                dados.tl_empresa = reader.GetInt32("tl_empresa");
                 dados.uf_uf = reader.GetString("uf_uf");
                 Funcionarios.Add(dados);
             }
@@ -125,24 +127,26 @@ namespace prototipos.DB.Funcionario
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
             List<FuncionarioViewDTO> lista = new List<FuncionarioViewDTO>();
-            while (reader.Read)
+            while (reader.Read())
             {
-                FuncionarioViewDTO dto = new FuncionarioViewDTO();
-                dto.Id_Funcionario = reader.GetInt32("Id_Cliente");
-                dto.lg_login = reader.GetString("lg_login");
-                dto.Nm_Nome = reader.GetInt("Nm_Nome");
-                dto.nm_numero = reader.GetInt("nm_numero");
-                dto.sn_senha = reader.GetInt("sn_senha");
-                dto.uf_uf = reader.GetInt("uf_uf");
-                dto.cel_celular = reader.GetString("cel_celular");
-                dto.cp_cep = reader.GetString("cp_cep");
-                dto.cr_cargo = reader.GetString("cr_cargo");
-                dto.ds_endereço = reader.GetString("ds_endereço");
-                dto.dt_datadeentrada = reader.GetString("dt_datadeentrada");
-                dto.dt_datasaida = reader.GetString("dt_datasaida");
+                FuncionarioViewDTO dados = new FuncionarioViewDTO();
+                dados.Id_Funcionario = reader.GetInt32("Id_Funcionario");
+                dados.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
+                dados.Nm_Nome = reader.GetString("Nm_Nome");
+                dados.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
+                dados.dt_datasaida = reader.GetDateTime("dt_datasaida");
+                dados.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dados.cp_cep = reader.GetInt32("cp_cep");
+                dados.ds_endereço = reader.GetString("ds_endereço");
+                dados.cr_cargo = reader.GetString("cr_cargo");
+                dados.lg_login = reader.GetString("lg_login");
+                dados.nm_numero = reader.GetInt32("nm_numero");
+                dados.sn_senha = reader.GetInt32("sn_senha");
+                dados.tl_empresa = reader.GetInt32("tl_empresa");
+                dados.uf_uf = reader.GetString("uf_uf");
+                Funcionarios.Add(dados);
 
-
-                lista.Add(dto);
+                lista.Add(dados);
 
             }
             return lista;
@@ -153,7 +157,7 @@ namespace prototipos.DB.Funcionario
         {
             string script = @"SELECT *FROM Tb_Funcionario WHERE id_Funcionario like id_Funcionario";
 
-            List<MyqlParameter> parms = new List<MyqlParameter>();
+            List<MySqlParameter> parms = new List<MySqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
@@ -166,14 +170,14 @@ namespace prototipos.DB.Funcionario
                 funcionario.Nm_Nome = reader.GetString("Nm_Nome");
                 funcionario.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 funcionario.dt_datasaida = reader.GetDateTime("dt_datasaida");
-                funcionario.cpf_cpf = reader.GetString("cpf_cpf");
-                funcionario.cp_cep = reader.GetString("cp_cep");
+                funcionario.cpf_cpf = reader.GetInt32("cpf_cpf");
+                funcionario.cp_cep = reader.GetInt32("cp_cep");
                 funcionario.ds_endereço = reader.GetString("ds_endereço");
                 funcionario.cr_cargo = reader.GetString("cr_cargo");
                 funcionario.lg_login = reader.GetString("lg_login");
-                funcionario.nm_numero = reader.GetString("nm_numero");
+                funcionario.nm_numero = reader.GetInt32("nm_numero");
                 funcionario.sn_senha = reader.GetInt32("sn_senha");
-                funcionario.tl_empresa = reader.GeatString("tl_empresa");
+                funcionario.tl_empresa = reader.GetInt32("tl_empresa");
                 funcionario.uf_uf = reader.GetString("uf_uf");
 
                 funcionario.Add(funcionario);

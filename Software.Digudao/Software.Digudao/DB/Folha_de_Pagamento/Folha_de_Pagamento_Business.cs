@@ -13,7 +13,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
             exReg regex = new exReg();
             regex.ValidarSalario(dto.vl_salarioBruto.ToString());
 
-            if (dto.ds_Cargo == string.Empty)
+            if (dto.cr_cargo == string.Empty)
                 throw new ArgumentException("O cargo não pode ser nulo.");
 
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();
@@ -25,7 +25,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
             exReg regex = new exReg();
             regex.ValidarSalario(dto.vl_salarioBruto.ToString());
 
-            if (dto.ds_Cargo == string.Empty)
+            if (dto.cr_cargo == string.Empty)
                 throw new ArgumentException("O cargo não pode ser nulo.");
 
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();

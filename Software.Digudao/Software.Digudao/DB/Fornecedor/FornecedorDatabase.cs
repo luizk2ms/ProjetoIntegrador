@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using prototipos.DB.Estoque;
+using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,15 +47,15 @@ namespace prototipos.DB.Fornecedor
                 FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
-                dto.Nm_nome = reader.GetInt32("Nm_nome");
+                dto.Nm_nome = reader.GetString("Nm_nome");
                 dto.Nm_numero = reader.GetInt32("Nm_numero");
                 dto.tel_contem = reader.GetInt32("tel_contem");
-                dto.uf_uf = reader.GetInt32("uf_uf");
+                dto.uf_uf = reader.GetString("uf_uf");
                 dto.cel_celular = reader.GetInt32("cel_celular");
                 dto.cnpj = reader.GetInt32("cnpj");
-                dto.ds_descricao = reader.GetInt32("ds_descricao");
-                dto.el_email = reader.GetInt32("el_email");
-                dto.en_endereço = reader.GetInt32("en_endereço");
+                dto.ds_descricao = reader.GetString("ds_descricao");
+                dto.el_email = reader.GetString("el_email");
+                dto.en_endereço = reader.GetString("en_endereço");
 
 
 
@@ -115,17 +118,17 @@ namespace prototipos.DB.Fornecedor
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
             List<FornecedorViewDTO> lista = new List<FornecedorViewDTO>();
-            while (reader.Read)
+            while (reader.Read())
             {
                 FornecedorViewDTO dto = new FornecedorViewDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");
-                dto.Nm_numero = reader.GetInt("Nm_numero");
-                dto.tel_contem = reader.GetInt("tel_contem");
+                dto.Nm_numero = reader.GetInt32("Nm_numero");
+                dto.tel_contem = reader.GetInt32("tel_contem");
                 dto.uf_uf = reader.GetString("uf_uf");
-                dto.cel_celular = reader.GetInt("cel_celular");
-                dto.cnpj = reader.GetInt("cnpj");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cnpj = reader.GetInt32("cnpj");
                 dto.ds_descricao = reader.GetString("ds_descricao");
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
@@ -151,14 +154,15 @@ namespace prototipos.DB.Fornecedor
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");
-                dto.Nm_numero = reader.GetInt("Nm_numero");
-                dto.tel_contem = reader.GetInt("tel_contem");
+                dto.Nm_numero = reader.GetInt32("Nm_numero");
+                dto.tel_contem = reader.GetInt32("tel_contem");
                 dto.uf_uf = reader.GetString("uf_uf");
-                dto.cel_celular = reader.GetInt("cel_celular");
-                dto.cnpj = reader.GetInt("cnpj");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cnpj = reader.GetInt32("cnpj");
                 dto.ds_descricao = reader.GetString("ds_descricao");
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
+
 
 
                 lista.Add(dto);
@@ -180,14 +184,15 @@ namespace prototipos.DB.Fornecedor
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");
-                dto.Nm_numero = reader.GetInt("Nm_numero");
-                dto.tel_contem = reader.GetInt("tel_contem");
+                dto.Nm_numero = reader.GetInt32("Nm_numero");
+                dto.tel_contem = reader.GetInt32("tel_contem");
                 dto.uf_uf = reader.GetString("uf_uf");
-                dto.cel_celular = reader.GetInt("cel_celular");
-                dto.cnpj = reader.GetInt("cnpj");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cnpj = reader.GetInt32("cnpj");
                 dto.ds_descricao = reader.GetString("ds_descricao");
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
+
 
 
             }
