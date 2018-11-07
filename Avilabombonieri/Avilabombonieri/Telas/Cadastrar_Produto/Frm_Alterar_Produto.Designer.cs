@@ -176,9 +176,9 @@
             this.label7.ForeColor = System.Drawing.Color.Indigo;
             this.label7.Location = new System.Drawing.Point(205, 48);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(327, 34);
+            this.label7.Size = new System.Drawing.Size(292, 34);
             this.label7.TabIndex = 83;
-            this.label7.Text = "Cadastrar produto de venda";
+            this.label7.Text = "Alterar produto de venda";
             // 
             // panel1
             // 
@@ -360,7 +360,7 @@
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(88, 33);
             this.btnCadastrar.TabIndex = 75;
-            this.btnCadastrar.Text = "Consultar";
+            this.btnCadastrar.Text = "Alterar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
