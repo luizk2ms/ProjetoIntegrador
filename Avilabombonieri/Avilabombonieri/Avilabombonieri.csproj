@@ -45,10 +45,41 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Cliente\ClienteBusiness.cs" />
+    <Compile Include="DB\Cliente\ClienteDatabase.cs" />
+    <Compile Include="DB\Cliente\ClienteDTO.cs" />
+    <Compile Include="DB\Cliente\ClienteViewDTO.cs" />
+    <Compile Include="DB\Connection.cs" />
+    <Compile Include="DB\Database.cs" />
+    <Compile Include="DB\Devolução\DevolucaoDTO.cs" />
+    <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
+    <Compile Include="DB\Estoque\EstoqueDatabase.cs" />
+    <Compile Include="DB\Estoque\EstoqueDTO.cs" />
+    <Compile Include="DB\Estoque\EstoqueViewDTo.cs" />
     <Compile Include="DB\Fluxo_caixa\Fluxo_BUSSINES.cs" />
+    <Compile Include="DB\Fluxo_caixa\Fluxo_DATABASE.cs" />
     <Compile Include="DB\Fluxo_caixa\Fluxo_DTO.cs" />
     <Compile Include="DB\Fluxo_caixa\Fluxo_View.cs" />
-    <Compile Include="DB\Fluxo_caixa\Fluxo_DATABASE.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
+    <Compile Include="DB\Funcionario\FuncionarioViewDTO.cs" />
+    <Compile Include="DB\PedidoItem\PedidoItemDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoDatabase.cs" />
+    <Compile Include="DB\Pedido\PedidoDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
+    <Compile Include="DB\Produto\PedidoBusiness.cs" />
+    <Compile Include="DB\Produto\PedidoDatabase.cs" />
+    <Compile Include="DB\Produto\PedidoViewDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Tb_Fonecedor\FornecedorBusiness.cs" />
+    <Compile Include="DB\Tb_Fonecedor\FornecedorDatabase.cs" />
+    <Compile Include="DB\Tb_Fonecedor\FornecedorViewDTO.cs" />
+    <Compile Include="DB\Tb_Fonecedor\Tb_FonecedorDTO.cs" />
+    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraBusiness.cs" />
+    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDataBase.cs" />
+    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDTO.cs" />
     <Compile Include="Telas\Cadastrar_Produto\Frm_Alterar_Produto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,33 +170,6 @@
     <Compile Include="Telas\Controle_Usuario\Consultar_Compra.Designer.cs">
       <DependentUpon>Consultar_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="DB\Cliente\ClienteBusiness.cs" />
-    <Compile Include="DB\Cliente\ClienteDataBase.cs" />
-    <Compile Include="DB\Cliente\ClienteDTO.cs" />
-    <Compile Include="DB\Devolução\DevolucaoBusiness.cs" />
-    <Compile Include="DB\Devolução\DevolucaoDataBase.cs" />
-    <Compile Include="DB\Devolução\DevolucaoDTO.cs" />
-    <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
-    <Compile Include="DB\Estoque\EstoqueDataBase.cs" />
-    <Compile Include="DB\Estoque\EstoqueDTO.cs" />
-    <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
-    <Compile Include="DB\Funcionario\FuncionarioDataBase.cs" />
-    <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
-    <Compile Include="DB\PedidoItem\PedidoItemBusiness.cs" />
-    <Compile Include="DB\PedidoItem\PedidoItemDatabase.cs" />
-    <Compile Include="DB\PedidoItem\PedidoItemDTO.cs" />
-    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
-    <Compile Include="DB\Pedido\PedidoDataBase.cs" />
-    <Compile Include="DB\Pedido\PedidoDTO.cs" />
-    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
-    <Compile Include="DB\Produto\ProdutoDataBase.cs" />
-    <Compile Include="DB\Produto\ProdutoDTO.cs" />
-    <Compile Include="DB\Tb_Fonecedor\Tb_FonecedorDTO.cs" />
-    <Compile Include="DB\Tb_Fonecedor\Tb_FornecedorBusiness.cs" />
-    <Compile Include="DB\Tb_Fonecedor\Tb_FornecedorDataBase.cs" />
-    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraBusiness.cs" />
-    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDataBase.cs" />
-    <Compile Include="DB\Tb_PedidoCompra\Tb_PedidoCompraDTO.cs" />
     <Compile Include="Telas\Fluxo_Caixa\Frm_Consultar_Fluxo.cs">
       <SubType>Form</SubType>
     </Compile>
