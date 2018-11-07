@@ -45,6 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Cardapio\Cardapio_BUSSINES.cs" />
+    <Compile Include="DB\Cardapio\Cardapio_DATABASE.cs" />
+    <Compile Include="DB\Cardapio\Cardapio_DTO.cs" />
+    <Compile Include="DB\Cardapio\ItemdpProdutonoCardapio\ItemProdutoCardapioGrid.cs" />
+    <Compile Include="DB\Cardapio\ItemdpProdutonoCardapio\ProdutonoCardapioBusiness.cs" />
+    <Compile Include="DB\Cardapio\ItemdpProdutonoCardapio\ProdutonoCardapioDTO.cs" />
+    <Compile Include="DB\Cardapio\ItemdpProdutonoCardapio\PRODUTO_CARDAPIO_DATABASE.cs" />
     <Compile Include="DB\Cliente\ClienteBusiness.cs" />
     <Compile Include="DB\Cliente\ClienteDatabase.cs" />
     <Compile Include="DB\Cliente\ClienteDTO.cs" />
