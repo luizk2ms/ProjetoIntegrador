@@ -262,6 +262,7 @@
             this.Controls.Add(this.dtpfim);
             this.Controls.Add(this.dtkinicio);
             this.Controls.Add(this.label2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Fluxo_Caixa";
             this.Text = "Frm_Fluxo_Caixa";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

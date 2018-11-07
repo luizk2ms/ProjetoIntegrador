@@ -140,5 +140,15 @@ namespace Avilabombonieri.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WhatsApp_Image_2018_11_01_at_21_211 {
+            get {
+                object obj = ResourceManager.GetObject("WhatsApp Image 2018-11-01 at 21.211", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -79,9 +79,9 @@
             this.label5.ForeColor = System.Drawing.Color.Indigo;
             this.label5.Location = new System.Drawing.Point(14, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(240, 24);
+            this.label5.Size = new System.Drawing.Size(219, 24);
             this.label5.TabIndex = 64;
-            this.label5.Text = "Cadastro de Funcionário";
+            this.label5.Text = "Alterar de Funcionário";
             // 
             // panel2
             // 
