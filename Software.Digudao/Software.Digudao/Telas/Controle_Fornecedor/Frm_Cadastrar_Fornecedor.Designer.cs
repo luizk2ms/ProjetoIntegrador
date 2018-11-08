@@ -35,6 +35,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtuf = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtnome = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
@@ -75,12 +80,9 @@
             this.btnfuncionarios = new System.Windows.Forms.Button();
             this.btncompras = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.lblid = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtnome = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtuf = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +98,7 @@
             this.button4.TabIndex = 97;
             this.button4.Text = "Vincular Produto ao \r\n   Fornecedor";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label16
             // 
@@ -131,6 +134,7 @@
             this.button1.TabIndex = 78;
             this.button1.Text = "Salvar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // contextMenuStrip1
             // 
@@ -141,9 +145,11 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox12);
             this.panel1.Controls.Add(this.txtuf);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.lblid);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label2);
@@ -183,6 +189,57 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 379);
             this.panel1.TabIndex = 98;
+            // 
+            // txtuf
+            // 
+            this.txtuf.Location = new System.Drawing.Point(6, 111);
+            this.txtuf.MaxLength = 2;
+            this.txtuf.Multiline = true;
+            this.txtuf.Name = "txtuf";
+            this.txtuf.Size = new System.Drawing.Size(191, 19);
+            this.txtuf.TabIndex = 136;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label15.Location = new System.Drawing.Point(6, 93);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(29, 18);
+            this.label15.TabIndex = 137;
+            this.label15.Text = "UF";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label1.Location = new System.Drawing.Point(6, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(26, 18);
+            this.label1.TabIndex = 134;
+            this.label1.Text = "ID";
+            // 
+            // txtnome
+            // 
+            this.txtnome.Location = new System.Drawing.Point(6, 70);
+            this.txtnome.MaxLength = 50;
+            this.txtnome.Multiline = true;
+            this.txtnome.Name = "txtnome";
+            this.txtnome.Size = new System.Drawing.Size(191, 19);
+            this.txtnome.TabIndex = 132;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(6, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(128, 18);
+            this.label2.TabIndex = 133;
+            this.label2.Text = "Nome da Empresa";
             // 
             // button5
             // 
@@ -606,67 +663,34 @@
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             // 
-            // lblid
+            // label3
             // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblid.Location = new System.Drawing.Point(44, 22);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(12, 18);
-            this.lblid.TabIndex = 135;
-            this.lblid.Text = ".";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Location = new System.Drawing.Point(507, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.TabIndex = 139;
+            this.label3.Text = "ID Produto";
             // 
-            // label1
+            // textBox12
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(6, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 18);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "ID";
+            this.textBox12.Location = new System.Drawing.Point(594, 205);
+            this.textBox12.MaxLength = 50;
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(96, 19);
+            this.textBox12.TabIndex = 138;
             // 
-            // txtnome
+            // textBox11
             // 
-            this.txtnome.Location = new System.Drawing.Point(6, 70);
-            this.txtnome.MaxLength = 50;
-            this.txtnome.Multiline = true;
-            this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(191, 19);
-            this.txtnome.TabIndex = 132;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(6, 50);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 18);
-            this.label2.TabIndex = 133;
-            this.label2.Text = "Nome da Empresa";
-            // 
-            // txtuf
-            // 
-            this.txtuf.Location = new System.Drawing.Point(6, 111);
-            this.txtuf.MaxLength = 2;
-            this.txtuf.Multiline = true;
-            this.txtuf.Name = "txtuf";
-            this.txtuf.Size = new System.Drawing.Size(191, 19);
-            this.txtuf.TabIndex = 136;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label15.Location = new System.Drawing.Point(6, 93);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(29, 18);
-            this.label15.TabIndex = 137;
-            this.label15.Text = "UF";
+            this.textBox11.Location = new System.Drawing.Point(38, 21);
+            this.textBox11.MaxLength = 50;
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(96, 19);
+            this.textBox11.TabIndex = 140;
             // 
             // Frm_Cadastrar_Fornecedor
             // 
@@ -728,7 +752,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtuf;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label2;
@@ -743,5 +766,8 @@
         private System.Windows.Forms.Button btnfuncionarios;
         private System.Windows.Forms.Button btncompras;
         private System.Windows.Forms.Button btnInicio;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox11;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,7 +50,7 @@ namespace prototipos.DB.Cliente
                                                     em_email = @em_email,
                                               WHERE Id_Cliente = @Id_Cliente";
 
-            List<MsqlParameter> parms = new List<MsqlParameter>();
+            List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
             parms.Add(new MySqlParameter("ds_endereço", dto.ds_endereço));
             parms.Add(new MySqlParameter("cp_cep", dto.cp_cep));
@@ -124,7 +125,7 @@ namespace prototipos.DB.Cliente
         {
             string script = @"select * from Tb_Cliente where Id_Cliente like @Id_Cliente";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Cliente", id);
+            parms.Add(new MySqlParameter("Id_Cliente", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ClienteViewDTO> lista = new List<ClienteViewDTO>();

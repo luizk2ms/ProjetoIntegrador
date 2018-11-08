@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prototipos.DB.Fornecedor;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace Software.Digudao.Controle_Fornecedor
         public Frm_Consultar_Fornecedor()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FornecedorBusiness Cliente = new FornecedorBusiness();
+            List<FornecedorViewDTO> View = Cliente.ConsultarporNome(txtfornecedor.Text);
+            FornecedorViewDTO dto = View[0];
+            dgvfornecedor.DataSource = View;
         }
     }
 }

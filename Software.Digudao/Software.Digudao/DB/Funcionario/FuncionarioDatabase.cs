@@ -146,6 +146,7 @@ namespace prototipos.DB.Funcionario
 
             }
             return lista;
+        }
 
 
             public int ConsultarPorId(int id)

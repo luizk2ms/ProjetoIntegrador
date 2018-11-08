@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Software.Digudao.Folha_Pagamento
+namespace Software.Digudao
 {
-    public partial class Frm_Alterar_Folha : Form
+    public partial class Login : Form
     {
-        public Frm_Alterar_Folha()
+        public Login()
         {
             InitializeComponent();
-        }
-
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

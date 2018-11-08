@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Software.Digudao.Folha_Pagamento
+namespace Software.Digudao.Telas.Produto
 {
-    public partial class Frm_Alterar_Folha : Form
+    public partial class ConsultarProduto : Form
     {
-        public Frm_Alterar_Folha()
+        public ConsultarProduto()
         {
             InitializeComponent();
-        }
-
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -35,7 +35,7 @@ namespace prototipos.DB.Fornecedor
         {
             string script = @"select * from Tb_Fornecedor where Id_Fornecedor like @Id_Fornecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Fornecedor", id);
+            parms.Add(new MySqlParameter("Id_Fornecedor", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
@@ -170,7 +170,7 @@ namespace prototipos.DB.Fornecedor
         {
             string script = @"select * from Tb_Fornecedor where Id_Fornecedor like @Id_Fornecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Fornecedor", id);
+            parms.Add(new MySqlParameter("Id_Fornecedor", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<FornecedorViewDTO> lista = new List<FornecedorViewDTO>();

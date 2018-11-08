@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace prototipos.DB.Produto
     {
         public int Cadastrar(ProdutoDTO dto)
         {
-            string script = @"INSERT Funcionario(Nm_Nome,Tm_Tamanho,Pc_Preco,Ql_Quantidade)
+            string script = @"INSERT Tb_Produto(Nm_Nome,Tm_Tamanho,Pc_Preco,Ql_Quantidade)
                                           VALUES(@Nm_Nome,@Tm_Tamanho,@Pc_Preco,@Ql_Quantidade)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -24,30 +25,26 @@ namespace prototipos.DB.Produto
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-        public int ConsultarPorId(int id)
+        public List<ProdutoDTO> ConsultarPorId(int ID)
         {
             string script = @"SELECT *FROM Tb_Produto WHERE id_Produto like @id_Produto ";
-            List<MyqlParameter> parms = new List<MyqlParameter>();
-            parms.Add(new MySqlParameter("Tb_Produto", id));
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("id_Produto", ID + "%"));
             Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(script,parms);
-            List<ProdutoViewDTO> produto = new List<ProdutoViewDTO>();
-            while (reader.Read)
-
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<ProdutoDTO> lista = new List<ProdutoDTO>();
+            while (reader.Read())
             {
-                ProdutoViewDTO dto = new ProdutoViewDTO();
+                ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GeatInt32("Id_Produto");
                 dto.Nm_Nome = reader.GeatString("Nm_Nome");
                 dto.Pc_Preco = reader.GeaDecimal("Pc_Preco");
                 dto.Ql_Quantidade = reader.GeatInt("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GeatString("Tm_Tamanho");
 
-
-
-
+                lista.Add(dto);
             }
-            reader.close();
-            return produto;
+            return lista;
         }
 
         public int RemoverPRodutos(int id)
@@ -83,30 +80,29 @@ namespace prototipos.DB.Produto
         }
 
 
-        public List<ProdutoDTO> ConsultarProdutos()
+        public List<ProdutoDTO> Listar()
         {
             string script = @"SELECT * FROM Tb_Produto";
-
             List<MySqlParameter> parms = new List<MySqlParameter>();
 
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<ProdutoDTO> Produtos = new List<ProdutoDTO>();
+            List<ProdutoDTO> lista = new List<ProdutoDTO>();
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GeatInt32("Id_Produto");
-                dto.Nm_Nome = reader.GeatString("Nm_Nome");
-                dto.Pc_Preco = reader.GeaDecimal("Pc_Preco");
-                dto.Ql_Quantidade = reader.GeatInt("Ql_Quantidade");
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
+                dto.Nm_Nome = reader.GetString("Nm_Nome");
+                dto.Pc_Preco = reader.GetDecimal("Pc_Preco");
+                dto.Ql_Quantidade = reader.GetInt32("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GeatString("Tm_Tamanho");
 
-                Produtos.Add(dados);
+                lista.Add(dto);
             }
 
             reader.Close();
-            return Produtos;
+            return lista;
 
         }
     }

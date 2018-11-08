@@ -16,5 +16,13 @@ namespace Software.Digudao.Fluxo_caixa
         {
             InitializeComponent();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FluxodecaixaBusiness Cliente = new FluxodecaixaBusiness();
+            List<FluxodecaixaView> View = Cliente.ConsultarporNome(textBox2.Text);
+            ClienteViewDTO dto = View[0];
+            dataGridView1.DataSource = View;
+        }
     }
 }

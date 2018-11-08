@@ -32,18 +32,18 @@ namespace Software.Digudao.Folha_Pagamento
                 dto.ds_diastrabalhados = textBox5.Text == string.Empty ? 0 : Convert.ToInt32(textBox5.Text);
                 dto.ds_horae = textBox6.Text == string.Empty ? 0 : Convert.ToInt32(textBox6.Text);
                 dto.ds_horas = textBox7.Text == string.Empty ? 0 : Convert.ToInt32(textBox7.Text);
-                dto.id_Funcionario = DateTime.Now;
+                dto.id_Funcionario = Funcionario.id_funcionario;
                 dto.vl_salarioBruto = textBox8.Text == string.Empty ? 0 : Convert.ToDecimal(textBox8.Text);
-                
 
                 Folha_de_Pagamento_Business business = new Folha_de_Pagamento_Business();
                 business.SalvarFolha(dto);
+               
 
                 MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (ArgumentException ex)
             {
-                MessageBox.Show(ex.Message, "Black Fit LTDA", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "digudão", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             catch (Exception ex)
             {

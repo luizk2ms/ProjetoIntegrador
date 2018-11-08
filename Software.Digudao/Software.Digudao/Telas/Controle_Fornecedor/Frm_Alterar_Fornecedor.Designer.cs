@@ -43,7 +43,6 @@
             this.btnInicio = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.lblid = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -80,6 +79,11 @@
             this.label29 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.label16 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -251,17 +255,6 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
             this.dateTimePicker1.TabIndex = 99;
             // 
-            // lblid
-            // 
-            this.lblid.AutoSize = true;
-            this.lblid.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblid.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.lblid.Location = new System.Drawing.Point(44, 22);
-            this.lblid.Name = "lblid";
-            this.lblid.Size = new System.Drawing.Size(12, 18);
-            this.lblid.TabIndex = 135;
-            this.lblid.Text = ".";
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -334,6 +327,7 @@
             this.button2.TabIndex = 77;
             this.button2.Text = "Carregar dados";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // maskedTextBox2
             // 
@@ -354,6 +348,7 @@
             this.button1.TabIndex = 78;
             this.button1.Text = "Alterar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // maskedTextBox3
             // 
@@ -393,7 +388,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(506, 88);
+            this.textBox3.Location = new System.Drawing.Point(503, 126);
             this.textBox3.MaxLength = 45;
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
@@ -402,7 +397,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(504, 154);
+            this.textBox4.Location = new System.Drawing.Point(501, 192);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(191, 19);
@@ -414,13 +409,16 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txtuf);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.lblid);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.textBox12);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox11);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.maskedTextBox4);
             this.panel1.Controls.Add(this.maskedTextBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.maskedTextBox2);
@@ -432,6 +430,7 @@
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label20);
@@ -490,7 +489,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label20.Location = new System.Drawing.Point(507, 73);
+            this.label20.Location = new System.Drawing.Point(504, 111);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(50, 18);
             this.label20.TabIndex = 121;
@@ -512,7 +511,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label22.Location = new System.Drawing.Point(504, 124);
+            this.label22.Location = new System.Drawing.Point(501, 162);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(102, 18);
             this.label22.TabIndex = 119;
@@ -654,12 +653,60 @@
             this.label16.TabIndex = 100;
             this.label16.Text = "Cadastrar Fornecedores";
             // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(38, 21);
+            this.textBox11.MaxLength = 50;
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(96, 19);
+            this.textBox11.TabIndex = 132;
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(585, 235);
+            this.textBox12.MaxLength = 50;
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(96, 19);
+            this.textBox12.TabIndex = 132;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Location = new System.Drawing.Point(498, 236);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.TabIndex = 134;
+            this.label3.Text = "ID Produto";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(504, 55);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 18);
+            this.label4.TabIndex = 123;
+            this.label4.Text = "Celular";
+            // 
+            // maskedTextBox4
+            // 
+            this.maskedTextBox4.Location = new System.Drawing.Point(507, 76);
+            this.maskedTextBox4.Mask = "(00) 0000-0000";
+            this.maskedTextBox4.Name = "maskedTextBox4";
+            this.maskedTextBox4.Size = new System.Drawing.Size(188, 20);
+            this.maskedTextBox4.TabIndex = 100;
+            // 
             // Frm_Alterar_Fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(788, 439);
+            this.ClientSize = new System.Drawing.Size(788, 450);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -690,7 +737,6 @@
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label2;
@@ -727,5 +773,10 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
+        private System.Windows.Forms.Label label4;
     }
 }

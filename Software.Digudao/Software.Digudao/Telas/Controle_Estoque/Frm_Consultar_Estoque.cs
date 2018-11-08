@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prototipos.DB.Estoque;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace Software.Digudao.Controle_Estoque
         public Frm_Consultar_Estoque()
         {
             InitializeComponent();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            EstoqueBusiness Cliente = new EstoqueBusiness();
+            List<EstoqueViewDTo> View = Cliente.ConsultarporNome(textBox2.Text);
+            EstoqueViewDTo dto = View[0];
+            dataGridView1.DataSource = View;
         }
     }
 }

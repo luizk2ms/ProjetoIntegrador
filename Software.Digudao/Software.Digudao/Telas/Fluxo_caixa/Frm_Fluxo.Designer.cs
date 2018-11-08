@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button9 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,7 +51,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -69,6 +69,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(477, 362);
             this.panel1.TabIndex = 0;
+            // 
+            // button9
+            // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button9.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button9.Location = new System.Drawing.Point(397, 334);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 89;
+            this.button9.Text = "Registrar";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // dataGridView1
             // 
@@ -310,18 +323,6 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Inicio";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button9.Location = new System.Drawing.Point(397, 334);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 89;
-            this.button9.Text = "Registrar";
-            this.button9.UseVisualStyleBackColor = true;
             // 
             // Frm_Fluxo
             // 

@@ -71,6 +71,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -249,6 +256,11 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.label13);
+            this.panel7.Controls.Add(this.textBox4);
+            this.panel7.Controls.Add(this.label12);
+            this.panel7.Controls.Add(this.button8);
             this.panel7.Controls.Add(this.textBox3);
             this.panel7.Controls.Add(this.textBox2);
             this.panel7.Controls.Add(this.textBox1);
@@ -338,6 +350,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
@@ -360,6 +374,7 @@
             this.button5.TabIndex = 11;
             this.button5.Text = "Alterar";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // panel6
             // 
@@ -555,6 +570,71 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Marca";
             // 
+            // button8
+            // 
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button8.Location = new System.Drawing.Point(318, 88);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "Buscar";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(464, 17);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(161, 20);
+            this.textBox4.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label12.Location = new System.Drawing.Point(380, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Id Pedido :";
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(457, 53);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(161, 20);
+            this.textBox6.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label13.Location = new System.Drawing.Point(373, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 18);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Id Produto :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(614, 50);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(161, 20);
+            this.textBox5.TabIndex = 20;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label14.Location = new System.Drawing.Point(611, 28);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 18);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Total :";
+            // 
             // Frm_Alterar_Compra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -634,5 +714,12 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label14;
     }
 }

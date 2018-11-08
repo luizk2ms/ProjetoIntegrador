@@ -92,7 +92,7 @@ namespace Software.Digudao.Telas
 
 
 
-            return cod;
+            return cod();
         }
     }
     

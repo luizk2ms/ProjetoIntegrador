@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -34,8 +35,9 @@ namespace prototipos.DB.Estoque
             parms.Add(new MySqlParameter("kl_kilo", dto.kl_kilo));
             parms.Add(new MySqlParameter("id_produto_id", dto.id_produto_id));
 
+
             Database db = new Database();
-            db.ExecuteInsertScriptWithPk(Script, parms);
+            return db.ExecuteInsertScriptWithPk(Script, parms);
         }
         public void Alterar(EstoqueDTO dto)
         {
@@ -125,7 +127,7 @@ namespace prototipos.DB.Estoque
         {
             string script = @"select * from Tb_Estoque where Id_Estoque like @Id_Estoque";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Estoque", id);
+            parms.Add(new MySqlParameter("Id_Estoque", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();

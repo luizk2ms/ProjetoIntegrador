@@ -138,7 +138,7 @@ namespace Software.Digudao.Folha_Pagamento
         private decimal ValorVR(decimal SalarioBase)
         {
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();
-            List<Desconto_DTO> taxas = db.Descontos();
+            List<Desconto_DTO> taxas = db.Desconto();
             Desconto_DTO taxa = taxas.ElementAt(1);
 
             decimal resultado = SalarioBase * taxa.ds_Porcentagem / 100;
@@ -148,7 +148,7 @@ namespace Software.Digudao.Folha_Pagamento
         private decimal ValorVT(decimal SalarioBase)
         {
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();
-            List<Desconto_DTO> taxas = db.Descontos();
+            List<Desconto_DTO> taxas = db.Desconto();
             Desconto_DTO taxa = taxas.ElementAt(0);
 
             decimal resultado = SalarioBase * taxa.ds_Porcentagem / 100;

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using prototipos.DB.Funcionario;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace Software.Digudao.Controle_Funcionario
         public Frm_Consultar_Funcionario()
         {
             InitializeComponent();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            FuncionarioBusiness Cliente = new FuncionarioBusiness();
+            List<FuncionarioViewDTO> View = Cliente.ConsultarporNome(textBox2.Text);
+            FuncionarioViewDTO dto = View[0];
+            dataGridView1.DataSource = View;
         }
     }
 }

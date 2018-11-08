@@ -259,8 +259,9 @@
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(75, 23);
             this.button8.TabIndex = 63;
-            this.button8.Text = "Verificar";
+            this.button8.Text = "Buscar";
             this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // dataGridView1
             // 
@@ -279,6 +280,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.Size = new System.Drawing.Size(546, 170);
             this.dataGridView1.TabIndex = 62;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label3
             // 
@@ -316,9 +318,9 @@
             this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label1.Location = new System.Drawing.Point(11, 314);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 21);
+            this.label1.Size = new System.Drawing.Size(69, 21);
             this.label1.TabIndex = 59;
-            this.label1.Text = "Insira o Id :";
+            this.label1.Text = "Nome :";
             // 
             // Frm_Consultar_Cliente
             // 

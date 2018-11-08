@@ -58,6 +58,18 @@
     <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
+    <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.Designer.cs">
+      <DependentUpon>Frm_UsuarioAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Produto\CadastrarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Produto\CadastrarProduto.Designer.cs">
+      <DependentUpon>CadastrarProduto.cs</DependentUpon>
+    </Compile>
     <Compile Include="DB\db\Connection.cs" />
     <Compile Include="DB\db\Database.cs" />
     <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
@@ -87,6 +99,12 @@
     <Compile Include="DB\Produto\ProdutoDatabase.cs" />
     <Compile Include="DB\Produto\ProdutoDTO.cs" />
     <Compile Include="DB\Produto\ProdutoViewDTO.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Controle_Cliente\Frm_Alterar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,20 +239,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Telas\Controle_Usuario\Frm_Usuario1.cs">
+    <Compile Include="Telas\Controle_Usuario\Frm_UsuarioCadastrarConta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Controle_Usuario\Frm_Usuario1.Designer.cs">
-      <DependentUpon>Frm_Usuario1.cs</DependentUpon>
+    <Compile Include="Telas\Controle_Usuario\Frm_UsuarioCadastrarConta.Designer.cs">
+      <DependentUpon>Frm_UsuarioCadastrarConta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Produto\ConsultarProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Produto\ConsultarProduto.Designer.cs">
+      <DependentUpon>ConsultarProduto.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.resx">
+      <DependentUpon>Frm_UsuarioAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Produto\CadastrarProduto.resx">
+      <DependentUpon>CadastrarProduto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Alterar_Cliente.resx">
       <DependentUpon>Frm_Alterar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Cadastrar_Cliente.resx">
       <DependentUpon>Frm_Cadastrar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Consultar_Cliente.resx">
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\Frm_Consultar_Cliente.resx">
       <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
+      <Link>Telas\Controle_Cliente\Frm_Consultar_Cliente.resx</Link>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_compra\Frm_Alterar_Compra.resx">
       <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
@@ -303,8 +337,11 @@
     <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.resx">
       <DependentUpon>Frm_Registrar_Folha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Controle_Usuario\Frm_Usuario1.resx">
-      <DependentUpon>Frm_Usuario1.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Controle_Usuario\Frm_UsuarioCadastrarConta.resx">
+      <DependentUpon>Frm_UsuarioCadastrarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Produto\ConsultarProduto.resx">
+      <DependentUpon>ConsultarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

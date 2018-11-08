@@ -15,7 +15,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
             public decimal TaxaIR(decimal SalarioBase)
             {
                 string Script = $@"SELECT Ds_Aliquota FROM Tb_IR
-                                    WHERE ds_Salario <={}
+                                    WHERE ds_Salario <=
 
                                   ORDER BY ds_Salario
                                   DESC LIMIT 1";
@@ -37,7 +37,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
             public decimal DeducaoIR(decimal SalarioBase)
             {
                 string Script = $@"SELECT Ds_Deduzir FROM Tb_IR
-                                    WHERE ds_Salario <={}
+                                    WHERE ds_Salario <=
 
                                   ORDER BY ds_Salario
                                   DESC LIMIT 1";

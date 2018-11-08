@@ -8,19 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Software.Digudao.Folha_Pagamento
+namespace Software.Digudao.Telas.Controle_Usuario
 {
-    public partial class Frm_Alterar_Folha : Form
+    public partial class Frm_UsuarioAlterar : Form
     {
-        public Frm_Alterar_Folha()
+        public Frm_UsuarioAlterar()
         {
             InitializeComponent();
-        }
-
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
