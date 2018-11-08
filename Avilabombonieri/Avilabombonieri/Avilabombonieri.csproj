@@ -76,10 +76,10 @@
     <Compile Include="DB\Pedido\PedidoDatabase.cs" />
     <Compile Include="DB\Pedido\PedidoDTO.cs" />
     <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
-    <Compile Include="DB\Produto\PedidoBusiness.cs" />
-    <Compile Include="DB\Produto\PedidoDatabase.cs" />
-    <Compile Include="DB\Produto\PedidoViewDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
+    <Compile Include="DB\Produto\ProdutoDataBase.cs" />
     <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoViewDTO.cs" />
     <Compile Include="DB\Tb_Fonecedor\FornecedorBusiness.cs" />
     <Compile Include="DB\Tb_Fonecedor\FornecedorDatabase.cs" />
     <Compile Include="DB\Tb_Fonecedor\FornecedorViewDTO.cs" />
