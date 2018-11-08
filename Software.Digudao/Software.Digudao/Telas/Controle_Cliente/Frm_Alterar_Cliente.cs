@@ -25,7 +25,7 @@ namespace Software.Digudao.Controle_Cliente
         private void CarregarCliente()
         {
             ClienteBusiness business = new ClienteBusiness();
-            List<ClienteDTO> lista = business.ConsultarpoId(id_cliente);
+            List<ClienteDTO> lista = business.ConsultarpoId(ID);
             ClienteDTO dto = lista[0];
 
         }

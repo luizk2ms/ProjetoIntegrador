@@ -38,7 +38,7 @@ namespace Software.Digudao.Controle_Cliente
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 27)
+            if(e.ColumnIndex == 7 )
             {
                 Frm_Alterar_Cliente alterarcliente = new Frm_Alterar_Cliente();
                 ClienteViewDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteViewDTO;
@@ -50,7 +50,7 @@ namespace Software.Digudao.Controle_Cliente
                 alterarcliente.Show();
                 
             }
-            if(e.ColumnIndex == 28)
+            if(e.ColumnIndex == 8)
             {
                 ClienteBusiness Cliente = new ClienteBusiness();
                 ClienteViewDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteViewDTO;

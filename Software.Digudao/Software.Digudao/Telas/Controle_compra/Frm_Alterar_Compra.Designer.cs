@@ -43,6 +43,11 @@
             this.button10 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -52,12 +57,12 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.domainUpDown2 = new System.Windows.Forms.DomainUpDown();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -71,13 +76,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
+            this.cboProdutos = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -272,6 +272,53 @@
             this.panel7.Size = new System.Drawing.Size(776, 128);
             this.panel7.TabIndex = 85;
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(457, 53);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(161, 20);
+            this.textBox6.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label13.Location = new System.Drawing.Point(373, 55);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(88, 18);
+            this.label13.TabIndex = 15;
+            this.label13.Text = "Id Produto :";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(457, 17);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(161, 20);
+            this.textBox4.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label12.Location = new System.Drawing.Point(380, 20);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(81, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Text = "Id Pedido :";
+            // 
+            // button8
+            // 
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button8.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button8.Location = new System.Drawing.Point(318, 88);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 11;
+            this.button8.Text = "Buscar";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(151, 91);
@@ -350,6 +397,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.cboProdutos);
+            this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.button5);
@@ -363,6 +412,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 147);
             this.panel1.TabIndex = 83;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label14.Location = new System.Drawing.Point(603, 56);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 18);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "Total :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(606, 78);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(161, 20);
+            this.textBox5.TabIndex = 20;
             // 
             // button5
             // 
@@ -379,32 +446,12 @@
             // panel6
             // 
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.domainUpDown2);
-            this.panel6.Controls.Add(this.label11);
             this.panel6.Controls.Add(this.label10);
-            this.panel6.Controls.Add(this.domainUpDown1);
+            this.panel6.Controls.Add(this.textBox7);
             this.panel6.Location = new System.Drawing.Point(440, 29);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(137, 100);
             this.panel6.TabIndex = 19;
-            // 
-            // domainUpDown2
-            // 
-            this.domainUpDown2.Location = new System.Drawing.Point(23, 66);
-            this.domainUpDown2.Name = "domainUpDown2";
-            this.domainUpDown2.Size = new System.Drawing.Size(88, 20);
-            this.domainUpDown2.TabIndex = 19;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label11.Location = new System.Drawing.Point(40, 44);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(52, 18);
-            this.label11.TabIndex = 18;
-            this.label11.Text = "Fardos";
             // 
             // label10
             // 
@@ -417,12 +464,12 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "Unidades";
             // 
-            // domainUpDown1
+            // textBox7
             // 
-            this.domainUpDown1.Location = new System.Drawing.Point(23, 19);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(88, 20);
-            this.domainUpDown1.TabIndex = 0;
+            this.textBox7.Location = new System.Drawing.Point(15, 45);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(104, 20);
+            this.textBox7.TabIndex = 12;
             // 
             // panel5
             // 
@@ -570,70 +617,25 @@
             this.label6.TabIndex = 15;
             this.label6.Text = "Marca";
             // 
-            // button8
+            // cboProdutos
             // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button8.Location = new System.Drawing.Point(318, 88);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 11;
-            this.button8.Text = "Buscar";
-            this.button8.UseVisualStyleBackColor = true;
+            this.cboProdutos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboProdutos.FormattingEnabled = true;
+            this.cboProdutos.Location = new System.Drawing.Point(606, 30);
+            this.cboProdutos.Name = "cboProdutos";
+            this.cboProdutos.Size = new System.Drawing.Size(161, 21);
+            this.cboProdutos.TabIndex = 42;
             // 
-            // textBox4
+            // label11
             // 
-            this.textBox4.Location = new System.Drawing.Point(464, 17);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(161, 20);
-            this.textBox4.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(380, 20);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(81, 18);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "Id Pedido :";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(457, 53);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(161, 20);
-            this.textBox6.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label13.Location = new System.Drawing.Point(373, 55);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 18);
-            this.label13.TabIndex = 15;
-            this.label13.Text = "Id Produto :";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(614, 50);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(161, 20);
-            this.textBox5.TabIndex = 20;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label14.Location = new System.Drawing.Point(611, 28);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(51, 18);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "Total :";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label11.Location = new System.Drawing.Point(603, 8);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(68, 18);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Produto :";
             // 
             // Frm_Alterar_Compra
             // 
@@ -697,10 +699,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.DomainUpDown domainUpDown2;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DomainUpDown domainUpDown1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
@@ -721,5 +720,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.ComboBox cboProdutos;
+        private System.Windows.Forms.Label label11;
     }
 }

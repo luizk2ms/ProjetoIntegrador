@@ -80,6 +80,7 @@
             this.dgvfornecedor.ReadOnly = true;
             this.dgvfornecedor.Size = new System.Drawing.Size(622, 257);
             this.dgvfornecedor.TabIndex = 39;
+            this.dgvfornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvfornecedor_CellContentClick);
             // 
             // Column3
             // 

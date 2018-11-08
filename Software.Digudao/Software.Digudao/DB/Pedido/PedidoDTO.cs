@@ -13,7 +13,7 @@ namespace prototipos.DB.Pedido
         public int qn_quantidade { get; set; }
         public string Tm_tamanho_tamanho { get; set; }
         public decimal pc_preçoporcaixa_caixa { get; set; }
-        public int id_produto { get; set; }
+        public int pedidoid_produto { get; set; }
       
     }
 }

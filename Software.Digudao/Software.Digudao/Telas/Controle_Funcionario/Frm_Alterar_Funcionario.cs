@@ -17,8 +17,8 @@ namespace Software.Digudao.Controle_Funcionario
         {
             InitializeComponent();
         }
-        public private SalvarFuncionario()
         
+        private void button5_Click(object sender, EventArgs e)
         {
             FuncionarioBusiness Funcionario = new FuncionarioBusiness();
             FuncionarioDTO dto = new FuncionarioDTO();
@@ -37,13 +37,6 @@ namespace Software.Digudao.Controle_Funcionario
             dto.dt_datasaida = DateTime.Parse(dateTimePicker1.Text);
 
             Funcionario.Alterar(dto);
-
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            SalvarFuncionario();
             MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
