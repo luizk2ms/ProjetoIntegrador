@@ -24,8 +24,8 @@ namespace Software.Digudao.Controle_Cliente
         private void CarregarDadosClientes()
         {
             ClienteBusiness Cliente = new ClienteBusiness();
-            List<ClienteViewDTO> View = Cliente.ConsultarporNome(textBox2.Text);
-            ClienteViewDTO dto = View[0];
+            List<ClienteDTO> View = Cliente.ConsultarporNome(textBox2.Text);
+            ClienteDTO dto = View[0];
             dataGridView1.DataSource = View;
 
         }
@@ -38,7 +38,7 @@ namespace Software.Digudao.Controle_Cliente
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 27)
+            if(e.ColumnIndex == 7 )
             {
                 Frm_Alterar_Cliente alterarcliente = new Frm_Alterar_Cliente();
                 ClienteViewDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteViewDTO;
@@ -50,7 +50,7 @@ namespace Software.Digudao.Controle_Cliente
                 alterarcliente.Show();
                 
             }
-            if(e.ColumnIndex == 28)
+            if(e.ColumnIndex == 8)
             {
                 ClienteBusiness Cliente = new ClienteBusiness();
                 ClienteViewDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteViewDTO;
@@ -61,6 +61,19 @@ namespace Software.Digudao.Controle_Cliente
             }
             
 
+        }
+
+        private void Frm_Consultar_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

@@ -94,6 +94,19 @@ namespace Software.Digudao.Telas
 
             return cod();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
     
 }

@@ -8,35 +8,43 @@ namespace prototipos.DB.Produto
 {
     class ProdutoBusiness
     {
-            public int Cadastrar(ProdutoDTO dto)
+        class JogadoresBusiness
+        {
+            public int Salvar(Produto_Compra_DTO dto)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
                 return db.Cadastrar(dto);
             }
 
-            public void Alterar(ProdutoDTO dto)
+            public void Alterar(Produto_Compra_DTO dto)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                db.Alterar(dto);
+                db.AlterarProdutos(dto);
             }
-            public int Remover(int id)
+            public void Remover(int ID)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                db.Remover(id);
+                db.RemoverPRodutos(ID);
             }
 
-            public List<ProdutoDTO> Listar()
+            public List<Produto_Compra_DTO> Listar()
             {
                 ProdutoDatabase db = new ProdutoDatabase();
                 return db.Listar();
             }
 
-            public List<ProdutoDTO> ConsultarPorId(int ID)
+            public List<Produto_Compra_DTO)> ConsultarporNome(string nome)
+            {
+                ProdutoDatabase db = new ProdutoDatabase();
+                return db.C(nome);
+            }
+
+            public List<Produto_Compra_DTO> ConsultarpoId(int ID)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
                 return db.ConsultarPorId(ID);
             }
 
-        
+        }
     }
 }

@@ -36,5 +36,13 @@ namespace Software.Digudao.Controle_Estoque
             AlterarEstoque();
             MessageBox.Show("Dados salvos com sucesso", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

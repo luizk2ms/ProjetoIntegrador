@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Frei.ProjetoIntegrador.Academia.Validacoes
+namespace Frei.ProjetoIntegrador.Digudão.Validacoes
 {
     class exReg
     {

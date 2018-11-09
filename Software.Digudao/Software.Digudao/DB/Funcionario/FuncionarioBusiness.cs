@@ -8,7 +8,7 @@ namespace prototipos.DB.Funcionario
 {
     class FuncionarioBusiness
     {
-        public FuncionarioDTO Cadastrar(FuncionarioDTO dto)
+        public int Salvar(FuncionarioDTO dto)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
             return db.Cadastrar(dto);
@@ -17,12 +17,12 @@ namespace prototipos.DB.Funcionario
         public void Alterar(FuncionarioDTO dto)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            db.AlterarFuncionario(dto);
+            db.RemoverFuncionario(dto);
         }
-        public void Remover(int id)
+        public void Remover(int ID)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            db.RemoverFuncionario(id);
+            db.RemoverFuncionario(ID);
         }
 
         public List<FuncionarioDTO> Listar()
@@ -34,13 +34,13 @@ namespace prototipos.DB.Funcionario
         public List<FuncionarioDTO> ConsultarporNome(string nome)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            return db.ConsultarFuncionariosFiltro(nome);
+            return db.co(nome);
         }
 
-        public List<FuncionarioDTO> ListarPorId(int id)
+        public List<FuncionarioDTO> ConsultarpoId(int ID)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            return db.ListarPorId(id);
+            return db.co(ID);
         }
     }
 }

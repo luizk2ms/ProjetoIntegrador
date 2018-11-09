@@ -32,9 +32,8 @@ namespace Software.Digudao.Folha_Pagamento
                 dto.ds_diastrabalhados = textBox5.Text == string.Empty ? 0 : Convert.ToInt32(textBox5.Text);
                 dto.ds_horae = textBox6.Text == string.Empty ? 0 : Convert.ToInt32(textBox6.Text);
                 dto.ds_horas = textBox7.Text == string.Empty ? 0 : Convert.ToInt32(textBox7.Text);
-                dto.id_Funcionario = Funcionario.id_funcionario;
                 dto.vl_salarioBruto = textBox8.Text == string.Empty ? 0 : Convert.ToDecimal(textBox8.Text);
-
+                dto.id_Funcionario = textBox10.Text == string.Empty ? 0 : Convert.ToInt32(textBox10.Text);
                 Folha_de_Pagamento_Business business = new Folha_de_Pagamento_Business();
                 business.SalvarFolha(dto);
                
@@ -59,6 +58,14 @@ namespace Software.Digudao.Folha_Pagamento
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

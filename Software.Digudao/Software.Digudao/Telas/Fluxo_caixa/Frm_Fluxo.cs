@@ -68,5 +68,13 @@ namespace Software.Digudao.Fluxo_caixa
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

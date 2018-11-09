@@ -13,8 +13,8 @@ namespace prototipos.DB.Fornecedor
     {
         public int Salvar(FornecedorDTO dto)
         {
-            string Script = @"INSERT Funcionario(Id_Fornecedor,en_endereço,cnpj,tel_contem,cel_celular,uf_uf,ds_descricao,el_email,Nm_numero,Nm_nome)
-                                          VALUES(@Id_Fornecedor,@en_endereço,@cnpj,@tel_contem,@cel_celular,@uf_uf,@ds_descricao,@el_email,@Nm_numero,@Nm_nome)";
+            string Script = @"INSERT tb_fonecedor(Id_Fornecedor,en_endereço,cnpj,tel_contem,cel_celular,uf_uf,ds_descricao,el_email,Nm_numero,Nm_nome,fk_ID_Funcionario)
+                                          VALUES(@Id_Fornecedor,@en_endereço,@cnpj,@tel_contem,@cel_celular,@uf_uf,@ds_descricao,@el_email,@Nm_numero,@Nm_nome,@fk_ID_Funcionario)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Usuario", dto.Id_Fornecedor));
@@ -28,15 +28,16 @@ namespace prototipos.DB.Fornecedor
             parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
             parms.Add(new MySqlParameter("el_email", dto.el_email));
             parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
+            parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
 
 
             Database db = new Database();
              db.ExecuteInsertScriptWithPk(Script, parms);
         }
 
-        public List<FornecedorDTO> ConsultarFornecedorFiltros(int id)
+        public List<FornecedorDTO> ConsultarFornecedor(int id)
         {
-            string script = @"select * from Tb_Fornecedor where Id_Fornecedor like @Id_Fornecedor";
+            string script = @"select * from tb_fonecedor where Id_Fornecedor like @Id_Fornecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Fornecedor", id));
             Database db = new Database();
@@ -67,7 +68,7 @@ namespace prototipos.DB.Fornecedor
 
         public int RemoverFornecedor(int id)
         {
-            string script = @"DELETE FROM Funcionario WHERE idFuncionario = @Id_Fornecedor";
+            string script = @"DELETE FROM tb_fonecedor WHERE  Id_Fornecedor like @Id_Fornecedor";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Fornecedor", id));
@@ -79,7 +80,7 @@ namespace prototipos.DB.Fornecedor
 
         public void Alterar(FornecedorDTO dto)
         {
-            string Script = @"UPDATE Tb_Fornecedor SET en_endereço = @en_endereço ,
+            string Script = @"UPDATE tb_fonecedor SET en_endereço = @en_endereço ,
                                                        cnpj = @cnpj,
                                                        tel_contem = @tel_contem,
                                                        cel_celular = @cel_celular,
@@ -111,7 +112,7 @@ namespace prototipos.DB.Fornecedor
 
         public List<FornecedorDTO> Listar()
         {
-            string Script = @"SELECT *FROM Tb_Estoque";
+            string Script = @"SELECT *FROM tb_fonecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
@@ -140,7 +141,7 @@ namespace prototipos.DB.Fornecedor
         }
         public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
-            string script = @"select * from Tb_Estoque where nm_nome like @nm_nome";
+            string script = @"select * from tb_fonecedor where nm_nome like @nm_nome";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
             Database db = new Database();
@@ -170,7 +171,7 @@ namespace prototipos.DB.Fornecedor
         }
         public List<FornecedorDTO> ConsultarpoID(int id)
         {
-            string script = @"select * from Tb_Fornecedor where Id_Fornecedor like @Id_Fornecedor";
+            string script = @"select * from tb_fonecedor where Id_Fornecedor like @Id_Fornecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Fornecedor", id));
             Database db = new Database();

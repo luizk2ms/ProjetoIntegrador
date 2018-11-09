@@ -54,5 +54,18 @@ namespace Software.Digudao.Controle_Cliente
             CadastrarDadosCliente();
 
         }
+
+        private void Frm_Cadastrar_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

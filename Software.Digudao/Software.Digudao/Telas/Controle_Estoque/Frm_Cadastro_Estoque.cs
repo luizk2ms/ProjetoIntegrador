@@ -28,13 +28,23 @@ namespace Software.Digudao.Controle_Estoque
             dto.Qn_Quantidade = int.Parse(textBox3.Text);
             dto.Tm_tamanho = textBox6.Text;
             EstoqueBusiness business = new EstoqueBusiness();
-            business.(dto);
+            business.SalvarEstoque(dto);
 
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            
+
+            SalvarEstoque();
+            MessageBox.Show("Dados salvos com sucesso", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

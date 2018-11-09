@@ -19,7 +19,7 @@ namespace Software.Digudao.DB.db
         }
         private void SalvarProduto()
         {
-            ProdutoDTO dto = new ProdutoDTO();
+            Produto_Compra dto = new Produto_Compra();
             ProdutoBusiness business = new ProdutoBusiness();
             dto.Nm_Nome = textBox8.Text;
             dto.Pc_Preco = decimal.Parse(textBox2.Text);
@@ -33,16 +33,16 @@ namespace Software.Digudao.DB.db
 
         private void button7_Click(object sender, EventArgs e)
         {
-            ProdutoDTO dto = new ProdutoDTO();
-            dto.Nm_Nome = textBox8.Text;
-            dto.Pc_Preco = decimal.Parse(textBox2.Text);
-            dto.Ql_Quantidade = int.Parse(textBox3.Text);
-            dto.Tm_Tamanho = textBox1.Text;
+            SalvarProduto();
+          
+        }
 
-            ProdutoBusiness business = new ProdutoBusiness();
-            business.Salvar(dto);
-
-            
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

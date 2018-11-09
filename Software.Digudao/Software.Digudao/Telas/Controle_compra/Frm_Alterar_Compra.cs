@@ -1,4 +1,5 @@
 ﻿using prototipos.DB.Pedido;
+using prototipos.DB.Produto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,39 +17,36 @@ namespace Software.Digudao.Controle_compra
         public Frm_Alterar_Compra()
         {
             InitializeComponent();
+            Carregarcampos();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            Produto_Compra_DTO produto = new Produto_Compra_DTO();
+            produto.Nm_Nome
+            
+        }
+
+        private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+         
+        }
+        void Carregarcampos()
+        {
+            ProdutoBusiness business = new ProdutoBusiness();
+            List<Produto_Compra_DTO> produto = business.listar;
+
+            cboProdutos.DataSource = produto;
+            cboProdutos.DisplayMember = "Tm_Tamanho";
 
         }
-        private void SalvarDadosdoJogador()
+
+        private void button10_Click(object sender, EventArgs e)
         {
-            PedidoBusiness jogadores = new PedidoBusiness();
-            PedidoDTO dto = new PedidoDTO();
-            try
-            {
-                dto.Cliente_id_cliente = int.Parse(textBox2.Text);
-                dto.Id_Pedido = int.Parse(textBox4.Text);
-                dto.id_produto = int.Parse(textBox6.Text);
-                dto.pc_preçoporcaixa_caixa = int.Parse(textBox5.Text);
-                
-                
-
-             MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (ArgumentException ex)
-            {
-                MessageBox.Show(ex.Message, "digudão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Ocorreu um erro não identificado: " + ex.Message, "digudão", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
-
-
-
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace prototipos.DB.Produto
 {
     class ProdutoDatabase
     {
-        public int Cadastrar(ProdutoDTO dto)
+        public int Cadastrar(Produto_Compra_DTO dto)
         {
             string script = @"INSERT Tb_Produto(Nm_Nome,Tm_Tamanho,Pc_Preco,Ql_Quantidade)
                                           VALUES(@Nm_Nome,@Tm_Tamanho,@Pc_Preco,@Ql_Quantidade)";
@@ -20,23 +20,24 @@ namespace prototipos.DB.Produto
             parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
+            parms.Add(new MySqlParameter("Id_Fornecedor",dto))
             
 
             Database db = new Database();
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-        public List<ProdutoDTO> ConsultarPorId(int ID)
+        public List<Produto_Compra_DTO> ConsultarPorId(int ID)
         {
             string script = @"SELECT *FROM Tb_Produto WHERE id_Produto like @id_Produto ";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_Produto", ID + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<ProdutoDTO> lista = new List<ProdutoDTO>();
+            List<Produto_Compra_DTO> lista = new List<Produto_Compra_DTO>();
             while (reader.Read())
             {
-                ProdutoDTO dto = new ProdutoDTO();
+                Produto_Compra dto = new Produto_Compra();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
                 dto.Pc_Preco = reader.GetDecimal("Pc_Preco");
@@ -48,7 +49,7 @@ namespace prototipos.DB.Produto
             return lista;
         }
 
-        public int Remover(int id)
+        public int RemoverPRodutos(int id)
         {
             string script = @"DELETE FROM Funcionario WHERE idFuncionario = @Id_Produto";
 
@@ -59,7 +60,7 @@ namespace prototipos.DB.Produto
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-        public int Alterar(ProdutoDTO dto)
+        public int AlterarProdutos(Produto_Compra_DTO dto)
         {
             string script = @"UPDATE Funcionario SET 
                                                     Nm_Nome = @Nm_Nome,
@@ -81,7 +82,7 @@ namespace prototipos.DB.Produto
         }
 
 
-        public List<ProdutoDTO> Listar()
+        public List<Produto_Compra_DTO> Listar()
         {
             string script = @"SELECT * FROM Tb_Produto";
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -89,10 +90,10 @@ namespace prototipos.DB.Produto
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<ProdutoDTO> lista = new List<ProdutoDTO>();
+            List<Produto_Compra_DTO> lista = new List<Produto_Compra_DTO>();
             while (reader.Read())
             {
-                ProdutoDTO dto = new ProdutoDTO();
+                Produto_Compra_DTO dto = new Produto_Compra_DTO();
                 parms.Add(new MySqlParameter("Id_Produto", dto.Id_Produto));
                 parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
                 parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));

@@ -25,7 +25,7 @@ namespace Software.Digudao.Controle_Cliente
         private void CarregarCliente()
         {
             ClienteBusiness business = new ClienteBusiness();
-            List<ClienteDTO> lista = business.ConsultarpoId(id_cliente);
+            List<ClienteDTO> lista = business.ConsultarpoId(ID);
             ClienteDTO dto = lista[0];
 
         }
@@ -49,6 +49,20 @@ namespace Software.Digudao.Controle_Cliente
 
             cliente.Alterar(dto);
 
+        }
+
+        private void Frm_Alterar_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+         Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

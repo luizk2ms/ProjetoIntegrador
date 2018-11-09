@@ -16,14 +16,28 @@ namespace Software.Digudao.Controle_compra
         public Frm_Consultar_Compra()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
         }
+
 
         private void button10_Click(object sender, EventArgs e)
         {
             PedidoBusiness Pedido = new PedidoBusiness();
             List<PedidoDTO> View = Pedido.ConsultarporNome(textBox2.Text);
-            PedidoDTO dto = View[0];
             dataGridView1.DataSource = View;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
         }
     }
 }

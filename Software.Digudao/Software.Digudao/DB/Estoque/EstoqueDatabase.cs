@@ -99,17 +99,17 @@ namespace prototipos.DB.Estoque
             return lista;
 
         }
-        public List<EstoqueViewDTo> ConsultarporNome(string Nome)
+        public List<EstoqueDTO> ConsultarporNome(string Nome)
         {
             string script = @"select * from Tb_Estoque where nm_nome like @nm_nome";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            List<EstoqueDTO> lista = new List<EstoqueDTO>();
             while (reader.Read())
             {
-                EstoqueViewDTo dto = new EstoqueViewDTo();
+                EstoqueDTO dto = new EstoqueDTO();
                 dto.Id_Estoque = reader.GetInt32("Id_Cliente");
                 dto.nm_nome = reader.GetString("nm_nome");
                 dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
@@ -124,17 +124,17 @@ namespace prototipos.DB.Estoque
             }
             return lista;
         }
-        public List<EstoqueViewDTo> ConsultarpoID(int id)
+        public List<EstoqueDTO> ConsultarpoID(int id)
         {
             string script = @"select * from Tb_Estoque where Id_Estoque like @Id_Estoque";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Estoque", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            List<EstoqueDTO> lista = new List<EstoqueDTO>();
             while (reader.Read())
             {
-                EstoqueViewDTo dto = new EstoqueViewDTo();
+                EstoqueDTO dto = new EstoqueDTO();
                 dto.Id_Estoque = reader.GetInt32("Id_Cliente");
                 dto.nm_nome = reader.GetString("nm_nome");
                 dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
