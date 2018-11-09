@@ -41,12 +41,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.button10 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -72,18 +66,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -251,66 +237,6 @@
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.LavenderBlush;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.textBox12);
-            this.panel5.Controls.Add(this.textBox11);
-            this.panel5.Controls.Add(this.label16);
-            this.panel5.Controls.Add(this.label15);
-            this.panel5.Location = new System.Drawing.Point(448, 202);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(283, 155);
-            this.panel5.TabIndex = 103;
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(8, 89);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(181, 20);
-            this.textBox12.TabIndex = 22;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(8, 42);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(181, 20);
-            this.textBox11.TabIndex = 22;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.Indigo;
-            this.label16.Location = new System.Drawing.Point(4, 65);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(101, 21);
-            this.label16.TabIndex = 10;
-            this.label16.Text = "Ds_Aliquota";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.Indigo;
-            this.label15.Location = new System.Drawing.Point(4, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 21);
-            this.label15.TabIndex = 10;
-            this.label15.Text = "DsSalario";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(444, 175);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(56, 24);
-            this.label13.TabIndex = 104;
-            this.label13.Text = "INSS";
-            // 
             // button10
             // 
             this.button10.BackColor = System.Drawing.Color.White;
@@ -322,6 +248,7 @@
             this.button10.TabIndex = 102;
             this.button10.Text = "Gerar relatorio";
             this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // textBox1
             // 
@@ -563,66 +490,6 @@
             this.label1.TabIndex = 94;
             this.label1.Text = "Gerar Folha Pagamento";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Indigo;
-            this.label10.Location = new System.Drawing.Point(453, 360);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(56, 24);
-            this.label10.TabIndex = 104;
-            this.label10.Text = "INSS";
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.LavenderBlush;
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Controls.Add(this.textBox9);
-            this.panel6.Controls.Add(this.textBox13);
-            this.panel6.Controls.Add(this.label17);
-            this.panel6.Controls.Add(this.label18);
-            this.panel6.Location = new System.Drawing.Point(457, 387);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(283, 155);
-            this.panel6.TabIndex = 103;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(8, 89);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(181, 20);
-            this.textBox9.TabIndex = 22;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Location = new System.Drawing.Point(8, 42);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(181, 20);
-            this.textBox13.TabIndex = 22;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.ForeColor = System.Drawing.Color.Indigo;
-            this.label17.Location = new System.Drawing.Point(4, 65);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(101, 21);
-            this.label17.TabIndex = 10;
-            this.label17.Text = "Ds_Aliquota";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Indigo;
-            this.label18.Location = new System.Drawing.Point(4, 18);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(81, 21);
-            this.label18.TabIndex = 10;
-            this.label18.Text = "DsSalario";
-            // 
             // Frm_Alterar_Folha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -630,10 +497,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(816, 652);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.panel6);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label11);
@@ -648,16 +511,12 @@
             this.Name = "Frm_Alterar_Folha";
             this.Text = "Frm_Alterar_Folha";
             this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -678,8 +537,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label11;
@@ -705,15 +562,5 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
     }
 }

@@ -16,6 +16,7 @@ namespace Software.Digudao.Controle_compra
         public Frm_Consultar_Compra()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
 

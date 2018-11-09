@@ -54,7 +54,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -64,28 +63,29 @@
             this.label10 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cboProdutos = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -256,7 +256,9 @@
             // panel7
             // 
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Controls.Add(this.textBox8);
             this.panel7.Controls.Add(this.textBox6);
+            this.panel7.Controls.Add(this.label15);
             this.panel7.Controls.Add(this.label13);
             this.panel7.Controls.Add(this.textBox4);
             this.panel7.Controls.Add(this.label12);
@@ -274,7 +276,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(457, 53);
+            this.textBox6.Location = new System.Drawing.Point(560, 88);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(161, 20);
             this.textBox6.TabIndex = 14;
@@ -284,15 +286,15 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label13.Location = new System.Drawing.Point(373, 55);
+            this.label13.Location = new System.Drawing.Point(450, 91);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(88, 18);
+            this.label13.Size = new System.Drawing.Size(108, 18);
             this.label13.TabIndex = 15;
-            this.label13.Text = "Id Produto :";
+            this.label13.Text = "Id Fornecedor :";
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(457, 17);
+            this.textBox4.Location = new System.Drawing.Point(553, 15);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(161, 20);
             this.textBox4.TabIndex = 12;
@@ -302,7 +304,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(380, 20);
+            this.label12.Location = new System.Drawing.Point(476, 18);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(81, 18);
             this.label12.TabIndex = 13;
@@ -372,16 +374,6 @@
             this.label2.Size = new System.Drawing.Size(116, 18);
             this.label2.TabIndex = 8;
             this.label2.Text = "Id Funcionário :";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(683, 30);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(114, 59);
-            this.pictureBox3.TabIndex = 84;
-            this.pictureBox3.TabStop = false;
             // 
             // label5
             // 
@@ -474,62 +466,12 @@
             // panel5
             // 
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel5.Controls.Add(this.radioButton4);
-            this.panel5.Controls.Add(this.radioButton3);
-            this.panel5.Controls.Add(this.radioButton2);
-            this.panel5.Controls.Add(this.radioButton1);
+            this.panel5.Controls.Add(this.comboBox1);
+            this.panel5.Controls.Add(this.textBox9);
             this.panel5.Location = new System.Drawing.Point(237, 29);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(137, 100);
             this.panel5.TabIndex = 19;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton4.Location = new System.Drawing.Point(24, 71);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(41, 17);
-            this.radioButton4.TabIndex = 3;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "GG";
-            this.radioButton4.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton3.Location = new System.Drawing.Point(24, 48);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(33, 17);
-            this.radioButton3.TabIndex = 2;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "G";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton2.Location = new System.Drawing.Point(24, 25);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(34, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "M";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.radioButton1.Location = new System.Drawing.Point(24, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(32, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "P";
-            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -573,17 +515,6 @@
             this.panel4.Size = new System.Drawing.Size(149, 100);
             this.panel4.TabIndex = 18;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(122, 70);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -594,17 +525,6 @@
             this.label7.Size = new System.Drawing.Size(51, 18);
             this.label7.TabIndex = 17;
             this.label7.Text = "Fralda";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(122, 70);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label6
             // 
@@ -625,6 +545,7 @@
             this.cboProdutos.Name = "cboProdutos";
             this.cboProdutos.Size = new System.Drawing.Size(161, 21);
             this.cboProdutos.TabIndex = 42;
+            this.cboProdutos.SelectedIndexChanged += new System.EventHandler(this.cboProdutos_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -636,6 +557,73 @@
             this.label11.Size = new System.Drawing.Size(68, 18);
             this.label11.TabIndex = 21;
             this.label11.Text = "Produto :";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(683, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox3.TabIndex = 84;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox2.Location = new System.Drawing.Point(12, 15);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(122, 70);
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(122, 70);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Modern No. 20", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label15.Location = new System.Drawing.Point(476, 53);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(88, 18);
+            this.label15.TabIndex = 15;
+            this.label15.Text = "Id Produto :";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(560, 51);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(161, 20);
+            this.textBox8.TabIndex = 14;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(7, 8);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(123, 21);
+            this.comboBox1.TabIndex = 42;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.cboProdutos_SelectedIndexChanged);
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(7, 47);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(104, 20);
+            this.textBox9.TabIndex = 12;
             // 
             // Frm_Alterar_Compra
             // 
@@ -655,7 +643,6 @@
             this.panel2.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -665,6 +652,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -701,10 +689,6 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
@@ -723,5 +707,9 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.ComboBox cboProdutos;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }

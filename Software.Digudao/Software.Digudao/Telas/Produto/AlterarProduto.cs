@@ -9,15 +9,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Software.Digudao.DB.db
+namespace Software.Digudao.Telas.Produto
 {
-    public partial class CadastrarProduto : Form
+    public partial class AlterarProduto : Form
     {
-        public CadastrarProduto()
+        public AlterarProduto()
         {
             InitializeComponent();
         }
-        private void SalvarProduto()
+
+        private void button2_Click(object sender, EventArgs e)
         {
             ProdutoDTO dto = new ProdutoDTO();
             ProdutoBusiness business = new ProdutoBusiness();
@@ -26,15 +27,7 @@ namespace Software.Digudao.DB.db
             dto.Ql_Quantidade = int.Parse(textBox3.Text);
             dto.Tm_Tamanho = textBox1.Text;
 
-            business.Salvar(dto);
-
-        }
-        
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            SalvarProduto();
-          
+            business.Alterar(dto);
         }
     }
 }
