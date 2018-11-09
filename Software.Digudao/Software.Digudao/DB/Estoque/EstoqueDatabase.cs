@@ -74,16 +74,16 @@ namespace prototipos.DB.Estoque
             Database db = new Database();
             db.ExecuteInsertScript(Script, parms);
         }
-        public List<EstoqueViewDTo> Listar()
+        public List<EstoqueDTO> Listar()
         {
             string Script = @"SELECT *FROM Tb_Estoque";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
-            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            List<EstoqueDTO> lista = new List<EstoqueDTO>();
             while (reader.Read())
             {
-                EstoqueViewDTo dto = new EstoqueViewDTo();
+                EstoqueDTO dto = new EstoqueDTO();
                 dto.Id_Estoque = reader.GetInt32("Id_Cliente");
                 dto.nm_nome = reader.GetString("nm_nome");
                 dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
@@ -146,9 +146,8 @@ namespace prototipos.DB.Estoque
 
             }
             return lista;
-
-
-
+            
         }
+        
     }
 }

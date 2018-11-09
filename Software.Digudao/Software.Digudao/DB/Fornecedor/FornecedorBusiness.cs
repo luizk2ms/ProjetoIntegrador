@@ -19,19 +19,19 @@ namespace prototipos.DB.Fornecedor
             FornecedorDatabase db = new FornecedorDatabase();
             db.Alterar(dto);
         }
-        public void Remover(int ID)
+        public void Remover(int id)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            db.Remover(ID);
+            db.RemoverFornecedor(id);
         }
 
-        public List<FornecedorViewDTO> Listar()
+        public List<FornecedorDTO> Listar()
         {
             FornecedorDatabase db = new FornecedorDatabase();
             return db.Listar();
         }
 
-        public List<FornecedorViewDTO> ConsultarporNome(string nome)
+        public List<FornecedorDTO> ConsultarporNome(string nome)
         {
             FornecedorDatabase db = new FornecedorDatabase();
             return db.ConsultarporNome(nome);
@@ -40,7 +40,7 @@ namespace prototipos.DB.Fornecedor
         public List<FornecedorDTO> ConsultarpoId(int ID)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            return db.ConsultarporId(ID);
+            return db.ConsultarpoID(ID);
         }
     }
 }

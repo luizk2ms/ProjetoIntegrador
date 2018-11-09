@@ -22,25 +22,25 @@ namespace prototipos.DB.Pedido
         public void Remover(int ID)
         {
             PedidoDatabase db = new PedidoDatabase();
-            db.Remover(ID);
+            db.RemoverPedido(ID);
         }
 
-        public List<PedidoViewDTO> Listar()
+        public List<PedidoDTO> Listar()
         {
             PedidoDatabase db = new PedidoDatabase();
             return db.Listar();
         }
 
-        public List<PedidoViewDTO> ConsultarporNome(string nome)
+        public List<PedidoDTO> ConsultarporNome(string Nome)
         {
             PedidoDatabase db = new PedidoDatabase();
-            return db.ConsultarporNome(nome);
+            return db.ConsultarporNome(Nome);
         }
 
-        public List<PedidoDTO> ConsultarpoId(int ID)
+        public List<PedidoDTO> ConsultarPorID(int id)
         {
             PedidoDatabase db = new PedidoDatabase();
-            return db.ConsultarporId(ID);
+            return db.ConsultarPorID(id);
         }
     }
 }

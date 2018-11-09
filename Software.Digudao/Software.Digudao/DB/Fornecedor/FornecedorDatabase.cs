@@ -11,7 +11,7 @@ namespace prototipos.DB.Fornecedor
 {
     class FornecedorDatabase
     {
-        public FornecedorDTO Salvar(FornecedorDTO dto)
+        public int Salvar(FornecedorDTO dto)
         {
             string Script = @"INSERT Funcionario(Id_Fornecedor,en_endereço,cnpj,tel_contem,cel_celular,uf_uf,ds_descricao,el_email,Nm_numero,Nm_nome)
                                           VALUES(@Id_Fornecedor,@en_endereço,@cnpj,@tel_contem,@cel_celular,@uf_uf,@ds_descricao,@el_email,@Nm_numero,@Nm_nome)";
@@ -31,7 +31,7 @@ namespace prototipos.DB.Fornecedor
 
 
             Database db = new Database();
-            return db.ExecuteInsertScriptWithPk(Script, parms);
+             db.ExecuteInsertScriptWithPk(Script, parms);
         }
 
         public List<FornecedorDTO> ConsultarFornecedorFiltros(int id)
@@ -41,7 +41,7 @@ namespace prototipos.DB.Fornecedor
             parms.Add(new MySqlParameter("Id_Fornecedor", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<EstoqueViewDTo> lista = new List<EstoqueViewDTo>();
+            List<FornecedorDTO> lista = new List<FornecedorDTO>();
             while (reader.Read())
             {
                 FornecedorDTO dto = new FornecedorDTO();
@@ -62,12 +62,10 @@ namespace prototipos.DB.Fornecedor
 
                 lista.Add(dto);
             }
-
-            reader.Close();
             return lista;
         }
 
-        public int RemoverFornecedor(string id)
+        public int RemoverFornecedor(int id)
         {
             string script = @"DELETE FROM Funcionario WHERE idFuncionario = @Id_Fornecedor";
 
@@ -79,7 +77,7 @@ namespace prototipos.DB.Fornecedor
         }
 
 
-        public int AlterarFornecedor(FornecedorDTO dto)
+        public void Alterar(FornecedorDTO dto)
         {
             string Script = @"UPDATE Tb_Fornecedor SET en_endereço = @en_endereço ,
                                                        cnpj = @cnpj,
@@ -111,16 +109,16 @@ namespace prototipos.DB.Fornecedor
 
         }
 
-        public List<FornecedorViewDTO> Listar()
+        public List<FornecedorDTO> Listar()
         {
             string Script = @"SELECT *FROM Tb_Estoque";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
-            List<FornecedorViewDTO> lista = new List<FornecedorViewDTO>();
+            List<FornecedorDTO> lista = new List<FornecedorDTO>();
             while (reader.Read())
             {
-                FornecedorViewDTO dto = new FornecedorViewDTO();
+                FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");
@@ -140,17 +138,17 @@ namespace prototipos.DB.Fornecedor
             return lista;
 
         }
-        public List<FornecedorViewDTO> ConsultarporNome(string Nome)
+        public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
             string script = @"select * from Tb_Estoque where nm_nome like @nm_nome";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<FornecedorViewDTO> lista = new List<FornecedorViewDTO>();
+            List<FornecedorDTO> lista = new List<FornecedorDTO>();
             while (reader.Read())
             {
-                FornecedorViewDTO dto = new FornecedorViewDTO();
+                FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");
@@ -170,17 +168,17 @@ namespace prototipos.DB.Fornecedor
             }
             return lista;
         }
-        public List<FornecedorViewDTO> ConsultarpoID(int id)
+        public List<FornecedorDTO> ConsultarpoID(int id)
         {
             string script = @"select * from Tb_Fornecedor where Id_Fornecedor like @Id_Fornecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Fornecedor", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<FornecedorViewDTO> lista = new List<FornecedorViewDTO>();
+            List<FornecedorDTO> lista = new List<FornecedorDTO>();
             while (reader.Read())
             {
-                FornecedorViewDTO dto = new FornecedorViewDTO();
+                FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");

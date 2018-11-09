@@ -21,8 +21,8 @@ namespace Software.Digudao.Controle_compra
         private void button10_Click(object sender, EventArgs e)
         {
             PedidoBusiness Pedido = new PedidoBusiness();
-            List<PedidoViewDTO> View = Pedido.ConsultarporNome(textBox2.Text);
-            PedidoViewDTO dto = View[0];
+            List<PedidoDTO> View = Pedido.ConsultarporNome(textBox2.Text);
+            PedidoDTO dto = View[0];
             dataGridView1.DataSource = View;
         }
     }

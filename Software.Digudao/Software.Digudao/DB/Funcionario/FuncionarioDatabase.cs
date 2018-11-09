@@ -12,7 +12,7 @@ namespace prototipos.DB.Funcionario
     {
         public FuncionarioDTO Cadastrar(FuncionarioDTO dto)
         {
-            string script = @"INSERT Funcionario(Login, Nm_Nome, Data_nascimento, CPF, RG, Endereco, Complemento, Cargo, observacao)
+            string Script = @"INSERT Funcionario(Login, Nm_Nome, Data_nascimento, CPF, RG, Endereco, Complemento, Cargo, observacao)
                                           VALUES(@Login, @Nm_Nome, @Data_nascimento, @CPF, @RG, @Endereco, @Complemento, @Cargo, @observacao)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -31,8 +31,9 @@ namespace prototipos.DB.Funcionario
             parms.Add(new MySqlParameter("dt_datadeentrada", dto.dt_datadeentrada));
             parms.Add(new MySqlParameter("dt_datasaida", dto.dt_datasaida));
             parms.Add(new MySqlParameter("id_FolhadePagamento", dto.id_FolhadePagamento));
+
             Database db = new Database();
-            return db.ExecuteInsertScriptWithPk(script, parms);
+            db.ExecuteInsertScriptWithPk(Script, parms);
         }
 
         internal FuncionarioDTO logar(string login, string senha)
@@ -74,7 +75,7 @@ namespace prototipos.DB.Funcionario
             return Funcionarios;
         }
 
-        public int RemoverFuncionario(string id)
+        public int RemoverFuncionario(int id)
         {
             string script = @"DELETE FROM Funcionario WHERE idFuncionario = @idFuncionario";
 
@@ -120,71 +121,72 @@ namespace prototipos.DB.Funcionario
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-        public List<FuncionarioViewDTO> Listar()
+        public List<FuncionarioDTO> Listar()
         {
-            string Script = @"SELECT *FROM Tb_Cliente";
+            string Script = @"SELECT *FROM Funcionario";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
-            List<FuncionarioViewDTO> lista = new List<FuncionarioViewDTO>();
+            List<FuncionarioDTO> lista = new List<FuncionarioDTO>();
             while (reader.Read())
             {
-                FuncionarioViewDTO dados = new FuncionarioViewDTO();
-                dados.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dados.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
-                dados.Nm_Nome = reader.GetString("Nm_Nome");
-                dados.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
-                dados.dt_datasaida = reader.GetDateTime("dt_datasaida");
-                dados.cpf_cpf = reader.GetInt32("cpf_cpf");
-                dados.cp_cep = reader.GetInt32("cp_cep");
-                dados.ds_endereço = reader.GetString("ds_endereço");
-                dados.cr_cargo = reader.GetString("cr_cargo");
-                dados.lg_login = reader.GetString("lg_login");
-                dados.nm_numero = reader.GetInt32("nm_numero");
-                dados.sn_senha = reader.GetInt32("sn_senha");
-                dados.tl_empresa = reader.GetInt32("tl_empresa");
-                dados.uf_uf = reader.GetString("uf_uf");
-                Funcionarios.Add(dados);
-
-                lista.Add(dados);
+                FuncionarioDTO dto = new FuncionarioDTO();
+                dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
+                dto.Nm_Nome = reader.GetString("Nm_Nome");
+                dto.tl_empresa = reader.GetInt32("tl_empresa");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.ds_endereço = reader.GetString("ds_endereço");
+                dto.nm_numero = reader.GetInt32("nm_numero");
+                dto.lg_login = reader.GetString("lg_login");
+                dto.sn_senha = reader.GetInt32("sn_senha");
+                dto.uf_uf = reader.GetString("uf_uf");
+                dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
+                dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
+                dto.cr_cargo = reader.GetString("cr_cargo");
+                dto.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
+               
+                lista.Add(dto);
 
             }
             return lista;
+
         }
 
 
-            public int ConsultarPorId(int id)
+        public List<FuncionarioDTO> ListarPorId(int id)
         {
-            string script = @"SELECT *FROM Tb_Funcionario WHERE id_Funcionario like id_Funcionario";
-
+            string script = @"select * from Funcionario where Id_Funcionario like @Id_Funcionario";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-
+            parms.Add(new MySqlParameter("Id_Funcionario", id));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-
-            FuncionarioDTO funcionario = new FuncionarioDTO();
-            if (reader.Read())
+            List<FuncionarioDTO> lista = new List<FuncionarioDTO>();
+            while (reader.Read())
             {
-                funcionario.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                funcionario.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
-                funcionario.Nm_Nome = reader.GetString("Nm_Nome");
-                funcionario.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
-                funcionario.dt_datasaida = reader.GetDateTime("dt_datasaida");
-                funcionario.cpf_cpf = reader.GetInt32("cpf_cpf");
-                funcionario.cp_cep = reader.GetInt32("cp_cep");
-                funcionario.ds_endereço = reader.GetString("ds_endereço");
-                funcionario.cr_cargo = reader.GetString("cr_cargo");
-                funcionario.lg_login = reader.GetString("lg_login");
-                funcionario.nm_numero = reader.GetInt32("nm_numero");
-                funcionario.sn_senha = reader.GetInt32("sn_senha");
-                funcionario.tl_empresa = reader.GetInt32("tl_empresa");
-                funcionario.uf_uf = reader.GetString("uf_uf");
+                FuncionarioDTO dto = new FuncionarioDTO();
+                dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
+                dto.Nm_Nome = reader.GetString("Nm_Nome");
+                dto.tl_empresa = reader.GetInt32("tl_empresa");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.ds_endereço = reader.GetString("ds_endereço");
+                dto.nm_numero = reader.GetInt32("nm_numero");
+                dto.lg_login = reader.GetString("lg_login");
+                dto.sn_senha = reader.GetInt32("sn_senha");
+                dto.uf_uf = reader.GetString("uf_uf");
+                dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
+                dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
+                dto.cr_cargo = reader.GetString("cr_cargo");
+                dto.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
 
-                funcionario.Add(funcionario);
+                lista.Add(dto);
 
             }
-            reader.close();
-            
+            return lista;
+
         }
     }
 }

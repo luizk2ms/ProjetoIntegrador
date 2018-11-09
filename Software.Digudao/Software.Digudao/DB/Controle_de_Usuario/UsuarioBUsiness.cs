@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frei.ProjetoIntegrador.Academia.Validacoes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

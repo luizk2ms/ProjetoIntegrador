@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -133,12 +133,6 @@
     </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Alterar_Compra.Designer.cs">
       <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Controle_compra\Frm_Compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Controle_compra\Frm_Compra.Designer.cs">
-      <DependentUpon>Frm_Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Consultar_Compra.cs">
       <SubType>Form</SubType>
@@ -280,9 +274,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_compra\Frm_Alterar_Compra.resx">
       <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Controle_compra\Frm_Compra.resx">
-      <DependentUpon>Frm_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_compra\Frm_Consultar_Compra.resx">
       <DependentUpon>Frm_Consultar_Compra.cs</DependentUpon>

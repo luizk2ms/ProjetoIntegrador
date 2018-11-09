@@ -8,39 +8,39 @@ namespace prototipos.DB.Funcionario
 {
     class FuncionarioBusiness
     {
-        public int Salvar(FuncionarioDTO dto)
+        public FuncionarioDTO Cadastrar(FuncionarioDTO dto)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            return db.Salvar(dto);
+            return db.Cadastrar(dto);
         }
 
         public void Alterar(FuncionarioDTO dto)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            db.Alterar(dto);
+            db.AlterarFuncionario(dto);
         }
-        public void Remover(int ID)
+        public void Remover(int id)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            db.Remover(ID);
+            db.RemoverFuncionario(id);
         }
 
-        public List<FuncionarioViewDTO> Listar()
+        public List<FuncionarioDTO> Listar()
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
             return db.Listar();
         }
 
-        public List<FuncionarioViewDTO> ConsultarporNome(string nome)
+        public List<FuncionarioDTO> ConsultarporNome(string nome)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            return db.ConsultarporNome(nome);
+            return db.ConsultarFuncionariosFiltro(nome);
         }
 
-        public List<FuncionarioDTO> ConsultarpoId(int ID)
+        public List<FuncionarioDTO> ListarPorId(int id)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            return db.ConsultarporId(ID);
+            return db.ListarPorId(id);
         }
     }
 }

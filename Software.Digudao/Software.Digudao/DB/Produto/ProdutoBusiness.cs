@@ -8,12 +8,10 @@ namespace prototipos.DB.Produto
 {
     class ProdutoBusiness
     {
-        class JogadoresBusiness
-        {
-            public int Salvar(ProdutoDTO dto)
+            public int Cadastrar(ProdutoDTO dto)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                return db.Salvar(dto);
+                return db.Cadastrar(dto);
             }
 
             public void Alterar(ProdutoDTO dto)
@@ -21,30 +19,24 @@ namespace prototipos.DB.Produto
                 ProdutoDatabase db = new ProdutoDatabase();
                 db.Alterar(dto);
             }
-            public void Remover(int ID)
+            public int Remover(int id)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                db.Remover(ID);
+                db.Remover(id);
             }
 
-            public List<ProdutoViewDTO> Listar()
+            public List<ProdutoDTO> Listar()
             {
                 ProdutoDatabase db = new ProdutoDatabase();
                 return db.Listar();
             }
 
-            public List<ProdutoViewDTO> ConsultarporNome(string nome)
+            public List<ProdutoDTO> ConsultarPorId(int ID)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                return db.ConsultarporNome(nome);
+                return db.ConsultarPorId(ID);
             }
 
-            public List<ProdutoDTO> ConsultarpoId(int ID)
-            {
-                ProdutoDatabase db = new ProdutoDatabase();
-                return db.ConsultarpoId(ID);
-            }
-
-        }
+        
     }
 }

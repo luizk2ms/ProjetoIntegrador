@@ -1,5 +1,6 @@
-﻿using Lanchonha.Banco.Banco;
+﻿
 using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,7 @@ namespace Software
             parms.Add(new MySqlParameter("fluxo_de_caixa_mensal", dto.fluxo_caixa_mensal));
             parms.Add(new MySqlParameter("fk_id_funcionario_para_fc", dto.FKIDfuncionarios));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
@@ -46,7 +47,7 @@ namespace Software
             parms.Add(new MySqlParameter("fluxo_de_caixa_mensal", dto.fluxo_caixa_mensal));
             parms.Add(new MySqlParameter("fk_id_funcionario_para_fc", dto.FKIDfuncionarios));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
 
@@ -57,7 +58,7 @@ namespace Software
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_fluxo_de_caixa", Id));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
 
@@ -66,7 +67,7 @@ namespace Software
         {
             string script = @"select * from tb_fluxo_de_caixa";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            DataBase db = new DataBase();
+            Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<FluxodeCaixaDTO> lista = new List<FluxodeCaixaDTO>();
             while(reader.Read())
@@ -92,7 +93,7 @@ namespace Software
             string script = @"select * from tb_fluxo_de_caixa where id_fluxo_de_caixa like @id_fluxo_de_caixa";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_fluxo_de_caixa", ID + "%"));
-            DataBase db = new DataBase();
+            Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<FluxodeCaixaDTO> lista = new List<FluxodeCaixaDTO>();
             while (reader.Read())
@@ -123,7 +124,7 @@ namespace Software
             parms.Add(new MySqlParameter("start", start));
             parms.Add(new MySqlParameter("end", end));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
             List<FluxodeCaixaView> fluxodeCaixas = new List<FluxodeCaixaView>();

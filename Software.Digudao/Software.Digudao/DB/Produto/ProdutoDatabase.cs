@@ -48,7 +48,7 @@ namespace prototipos.DB.Produto
             return lista;
         }
 
-        public int RemoverPRodutos(int id)
+        public int Remover(int id)
         {
             string script = @"DELETE FROM Funcionario WHERE idFuncionario = @Id_Produto";
 
@@ -59,7 +59,7 @@ namespace prototipos.DB.Produto
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-        public int AlterarProdutos(ProdutoDTO dto)
+        public int Alterar(ProdutoDTO dto)
         {
             string script = @"UPDATE Funcionario SET 
                                                     Nm_Nome = @Nm_Nome,

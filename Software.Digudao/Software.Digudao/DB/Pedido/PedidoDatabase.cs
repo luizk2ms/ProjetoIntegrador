@@ -10,7 +10,7 @@ namespace prototipos.DB.Pedido
 {
     class PedidoDatabase
     {
-        public PedidoDTO Cadastrar(PedidoDTO dto)
+        public int Cadastrar(PedidoDTO dto)
         {
             string script = @"INSERT Funcionario(Id_Pedido, pc_preçoporcaixa_caixa, Cliente_id_cliente,qn_quantidade,Tm_tamanho_tamanho)
                                           VALUES(@Id_Pedido,@pc_preçoporcaixa_caixa,@Cliente_id_cliente,@qn_quantidade,@Tm_tamanho_tamanho)";
@@ -25,107 +25,123 @@ namespace prototipos.DB.Pedido
 
 
             Database db = new Database();
-            return db.ExecuteInsertScriptWithPk(script, parms);
+             db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-    }
-    public List<PedidoViewDTO> ConsultarporNome(string Nome)
-    {
-        string script = @"select * from Tb_Pedido where Nm_Nome like @Nm_Nome";
-        List<MySqlParameter> parms = new List<MySqlParameter>();
-        parms.Add(new MySqlParameter("Nm_Nome", Nome + "%"));
-        Database db = new Database();
-        MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-        List<PedidoViewDTO> lista = new List<PedidoViewDTO>();
-        while (reader.Read())
+
+
+
+        public List<PedidoDTO> ConsultarPorID(int id)
         {
-            PedidoViewDTO dto = new PedidoViewDTO();
-            dto.Id_Pedido = reader.GetInt32("Id_Pedido");
-            dto.id_produto = reader.GetInt32("id_produto");
-            dto.pc_preçoporcaixa_caixa = reader.GetDecimal("pc_preçoporcaixa_caixa");
-            dto.qn_quantidade = reader.GetInt32("qn_quantidade");
-            dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
-            dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
+            string script = @"select * from Tb_Pedido where Id_Pedido like @Id_Pedido";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Id_Pedido", id));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<PedidoDTO> lista = new List<PedidoDTO>();
+            while (reader.Read())
+            {
+                PedidoDTO dto = new PedidoDTO();
+                dto.Id_Pedido = reader.GetInt32("Id_Pedido");
+                dto.id_produto = reader.GetInt32("id_produto");
+                dto.pc_preçoporcaixa_caixa = reader.GetDecimal("pc_preçoporcaixa_caixa");
+                dto.qn_quantidade = reader.GetInt32("qn_quantidade");
+                dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
+                dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
 
+                lista.Add(dto);
 
-            lista.Add(dto);
-
+            }
+            return lista;
         }
-        return lista;
-    }
-    public List<PedidoViewDTO> ConsultarporID(int id)
-    {
-        string script = @"select * from Tb_Pedido where Id_Pedido like @Id_Pedido";
-        List<MySqlParameter> parms = new List<MySqlParameter>();
-        parms.Add(new MySqlParameter("Id_Pedido", id));
-        Database db = new Database();
-        MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-        List<PedidoViewDTO> lista = new List<PedidoViewDTO>();
-        while (reader.Read())
+
+
+
+        public void Alterar(PedidoDTO dto)
         {
-            PedidoViewDTO dto = new PedidoViewDTO();
-            dto.Id_Pedido = reader.GetInt32("Id_Pedido");
-            dto.id_produto = reader.GetInt32("id_produto");
-            dto.pc_preçoporcaixa_caixa = reader.GetDecimal("pc_preçoporcaixa_caixa");
-            dto.qn_quantidade = reader.GetInt32("qn_quantidade");
-            dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
-            dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
-
-            lista.Add(dto);
-
-        }
-        return lista;
-    }
-
-
-
-    public void Alterar(PedidoDTO dto)
-    {
-        string Script = @"UPDATE Tb_Cliente SET pc_preçoporcaixa_caixa = @pc_preçoporcaixa_caixa,
+            string Script = @"UPDATE Tb_Cliente SET pc_preçoporcaixa_caixa = @pc_preçoporcaixa_caixa,
                                                     qn_quantidade = @qn_quantidade,
                                                     Tm_tamanho_tamanho = @cp_cep,
                                                     id_produto = @cpf_cpf,
                                                     Cliente_id_cliente = @tl_empresa,
                                               WHERE Id_Pedido = @Id_Pedido";
 
-        List<MySqlParameter> parms = new List<MySqlParameter>();
-        parms.Add(new MySqlParameter("Id_Pedido", dto.Id_Pedido));
-        parms.Add(new MySqlParameter("Cliente_id_cliente", dto.id_produto));
-        parms.Add(new MySqlParameter("id_produto", dto.pc_preçoporcaixa_caixa));
-        parms.Add(new MySqlParameter("pc_preçoporcaixa_caixa", dto.qn_quantidade));
-        parms.Add(new MySqlParameter("qn_quantidade", dto.Tm_tamanho_tamanho));
-        parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Cliente_id_cliente));
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Id_Pedido", dto.Id_Pedido));
+            parms.Add(new MySqlParameter("Cliente_id_cliente", dto.id_produto));
+            parms.Add(new MySqlParameter("id_produto", dto.pc_preçoporcaixa_caixa));
+            parms.Add(new MySqlParameter("pc_preçoporcaixa_caixa", dto.qn_quantidade));
+            parms.Add(new MySqlParameter("qn_quantidade", dto.Tm_tamanho_tamanho));
+            parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Cliente_id_cliente));
 
 
-        Database db = new Database();
-        db.ExecuteInsertScriptWithPk(Script, parms);
-    }
-
-    public List<PedidoDTO> ConsultarFuncionarios()
-    {
-        string script = @"SELECT * FROM Pedido";
-
-        List<MySqlParameter> parms = new List<MySqlParameter>();
-
-        Database db = new Database();
-        MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-
-        List<PedidoDTO> pedidos = new List<PedidoDTO>();
-        while (reader.Read())
-        {
-            PedidoDTO dto = new PedidoDTO();
-            dto.Id_Pedido = reader.GetInt32("Id_Pedido");
-            dto.id_produto = reader.GetInt32("id_produto");
-            dto.pc_preçoporcaixa_caixa = reader.GetDecimal("pc_preçoporcaixa_caixa");
-            dto.qn_quantidade = reader.GetInt32("qn_quantidade");
-            dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
-            dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
-
-            pedidos.Add(dto);
+            Database db = new Database();
+            db.ExecuteInsertScriptWithPk(Script, parms);
         }
 
-        reader.Close();
-        return pedidos;
+        public List<PedidoDTO> ConsultarporNome(string Nome)
+        {
+            string script = @"select * from Tb_Estoque where nm_nome like @nm_nome";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<PedidoDTO> lista = new List<PedidoDTO>();
+            while (reader.Read())
+            {
+                PedidoDTO dto = new PedidoDTO();
+                dto.Id_Pedido = reader.GetInt32("Id_Pedido");
+                dto.id_produto = reader.GetInt32("id_produto");
+                dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
+                dto.pc_preçoporcaixa_caixa = reader.GetInt32("pc_preçoporcaixa_caixa ");
+                dto.qn_quantidade = reader.GetInt32("qn_quantidade");
+                dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho ");
+
+
+
+
+
+                lista.Add(dto);
+
+            }
+            return lista;
+        }
+        public int RemoverPedido(int id)
+        {
+            string script = @"DELETE FROM Tb_Pedido WHERE Id_Pedido = @Id_Pedido";
+
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Id_Pedido", id));
+
+            Database db = new Database();
+            return db.ExecuteInsertScriptWithPk(script, parms);
+        }
+        public List<PedidoDTO> Listar()
+        {
+            string Script = @"SELECT *FROM Funcionario";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
+            List<PedidoDTO> lista = new List<PedidoDTO>();
+            while (reader.Read())
+            {
+                PedidoDTO dto = new PedidoDTO();
+                dto.Id_Pedido = reader.GetInt32("Id_Pedido");
+                dto.id_produto = reader.GetInt32("id_produto");
+                dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
+                dto.pc_preçoporcaixa_caixa = reader.GetInt32("pc_preçoporcaixa_caixa ");
+                dto.qn_quantidade = reader.GetInt32("qn_quantidade");
+                dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho ");
+
+
+                lista.Add(dto);
+
+            }
+            return lista;
+
+        }
     }
 }
+    
+   
     

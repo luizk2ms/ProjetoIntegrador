@@ -32,8 +32,8 @@ namespace Software.Digudao.Controle_compra
                 dto.Id_Pedido = int.Parse(textBox4.Text);
                 dto.id_produto = int.Parse(textBox6.Text);
                 dto.pc_preçoporcaixa_caixa = int.Parse(textBox5.Text);
-                dto.qn_quantidade = radioButton1
-                dto.Tm_tamanho_tamanho =
+                
+                
 
              MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
