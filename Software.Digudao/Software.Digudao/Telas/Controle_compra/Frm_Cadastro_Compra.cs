@@ -8,26 +8,21 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Software.Digudao.Telas.Controle_Usuario
+namespace Software.Digudao.Telas.Controle_compra
 {
-    public partial class Frm_UsuarioAlterar : Form
+    public partial class Frm_Cadastro_Compra : Form
     {
-        public Frm_UsuarioAlterar()
+        public Frm_Cadastro_Compra()
         {
             InitializeComponent();
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void Frm_Cadastro_Compra_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void button10_Click(object sender, EventArgs e)
         {
             Inicio iniciar = new Inicio();
             Hide();

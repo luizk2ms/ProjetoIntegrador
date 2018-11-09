@@ -62,5 +62,18 @@ namespace Software.Digudao.Controle_Cliente
             
 
         }
+
+        private void Frm_Consultar_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

@@ -36,5 +36,13 @@ namespace Software.Digudao.DB.db
             SalvarProduto();
           
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

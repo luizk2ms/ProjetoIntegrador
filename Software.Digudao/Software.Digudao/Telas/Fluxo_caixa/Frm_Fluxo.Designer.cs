@@ -215,8 +215,9 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Inicio";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Frm_Fluxo
+            // FluxoDeCaixa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -226,7 +227,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Fluxo";
+            this.Name = "FluxoDeCaixa";
             this.Text = "Frm_Fluxo";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

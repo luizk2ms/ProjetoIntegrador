@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -38,8 +40,6 @@
             this.btncompras = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -74,88 +74,6 @@
             this.panel2.Size = new System.Drawing.Size(909, 36);
             this.panel2.TabIndex = 7;
             // 
-            // button6
-            // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button6.Location = new System.Drawing.Point(435, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Folha de Pagamento";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button5.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button5.Location = new System.Drawing.Point(354, 6);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "Estoque";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button4.Location = new System.Drawing.Point(262, 6);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Fornecedor";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // btnfuncionarios
-            // 
-            this.btnfuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnfuncionarios.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnfuncionarios.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnfuncionarios.Location = new System.Drawing.Point(168, 6);
-            this.btnfuncionarios.Name = "btnfuncionarios";
-            this.btnfuncionarios.Size = new System.Drawing.Size(88, 23);
-            this.btnfuncionarios.TabIndex = 7;
-            this.btnfuncionarios.Text = "Funcionários";
-            this.btnfuncionarios.UseVisualStyleBackColor = true;
-            // 
-            // btncompras
-            // 
-            this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncompras.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btncompras.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btncompras.Location = new System.Drawing.Point(87, 6);
-            this.btncompras.Name = "btncompras";
-            this.btncompras.Size = new System.Drawing.Size(75, 23);
-            this.btncompras.TabIndex = 6;
-            this.btncompras.Text = "Compras";
-            this.btncompras.UseVisualStyleBackColor = true;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInicio.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnInicio.Location = new System.Drawing.Point(6, 6);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(75, 23);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(101, 122);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(430, 181);
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
-            // 
             // button12
             // 
             this.button12.BackgroundImage = global::Software.Digudao.Properties.Resources.minimize;
@@ -180,6 +98,93 @@
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 53;
             this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button6.Location = new System.Drawing.Point(435, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(138, 23);
+            this.button6.TabIndex = 10;
+            this.button6.Text = "Folha de Pagamento";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button5.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button5.Location = new System.Drawing.Point(354, 6);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 9;
+            this.button5.Text = "Estoque";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.button4.Location = new System.Drawing.Point(262, 6);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(86, 23);
+            this.button4.TabIndex = 8;
+            this.button4.Text = "Fornecedor";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnfuncionarios
+            // 
+            this.btnfuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnfuncionarios.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btnfuncionarios.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnfuncionarios.Location = new System.Drawing.Point(168, 6);
+            this.btnfuncionarios.Name = "btnfuncionarios";
+            this.btnfuncionarios.Size = new System.Drawing.Size(88, 23);
+            this.btnfuncionarios.TabIndex = 7;
+            this.btnfuncionarios.Text = "Funcionários";
+            this.btnfuncionarios.UseVisualStyleBackColor = true;
+            this.btnfuncionarios.Click += new System.EventHandler(this.btnfuncionarios_Click);
+            // 
+            // btncompras
+            // 
+            this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncompras.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btncompras.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btncompras.Location = new System.Drawing.Point(87, 6);
+            this.btncompras.Name = "btncompras";
+            this.btncompras.Size = new System.Drawing.Size(75, 23);
+            this.btncompras.TabIndex = 6;
+            this.btncompras.Text = "Compras";
+            this.btncompras.UseVisualStyleBackColor = true;
+            this.btncompras.Click += new System.EventHandler(this.btncompras_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnInicio.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.btnInicio.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.btnInicio.Location = new System.Drawing.Point(6, 6);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(75, 23);
+            this.btnInicio.TabIndex = 5;
+            this.btnInicio.Text = "Inicio";
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(101, 122);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(430, 181);
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // Inicio
             // 

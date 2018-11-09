@@ -133,6 +133,7 @@
             this.button10.TabIndex = 5;
             this.button10.Text = "Inicio";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // label1
             // 
@@ -225,7 +226,7 @@
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button11.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button11.Location = new System.Drawing.Point(688, 53);
+            this.button11.Location = new System.Drawing.Point(690, 82);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(75, 23);
             this.button11.TabIndex = 11;

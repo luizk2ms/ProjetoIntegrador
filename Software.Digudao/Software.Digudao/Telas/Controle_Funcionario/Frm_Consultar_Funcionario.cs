@@ -50,5 +50,13 @@ namespace Software.Digudao.Controle_Funcionario
 
             }
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

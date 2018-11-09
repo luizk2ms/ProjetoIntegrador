@@ -59,5 +59,13 @@ namespace Software.Digudao.Folha_Pagamento
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

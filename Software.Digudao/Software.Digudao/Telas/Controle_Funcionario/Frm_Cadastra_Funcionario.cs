@@ -46,5 +46,13 @@ namespace Software.Digudao.Controle_Funcionario
             CarregarFuncionario();
             MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

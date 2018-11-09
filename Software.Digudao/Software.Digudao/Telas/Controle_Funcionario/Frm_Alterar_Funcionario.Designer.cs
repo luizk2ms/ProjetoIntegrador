@@ -117,6 +117,7 @@
             this.btnInicio.TabIndex = 5;
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // label5
             // 

@@ -59,5 +59,13 @@ namespace Software.Digudao.Controle_Cliente
         {
 
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }

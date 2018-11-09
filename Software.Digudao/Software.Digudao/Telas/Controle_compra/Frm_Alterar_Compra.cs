@@ -40,5 +40,13 @@ namespace Software.Digudao.Controle_compra
             cboProdutos.DisplayMember = "Tm_Tamanho";
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Inicio iniciar = new Inicio();
+            Hide();
+            iniciar.ShowDialog();
+            Show();
+        }
     }
 }
