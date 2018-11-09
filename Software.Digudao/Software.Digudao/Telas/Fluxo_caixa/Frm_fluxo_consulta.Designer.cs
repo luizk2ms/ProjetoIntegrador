@@ -40,6 +40,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dtg_consultarproduto = new System.Windows.Forms.DataGridView();
+            this.NúmeroCaixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QntVendasAVista = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.QntVendasCartão = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ValorRecebido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Diário = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Mensal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -51,12 +57,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.NúmeroCaixa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QntVendasAVista = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QntVendasCartão = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ValorRecebido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Diário = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Mensal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_consultarproduto)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -124,6 +124,48 @@
             this.dtg_consultarproduto.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dtg_consultarproduto.Size = new System.Drawing.Size(643, 329);
             this.dtg_consultarproduto.TabIndex = 74;
+            // 
+            // NúmeroCaixa
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            this.NúmeroCaixa.DefaultCellStyle = dataGridViewCellStyle3;
+            this.NúmeroCaixa.HeaderText = "NúmeroCaixa";
+            this.NúmeroCaixa.Name = "NúmeroCaixa";
+            // 
+            // QntVendasAVista
+            // 
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.QntVendasAVista.DefaultCellStyle = dataGridViewCellStyle4;
+            this.QntVendasAVista.HeaderText = "QntVendasAVista";
+            this.QntVendasAVista.Name = "QntVendasAVista";
+            // 
+            // QntVendasCartão
+            // 
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.QntVendasCartão.DefaultCellStyle = dataGridViewCellStyle5;
+            this.QntVendasCartão.HeaderText = "QntVendasCartão";
+            this.QntVendasCartão.Name = "QntVendasCartão";
+            // 
+            // ValorRecebido
+            // 
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            this.ValorRecebido.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ValorRecebido.HeaderText = "ValorRecebido";
+            this.ValorRecebido.Name = "ValorRecebido";
+            // 
+            // Diário
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.Diário.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Diário.HeaderText = "Diário";
+            this.Diário.Name = "Diário";
+            // 
+            // Mensal
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            this.Mensal.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Mensal.HeaderText = "Mensal";
+            this.Mensal.Name = "Mensal";
             // 
             // panel2
             // 
@@ -265,48 +307,6 @@
             this.button9.Text = "Inicio";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // NúmeroCaixa
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            this.NúmeroCaixa.DefaultCellStyle = dataGridViewCellStyle3;
-            this.NúmeroCaixa.HeaderText = "NúmeroCaixa";
-            this.NúmeroCaixa.Name = "NúmeroCaixa";
-            // 
-            // QntVendasAVista
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.QntVendasAVista.DefaultCellStyle = dataGridViewCellStyle4;
-            this.QntVendasAVista.HeaderText = "QntVendasAVista";
-            this.QntVendasAVista.Name = "QntVendasAVista";
-            // 
-            // QntVendasCartão
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            this.QntVendasCartão.DefaultCellStyle = dataGridViewCellStyle5;
-            this.QntVendasCartão.HeaderText = "QntVendasCartão";
-            this.QntVendasCartão.Name = "QntVendasCartão";
-            // 
-            // ValorRecebido
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            this.ValorRecebido.DefaultCellStyle = dataGridViewCellStyle6;
-            this.ValorRecebido.HeaderText = "ValorRecebido";
-            this.ValorRecebido.Name = "ValorRecebido";
-            // 
-            // Diário
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.Diário.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Diário.HeaderText = "Diário";
-            this.Diário.Name = "Diário";
-            // 
-            // Mensal
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            this.Mensal.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Mensal.HeaderText = "Mensal";
-            this.Mensal.Name = "Mensal";
-            // 
             // Frm_fluxo_consulta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -320,6 +320,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_fluxo_consulta";
             this.Text = "Frm_fluxo_consulta";
+            this.Load += new System.EventHandler(this.Frm_fluxo_consulta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_consultarproduto)).EndInit();
             this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);

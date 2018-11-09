@@ -59,6 +59,10 @@
     <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaBusiness.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDataBase.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDTO.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaView.cs" />
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
