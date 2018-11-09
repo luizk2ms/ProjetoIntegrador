@@ -63,6 +63,14 @@
     <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDataBase.cs" />
     <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDTO.cs" />
     <Compile Include="DB\FluxodeCaixa\FluxodeCaixaView.cs" />
+    <Compile Include="DB\Pedido\PedidoitemBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoitemDatabase.cs" />
+    <Compile Include="DB\Pedido\PedidoitemDTO.cs" />
+    <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
+    <Compile Include="DB\Pedido\Pedido_Compra_Business.cs" />
+    <Compile Include="DB\Pedido\Pedido_Compra_Database.cs" />
+    <Compile Include="DB\Pedido\Pedido_Compra_DTO.cs" />
+    <Compile Include="DB\Pedido\Pedido_Venda.cs" />
     <Compile Include="Telas\Controle_compra\Frm_Cadastro_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,14 +110,6 @@
     <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
     <Compile Include="DB\Funcionario\FuncionarioViewDTO.cs" />
-    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
-    <Compile Include="DB\Pedido\PedidoDatabase.cs" />
-    <Compile Include="DB\Pedido\PedidoDTO.cs" />
-    <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
-    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
-    <Compile Include="DB\Produto\ProdutoDatabase.cs" />
-    <Compile Include="DB\Produto\ProdutoDTO.cs" />
-    <Compile Include="DB\Produto\ProdutoViewDTO.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
