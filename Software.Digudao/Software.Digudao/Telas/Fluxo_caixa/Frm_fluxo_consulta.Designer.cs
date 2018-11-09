@@ -47,9 +47,9 @@
             this.Diário = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Mensal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button9 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_consultarproduto)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +72,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(223, 33);
+            this.label2.Location = new System.Drawing.Point(222, 33);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(342, 32);
             this.label2.TabIndex = 75;
@@ -175,18 +175,6 @@
             this.panel2.Size = new System.Drawing.Size(819, 36);
             this.panel2.TabIndex = 85;
             // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button9.Location = new System.Drawing.Point(9, 5);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 5;
-            this.button9.Text = "Inicio";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
             // button12
             // 
             this.button12.BackgroundImage = global::Software.Digudao.Properties.Resources.minimize;
@@ -211,6 +199,18 @@
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 55;
             this.button14.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button9.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
+            this.button9.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button9.Location = new System.Drawing.Point(9, 5);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(75, 23);
+            this.button9.TabIndex = 5;
+            this.button9.Text = "Inicio";
+            this.button9.UseVisualStyleBackColor = true;
             // 
             // Frm_fluxo_consulta
             // 

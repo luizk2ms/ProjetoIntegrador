@@ -177,7 +177,7 @@
             this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.Transparent;
-            this.button12.Location = new System.Drawing.Point(288, 6);
+            this.button12.Location = new System.Drawing.Point(306, 6);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(33, 23);
             this.button12.TabIndex = 56;
@@ -190,7 +190,7 @@
             this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.ForeColor = System.Drawing.Color.Transparent;
-            this.button14.Location = new System.Drawing.Point(327, 6);
+            this.button14.Location = new System.Drawing.Point(345, 6);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 55;

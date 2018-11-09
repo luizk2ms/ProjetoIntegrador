@@ -54,5 +54,10 @@ namespace Software.Digudao.Controle_Cliente
             CadastrarDadosCliente();
 
         }
+
+        private void Frm_Cadastrar_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
