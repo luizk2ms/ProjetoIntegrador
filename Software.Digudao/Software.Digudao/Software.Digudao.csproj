@@ -59,33 +59,15 @@
     <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
-    <Compile Include="DB\Pedido\PedidoitemBusiness.cs" />
-    <Compile Include="DB\Pedido\PedidoitemDatabase.cs" />
-    <Compile Include="DB\Pedido\PedidoitemDTO.cs" />
-    <Compile Include="DB\Pedido\Pedido_Venda.cs" />
-    <Compile Include="Telas\Controle_compra\Cadastrar_Compra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Controle_compra\Cadastrar_Compra.Designer.cs">
-      <DependentUpon>Cadastrar_Compra.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaBusiness.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDataBase.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDTO.cs" />
+    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaView.cs" />
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.Designer.cs">
       <DependentUpon>Frm_UsuarioAlterar.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.Designer.cs">
-      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Telas\Produto\AlterarProduto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Telas\Produto\AlterarProduto.Designer.cs">
-      <DependentUpon>AlterarProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Produto\CadastrarProduto.cs">
       <SubType>Form</SubType>
@@ -114,14 +96,14 @@
     <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
     <Compile Include="DB\Funcionario\FuncionarioViewDTO.cs" />
-    <Compile Include="DB\Pedido\Pedido_Compra_Business.cs" />
-    <Compile Include="DB\Pedido\Pedido_Compra_Database.cs" />
-    <Compile Include="DB\Pedido\Pedido_Compra_DTO.cs" />
+    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoDatabase.cs" />
+    <Compile Include="DB\Pedido\PedidoDTO.cs" />
     <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
-    <Compile Include="DB\Produto_Compra\Produto_Compra_Business.cs" />
-    <Compile Include="DB\Produto_Compra\Produto_Compra_Database.cs" />
-    <Compile Include="DB\Produto_Compra\Produto_Compra_DTO.cs" />
-    <Compile Include="DB\Produto_Compra\Produto_View_DTO.cs" />
+    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
+    <Compile Include="DB\Produto\ProdutoDatabase.cs" />
+    <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoViewDTO.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +133,12 @@
     </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Alterar_Compra.Designer.cs">
       <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Controle_compra\Frm_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Controle_compra\Frm_Compra.Designer.cs">
+      <DependentUpon>Frm_Compra.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Consultar_Compra.cs">
       <SubType>Form</SubType>
@@ -230,11 +218,11 @@
     <Compile Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.Designer.cs">
       <DependentUpon>Frm_Alterar_Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Visualisar_Folha.cs">
+    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Visualisar_Folha.Designer.cs">
-      <DependentUpon>Frm_Visualisar_Folha.cs</DependentUpon>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.Designer.cs">
+      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.cs">
       <SubType>Form</SubType>
@@ -274,20 +262,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Consultar_Cliente.resx">
-      <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Controle_compra\Cadastrar_Compra.resx">
-      <DependentUpon>Cadastrar_Compra.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.resx">
       <DependentUpon>Frm_UsuarioAlterar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.resx">
-      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Produto\AlterarProduto.resx">
-      <DependentUpon>AlterarProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Produto\CadastrarProduto.resx">
       <DependentUpon>CadastrarProduto.cs</DependentUpon>
@@ -298,8 +274,15 @@
     <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Cadastrar_Cliente.resx">
       <DependentUpon>Frm_Cadastrar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\..\Desktop\Frm_Consultar_Cliente.resx">
+      <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
+      <Link>Telas\Controle_Cliente\Frm_Consultar_Cliente.resx</Link>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_compra\Frm_Alterar_Compra.resx">
       <DependentUpon>Frm_Alterar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Controle_compra\Frm_Compra.resx">
+      <DependentUpon>Frm_Compra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_compra\Frm_Consultar_Compra.resx">
       <DependentUpon>Frm_Consultar_Compra.cs</DependentUpon>
@@ -356,8 +339,8 @@
     <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.resx">
       <DependentUpon>Frm_Alterar_Folha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Visualisar_Folha.resx">
-      <DependentUpon>Frm_Visualisar_Folha.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.resx">
+      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.resx">
       <DependentUpon>Frm_Registrar_Folha.cs</DependentUpon>
@@ -381,14 +364,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\close-md.png" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\demo.gif" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
