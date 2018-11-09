@@ -8,39 +8,39 @@ namespace prototipos.DB.Fornecedor
 {
     class FornecedorBusiness
     {
-        public int Salvar(FornecedorDTO dto)
+        public FornecedorDTO Salvar(FornecedorDTO dto)
         {
             FornecedorDatabase db = new FornecedorDatabase();
             return db.Salvar(dto);
         }
 
-        public void Alterar(FornecedorDTO dto)
+        public int AlterarFornecedor(FornecedorDTO dto)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            db.Alterar(dto);
+            db.AlterarFornecedor(dto);
         }
-        public void Remover(int ID)
+        public int RemoverFornecedor(string id)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            db.Remover(ID);
+            db.RemoverFornecedor(id);
         }
 
-        public List<FornecedorViewDTO> Listar()
+        public List<FornecedorDTO> Listar()
         {
             FornecedorDatabase db = new FornecedorDatabase();
             return db.Listar();
         }
 
-        public List<FornecedorViewDTO> ConsultarporNome(string nome)
+        public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            return db.ConsultarporNome(nome);
+            return db.ConsultarporNome(Nome);
         }
 
-        public List<FornecedorDTO> ConsultarpoId(int ID)
+        public List<FornecedorDTO> ConsultarFornecedor(int id)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            return db.ConsultarporId(ID);
+            return db.ConsultarFornecedor(id);
         }
     }
 }

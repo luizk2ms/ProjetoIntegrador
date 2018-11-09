@@ -35,6 +35,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtuf = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -70,19 +73,9 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.btnfuncionarios = new System.Windows.Forms.Button();
-            this.btncompras = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -189,6 +182,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 379);
             this.panel1.TabIndex = 98;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(38, 21);
+            this.textBox11.MaxLength = 50;
+            this.textBox11.Multiline = true;
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(96, 19);
+            this.textBox11.TabIndex = 140;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Location = new System.Drawing.Point(507, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(81, 18);
+            this.label3.TabIndex = 139;
+            this.label3.Text = "ID Produto";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(594, 205);
+            this.textBox12.MaxLength = 50;
+            this.textBox12.Multiline = true;
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(96, 19);
+            this.textBox12.TabIndex = 138;
             // 
             // txtuf
             // 
@@ -529,127 +551,14 @@
             this.panel2.BackColor = System.Drawing.Color.Aquamarine;
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button12);
-            this.panel2.Controls.Add(this.button8);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.btnfuncionarios);
-            this.panel2.Controls.Add(this.btncompras);
+            this.panel2.Controls.Add(this.button14);
             this.panel2.Controls.Add(this.btnInicio);
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(791, 36);
             this.panel2.TabIndex = 99;
-            // 
-            // button7
-            // 
-            this.button7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.Transparent;
-            this.button7.Location = new System.Drawing.Point(672, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(33, 23);
-            this.button7.TabIndex = 49;
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.Transparent;
-            this.button3.Location = new System.Drawing.Point(711, 6);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 23);
-            this.button3.TabIndex = 50;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button12
-            // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.ForeColor = System.Drawing.Color.Transparent;
-            this.button12.Location = new System.Drawing.Point(743, 6);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(28, 23);
-            this.button12.TabIndex = 48;
-            this.button12.UseVisualStyleBackColor = false;
-            // 
-            // button8
-            // 
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button8.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button8.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button8.Location = new System.Drawing.Point(579, 6);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(75, 23);
-            this.button8.TabIndex = 12;
-            this.button8.Text = "Sobre Nós";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button6.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button6.Location = new System.Drawing.Point(435, 6);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Folha de Pagamento";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button9
-            // 
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button9.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button9.Location = new System.Drawing.Point(354, 6);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 23);
-            this.button9.TabIndex = 9;
-            this.button9.Text = "Estoque";
-            this.button9.UseVisualStyleBackColor = true;
-            // 
-            // button10
-            // 
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button10.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button10.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button10.Location = new System.Drawing.Point(262, 6);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(86, 23);
-            this.button10.TabIndex = 8;
-            this.button10.Text = "Fornecedor";
-            this.button10.UseVisualStyleBackColor = true;
-            // 
-            // btnfuncionarios
-            // 
-            this.btnfuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnfuncionarios.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnfuncionarios.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnfuncionarios.Location = new System.Drawing.Point(168, 6);
-            this.btnfuncionarios.Name = "btnfuncionarios";
-            this.btnfuncionarios.Size = new System.Drawing.Size(88, 23);
-            this.btnfuncionarios.TabIndex = 7;
-            this.btnfuncionarios.Text = "Funcionários";
-            this.btnfuncionarios.UseVisualStyleBackColor = true;
-            // 
-            // btncompras
-            // 
-            this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btncompras.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btncompras.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btncompras.Location = new System.Drawing.Point(87, 6);
-            this.btncompras.Name = "btncompras";
-            this.btncompras.Size = new System.Drawing.Size(75, 23);
-            this.btncompras.TabIndex = 6;
-            this.btncompras.Text = "Compras";
-            this.btncompras.UseVisualStyleBackColor = true;
             // 
             // btnInicio
             // 
@@ -663,41 +572,37 @@
             this.btnInicio.Text = "Inicio";
             this.btnInicio.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // button12
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(507, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
-            this.label3.TabIndex = 139;
-            this.label3.Text = "ID Produto";
+            this.button12.BackgroundImage = global::Software.Digudao.Properties.Resources.minimize;
+            this.button12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button12.ForeColor = System.Drawing.Color.Transparent;
+            this.button12.Location = new System.Drawing.Point(665, 6);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(33, 23);
+            this.button12.TabIndex = 56;
+            this.button12.UseVisualStyleBackColor = true;
             // 
-            // textBox12
+            // button14
             // 
-            this.textBox12.Location = new System.Drawing.Point(594, 205);
-            this.textBox12.MaxLength = 50;
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(96, 19);
-            this.textBox12.TabIndex = 138;
-            // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(38, 21);
-            this.textBox11.MaxLength = 50;
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(96, 19);
-            this.textBox11.TabIndex = 140;
+            this.button14.BackColor = System.Drawing.Color.Transparent;
+            this.button14.BackgroundImage = global::Software.Digudao.Properties.Resources.close_md;
+            this.button14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button14.ForeColor = System.Drawing.Color.Transparent;
+            this.button14.Location = new System.Drawing.Point(704, 6);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(28, 23);
+            this.button14.TabIndex = 55;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // Frm_Cadastrar_Fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(788, 434);
+            this.ClientSize = new System.Drawing.Size(761, 434);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.panel1);
@@ -756,18 +661,11 @@
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button btnfuncionarios;
-        private System.Windows.Forms.Button btncompras;
         private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button14;
     }
 }

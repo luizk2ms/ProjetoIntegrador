@@ -24,8 +24,8 @@ namespace Software.Digudao.Controle_Cliente
         private void CarregarDadosClientes()
         {
             ClienteBusiness Cliente = new ClienteBusiness();
-            List<ClienteViewDTO> View = Cliente.ConsultarporNome(textBox2.Text);
-            ClienteViewDTO dto = View[0];
+            List<ClienteDTO> View = Cliente.ConsultarporNome(textBox2.Text);
+            ClienteDTO dto = View[0];
             dataGridView1.DataSource = View;
 
         }

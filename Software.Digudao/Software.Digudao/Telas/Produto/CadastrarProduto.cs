@@ -19,7 +19,7 @@ namespace Software.Digudao.DB.db
         }
         private void SalvarProduto()
         {
-            ProdutoDTO dto = new ProdutoDTO();
+            Produto_Compra dto = new Produto_Compra();
             ProdutoBusiness business = new ProdutoBusiness();
             dto.Nm_Nome = textBox8.Text;
             dto.Pc_Preco = decimal.Parse(textBox2.Text);

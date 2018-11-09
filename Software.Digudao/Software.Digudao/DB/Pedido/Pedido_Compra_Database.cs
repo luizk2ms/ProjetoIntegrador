@@ -29,17 +29,17 @@ namespace prototipos.DB.Pedido
         }
 
     }
-    public List<PedidoViewDTO> ConsultarporNome(string Nome)
+    public List<PedidoDTO> ListarporNome(string Nome)
     {
         string script = @"select * from Tb_Pedido where Nm_Nome like @Nm_Nome";
         List<MySqlParameter> parms = new List<MySqlParameter>();
         parms.Add(new MySqlParameter("Nm_Nome", Nome + "%"));
         Database db = new Database();
         MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-        List<PedidoViewDTO> lista = new List<PedidoViewDTO>();
+        List<PedidoDTO> lista = new List<PedidoDTO>();
         while (reader.Read())
         {
-            PedidoViewDTO dto = new PedidoViewDTO();
+            PedidoDTO dto = new PedidoDTO();
             dto.Id_Pedido = reader.GetInt32("Id_Pedido");
             dto.id_produto = reader.GetInt32("id_produto");
             dto.pc_preçoporcaixa_caixa = reader.GetDecimal("pc_preçoporcaixa_caixa");

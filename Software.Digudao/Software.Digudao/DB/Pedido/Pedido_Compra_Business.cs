@@ -8,16 +8,16 @@ namespace prototipos.DB.Pedido
 {
     class PedidoBusiness
     {
-        public int Salvar(PedidoDTO dto)
+        public PedidoDTO Cadastrar(PedidoDTO dto)
         {
             PedidoDatabase db = new PedidoDatabase();
-            return db.Salvar(dto);
+            return db.Cadastrar(dto);
         }
 
         public void Alterar(PedidoDTO dto)
         {
             PedidoDatabase db = new PedidoDatabase();
-            db.Alterar(dto);
+            db.(dto);
         }
         public void Remover(int ID)
         {
@@ -25,16 +25,16 @@ namespace prototipos.DB.Pedido
             db.Remover(ID);
         }
 
-        public List<PedidoViewDTO> Listar()
+        public List<PedidoDTO> Listar()
         {
             PedidoDatabase db = new PedidoDatabase();
             return db.Listar();
         }
 
-        public List<PedidoViewDTO> ConsultarporNome(string nome)
+        public List<PedidoDTO> ListarporNome(string Nome)
         {
             PedidoDatabase db = new PedidoDatabase();
-            return db.ConsultarporNome(nome);
+            return db.(nome);
         }
 
         public List<PedidoDTO> ConsultarpoId(int ID)

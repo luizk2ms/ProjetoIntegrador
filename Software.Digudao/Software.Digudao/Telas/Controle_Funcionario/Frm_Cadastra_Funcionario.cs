@@ -17,7 +17,7 @@ namespace Software.Digudao.Controle_Funcionario
         {
             InitializeComponent();
         }
-        public private SalvarFuncionario()
+        public void CarregarFuncionario()
 
         {
             FuncionarioBusiness Funcionario = new FuncionarioBusiness();
@@ -27,7 +27,6 @@ namespace Software.Digudao.Controle_Funcionario
             dto.Nm_Nome = textBox4.Text;
             dto.nm_numero = int.Parse(textBox5.Text);
             dto.tl_empresa = int.Parse(textBox9.Text);
-            dto.uf_uf = textBox12.Text;
             dto.cel_celular = int.Parse(textBox11.Text);
             dto.cpf_cpf = int.Parse(textBox7.Text);
             dto.cp_cep = int.Parse(textBox6.Text);
@@ -44,7 +43,7 @@ namespace Software.Digudao.Controle_Funcionario
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SalvaFuncionario();
+            CarregarFuncionario();
             MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }

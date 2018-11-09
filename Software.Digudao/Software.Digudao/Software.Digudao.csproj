@@ -63,11 +63,23 @@
     <Compile Include="DB\Pedido\PedidoitemDatabase.cs" />
     <Compile Include="DB\Pedido\PedidoitemDTO.cs" />
     <Compile Include="DB\Pedido\Pedido_Venda.cs" />
+    <Compile Include="Telas\Controle_compra\Cadastrar_Compra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Controle_compra\Cadastrar_Compra.Designer.cs">
+      <DependentUpon>Cadastrar_Compra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.Designer.cs">
       <DependentUpon>Frm_UsuarioAlterar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.Designer.cs">
+      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Produto\AlterarProduto.cs">
       <SubType>Form</SubType>
@@ -218,11 +230,11 @@
     <Compile Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.Designer.cs">
       <DependentUpon>Frm_Alterar_Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.cs">
+    <Compile Include="Telas\Folha_Pagamento\Frm_Visualisar_Folha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.Designer.cs">
-      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Visualisar_Folha.Designer.cs">
+      <DependentUpon>Frm_Visualisar_Folha.cs</DependentUpon>
     </Compile>
     <Compile Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.cs">
       <SubType>Form</SubType>
@@ -265,8 +277,14 @@
     <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Consultar_Cliente.resx">
       <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Controle_compra\Cadastrar_Compra.resx">
+      <DependentUpon>Cadastrar_Compra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.resx">
       <DependentUpon>Frm_UsuarioAlterar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.resx">
+      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Produto\AlterarProduto.resx">
       <DependentUpon>AlterarProduto.cs</DependentUpon>
@@ -338,8 +356,8 @@
     <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.resx">
       <DependentUpon>Frm_Alterar_Folha.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.resx">
-      <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
+    <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Visualisar_Folha.resx">
+      <DependentUpon>Frm_Visualisar_Folha.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.resx">
       <DependentUpon>Frm_Registrar_Folha.cs</DependentUpon>
@@ -363,9 +381,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\close-md.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\demo.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -22,7 +22,7 @@ namespace Software.Digudao.Controle_Fornecedor
         private void button1_Click(object sender, EventArgs e)
         {
             FornecedorBusiness Cliente = new FornecedorBusiness();
-            List<FornecedorViewDTO> View = Cliente.ConsultarporNome(txtfornecedor.Text);
+            List<FornecedorDTO> View = Cliente.ConsultarporNome(txtfornecedor.Text);
             FornecedorViewDTO dto = View[0];
             dgvfornecedor.DataSource = View;
         }

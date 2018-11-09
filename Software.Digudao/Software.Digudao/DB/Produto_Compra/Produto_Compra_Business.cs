@@ -10,39 +10,39 @@ namespace prototipos.DB.Produto
     {
         class JogadoresBusiness
         {
-            public int Salvar(ProdutoDTO dto)
+            public int Salvar(Produto_Compra_DTO dto)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                return db.Salvar(dto);
+                return db.Cadastrar(dto);
             }
 
-            public void Alterar(ProdutoDTO dto)
+            public void Alterar(Produto_Compra_DTO dto)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                db.Alterar(dto);
+                db.AlterarProdutos(dto);
             }
             public void Remover(int ID)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                db.Remover(ID);
+                db.RemoverPRodutos(ID);
             }
 
-            public List<ProdutoViewDTO> Listar()
+            public List<Produto_Compra_DTO> Listar()
             {
                 ProdutoDatabase db = new ProdutoDatabase();
                 return db.Listar();
             }
 
-            public List<ProdutoViewDTO> ConsultarporNome(string nome)
+            public List<Produto_Compra_DTO)> ConsultarporNome(string nome)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                return db.ConsultarporNome(nome);
+                return db.C(nome);
             }
 
-            public List<ProdutoDTO> ConsultarpoId(int ID)
+            public List<Produto_Compra_DTO> ConsultarpoId(int ID)
             {
                 ProdutoDatabase db = new ProdutoDatabase();
-                return db.ConsultarpoId(ID);
+                return db.ConsultarPorId(ID);
             }
 
         }

@@ -13,5 +13,6 @@ namespace prototipos.DB.Produto
         public string Tm_Tamanho { get; set; }
         public decimal Pc_Preco { get; set; }
         public int Ql_Quantidade { get; set; }
+        public int Id_Fornecedor { get; set; }
     }
 }

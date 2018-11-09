@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Frei.ProjetoIntegrador.Academia.Validacoes
+namespace Frei.ProjetoIntegrador.digudão.Validacoes
 {
     class CPF
     {

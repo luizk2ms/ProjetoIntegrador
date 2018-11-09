@@ -17,36 +17,27 @@ namespace Software.Digudao.Controle_compra
         public Frm_Alterar_Compra()
         {
             InitializeComponent();
+            Carregarcampos();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            ProdutoViewDTO dto = cboProdutos.SelectedItem as ProdutoViewDTO;
-            ProdutoDTO produto = new ProdutoDTO();
-
-            produto.Ql_Quantidade = Convert.ToInt32(textBox7.Text);
-            produto.Nm_Nome = dto.Nm_Nome;
-            produto.Id_Produto = dto.Id_Produto;
-
-            ProdutoBusiness business = new ProdutoBusiness();
-            business.Altera(produto);
+            Produto_Compra_DTO produto = new Produto_Compra_DTO();
+            produto.Nm_Nome
             
         }
 
         private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
+         
+        }
+        void Carregarcampos()
+        {
             ProdutoBusiness business = new ProdutoBusiness();
-            ProdutoViewDTO produto = business.Consultarporid(Convert.ToInt32(cboProdutos.SelectedValue));
+            List<Produto_Compra_DTO> produto = business.listar;
 
-            textBox9.Text = produto.Pc_Preco.ToString();
-
-
-
-
-
-
-
-            
+            cboProdutos.DataSource = produto;
+            cboProdutos.DisplayMember = "Tm_Tamanho";
 
         }
     }

@@ -94,6 +94,11 @@ namespace Software.Digudao.Telas
 
             return cod();
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
     
 }

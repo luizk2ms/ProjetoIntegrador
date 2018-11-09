@@ -50,5 +50,10 @@ namespace Software.Digudao.Controle_Cliente
             cliente.Alterar(dto);
 
         }
+
+        private void Frm_Alterar_Cliente_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,7 +28,6 @@ namespace Software.Digudao.Controle_Fornecedor
             dto.Nm_numero = int.Parse(textBox8.Text);
             dto.tel_contem = int.Parse(maskedTextBox1.Text);
             dto.uf_uf = txtuf.Text;
-            dto.cel_celular = int.Parse(maskedTextBox4.Text);
             dto.cnpj = int.Parse(maskedTextBox3.Text);
             dto.ds_descricao = textBox2.Text;
             dto.el_email = textBox3.Text;
