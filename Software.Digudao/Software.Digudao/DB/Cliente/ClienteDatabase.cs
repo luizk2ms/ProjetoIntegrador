@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -78,15 +79,15 @@ namespace prototipos.DB.Cliente
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
             List<ClienteDTO> lista = new List<ClienteDTO>();
-            while (reader.Read)
+            while (reader.Read())
             {
                 ClienteDTO dto = new ClienteDTO();
                 dto.Id_Cliente = reader.GetInt32("Id_Cliente");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.tl_empresa = reader.GetInt("tl_empresa");
-                dto.cel_celular = reader.GetInt("cel_celular");
-                dto.cpf_cpf = reader.GetInt("cpf_cpf");
-                dto.cp_cep = reader.GetInt("cp_cep");
+                dto.tl_empresa = reader.GetInt32("tl_empresa");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dto.cp_cep = reader.GetInt32("cp_cep");
                 dto.ds_endereço = reader.GetString("ds_endereço");
                 dto.em_email = reader.GetString("em_email");
 
@@ -110,11 +111,11 @@ namespace prototipos.DB.Cliente
                 dto.Id_Cliente = reader.GetInt32("Id_Cliente");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
                 dto.tl_empresa = reader.GetInt32("tl_empresa");
-                dto.cel_celular = reader.GetString("cel_celular");
-                dto.cpf_cpf = reader.GetString("cpf_cpf");
-                dto.cp_cep = reader.GetString("cp_cep");
-                dto.ds_endereço = reader.GetInt32("ds_endereço");
-                dto.em_email = reader.GetInt32("em_email");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.ds_endereço = reader.GetString("ds_endereço");
+                dto.em_email = reader.GetString("em_email");
 
                 lista.Add(dto);
 
@@ -135,11 +136,11 @@ namespace prototipos.DB.Cliente
                 dto.Id_Cliente = reader.GetInt32("Id_Cliente");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
                 dto.tl_empresa = reader.GetInt32("tl_empresa");
-                dto.cel_celular = reader.GetString("cel_celular");
-                dto.cpf_cpf = reader.GetString("cpf_cpf");
-                dto.cp_cep = reader.GetString("cp_cep");
-                dto.ds_endereço = reader.GetInt32("ds_endereço");
-                dto.em_email = reader.GetInt32("em_email");
+                dto.cel_celular = reader.GetInt32("cel_celular");
+                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
+                dto.cp_cep = reader.GetInt32("cp_cep");
+                dto.ds_endereço = reader.GetString("ds_endereço");
+                dto.em_email = reader.GetString("em_email");
 
                 lista.Add(dto);
 

@@ -39,7 +39,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
         }
 
     }
-    public decimal DeducaoIR(decimal SalarioBase)
+    public decimal Deduzir_ir(decimal SalarioBase)
     {
         string Script = $@"SELECT Ds_Deduzir FROM Tb_IR
                                     WHERE ds_Salario <=
@@ -60,7 +60,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
         else
             return 0;
     }
-    public decimal TaxaINSS(decimal SalarioBase)
+    public decimal TaxarINSS(decimal SalarioBase)
     {
         string Script = $@"SELECT Ds_Aliquota FROM Tb_Inss
                                     WHERE ds_Salario <=

@@ -40,8 +40,8 @@ namespace Software.Digudao.Controle_Cliente
         {
             if(e.ColumnIndex == 7 )
             {
-                Frm_Alterar_Cliente alterarcliente = new Frm_Alterar_Cliente();
-                ClienteViewDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteViewDTO;
+                Id_cliente alterarcliente = new Id_cliente();
+                ClienteDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteDTO;
                 int Id_Cliente = dto.Id_Cliente;
                 string Nm_Nome;
                 Id_Cliente = dto.Id_Cliente;
@@ -53,7 +53,7 @@ namespace Software.Digudao.Controle_Cliente
             if(e.ColumnIndex == 8)
             {
                 ClienteBusiness Cliente = new ClienteBusiness();
-                ClienteViewDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteViewDTO;
+                ClienteDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteDTO;
                 Cliente.Remover(dto.Id_Cliente);
                 CarregarDadosClientes();
                 

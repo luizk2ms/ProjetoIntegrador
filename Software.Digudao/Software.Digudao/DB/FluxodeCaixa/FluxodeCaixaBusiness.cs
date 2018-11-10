@@ -39,7 +39,7 @@ namespace Software
         }
 
 
-        public List<FluxodeCaixaView> FiltrarData(DateTime start, DateTime end)
+        public List<FluxodeCaixaDTO> FiltrarData(DateTime start, DateTime end)
         {
             FluxodeCaixaDataBase db = new FluxodeCaixaDataBase();
             return db.FiltrarData(start, end);

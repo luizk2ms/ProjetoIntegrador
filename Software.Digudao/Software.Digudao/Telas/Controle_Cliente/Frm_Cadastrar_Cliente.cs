@@ -46,12 +46,14 @@ namespace Software.Digudao.Controle_Cliente
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             CadastrarDadosCliente();
+
+            MessageBox.Show("Seu cliente foi cadastrado com sucesso.","digudão",MessageBoxButtons.OK,MessageBoxIcon.Information);
 
         }
 

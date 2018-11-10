@@ -112,7 +112,7 @@ namespace Software
             return lista;
         }
 
-        public List<FluxodeCaixaView> FiltrarData (DateTime start, DateTime end)
+        public List<FluxodeCaixaDTO> FiltrarData (DateTime start, DateTime end)
         {   
             string script = @"select *
                                 from vw_fluxo_caixa
@@ -127,10 +127,10 @@ namespace Software
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<FluxodeCaixaView> fluxodeCaixas = new List<FluxodeCaixaView>();
+            List<FluxodeCaixaDTO> fluxodeCaixas = new List<FluxodeCaixaDTO>();
             while(reader.Read() == true)
             {
-                FluxodeCaixaView dto = new FluxodeCaixaView();
+                FluxodeCaixaDTO dto = new FluxodeCaixaDTO();
                 dto.dt_operacao = reader.GetDateTime("dt_operacao");
                 dto.vl_total = reader.GetDecimal("vl_total");
                 dto.to_operacao = reader.GetString("tp_operacao");

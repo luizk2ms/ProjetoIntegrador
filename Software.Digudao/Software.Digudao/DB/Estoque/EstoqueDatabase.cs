@@ -36,7 +36,6 @@ namespace prototipos.DB.Estoque
             parms.Add(new MySqlParameter("kl_kilo", dto.kl_kilo));
             parms.Add(new MySqlParameter("id_produto_id", dto.id_produto_id));
 
-
             Database db = new Database();
             return db.ExecuteInsertScriptWithPk(Script, parms);
         }

@@ -1,4 +1,5 @@
 ﻿using Frei.ProjetoIntegrador.Academia.Validacoes;
+using Frei.ProjetoIntegrador.Digudão.Validacoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +19,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                 throw new ArgumentException("O cargo não pode ser nulo.");
 
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();
-            return db.(dto);
+            return db.SalvarFolha(dto);
         }
 
         public int AlterarFolha(Folha_de_Pagamento_DTO dto)
@@ -30,7 +31,7 @@ namespace Software.Digudao.DB.Folha_de_Pagamento
                 throw new ArgumentException("O cargo não pode ser nulo.");
 
             Folha_de_Pagamento_Database db = new Folha_de_Pagamento_Database();
-            return db(dto);
+            return db.AlterarFolha(dto);
         }
 
         public int RemoverFolha(int id)

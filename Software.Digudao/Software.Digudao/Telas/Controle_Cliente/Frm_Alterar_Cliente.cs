@@ -11,21 +11,16 @@ using System.Windows.Forms;
 
 namespace Software.Digudao.Controle_Cliente
 {
-    public partial class Frm_Alterar_Cliente : Form
+    public partial class Id_cliente : Form
     {
-        public Frm_Alterar_Cliente()
+        public Id_cliente()
         {
             InitializeComponent();
-        }
-
-        private void button9_Click(object sender, EventArgs e)
-        {
-
         }
         private void CarregarCliente()
         {
             ClienteBusiness business = new ClienteBusiness();
-            List<ClienteDTO> lista = business.ConsultarpoId(ID);
+            List<ClienteDTO> lista = business.ConsultarporNome(Name);
             ClienteDTO dto = lista[0];
 
         }
@@ -63,6 +58,38 @@ namespace Software.Digudao.Controle_Cliente
             Hide();
             iniciar.ShowDialog();
             Show();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ClienteBusiness cliente = new ClienteBusiness();
+            ClienteDTO dto = new ClienteDTO();
+            textBox5.Text = dto.Nm_Nome;
+            textBox8.Text = dto.ds_endereço;
+            textBox3.Text = dto.em_email;
+
+            cliente.Alterar(dto);
+
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

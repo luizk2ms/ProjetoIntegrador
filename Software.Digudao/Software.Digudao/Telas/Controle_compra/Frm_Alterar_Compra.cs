@@ -23,7 +23,7 @@ namespace Software.Digudao.Controle_compra
         private void button5_Click(object sender, EventArgs e)
         {
             Produto_Compra_DTO produto = new Produto_Compra_DTO();
-            produto.Nm_Nome
+            produto
             
         }
 

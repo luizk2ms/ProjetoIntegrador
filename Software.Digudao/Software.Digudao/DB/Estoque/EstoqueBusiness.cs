@@ -25,19 +25,19 @@ namespace prototipos.DB.Estoque
             db.Remover(ID);
         }
 
-        public List<EstoqueViewDTo> Listar()
+        public List<EstoqueDTO> Listar()
         {
             EstoqueDatabase db = new EstoqueDatabase();
             return db.Listar();
         }
 
-        public List<EstoqueViewDTo> ConsultarporNome(string nome)
+        public List<EstoqueDTO> ConsultarporNome(string nome)
         {
             EstoqueDatabase db = new EstoqueDatabase();
             return db.ConsultarporNome(nome);
         }
 
-        public List<EstoqueViewDTo> ConsultarpoID(int id)
+        public List<EstoqueDTO> ConsultarpoID(int id)
         {
             EstoqueDatabase db = new EstoqueDatabase();
             return db.ConsultarpoID(id);

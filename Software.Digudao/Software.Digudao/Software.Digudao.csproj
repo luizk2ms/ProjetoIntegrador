@@ -52,7 +52,6 @@
     <Compile Include="DB\Cliente\ClienteBusiness.cs" />
     <Compile Include="DB\Cliente\ClienteDatabase.cs" />
     <Compile Include="DB\Cliente\ClienteDTO.cs" />
-    <Compile Include="DB\Cliente\ClienteViewDTO.cs" />
     <Compile Include="DB\Controle_de_Usuario\LoginDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\LoginBusiness.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioBUsiness.cs" />
@@ -62,21 +61,17 @@
     <Compile Include="DB\FluxodeCaixa\FluxodeCaixaBusiness.cs" />
     <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDataBase.cs" />
     <Compile Include="DB\FluxodeCaixa\FluxodeCaixaDTO.cs" />
-    <Compile Include="DB\FluxodeCaixa\FluxodeCaixaView.cs" />
-    <Compile Include="DB\Pedido\PedidoitemBusiness.cs" />
-    <Compile Include="DB\Pedido\PedidoitemDatabase.cs" />
-    <Compile Include="DB\Pedido\PedidoitemDTO.cs" />
-    <Compile Include="DB\Pedido\PedidoViewDTO.cs" />
-    <Compile Include="DB\Pedido\Pedido_Compra_Business.cs" />
-    <Compile Include="DB\Pedido\Pedido_Compra_Database.cs" />
-    <Compile Include="DB\Pedido\Pedido_Compra_DTO.cs" />
-    <Compile Include="DB\Pedido\Pedido_Venda.cs" />
+    <Compile Include="DB\Pedido\PedidoBusiness.cs" />
+    <Compile Include="DB\Pedido\PedidoDatabase.cs" />
+    <Compile Include="DB\Pedido\PedidoDTO.cs" />
     <Compile Include="Telas\Controle_compra\Frm_Cadastro_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Cadastro_Compra.Designer.cs">
       <DependentUpon>Frm_Cadastro_Compra.cs</DependentUpon>
     </Compile>
+    <Compile Include="Telas\Controle_compra\ProdutoBusiness.cs" />
+    <Compile Include="Telas\Controle_compra\Produto_Compra_DTO.cs" />
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,7 +89,6 @@
     <Compile Include="DB\Estoque\EstoqueBusiness.cs" />
     <Compile Include="DB\Estoque\EstoqueDatabase.cs" />
     <Compile Include="DB\Estoque\EstoqueDTO.cs" />
-    <Compile Include="DB\Estoque\EstoqueViewDTo.cs" />
     <Compile Include="DB\Folha_de_Pagamento\Desconto_DTO.cs" />
     <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_Business.cs" />
     <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_Database.cs" />
@@ -105,11 +99,9 @@
     <Compile Include="DB\Fornecedor\FornecedorBusiness.cs" />
     <Compile Include="DB\Fornecedor\FornecedorDatabase.cs" />
     <Compile Include="DB\Fornecedor\FornecedorDTO.cs" />
-    <Compile Include="DB\Fornecedor\FornecedorViewDTO.cs" />
     <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
-    <Compile Include="DB\Funcionario\FuncionarioViewDTO.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
