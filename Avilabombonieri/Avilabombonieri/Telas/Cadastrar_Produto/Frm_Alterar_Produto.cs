@@ -44,5 +44,20 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
         {
 
         }
+
+        private void Frm_Alterar_Produto_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

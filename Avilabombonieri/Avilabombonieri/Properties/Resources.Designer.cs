@@ -83,6 +83,16 @@ namespace Avilabombonieri.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cuuc {
+            get {
+                object obj = ResourceManager.GetObject("cuuc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap loading_gif_transparent_10 {
             get {
                 object obj = ResourceManager.GetObject("loading-gif-transparent-10", resourceCulture);
@@ -106,6 +116,16 @@ namespace Avilabombonieri.Properties {
         internal static System.Drawing.Bitmap minimize {
             get {
                 object obj = ResourceManager.GetObject("minimize", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pirulito {
+            get {
+                object obj = ResourceManager.GetObject("pirulito", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
