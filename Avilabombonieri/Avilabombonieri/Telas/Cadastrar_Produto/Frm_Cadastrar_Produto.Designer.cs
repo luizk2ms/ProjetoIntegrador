@@ -80,7 +80,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Impact", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Indigo;
             this.label7.Location = new System.Drawing.Point(199, 68);
@@ -170,7 +170,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button12);
@@ -180,6 +180,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button1);
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(719, 35);
@@ -187,6 +188,7 @@
             // 
             // button13
             // 
+            this.button13.BackColor = System.Drawing.Color.White;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.Indigo;
@@ -195,10 +197,11 @@
             this.button13.Size = new System.Drawing.Size(154, 23);
             this.button13.TabIndex = 53;
             this.button13.Text = "Folha Pagamento";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.White;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Indigo;
@@ -207,10 +210,11 @@
             this.button12.Size = new System.Drawing.Size(104, 23);
             this.button12.TabIndex = 52;
             this.button12.Text = "Fornecedor";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.White;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Indigo;
@@ -219,10 +223,11 @@
             this.button14.Size = new System.Drawing.Size(113, 23);
             this.button14.TabIndex = 50;
             this.button14.Text = "Funcionários";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.White;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Indigo;
@@ -231,10 +236,11 @@
             this.button15.Size = new System.Drawing.Size(75, 23);
             this.button15.TabIndex = 49;
             this.button15.Text = "Compras";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Indigo;
@@ -243,7 +249,7 @@
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 43;
             this.button4.Text = "Inicio";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -375,7 +381,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel3.BackColor = System.Drawing.Color.Indigo;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBox4);
             this.panel3.Controls.Add(this.id);
@@ -394,6 +400,7 @@
             this.panel3.Controls.Add(this.button5);
             this.panel3.Controls.Add(this.textBox10);
             this.panel3.Controls.Add(this.dateTimePicker1);
+            this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(-1, -1);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(587, 341);
@@ -413,7 +420,7 @@
             this.id.AutoSize = true;
             this.id.BackColor = System.Drawing.Color.Transparent;
             this.id.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.id.ForeColor = System.Drawing.Color.Indigo;
+            this.id.ForeColor = System.Drawing.Color.White;
             this.id.Location = new System.Drawing.Point(113, 36);
             this.id.Name = "id";
             this.id.Size = new System.Drawing.Size(25, 20);
@@ -434,7 +441,7 @@
             this.nome.AutoSize = true;
             this.nome.BackColor = System.Drawing.Color.Transparent;
             this.nome.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.nome.ForeColor = System.Drawing.Color.Indigo;
+            this.nome.ForeColor = System.Drawing.Color.White;
             this.nome.Location = new System.Drawing.Point(96, 62);
             this.nome.Name = "nome";
             this.nome.Size = new System.Drawing.Size(49, 20);
@@ -447,7 +454,7 @@
             this.litros.AutoSize = true;
             this.litros.BackColor = System.Drawing.Color.Transparent;
             this.litros.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.litros.ForeColor = System.Drawing.Color.Indigo;
+            this.litros.ForeColor = System.Drawing.Color.White;
             this.litros.Location = new System.Drawing.Point(93, 192);
             this.litros.Name = "litros";
             this.litros.Size = new System.Drawing.Size(52, 20);
@@ -475,7 +482,7 @@
             this.descricao.AutoSize = true;
             this.descricao.BackColor = System.Drawing.Color.Transparent;
             this.descricao.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.descricao.ForeColor = System.Drawing.Color.Indigo;
+            this.descricao.ForeColor = System.Drawing.Color.White;
             this.descricao.Location = new System.Drawing.Point(66, 88);
             this.descricao.Name = "descricao";
             this.descricao.Size = new System.Drawing.Size(79, 20);
@@ -487,7 +494,7 @@
             this.kg.AutoSize = true;
             this.kg.BackColor = System.Drawing.Color.Transparent;
             this.kg.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.kg.ForeColor = System.Drawing.Color.Indigo;
+            this.kg.ForeColor = System.Drawing.Color.White;
             this.kg.Location = new System.Drawing.Point(113, 140);
             this.kg.Name = "kg";
             this.kg.Size = new System.Drawing.Size(33, 20);
@@ -516,7 +523,7 @@
             this.valor.AutoSize = true;
             this.valor.BackColor = System.Drawing.Color.Transparent;
             this.valor.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.valor.ForeColor = System.Drawing.Color.Indigo;
+            this.valor.ForeColor = System.Drawing.Color.White;
             this.valor.Location = new System.Drawing.Point(101, 114);
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(45, 20);
@@ -529,7 +536,7 @@
             this.ml.AutoSize = true;
             this.ml.BackColor = System.Drawing.Color.Transparent;
             this.ml.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.ml.ForeColor = System.Drawing.Color.Indigo;
+            this.ml.ForeColor = System.Drawing.Color.White;
             this.ml.Location = new System.Drawing.Point(113, 166);
             this.ml.Name = "ml";
             this.ml.Size = new System.Drawing.Size(32, 20);
@@ -541,7 +548,7 @@
             this.datadeVal.AutoSize = true;
             this.datadeVal.BackColor = System.Drawing.Color.Transparent;
             this.datadeVal.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.datadeVal.ForeColor = System.Drawing.Color.Indigo;
+            this.datadeVal.ForeColor = System.Drawing.Color.White;
             this.datadeVal.Location = new System.Drawing.Point(26, 222);
             this.datadeVal.Name = "datadeVal";
             this.datadeVal.Size = new System.Drawing.Size(119, 20);
@@ -551,9 +558,9 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.White;
+            this.button5.BackColor = System.Drawing.Color.Indigo;
             this.button5.Font = new System.Drawing.Font("Impact", 12F, System.Drawing.FontStyle.Italic);
-            this.button5.ForeColor = System.Drawing.Color.Indigo;
+            this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(389, 280);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(88, 33);
@@ -581,11 +588,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(718, 466);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.ForeColor = System.Drawing.Color.Indigo;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Cadastrar_Produto";
             this.Text = "Frm_Cadastrar_Produto";

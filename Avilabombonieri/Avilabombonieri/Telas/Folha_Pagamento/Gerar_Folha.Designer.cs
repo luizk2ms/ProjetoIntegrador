@@ -76,9 +76,9 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.BackColor = System.Drawing.Color.Indigo;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.Color.Indigo;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(614, 455);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(93, 23);
@@ -109,10 +109,11 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel4.BackColor = System.Drawing.Color.Indigo;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.textBox8);
             this.panel4.Controls.Add(this.label9);
+            this.panel4.ForeColor = System.Drawing.Color.White;
             this.panel4.Location = new System.Drawing.Point(428, 74);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(283, 69);
@@ -128,8 +129,9 @@
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Indigo;
             this.label9.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Indigo;
+            this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(5, 5);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(113, 21);
@@ -149,7 +151,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel3.BackColor = System.Drawing.Color.Indigo;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.textBox7);
             this.panel3.Controls.Add(this.textBox6);
@@ -157,6 +159,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
+            this.panel3.ForeColor = System.Drawing.Color.White;
             this.panel3.Location = new System.Drawing.Point(28, 284);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(293, 163);
@@ -186,8 +189,9 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Indigo;
             this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Indigo;
+            this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(3, 4);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(142, 21);
@@ -197,8 +201,9 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Indigo;
             this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Indigo;
+            this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(3, 110);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(208, 21);
@@ -208,8 +213,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Indigo;
             this.label8.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Indigo;
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(3, 57);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(200, 21);
@@ -229,7 +235,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
@@ -239,6 +245,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(27, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(294, 162);
@@ -275,8 +282,9 @@
             // label14
             // 
             this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Indigo;
             this.label14.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Indigo;
+            this.label14.ForeColor = System.Drawing.Color.White;
             this.label14.Location = new System.Drawing.Point(4, 14);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 21);
@@ -286,8 +294,9 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Indigo;
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Indigo;
+            this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(23, 47);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(49, 21);
@@ -297,8 +306,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Indigo;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(11, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 21);
@@ -308,8 +318,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Indigo;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Indigo;
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(13, 82);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 21);
@@ -329,10 +340,11 @@
             // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.LavenderBlush;
+            this.panel5.BackColor = System.Drawing.Color.Indigo;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.textBox9);
             this.panel5.Controls.Add(this.label10);
+            this.panel5.ForeColor = System.Drawing.Color.White;
             this.panel5.Location = new System.Drawing.Point(429, 186);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(283, 69);
@@ -348,8 +360,9 @@
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Indigo;
             this.label10.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Indigo;
+            this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(5, 5);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(54, 21);
@@ -370,7 +383,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button12);
@@ -380,6 +393,7 @@
             this.panel2.Controls.Add(this.button2);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.button5);
+            this.panel2.ForeColor = System.Drawing.Color.White;
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(756, 35);
@@ -387,6 +401,7 @@
             // 
             // button13
             // 
+            this.button13.BackColor = System.Drawing.Color.White;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.Indigo;
@@ -395,10 +410,11 @@
             this.button13.Size = new System.Drawing.Size(154, 23);
             this.button13.TabIndex = 53;
             this.button13.Text = "Folha Pagamento";
-            this.button13.UseVisualStyleBackColor = true;
+            this.button13.UseVisualStyleBackColor = false;
             // 
             // button12
             // 
+            this.button12.BackColor = System.Drawing.Color.White;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Indigo;
@@ -407,10 +423,11 @@
             this.button12.Size = new System.Drawing.Size(104, 23);
             this.button12.TabIndex = 52;
             this.button12.Text = "Fornecedor";
-            this.button12.UseVisualStyleBackColor = true;
+            this.button12.UseVisualStyleBackColor = false;
             // 
             // button14
             // 
+            this.button14.BackColor = System.Drawing.Color.White;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.Indigo;
@@ -419,11 +436,12 @@
             this.button14.Size = new System.Drawing.Size(113, 23);
             this.button14.TabIndex = 50;
             this.button14.Text = "Funcionários";
-            this.button14.UseVisualStyleBackColor = true;
+            this.button14.UseVisualStyleBackColor = false;
             this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.White;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.Indigo;
@@ -432,11 +450,12 @@
             this.button15.Size = new System.Drawing.Size(75, 23);
             this.button15.TabIndex = 49;
             this.button15.Text = "Compras";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button4
             // 
+            this.button4.BackColor = System.Drawing.Color.White;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Indigo;
@@ -445,7 +464,7 @@
             this.button4.Size = new System.Drawing.Size(75, 23);
             this.button4.TabIndex = 43;
             this.button4.Text = "Inicio";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button2
@@ -481,9 +500,9 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.BackColor = System.Drawing.Color.Indigo;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.ForeColor = System.Drawing.Color.Indigo;
+            this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(502, 455);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(106, 23);
@@ -496,7 +515,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(755, 483);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.panel2);
@@ -511,6 +530,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
+            this.ForeColor = System.Drawing.Color.Indigo;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Gerar_Folha";
             this.Text = "Gerar_Folha";

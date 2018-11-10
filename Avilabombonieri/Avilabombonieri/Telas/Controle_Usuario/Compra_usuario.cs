@@ -71,5 +71,20 @@ namespace Avilabombonieri.Controle_Usuario
         {
 
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Compra_usuario_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
