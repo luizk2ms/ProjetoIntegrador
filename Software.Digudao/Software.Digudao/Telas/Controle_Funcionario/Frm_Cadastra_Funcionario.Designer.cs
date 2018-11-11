@@ -66,7 +66,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -456,7 +455,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.btnInicio);
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -474,6 +472,7 @@
             this.button12.Size = new System.Drawing.Size(33, 23);
             this.button12.TabIndex = 56;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button14
             // 
@@ -487,19 +486,7 @@
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 55;
             this.button14.UseVisualStyleBackColor = false;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInicio.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnInicio.Location = new System.Drawing.Point(6, 6);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(75, 23);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Frm_Cadastra_Funcionario
             // 
@@ -534,7 +521,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;

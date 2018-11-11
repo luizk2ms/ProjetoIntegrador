@@ -63,5 +63,16 @@ namespace Software.Digudao.Controle_Fornecedor
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

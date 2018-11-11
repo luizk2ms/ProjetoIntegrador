@@ -30,16 +30,10 @@
         {
             this.button9 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button14 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +43,9 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -65,6 +62,7 @@
             this.button9.TabIndex = 48;
             this.button9.Text = "Remover";
             this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // button12
             // 
@@ -77,19 +75,7 @@
             this.button12.Size = new System.Drawing.Size(33, 23);
             this.button12.TabIndex = 52;
             this.button12.UseVisualStyleBackColor = true;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInicio.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.btnInicio.Location = new System.Drawing.Point(9, 5);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(75, 23);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // panel2
             // 
@@ -98,7 +84,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.btnInicio);
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -117,6 +102,7 @@
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 51;
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button8
             // 
@@ -153,56 +139,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(546, 170);
             this.dataGridView1.TabIndex = 62;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(11, 117);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(268, 21);
-            this.label3.TabIndex = 61;
-            this.label3.Text = "Verificar Cliente Cadastrado :";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(132, 317);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(237, 20);
-            this.textBox2.TabIndex = 60;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(199, 52);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(260, 21);
-            this.label2.TabIndex = 58;
-            this.label2.Text = "Consultar Cliente Cadastrado";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(11, 314);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 21);
-            this.label1.TabIndex = 59;
-            this.label1.Text = "Nome :";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImage = global::Software.Digudao.Properties.Resources.Digudão_sxd;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(447, 73);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(114, 59);
-            this.pictureBox2.TabIndex = 65;
-            this.pictureBox2.TabStop = false;
             // 
             // Column1
             // 
@@ -266,6 +202,38 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label3.Location = new System.Drawing.Point(11, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(268, 21);
+            this.label3.TabIndex = 61;
+            this.label3.Text = "Verificar Cliente Cadastrado :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Modern No. 20", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label2.Location = new System.Drawing.Point(199, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(260, 21);
+            this.label2.TabIndex = 58;
+            this.label2.Text = "Consultar Cliente Cadastrado";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImage = global::Software.Digudao.Properties.Resources.Digudão_sxd;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(447, 73);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(114, 59);
+            this.pictureBox2.TabIndex = 65;
+            this.pictureBox2.TabStop = false;
+            // 
             // Frm_Consultar_Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -277,9 +245,7 @@
             this.Controls.Add(this.button8);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.button9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Consultar_Cliente";
@@ -297,14 +263,11 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;

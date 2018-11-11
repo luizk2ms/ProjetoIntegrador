@@ -52,5 +52,16 @@ namespace Software.Digudao.Controle_Estoque
             consultarEstoque.Show();
             this.Close();
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

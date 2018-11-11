@@ -44,5 +44,15 @@ namespace Software.Digudao.DB.db
         private void button3_Click(object sender, EventArgs e)
         {
         }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
+        }
     }
 }

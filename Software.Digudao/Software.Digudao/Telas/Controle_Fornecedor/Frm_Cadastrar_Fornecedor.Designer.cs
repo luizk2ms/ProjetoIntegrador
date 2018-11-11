@@ -33,6 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -71,8 +72,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -151,6 +150,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 379);
             this.panel1.TabIndex = 98;
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button2.Location = new System.Drawing.Point(603, 298);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 28);
+            this.button2.TabIndex = 141;
+            this.button2.Text = "Consultar";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox11
             // 
@@ -504,7 +515,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.btnInicio);
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
@@ -522,6 +532,7 @@
             this.button12.Size = new System.Drawing.Size(33, 23);
             this.button12.TabIndex = 56;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button14
             // 
@@ -535,31 +546,7 @@
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 55;
             this.button14.UseVisualStyleBackColor = false;
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInicio.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnInicio.Location = new System.Drawing.Point(6, 6);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(75, 23);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
-            // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button2.Location = new System.Drawing.Point(603, 298);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 28);
-            this.button2.TabIndex = 141;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // Frm_Cadastrar_Fornecedor
             // 
@@ -620,7 +607,6 @@
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.TextBox textBox11;

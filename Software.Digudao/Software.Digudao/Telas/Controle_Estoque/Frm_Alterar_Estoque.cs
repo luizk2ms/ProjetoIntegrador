@@ -23,7 +23,7 @@ namespace Software.Digudao.Controle_Estoque
             dto.Id_Estoque = int.Parse(textBox8.Text);
             dto.Id_Estoque = int.Parse(textBox1.Text);
             dto.Qn_QuantidadeEmKg = textBox2.Text;
-            dto. = textBox4.Text;
+            //dto. = textBox4.Text;
             dto.Pc_preco = textBox5.Text;
             dto.Qn_Quantidade = textBox3.Text;
             dto.Tm_tamanho = textBox6.Text;

@@ -26,12 +26,12 @@ namespace Software.Digudao.Controle_Cliente
         private void button8_Click(object sender, EventArgs e)
         {
             Frm_Consultar_Cliente consultarCliente = new Frm_Consultar_Cliente();
-            consultarCliente.Show();
-            this.Close();
+            Hide();
+            consultarCliente.ShowDialog();
+            Show();
         }
         private void CadastrarDadosCliente()
         {
-            ClienteBusiness cliente = new ClienteBusiness();
             ClienteDTO dto = new ClienteDTO();
             dto.Nm_Nome = textBox5.Text;
             dto.Ed_endereco = textBox8.Text;
@@ -39,10 +39,9 @@ namespace Software.Digudao.Controle_Cliente
             dto.Nm_numero = textBox2.Text;
             dto.CNPJ = textBox7.Text;
             dto.CPF = textBox9.Text;
-            
 
+            ClienteBusiness cliente = new ClienteBusiness();
             cliente.Salvar(dto);
-
         }
 
         private void button9_Click(object sender, EventArgs e)
@@ -55,7 +54,7 @@ namespace Software.Digudao.Controle_Cliente
             CadastrarDadosCliente();
 
             MessageBox.Show("Seu cliente foi cadastrado com sucesso.","digudão",MessageBoxButtons.OK,MessageBoxIcon.Information);
-
+            Close();
         }
 
         private void Frm_Cadastrar_Cliente_Load(object sender, EventArgs e)
@@ -69,6 +68,17 @@ namespace Software.Digudao.Controle_Cliente
             Hide();
             iniciar.ShowDialog();
             Show();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

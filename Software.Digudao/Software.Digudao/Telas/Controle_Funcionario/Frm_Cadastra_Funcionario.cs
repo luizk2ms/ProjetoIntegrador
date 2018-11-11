@@ -67,5 +67,16 @@ namespace Software.Digudao.Controle_Funcionario
         {
 
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
+
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
