@@ -25,8 +25,7 @@ namespace Software.Digudao.Controle_Fornecedor
             dto.Id_Fornecedor = int.Parse(textBox11.Text);
             dto.id_produto = Convert.ToInt32(textBox12.Text);
             dto.Nm_nome = txtnome.Text;
-            dto.Nm_numero = textBox8.Text;
-            dto.tel_contem = maskedTextBox1.Text;
+            dto.tel_telefone = maskedTextBox1.Text;
             dto.uf_uf = txtuf.Text;
             dto.cnpj = maskedTextBox3.Text;
             dto.ds_descricao = textBox2.Text;
