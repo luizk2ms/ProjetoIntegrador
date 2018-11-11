@@ -16,7 +16,7 @@ namespace Software.Digudao.Controle_Fornecedor
         public Frm_Consultar_Fornecedor()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
+            dgvfornecedor.AutoGenerateColumns = false;
         }
 
 
@@ -36,10 +36,7 @@ namespace Software.Digudao.Controle_Fornecedor
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+            
         }
     }
 }

@@ -31,14 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_Cadastrar_Cliente));
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.button11 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
@@ -88,17 +82,6 @@
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label6.Location = new System.Drawing.Point(468, 70);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 20);
-            this.label6.TabIndex = 46;
-            this.label6.Text = "CEP";
-            // 
             // button7
             // 
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -112,42 +95,6 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(560, 68);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(125, 20);
-            this.textBox6.TabIndex = 45;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label13.Location = new System.Drawing.Point(468, 18);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(87, 20);
-            this.label13.TabIndex = 39;
-            this.label13.Text = "ID Cliente :";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label12.Location = new System.Drawing.Point(29, 55);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 20);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Telefone :";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(107, 55);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 20);
-            this.textBox4.TabIndex = 36;
-            // 
             // button11
             // 
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -160,13 +107,6 @@
             this.button11.Text = "Inicio";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(560, 16);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(69, 20);
-            this.textBox1.TabIndex = 35;
             // 
             // label5
             // 
@@ -228,20 +168,14 @@
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button9);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(15, 109);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(780, 238);
@@ -253,7 +187,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label8.Location = new System.Drawing.Point(29, 201);
+            this.label8.Location = new System.Drawing.Point(29, 165);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(48, 20);
             this.label8.TabIndex = 57;
@@ -261,7 +195,7 @@
             // 
             // textBox9
             // 
-            this.textBox9.Location = new System.Drawing.Point(107, 199);
+            this.textBox9.Location = new System.Drawing.Point(121, 165);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(196, 20);
             this.textBox9.TabIndex = 56;
@@ -271,7 +205,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label7.Location = new System.Drawing.Point(29, 161);
+            this.label7.Location = new System.Drawing.Point(29, 125);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(86, 20);
             this.label7.TabIndex = 55;
@@ -279,7 +213,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(107, 159);
+            this.textBox8.Location = new System.Drawing.Point(121, 125);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(196, 20);
             this.textBox8.TabIndex = 54;
@@ -291,9 +225,9 @@
             this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
             this.label4.Location = new System.Drawing.Point(468, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 20);
+            this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 46;
-            this.label4.Text = "Descrição";
+            this.label4.Text = "CNPJ";
             // 
             // textBox7
             // 
@@ -315,7 +249,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(138, 19);
+            this.textBox5.Location = new System.Drawing.Point(147, 21);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(165, 20);
             this.textBox5.TabIndex = 36;
@@ -325,7 +259,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(29, 124);
+            this.label3.Location = new System.Drawing.Point(29, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 20);
             this.label3.TabIndex = 37;
@@ -333,7 +267,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(107, 124);
+            this.textBox3.Location = new System.Drawing.Point(114, 88);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(196, 20);
             this.textBox3.TabIndex = 36;
@@ -343,15 +277,15 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label2.Location = new System.Drawing.Point(29, 91);
+            this.label2.Location = new System.Drawing.Point(29, 55);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 20);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 37;
-            this.label2.Text = "Celular :";
+            this.label2.Text = "Numero :";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(107, 91);
+            this.textBox2.Location = new System.Drawing.Point(114, 55);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(196, 20);
             this.textBox2.TabIndex = 36;
@@ -392,14 +326,8 @@
         #endregion
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;

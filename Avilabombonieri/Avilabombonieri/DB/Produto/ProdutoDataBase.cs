@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,7 +38,7 @@ namespace Avilabombonieri.DB.Produto
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ProdutoDTO> produto = new List<ProdutoDTO>();
-            while (reader.Read)
+            while (reader.Read())
 
             {
                 ProdutoDTO dto = new ProdutoDTO();
@@ -109,9 +111,9 @@ namespace Avilabombonieri.DB.Produto
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GeatInt32("Id_Produto");
-                dto.Nm_Nome = reader.GeatString("Nm_Nome");
-                dto.Vl_Valor = reader.GeaDecimal("Pc_Preco");
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
+                dto.Nm_Nome = reader.GetString("Nm_Nome");
+                dto.Vl_Valor = reader.GetDecimal("Pc_Preco");
                 dto.Ml = reader.GeaDecimal("Ml");
                 dto.Lt_litros = reader.GeaDecimal("Lt_litros");
                 dto.Kg_kilo = reader.GeaDecimal("Kg_kilo");

@@ -22,10 +22,9 @@ namespace Software.Digudao.Controle_Estoque
             EstoqueDTO dto = new EstoqueDTO();
             dto.Id_Estoque = int.Parse(textBox8.Text);
             dto.fk_id_produto_estoque = int.Parse(textBox1.Text);
-            dto.kl_kilo = decimal.Parse(textBox2.Text);
-            dto.nm_nome = textBox4.Text;
-            dto.pc_preçoporcaixa = decimal.Parse(textBox5.Text);
-            dto.Qn_Quantidade = int.Parse(textBox3.Text);
+            dto.Qn_QuantidadeEmKg = textBox2.Text;
+            dto.Pc_preco = textBox5.Text;
+            dto.Qn_Quantidade = textBox3.Text;
             dto.Tm_tamanho = textBox6.Text;
             EstoqueBusiness business = new EstoqueBusiness();
             business.SalvarEstoque(dto);
@@ -45,6 +44,13 @@ namespace Software.Digudao.Controle_Estoque
             Hide();
             iniciar.ShowDialog();
             Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Frm_Consultar_Estoque consultarEstoque = new Frm_Consultar_Estoque();
+            consultarEstoque.Show();
+            this.Close();
         }
     }
 }

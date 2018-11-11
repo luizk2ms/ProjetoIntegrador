@@ -26,5 +26,10 @@ namespace Software.Digudao.Telas.Produto
             ProdutoDTO dto = view[0];
             dgvFolha.DataSource = view;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

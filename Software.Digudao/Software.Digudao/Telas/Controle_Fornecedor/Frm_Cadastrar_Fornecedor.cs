@@ -23,12 +23,12 @@ namespace Software.Digudao.Controle_Fornecedor
             FornecedorDTO dto = new FornecedorDTO();
 
             dto.Id_Fornecedor = int.Parse(textBox11.Text);
-            dto.id_produto = int.Parse(textBox12.Text);
+            dto.id_produto = Convert.ToInt32(textBox12.Text);
             dto.Nm_nome = txtnome.Text;
-            dto.Nm_numero = int.Parse(textBox8.Text);
-            dto.tel_contem = int.Parse(maskedTextBox1.Text);
+            dto.Nm_numero = textBox8.Text;
+            dto.tel_contem = maskedTextBox1.Text;
             dto.uf_uf = txtuf.Text;
-            dto.cnpj = int.Parse(maskedTextBox3.Text);
+            dto.cnpj = maskedTextBox3.Text;
             dto.ds_descricao = textBox2.Text;
             dto.el_email = textBox3.Text;
             dto.en_endereço = textBox5.Text;
@@ -57,10 +57,12 @@ namespace Software.Digudao.Controle_Fornecedor
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+           
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

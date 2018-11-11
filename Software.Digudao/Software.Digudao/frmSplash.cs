@@ -20,6 +20,7 @@ namespace Software.Digudao
 
             Task.Factory.StartNew(() =>
             {
+            
                 // Espera 2 segundos para iniciar o sistema
                 System.Threading.Thread.Sleep(4800);
 

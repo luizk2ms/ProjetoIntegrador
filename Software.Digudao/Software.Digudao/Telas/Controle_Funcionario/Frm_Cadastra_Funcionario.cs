@@ -23,18 +23,17 @@ namespace Software.Digudao.Controle_Funcionario
             FuncionarioBusiness Funcionario = new FuncionarioBusiness();
             FuncionarioDTO dto = new FuncionarioDTO();
 
-            dto.Id_Funcionario = int.Parse(textBox1.Text);
             dto.Nm_Nome = textBox4.Text;
-            dto.nm_numero = int.Parse(textBox5.Text);
-            dto.tl_empresa = int.Parse(textBox9.Text);
-            dto.cel_celular = int.Parse(textBox11.Text);
-            dto.cpf_cpf = int.Parse(textBox7.Text);
-            dto.cp_cep = int.Parse(textBox6.Text);
+            dto.nm_numero = textBox5.Text;
+            dto.tl_empresa = textBox9.Text;
+            dto.cel_celular = textBox11.Text;
+            dto.cpf_cpf = textBox7.Text;
+            dto.cp_cep = textBox6.Text;
             dto.cr_cargo = textBox10.Text;
             dto.ds_endereço = textBox8.Text;
             dto.dt_datadeentrada = DateTime.Parse(dateTimePicker2.Text);
             dto.dt_datasaida = DateTime.Parse(dateTimePicker1.Text);
-
+            dto.Nomedaempresa = txtnomeempresa.Text;
             Funcionario.Cadastrar(dto);
 
 
@@ -49,13 +48,22 @@ namespace Software.Digudao.Controle_Funcionario
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
+        {
+            Frm_Consultar_Funcionario consultarfuncionario = new Frm_Consultar_Funcionario();
+           consultarfuncionario.Show();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CarregarFuncionario();
+        }
+
+        private void Frm_Cadastra_Funcionario_Load(object sender, EventArgs e)
         {
 
         }

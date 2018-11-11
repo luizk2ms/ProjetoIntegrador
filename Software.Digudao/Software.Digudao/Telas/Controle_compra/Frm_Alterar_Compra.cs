@@ -1,5 +1,5 @@
 ﻿using prototipos.DB.Pedido;
-using prototipos.DB.Produto;
+using Software.Digudao.DB.Produto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,31 +22,23 @@ namespace Software.Digudao.Controle_compra
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Produto_Compra_DTO produto = new Produto_Compra_DTO();
-            produto
-            
+
+
         }
 
         private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
-         
+
         }
         void Carregarcampos()
         {
-            ProdutoBusiness business = new ProdutoBusiness();
-            List<Produto_Compra_DTO> produto = business.listar;
 
-            cboProdutos.DataSource = produto;
-            cboProdutos.DisplayMember = "Tm_Tamanho";
 
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+
         }
     }
 }

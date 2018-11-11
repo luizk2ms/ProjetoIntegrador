@@ -16,15 +16,15 @@ namespace Software.Digudao.Controle_Funcionario
         public Frm_Consultar_Funcionario()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
+            dgvfuncionario.AutoGenerateColumns = false;
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            FuncionarioBusiness Cliente = new FuncionarioBusiness();
-            List<FuncionarioDTO> View = Cliente.ConsultarporNome(textBox2.Text);
-            FuncionarioDTO dto = View[0];
-            dataGridView1.DataSource = View;
+            FuncionarioBusiness funcionario = new FuncionarioBusiness();
+            List<FuncionarioDTO> View = funcionario.ConsultarporNome(textBox2.Text);
+            //FuncionarioDTO dto = View[0];
+            dgvfuncionario.DataSource = View;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -34,10 +34,12 @@ namespace Software.Digudao.Controle_Funcionario
 
         private void btnInicio_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+            
+        }
+
+        private void Frm_Consultar_Funcionario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

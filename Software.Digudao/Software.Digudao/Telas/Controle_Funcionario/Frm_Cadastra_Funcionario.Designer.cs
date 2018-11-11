@@ -44,7 +44,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtnomeempresa = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -101,7 +101,7 @@
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.textBox11);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox2);
+            this.panel1.Controls.Add(this.txtnomeempresa);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label7);
@@ -252,12 +252,12 @@
             this.label1.TabIndex = 127;
             this.label1.Text = "Empresa :";
             // 
-            // textBox2
+            // txtnomeempresa
             // 
-            this.textBox2.Location = new System.Drawing.Point(137, 158);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(118, 20);
-            this.textBox2.TabIndex = 126;
+            this.txtnomeempresa.Location = new System.Drawing.Point(137, 158);
+            this.txtnomeempresa.Name = "txtnomeempresa";
+            this.txtnomeempresa.Size = new System.Drawing.Size(118, 20);
+            this.txtnomeempresa.TabIndex = 126;
             // 
             // label3
             // 
@@ -513,6 +513,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Cadastra_Funcionario";
             this.Text = "Frm_Cadastra_Funcionario";
+            this.Load += new System.EventHandler(this.Frm_Cadastra_Funcionario_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -548,7 +549,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtnomeempresa;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;

@@ -1,4 +1,5 @@
 ﻿using Frei.ProjetoIntegrador.Academia.Validacoes;
+using Frei.ProjetoIntegrador.Digudão.Validacoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;

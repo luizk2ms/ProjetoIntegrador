@@ -35,6 +35,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::Software.Digudao.Properties.Resources.demo;
             this.pictureBox1.InitialImage = global::Software.Digudao.Properties.Resources.demo;
             this.pictureBox1.Location = new System.Drawing.Point(58, 16);
             this.pictureBox1.Name = "pictureBox1";

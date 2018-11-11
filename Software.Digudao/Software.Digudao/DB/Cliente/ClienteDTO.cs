@@ -10,15 +10,11 @@ namespace prototipos.DB.Cliente
     {
         public int Id_Cliente { get; set; }
         public string Nm_Nome { get; set; }
-        public string ds_endereço { get; set; }
-        public int cp_cep { get; set; }
-        public int cpf_cpf { get; set; }
-        public int tl_empresa { get; set; }
-        public int cel_celular { get; set; }
-        public string em_email { get; set; }
-        public int fk_id_funcionario_cliente{ get; set; }
-
-
-
+        public string Ed_endereco { get; set; }
+        public string CNPJ { get; set; }
+        public string CPF { get; set; }
+        public string Em_Email { get; set; }
+        public string Nm_numero { get; set; }
+        public int fk_id_funcionario_cliente { get; set; }
     }
 }

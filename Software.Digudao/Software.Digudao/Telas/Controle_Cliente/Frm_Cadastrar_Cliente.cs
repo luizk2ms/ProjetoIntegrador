@@ -25,20 +25,21 @@ namespace Software.Digudao.Controle_Cliente
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Frm_Consultar_Cliente consultarCliente = new Frm_Consultar_Cliente();
+            consultarCliente.Show();
+            this.Close();
         }
         private void CadastrarDadosCliente()
         {
             ClienteBusiness cliente = new ClienteBusiness();
             ClienteDTO dto = new ClienteDTO();
-            dto.Id_Cliente = int.Parse(textBox1.Text);
             dto.Nm_Nome = textBox5.Text;
-            dto.tl_empresa = int.Parse(textBox4.Text);
-            dto.cp_cep = int.Parse(textBox6.Text);
-            dto.ds_endereço = textBox8.Text;
-            dto.em_email = textBox3.Text;
-            dto.cpf_cpf = int.Parse(textBox9.Text);
-            dto.cel_celular = int.Parse(textBox2.Text);
+            dto.Ed_endereco = textBox8.Text;
+            dto.Em_Email = textBox3.Text;
+            dto.Nm_numero = textBox2.Text;
+            dto.CNPJ = textBox7.Text;
+            dto.CPF = textBox9.Text;
+            
 
             cliente.Salvar(dto);
 

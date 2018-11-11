@@ -31,10 +31,10 @@ namespace prototipos.DB.Funcionario
             return db.Listar();
         }
 
-        public List<FuncionarioDTO> ConsultarporNome(string nome)
+        public List<FuncionarioDTO> ConsultarporNome(string Nome)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
-            return db.ConsultarFuncionario(nome);
+            return db.ConsultarporNome(Nome);
         }
 
         public List<FuncionarioDTO> ConsultarpoId(int ID)

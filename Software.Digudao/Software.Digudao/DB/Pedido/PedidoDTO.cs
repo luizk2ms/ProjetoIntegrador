@@ -10,11 +10,11 @@ namespace prototipos.DB.Pedido
     {
         public int Id_Pedido { get; set; }
         public int Cliente_id_cliente { get; set; }
-        public int qn_quantidade { get; set; }
+        public string qn_quantidade { get; set; }
         public string Tm_tamanho_tamanho { get; set; }
         public decimal FK_preço { get; set; }
         public int pedidoid_produto { get; set; }
-        public decimal tl_total { get; set; }
+        public string tl_total { get; set; }
        
 
     }

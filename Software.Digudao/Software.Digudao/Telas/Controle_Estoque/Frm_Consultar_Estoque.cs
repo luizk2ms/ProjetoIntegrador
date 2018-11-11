@@ -39,10 +39,7 @@ namespace Software.Digudao.Controle_Estoque
 
         private void button9_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+         
         }
     }
 }

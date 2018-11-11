@@ -9,10 +9,10 @@ namespace Software.Digudao.DB.Produto
     class ProdutoBusiness
     {
         
-            public int Salvar(ProdutoDTO dto)
+            public void Salvar(ProdutoDTO dto)
             {
             ProdutoDatabase db = new ProdutoDatabase();
-                return db.Salvar(dto);
+               db.Salvar(dto);
             }
 
             public void Alterar(ProdutoDTO dto)

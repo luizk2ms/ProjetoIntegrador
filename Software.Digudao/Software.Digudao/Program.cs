@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Software.Digudao.Controle_Fornecedor;
+using Software.Digudao.DB.db;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +18,7 @@ namespace Software.Digudao
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmSplash());
+            Application.Run(new Inicio());
         }
     }
 }

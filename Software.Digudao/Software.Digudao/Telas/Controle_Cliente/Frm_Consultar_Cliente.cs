@@ -38,29 +38,7 @@ namespace Software.Digudao.Controle_Cliente
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.ColumnIndex == 7 )
-            {
-                Id_cliente alterarcliente = new Id_cliente();
-                ClienteDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteDTO;
-                int Id_Cliente = dto.Id_Cliente;
-                string Nm_Nome;
-                Id_Cliente = dto.Id_Cliente;
-                Nm_Nome = dto.Nm_Nome;
-                alterarcliente.LoadScreen(Id_Cliente, Nm_Nome);
-                alterarcliente.Show();
-                
-            }
-            if(e.ColumnIndex == 8)
-            {
-                ClienteBusiness Cliente = new ClienteBusiness();
-                ClienteDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteDTO;
-                Cliente.Remover(dto.Id_Cliente);
-                CarregarDadosClientes();
-                
-
-            }
             
-
         }
 
         private void Frm_Consultar_Cliente_Load(object sender, EventArgs e)

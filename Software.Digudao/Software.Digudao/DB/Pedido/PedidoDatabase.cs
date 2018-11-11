@@ -79,7 +79,7 @@ namespace prototipos.DB.Pedido
                 PedidoDTO dto = new PedidoDTO();
                 dto.Id_Pedido = reader.GetInt32("Id_Pedido");
                 dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
-                dto.qn_quantidade = reader.GetInt32("qn_quantidade");
+                dto.qn_quantidade = reader.GetString("qn_quantidade");
                 dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
                 dto.FK_preço = reader.GetInt32("FK_preço");
                 dto.pedidoid_produto = reader.GetInt32("pedidoid_produto");
@@ -104,7 +104,7 @@ namespace prototipos.DB.Pedido
                 PedidoDTO dto = new PedidoDTO();
                 dto.Id_Pedido = reader.GetInt32("Id_Pedido");
                 dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
-                dto.qn_quantidade = reader.GetInt32("qn_quantidade");
+                dto.qn_quantidade = reader.GetString("qn_quantidade");
                 dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
                 dto.FK_preço = reader.GetInt32("FK_preço");
                 dto.pedidoid_produto = reader.GetInt32("pedidoid_produto");

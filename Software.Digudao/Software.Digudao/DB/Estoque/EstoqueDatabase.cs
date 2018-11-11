@@ -10,55 +10,54 @@ namespace prototipos.DB.Estoque
 {
     class EstoqueDatabase
     {
-        public int SalvarEstoque (EstoqueDTO dto)
+        public void SalvarEstoque (EstoqueDTO dto)
         {
             string Script = @"INSERT INTO tb_estoque(Qn_Quantidade,
                                                      Tm_tamanho,
-                                                     dt_datavl,
-                                                     nm_nome,
-                                                     pc_preçoporcaixa,
+                                                     dt_data,
+                                                     Pc_preco,
                                                      fk_id_produto_estoque,
-                                                     kl_kilo)
+                                                     Qn_QuantidadeEmKg)
                                                      VALUES(@Qn_Quantidade,
                                                      @Tm_tamanho,
                                                      @dt_datavl,
-                                                     @nm_nome,
-                                                     @pc_preçoporcaixa,
+                                                     @Pc_preco,
                                                      @fk_id_produto_estoque,
-                                                     @kl_kilo)";
+                                                     @Qn_QuantidadeEmKg)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Qn_Quantidade",dto.Qn_Quantidade));
+            parms.Add(new MySqlParameter("Qn_Quantidade", dto.Qn_Quantidade));
             parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
-            parms.Add(new MySqlParameter("dt_datavl", dto.dt_datavl));
-            parms.Add(new MySqlParameter("nm_nome", dto.nm_nome));
-            parms.Add(new MySqlParameter("pc_preçoporcaixa", dto.pc_preçoporcaixa));
-            parms.Add(new MySqlParameter("kl_kilo", dto.kl_kilo));
+            parms.Add(new MySqlParameter("dt_data", dto.dt_data));
+            parms.Add(new MySqlParameter("Pc_preco", dto.Pc_preco));
+            parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
+            parms.Add(new MySqlParameter("Qn_QuantidadeEmKg", dto.Qn_QuantidadeEmKg));
             parms.Add(new MySqlParameter("fk_id_produto_estoque", dto.fk_id_produto_estoque));
+            parms.Add(new MySqlParameter("Id_Estoque", dto.Id_Estoque));
 
             Database db = new Database();
-            return db.ExecuteInsertScriptWithPk(Script, parms);
+            db.ExecuteInsertScriptWithPk(Script, parms);
         }
         public void Alterar(EstoqueDTO dto)
         {
             string Script = @"UPDATE tb_estoque SET Qn_Quantidade = @Qn_Quantidade,
                                                      Tm_tamanho = @Tm_tamanho,
-                                                     dt_datavl = @dt_datavl,
-                                                     nm_nome = @nm_nome,
+                                                     dt_data = @dt_data,
                                                      fk_id_produto_estoque = @fk_id_produto_estoque,
-                                                     pc_preçoporcaixa = @pc_preçoporcaixa,
-                                                     kl_kilo = @kl_kilo
+                                                     Pc_preco = @Pc_preco,
+                                                     Qn_QuantidadeEmKg = @Qn_QuantidadeEmKg
                                                WHERE Id_Estoque = @Id_Estoque";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Qn_Quantidade", dto.Qn_Quantidade));
             parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
-            parms.Add(new MySqlParameter("dt_datavl", dto.dt_datavl));
-            parms.Add(new MySqlParameter("nm_nome", dto.nm_nome));
-            parms.Add(new MySqlParameter("pc_preçoporcaixa", dto.pc_preçoporcaixa));
+            parms.Add(new MySqlParameter("dt_data", dto.dt_data));
+            parms.Add(new MySqlParameter("Pc_preco", dto.Pc_preco));
             parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
-            parms.Add(new MySqlParameter("kl_kilo", dto.kl_kilo));
+            parms.Add(new MySqlParameter("Qn_QuantidadeEmKg", dto.Qn_QuantidadeEmKg));
             parms.Add(new MySqlParameter("fk_id_produto_estoque", dto.fk_id_produto_estoque));
+            parms.Add(new MySqlParameter("Id_Estoque", dto.fk_id_produto_estoque));
+
 
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
@@ -83,14 +82,15 @@ namespace prototipos.DB.Estoque
             while (reader.Read())
             {
                 EstoqueDTO dto = new EstoqueDTO();
-                dto.Id_Estoque = reader.GetInt32("Id_Cliente");
-                dto.nm_nome = reader.GetString("nm_nome");
-                dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
-                dto.kl_kilo = reader.GetDecimal("kl_kilo");
+                dto.Id_Estoque = reader.GetInt32("Id_Estoque");
+                dto.Pc_preco = reader.GetString("Pc_preco");
                 dto.fk_id_produto_estoque = reader.GetInt32("fk_id_produto_estoque");
-                dto.Qn_Quantidade = reader.GetInt32("Qn_Quantidade");
+                dto.Qn_Quantidade = reader.GetString("Qn_QuantidadeEmKg");
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
-                dto.dt_datavl = reader.GetDateTime("dt_datavl");
+                dto.dt_data = reader.GetDateTime("dt_data");
+                dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+
 
                 lista.Add(dto);
 
@@ -109,14 +109,14 @@ namespace prototipos.DB.Estoque
             while (reader.Read())
             {
                 EstoqueDTO dto = new EstoqueDTO();
-                dto.Id_Estoque = reader.GetInt32("Id_Cliente");
-                dto.nm_nome = reader.GetString("nm_nome");
-                dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
-                dto.kl_kilo = reader.GetDecimal("kl_kilo");
+                dto.Id_Estoque = reader.GetInt32("Id_Estoque");
+                dto.Pc_preco = reader.GetString("Pc_preco");
                 dto.fk_id_produto_estoque = reader.GetInt32("fk_id_produto_estoque");
-                dto.Qn_Quantidade = reader.GetInt32("Qn_Quantidade");
+                dto.Qn_Quantidade = reader.GetString("Qn_QuantidadeEmKg");
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
-                dto.dt_datavl = reader.GetDateTime("dt_datavl"); ;
+                dto.dt_data = reader.GetDateTime("dt_data");
+                dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
 
                 lista.Add(dto);
 
@@ -134,14 +134,14 @@ namespace prototipos.DB.Estoque
             while (reader.Read())
             {
                 EstoqueDTO dto = new EstoqueDTO();
-                dto.Id_Estoque = reader.GetInt32("Id_Cliente");
-                dto.nm_nome = reader.GetString("nm_nome");
-                dto.pc_preçoporcaixa = reader.GetDecimal("pc_preçoporcaixa");
-                dto.kl_kilo = reader.GetDecimal("kl_kilo");
+                dto.Id_Estoque = reader.GetInt32("Id_Estoque");
+                dto.Pc_preco = reader.GetString("Pc_preco");
                 dto.fk_id_produto_estoque = reader.GetInt32("fk_id_produto_estoque");
-                dto.Qn_Quantidade = reader.GetInt32("Qn_Quantidade");
+                dto.Qn_Quantidade = reader.GetString("Qn_QuantidadeEmKg");
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
-                dto.dt_datavl = reader.GetDateTime("dt_datavl");
+                dto.dt_data = reader.GetDateTime("dt_data");
+                dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
+                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
 
             }
             return lista;

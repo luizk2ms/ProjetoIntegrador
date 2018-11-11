@@ -8,10 +8,10 @@ namespace prototipos.DB.Cliente
 {
     class ClienteBusiness
         {
-            public int Salvar(ClienteDTO dto)
+            public void Salvar(ClienteDTO dto)
             {
                 ClienteDatabase db = new ClienteDatabase();
-                return db.Salvar(dto);
+                db.Salvar(dto);
             }
 
             public void Alterar(ClienteDTO dto)

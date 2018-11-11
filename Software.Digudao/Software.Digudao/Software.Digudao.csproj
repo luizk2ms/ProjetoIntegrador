@@ -67,6 +67,12 @@
     <Compile Include="DB\Produto\ProdutoBusiness.cs" />
     <Compile Include="DB\Produto\ProdutoDatabase.cs" />
     <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="Inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio.Designer.cs">
+      <DependentUpon>Inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Cadastro_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,12 +109,6 @@
     <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
-    <Compile Include="Login.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
-    </Compile>
     <Compile Include="Telas\Controle_Cliente\Frm_Alterar_Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,9 +157,7 @@
     <Compile Include="Telas\Controle_Estoque\Frm_Consultar_Estoque.Designer.cs">
       <DependentUpon>Frm_Consultar_Estoque.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Controle_Fornecedor\Frm_Alterar_Fornecedor.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Controle_Fornecedor\Frm_Alterar_Fornecedor.cs" />
     <Compile Include="Telas\Controle_Fornecedor\Frm_Alterar_Fornecedor.Designer.cs">
       <DependentUpon>Frm_Alterar_Fornecedor.cs</DependentUpon>
     </Compile>
@@ -193,33 +191,23 @@
     <Compile Include="Telas\Controle_Funcionario\Frm_Consultar_Funcionario.Designer.cs">
       <DependentUpon>Frm_Consultar_Funcionario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fluxo_caixa\Frm_Fluxo.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Fluxo_caixa\Frm_Fluxo.cs" />
     <Compile Include="Telas\Fluxo_caixa\Frm_Fluxo.Designer.cs">
       <DependentUpon>Frm_Fluxo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fluxo_caixa\Frm_fluxo_consulta.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Fluxo_caixa\Frm_fluxo_consulta.cs" />
     <Compile Include="Telas\Fluxo_caixa\Frm_fluxo_consulta.Designer.cs">
       <DependentUpon>Frm_fluxo_consulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.cs" />
     <Compile Include="Telas\Folha_Pagamento\Frm_Alterar_Folha.Designer.cs">
       <DependentUpon>Frm_Alterar_Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.cs" />
     <Compile Include="Telas\Folha_Pagamento\Frm_Consultar_Folha.Designer.cs">
       <DependentUpon>Frm_Consultar_Folha.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.cs" />
     <Compile Include="Telas\Folha_Pagamento\Frm_Registrar_Folha.Designer.cs">
       <DependentUpon>Frm_Registrar_Folha.cs</DependentUpon>
     </Compile>
@@ -228,12 +216,6 @@
     </Compile>
     <Compile Include="frmSplash.Designer.cs">
       <DependentUpon>frmSplash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Inicio.Designer.cs">
-      <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -252,8 +234,8 @@
     <Compile Include="Validações\CNPJ.cs" />
     <Compile Include="Validações\CPF.cs" />
     <Compile Include="Validações\exReg.cs" />
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Inicio.resx">
+      <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Telas\Controle_Cliente\Frm_Consultar_Cliente.resx">
       <DependentUpon>Frm_Consultar_Cliente.cs</DependentUpon>
@@ -314,9 +296,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSplash.resx">
       <DependentUpon>frmSplash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Inicio.resx">
-      <DependentUpon>Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

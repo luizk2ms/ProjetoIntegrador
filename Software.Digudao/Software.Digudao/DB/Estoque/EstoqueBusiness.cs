@@ -8,10 +8,10 @@ namespace prototipos.DB.Estoque
 {
     class EstoqueBusiness
     {
-        public int SalvarEstoque(EstoqueDTO dto)
+        public void SalvarEstoque(EstoqueDTO dto)
         {
             EstoqueDatabase db = new EstoqueDatabase();
-            return db.SalvarEstoque(dto);
+            db.SalvarEstoque(dto);
         }
 
         public void Alterar(EstoqueDTO dto)

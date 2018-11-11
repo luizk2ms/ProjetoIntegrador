@@ -1,8 +1,8 @@
-﻿using Software.Digudao.Controle_Estoque;
+﻿using Software.Digudao.Controle_Cliente;
+using Software.Digudao.Controle_Estoque;
 using Software.Digudao.Controle_Fornecedor;
 using Software.Digudao.Controle_Funcionario;
-using Software.Digudao.Folha_Pagamento;
-using Software.Digudao.Telas.Controle_compra;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,48 +22,46 @@ namespace Software.Digudao
             InitializeComponent();
         }
 
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void btncompras_Click(object sender, EventArgs e)
         {
-            Frm_Cadastro_Compra compra = new Frm_Cadastro_Compra();
-            Hide();
-           compra.ShowDialog();
-            Show();
+            CadastrarProduto cadastra_Produto = new CadastrarProduto();
+            cadastra_Produto.Show();
         }
 
         private void btnfuncionarios_Click(object sender, EventArgs e)
         {
-            Frm_Cadastra_Funcionario cadastrofuncionario = new Frm_Cadastra_Funcionario();
-            Hide();
-            cadastrofuncionario.ShowDialog();
-            Show();
-           
+            Frm_Cadastra_Funcionario cadastra_Funcionario = new Frm_Cadastra_Funcionario();
+            cadastra_Funcionario.Show();
+            
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Frm_Cadastrar_Cliente cadastra_Cliente = new Frm_Cadastrar_Cliente();
+            cadastra_Cliente.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Frm_Cadastrar_Fornecedor cadastrofornecedor = new Frm_Cadastrar_Fornecedor();
-            Hide();
-            cadastrofornecedor.ShowDialog();
-            Show();
-            
+            Frm_Cadastrar_Fornecedor cadastra_Fornecedor = new Frm_Cadastrar_Fornecedor();
+            cadastra_Fornecedor.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Frm_Cadastro_Estoque cadastrofornecedor = new Frm_Cadastro_Estoque();
-            Hide();
-            cadastrofornecedor.ShowDialog();
-            Show();
-            
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Frm_Registrar_Folha cadastrofolha = new Frm_Registrar_Folha();
-            Hide();
-            cadastrofolha.ShowDialog();
-            Show();
-            
+            Frm_Cadastro_Estoque cadastra_Fornecedor = new Frm_Cadastro_Estoque();
+            cadastra_Fornecedor.Show();
         }
     }
 }

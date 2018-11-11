@@ -11,14 +11,13 @@ namespace prototipos.DB.Fornecedor
         public int Id_Fornecedor { get; set; }
         public int id_produto { get; set; }
         public string en_endereço { get; set; }
-        public int cnpj { get; set; }
-        public int tel_contem { get; set; }
-        public int cel_celular { get; set; }
+        public string cnpj { get; set; }
+        public string tel_telefone { get; set; }
+        public string cel_celular { get; set; }
         public string uf_uf { get; set; }
         public string ds_descricao { get; set; }
         public string el_email { get; set; }
-        public int Nm_numero { get; set; }
-        public string Nm_nome { get; set; }
         public int fk_ID_Funcionario { get; set; }
+        public string Nm_nome { get; set; }
     }
 }

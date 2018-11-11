@@ -11,8 +11,8 @@ namespace Software.Digudao.DB.Produto
         public int Id_Produto { get; set; }
         public string Nm_Nome { get; set; }
         public string Tm_Tamanho { get; set; }
-        public int Ql_Quantidade { get; set; }
-        public decimal pç_preço { get; set; }
+        public string Ql_Quantidade { get; set; }
+        public string pç_preço { get; set; }
         public int fk_id_funcionario_produto { get; set; }
     }
 }

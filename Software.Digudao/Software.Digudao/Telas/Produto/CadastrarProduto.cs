@@ -1,5 +1,6 @@
-﻿using prototipos.DB.Produto;
+﻿
 using Software.Digudao.DB.Produto;
+using Software.Digudao.Telas.Produto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,8 +24,8 @@ namespace Software.Digudao.DB.db
             ProdutoDTO dto = new ProdutoDTO();
             ProdutoBusiness business = new ProdutoBusiness();
             dto.Nm_Nome = textBox8.Text;
-            dto.pç_preço = decimal.Parse(textBox2.Text);
-            dto.Ql_Quantidade = int.Parse(textBox3.Text);
+            dto.pç_preço = textBox2.Text;
+            dto.Ql_Quantidade = textBox3.Text;
             dto.Tm_Tamanho = textBox1.Text;
 
             business.Salvar(dto);
@@ -34,16 +35,14 @@ namespace Software.Digudao.DB.db
 
         private void button7_Click(object sender, EventArgs e)
         {
-            SalvarProduto();
-          
+            ConsultarProduto consultarProduto = new ConsultarProduto();
+            consultarProduto.Show();
+            this.Close();
+
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +10,7 @@ namespace Software.Digudao.DB.Produto
 {
     class ProdutoDatabase
     {
-        public int Salvar(ProdutoDTO dto)
+        public void Salvar(ProdutoDTO dto)
         {
             string Script = @"INSERT INTO tb_produto (Nm_Nome,
                                                      Tm_Tamanho,
@@ -28,8 +29,9 @@ namespace Software.Digudao.DB.Produto
             parms.Add(new MySqlParameter("pç_preço", dto.pç_preço));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
+            parms.Add(new MySqlParameter("fk_id_funcionario_produto", dto.fk_id_funcionario_produto));
             Database db = new Database();
-            return db.ExecuteInsertScriptWithPk(Script, parms);
+            db.ExecuteInsertScriptWithPk(Script, parms);
         }
         public void Alterar(ProdutoDTO dto)
         {
@@ -45,6 +47,11 @@ namespace Software.Digudao.DB.Produto
             parms.Add(new MySqlParameter("pç_preço", dto.pç_preço));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
+            parms.Add(new MySqlParameter("fk_id_funcionario_produto", dto.fk_id_funcionario_produto));
+            parms.Add(new MySqlParameter("Id_Produto", dto.Id_Produto));
+
+
+
 
 
             Database db = new Database();
@@ -68,10 +75,10 @@ namespace Software.Digudao.DB.Produto
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GetInt32("Id_Cliente");
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.pç_preço = reader.GetDecimal("pç_preço");
-                dto.Ql_Quantidade = reader.GetInt32("Ql_Quantidade");
+                dto.pç_preço = reader.GetString("pç_preço");
+                dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
 
@@ -82,6 +89,7 @@ namespace Software.Digudao.DB.Produto
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
 
         }
@@ -96,21 +104,22 @@ namespace Software.Digudao.DB.Produto
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GetInt32("Id_Cliente");
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.pç_preço = reader.GetDecimal("pç_preço");
-                dto.Ql_Quantidade = reader.GetInt32("Ql_Quantidade");
+                dto.pç_preço = reader.GetString("pç_preço");
+                dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
         }
         public List<ProdutoDTO> ConsultarpoID(int id)
         {
-            string script = @"select * from tb_produto where Id_Cliente like @Id_Cliente";
+            string script = @"select * from tb_produto where Id_Produto like @Id_Produto";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Cliente", id));
             Database db = new Database();
@@ -119,16 +128,17 @@ namespace Software.Digudao.DB.Produto
             while (reader.Read())
             {
                 ProdutoDTO dto = new ProdutoDTO();
-                dto.Id_Produto = reader.GetInt32("Id_Cliente");
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.pç_preço = reader.GetDecimal("pç_preço");
-                dto.Ql_Quantidade = reader.GetInt32("Ql_Quantidade");
+                dto.pç_preço = reader.GetString("pç_preço");
+                dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
         }
     }

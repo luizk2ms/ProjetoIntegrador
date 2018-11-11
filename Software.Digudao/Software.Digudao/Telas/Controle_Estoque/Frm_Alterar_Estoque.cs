@@ -21,11 +21,11 @@ namespace Software.Digudao.Controle_Estoque
         {
             EstoqueDTO dto = new EstoqueDTO();
             dto.Id_Estoque = int.Parse(textBox8.Text);
-            dto.id_produto_id = int.Parse(textBox1.Text);
-            dto.kl_kilo = decimal.Parse(textBox2.Text);
-            dto.nm_nome = textBox4.Text;
-            dto.pc_preçoporcaixa = decimal.Parse(textBox5.Text);
-            dto.Qn_Quantidade = int.Parse(textBox3.Text);
+            dto.Id_Estoque = int.Parse(textBox1.Text);
+            dto.Qn_QuantidadeEmKg = textBox2.Text;
+            dto. = textBox4.Text;
+            dto.Pc_preco = textBox5.Text;
+            dto.Qn_Quantidade = textBox3.Text;
             dto.Tm_tamanho = textBox6.Text;
             EstoqueBusiness business = new EstoqueBusiness();
             business.Alterar(dto);
@@ -39,10 +39,7 @@ namespace Software.Digudao.Controle_Estoque
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Inicio iniciar = new Inicio();
-            Hide();
-            iniciar.ShowDialog();
-            Show();
+           
         }
     }
 }
