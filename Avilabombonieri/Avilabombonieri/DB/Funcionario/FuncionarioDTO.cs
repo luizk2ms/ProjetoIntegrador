@@ -4,20 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Avilabombonieri.DB.Funcionario
+namespace prototipos.DB.Funcionario
 {
     class FuncionarioDTO
     {
         public int Id_Funcionario { get; set; }
         public string Nm_Nome { get; set; }
+        public string lg_login { get; set; }
+        public int sn_senha { get; set; }
         public string ds_endereço { get; set; }
-        public string cp_cep { get; set; }
-        public string cpf_cpf { get; set; }
-        public decimal tl_empresa { get; set; }
-        public decimal cel_celular { get; set; }
+        public int cp_cep { get; set; }
+        public int cpf_cpf { get; set; }
+        public int tl_empresa { get; set; }
+        public int cel_celular { get; set; }
         public string cr_cargo { get; set; }
-        public decimal sl_salario { get; set; }
-        public decimal hr_horadeentrada { get; set; }
-        public decimal hrs_horadesaida { get; set; }
+        public DateTime dt_datadeentrada { get; set; }
+        public DateTime dt_datasaida { get; set; }
+        public int id_FolhadePagamento { get; set; }
+        public string uf_uf { get; set; }
+        public int nm_numero { get; set; }
+        
+
     }
 }

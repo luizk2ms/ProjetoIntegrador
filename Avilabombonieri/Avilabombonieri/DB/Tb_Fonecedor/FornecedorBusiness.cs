@@ -1,5 +1,4 @@
-﻿using Avilabombonieri.DB.Tb_Fonecedor;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,39 +8,39 @@ namespace prototipos.DB.Fornecedor
 {
     class FornecedorBusiness
     {
-        public int Salvar(Tb_FonecedorDTO dto)
+        public void Salvar(FornecedorDTO dto)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            return db.Salvar(dto);
+              db.Salvar(dto);
         }
 
-        public void Alterar(Tb_FonecedorDTO dto)
+        public void Alterar(FornecedorDTO dto)
         {
             FornecedorDatabase db = new FornecedorDatabase();
             db.Alterar(dto);
         }
-        public void Remover(int ID)
+        public int RemoverFornecedor(int id)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            db.Remover(ID);
+            return db.RemoverFornecedor(id);
         }
 
-        public List<FornecedorViewDTO> Listar()
+        public List<FornecedorDTO> Listar()
         {
             FornecedorDatabase db = new FornecedorDatabase();
             return db.Listar();
         }
 
-        public List<FornecedorViewDTO> ConsultarporNome(string nome)
+        public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            return db.ConsultarporNome(nome);
+            return db.ConsultarporNome(Nome);
         }
 
-        public List<FornecedorDTO> ConsultarpoId(int ID)
+        public List<FornecedorDTO> ConsultarFornecedor(int id)
         {
             FornecedorDatabase db = new FornecedorDatabase();
-            return db.ConsultarporId(ID);
+            return db.ConsultarFornecedor(id);
         }
     }
 }

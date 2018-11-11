@@ -1,48 +1,53 @@
-﻿using MySql.Data.MySqlClient;
+﻿
+using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Avilabombonieri.DB.Fluxo_caixa
+namespace Software
 {
-    class Fluxo_DATABASE
+    class FluxodeCaixaDataBase
     {
-        
-        public int Salvar(Fluxo_DTO dto)
+        public int Salvar (FluxodeCaixaDTO dto)
         {
-            string script = @"insert into tb_fluxo_de_caixa (vl_total_recebido,fluxo_de_caixa_diario,fluxo_de_caixa_mensal,fk_id_funcionario_para_fc)
-                           values     (@vl_total_recebido,@fluxo_de_caixa_diario,@fluxo_de_caixa_mensal,@fk_id_funcionario_para_fc)";
+            string script = @"insert into tb_fluxo_de_caixa (qnt_de_venda_avista,qnt_de_venda_cartao,vl_total_recebido,fluxo_de_caixa_diario,fluxo_de_caixa_mensal,fk_id_funcionario_para_fc)
+                           values     (@qnt_de_venda_avista,@qnt_de_venda_cartao,@vl_total_recebido,@fluxo_de_caixa_diario,@fluxo_de_caixa_mensal,@fk_id_funcionario_para_fc)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            
+            parms.Add(new MySqlParameter("qnt_de_venda_avista", dto.qnt_venda_avista));
+            parms.Add(new MySqlParameter("qnt_de_venda_cartao", dto.qnt_venda_cartao));
             parms.Add(new MySqlParameter("vl_total_recebido", dto.vl_total_recebido));
             parms.Add(new MySqlParameter("fluxo_de_caixa_diario", dto.fluxo_caixa_diario));
             parms.Add(new MySqlParameter("fluxo_de_caixa_mensal", dto.fluxo_caixa_mensal));
             parms.Add(new MySqlParameter("fk_id_funcionario_para_fc", dto.FKIDfuncionarios));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             return db.ExecuteInsertScriptWithPk(script, parms);
         }
 
-        public void Alterar(Fluxo_DTO dto)
+        public void Alterar(FluxodeCaixaDTO dto)
         {
-            string script = @"update tb_fluxo_de_caixa set   vl_total_recebido=@vl_total_recebido,
+            string script = @"update tb_fluxo_de_caixa set   qnt_de_venda_avista=@qnt_de_venda_avista,
+                                                            qnt_de_venda_cartao=@qnt_de_venda_cartao,
+                                                            vl_total_recebido=@vl_total_recebido,
                                                             fluxo_de_caixa_diario=@fluxo_de_caixa_diario,
                                                             fluxo_de_caixa_mensal=@fluxo_de_caixa_mensal,
                                                             fk_id_funcionario_para_fc=@fk_id_funcionario_para_fc
                                             where           id_fluxo_de_caixa = @id_fluxo_de_caixa";
 
-
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_fluxo_de_caixa", dto.Id_fluxo_de_caixa));
+            parms.Add(new MySqlParameter("qnt_de_venda_avista", dto.qnt_venda_avista));
+            parms.Add(new MySqlParameter("qnt_de_venda_cartao", dto.qnt_venda_cartao));
             parms.Add(new MySqlParameter("vl_total_recebido", dto.vl_total_recebido));
             parms.Add(new MySqlParameter("fluxo_de_caixa_diario", dto.fluxo_caixa_diario));
             parms.Add(new MySqlParameter("fluxo_de_caixa_mensal", dto.fluxo_caixa_mensal));
             parms.Add(new MySqlParameter("fk_id_funcionario_para_fc", dto.FKIDfuncionarios));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
 
@@ -53,23 +58,24 @@ namespace Avilabombonieri.DB.Fluxo_caixa
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_fluxo_de_caixa", Id));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             db.ExecuteInsertScript(script, parms);
         }
 
 
-        public List<Fluxo_DTO> Listar()
+        public List<FluxodeCaixaDTO> Listar()
         {
             string script = @"select * from tb_fluxo_de_caixa";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            DataBase db = new DataBase();
+            Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<Fluxo_DTO> lista = new List<Fluxo_DTO>();
-            while (reader.Read())
+            List<FluxodeCaixaDTO> lista = new List<FluxodeCaixaDTO>();
+            while(reader.Read())
             {
-                Fluxo_DTO dto = new Fluxo_DTO();
+                FluxodeCaixaDTO dto = new FluxodeCaixaDTO();
                 dto.Id_fluxo_de_caixa = reader.GetInt32("id_fluxo_de_caixa");
-               
+                dto.qnt_venda_avista = reader.GetInt32("qnt_de_venda_avista");
+                dto.qnt_venda_cartao= reader.GetInt32("qnt_de_venda_cartao");
                 dto.vl_total_recebido = reader.GetDecimal("vl_total_recebido");
                 dto.fluxo_caixa_diario = reader.GetBoolean("fluxo_de_caixa_diario");
                 dto.fluxo_caixa_mensal = reader.GetBoolean("fluxo_de_caixa_mensal");
@@ -80,20 +86,22 @@ namespace Avilabombonieri.DB.Fluxo_caixa
             return lista;
         }
 
+        
 
-
-        public List<Fluxo_DTO> ConsultarporID(int ID)
+        public List<FluxodeCaixaDTO> ConsultarporID(int ID)
         {
             string script = @"select * from tb_fluxo_de_caixa where id_fluxo_de_caixa like @id_fluxo_de_caixa";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_fluxo_de_caixa", ID + "%"));
-            DataBase db = new DataBase();
+            Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
-            List<Fluxo_DTO> lista = new List<Fluxo_DTO>();
+            List<FluxodeCaixaDTO> lista = new List<FluxodeCaixaDTO>();
             while (reader.Read())
             {
-                Fluxo_DTO dto = new Fluxo_DTO();
+                FluxodeCaixaDTO dto = new FluxodeCaixaDTO();
                 dto.Id_fluxo_de_caixa = reader.GetInt32("id_fluxo_de_caixa");
+                dto.qnt_venda_avista = reader.GetInt32("qnt_de_venda_avista");
+                dto.qnt_venda_cartao = reader.GetInt32("qnt_de_venda_cartao");
                 dto.vl_total_recebido = reader.GetDecimal("vl_total_recebido");
                 dto.fluxo_caixa_diario = reader.GetBoolean("fluxo_de_caixa_diario");
                 dto.fluxo_caixa_mensal = reader.GetBoolean("fluxo_de_caixa_mensal");
@@ -104,8 +112,8 @@ namespace Avilabombonieri.DB.Fluxo_caixa
             return lista;
         }
 
-        public List<Fluxo_View> FiltrarData(DateTime start, DateTime end)
-        {
+        public List<FluxodeCaixaDTO> FiltrarData (DateTime start, DateTime end)
+        {   
             string script = @"select *
                                 from vw_fluxo_caixa
                                 where dt_operacao >= @start
@@ -116,13 +124,13 @@ namespace Avilabombonieri.DB.Fluxo_caixa
             parms.Add(new MySqlParameter("start", start));
             parms.Add(new MySqlParameter("end", end));
 
-            DataBase db = new DataBase();
+            Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
 
-            List<Fluxo_View> fluxodeCaixas = new List<Fluxo_View>();
-            while (reader.Read() == true)
+            List<FluxodeCaixaDTO> fluxodeCaixas = new List<FluxodeCaixaDTO>();
+            while(reader.Read() == true)
             {
-                Fluxo_View dto = new Fluxo_View();
+                FluxodeCaixaDTO dto = new FluxodeCaixaDTO();
                 dto.dt_operacao = reader.GetDateTime("dt_operacao");
                 dto.vl_total = reader.GetDecimal("vl_total");
                 dto.to_operacao = reader.GetString("tp_operacao");

@@ -1,5 +1,4 @@
-﻿using Avilabombonieri.DB.Cliente;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,13 +25,13 @@ namespace prototipos.DB.Cliente
                 db.Remover(ID);
             }
 
-            public List<ClienteViewDTO> Listar()
+            public List<ClienteDTO> Listar()
             {
                 ClienteDatabase db = new ClienteDatabase();
                 return db.Listar();
             }
 
-            public List<ClienteViewDTO> ConsultarporNome(string nome)
+            public List<ClienteDTO> ConsultarporNome(string nome)
             {
                 ClienteDatabase db = new ClienteDatabase();
                 return db.ConsultarporNome(nome);
@@ -41,7 +40,7 @@ namespace prototipos.DB.Cliente
             public List<ClienteDTO> ConsultarpoId(int ID)
             {
                 ClienteDatabase db = new ClienteDatabase();
-                return db.ConsultarporId(ID);
+                return db.ConsultarpoID(ID);
             }
         }
 }
