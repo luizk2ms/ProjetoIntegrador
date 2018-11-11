@@ -45,6 +45,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Apis\CorreioResponde.cs" />
+    <Compile Include="DB\Apis\CorreiosModels.cs" />
+    <Compile Include="DB\Controle_de_Usuario\LoginBusiness.cs" />
+    <Compile Include="DB\Controle_de_Usuario\LoginDatabase.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioBUsiness.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
+    <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
     <Compile Include="DB\dbb\Connection.cs" />
     <Compile Include="DB\dbb\Database.cs" />
     <Compile Include="DB\Cardapio\Cardapio_BUSSINES.cs" />
@@ -64,6 +72,13 @@
     <Compile Include="DB\Fluxo_caixa\FluxodeCaixaBusiness.cs" />
     <Compile Include="DB\Fluxo_caixa\FluxodeCaixaDataBase.cs" />
     <Compile Include="DB\Fluxo_caixa\FluxodeCaixaDTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Desconto_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_Business.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_Database.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\Folha_de_Pagamento_View_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\INSS_DTO.cs" />
+    <Compile Include="DB\Folha_de_Pagamento\IR_DTO.cs" />
     <Compile Include="DB\Funcionario\FuncionarioBusiness.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDatabase.cs" />
     <Compile Include="DB\Funcionario\FuncionarioDTO.cs" />
