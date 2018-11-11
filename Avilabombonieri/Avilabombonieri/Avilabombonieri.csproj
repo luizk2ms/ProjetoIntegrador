@@ -47,12 +47,14 @@
   <ItemGroup>
     <Compile Include="DB\Apis\CorreioResponde.cs" />
     <Compile Include="DB\Apis\CorreiosModels.cs" />
+    <Compile Include="DB\Connection\Connection.cs" />
     <Compile Include="DB\Controle_de_Usuario\LoginBusiness.cs" />
     <Compile Include="DB\Controle_de_Usuario\LoginDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioBUsiness.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
+    <Compile Include="DB\Database\Database.cs" />
     <Compile Include="DB\dbb\Connection.cs" />
     <Compile Include="DB\dbb\Database.cs" />
     <Compile Include="DB\Cardapio\Cardapio_BUSSINES.cs" />
@@ -346,5 +348,6 @@
   <ItemGroup>
     <None Include="Resources\cuuc.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
