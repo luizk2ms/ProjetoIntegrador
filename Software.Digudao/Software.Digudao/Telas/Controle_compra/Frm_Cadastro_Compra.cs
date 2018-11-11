@@ -29,5 +29,20 @@ namespace Software.Digudao.Telas.Controle_compra
             iniciar.ShowDialog();
             Show();
         }
+
+        private void cboProdutos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,11 +13,9 @@ namespace prototipos.DB.Funcionario
     {
         public void Cadastrar(FuncionarioDTO dto)
         {
-            string Script = @"INSERT Funcionario(Login, Nm_Nome, Data_nascimento, CPF, RG, Endereco, Complemento, Cargo, observacao)
-                                          VALUES(@Login, @Nm_Nome, @Data_nascimento, @CPF, @RG, @Endereco, @Complemento, @Cargo, @observacao)";
-
+            string Script = @"INSERT tb_funcionario(Login, Nm_Nome, nm_numero, tl_empresa, uf_uf, cel_celular,cr_cargo, ds_endereço, cpf_cpf,cp_cep,dt_datadeentrada,dt_datasaida)
+                                          VALUES(@Login,@Nm_Nome,@nm_numero,@tl_empresa,@uf_uf,@cel_celular,@cr_cargo,@ds_endereço,@cpf_cpf,@cp_cep,@dt_datadeentrada,@dt_datasaida)"
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Funcionario", dto.Id_Funcionario));
             parms.Add(new MySqlParameter("lg_login", dto.lg_login));
             parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
             parms.Add(new MySqlParameter("nm_numero", dto.nm_numero));
@@ -44,7 +42,7 @@ namespace prototipos.DB.Funcionario
 
         public List<FuncionarioDTO> ConsultarFuncionario(int CPF)
         {
-            string script = $"SELECT * FROM Funcionario WHERE CPF like '%{CPF}%'";
+            string script = $"SELECT * FROM tb_funcionario WHERE CPF like '%{CPF}%'";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
 
@@ -78,7 +76,7 @@ namespace prototipos.DB.Funcionario
 
         public void RemoverFuncionario(int id)
         {
-            string script = @"DELETE FROM Funcionario WHERE id_Funcionario = @id_Funcionario";
+            string script = @"DELETE FROM tb_funcionario WHERE id_Funcionario = @id_Funcionario";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("id_Funcionario", id));
@@ -89,15 +87,17 @@ namespace prototipos.DB.Funcionario
 
         public int AlterarFuncionario(FuncionarioDTO dto)
         {
-            string script = @"UPDATE Funcionario SET Usuario = @Usuario,
-                                                       NomeF = @Nm_Nome,
-                                             Data_nascimento = @Data_nascimento,
-                                                         CPF = @CPF,
-                                                          RG = @RG,
-                                                    Endereco = @Endereco,
-                                                 Complemento = @Complemento,
-                                                       Cargo = @Cargo,
-                                                  observacao = @observacao
+            string script = @"UPDATE Funcionario SET Login, Nm_Nome = @Nm_Nome,
+                                                            nm_numero = @nm_numero,
+                                                            tl_empresa = @tl_empresa,
+                                                            uf_uf = @uf_uf,
+                                                            cel_celular = @cel_celular,
+                                                            cr_cargo = @cr_cargo,
+                                                            ds_endereço = @ds_endereço,
+                                                            cpf_cpf = @cpf_cpf,
+                                                            cp_ce = @cp_cep,
+                                                            dt_datadeentrada = @dt_datadeentrada,
+                                                            dt_datasaida = @dt_datasaida
 
                                          WHERE Id_Funcionario = @Id_Funcionario";
 
@@ -124,7 +124,7 @@ namespace prototipos.DB.Funcionario
 
         public List<FuncionarioDTO> Listar()
         {
-            string Script = @"SELECT *FROM Funcionario";
+            string Script = @"SELECT *FROM tb_funcionario";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
@@ -158,7 +158,7 @@ namespace prototipos.DB.Funcionario
 
         public List<FuncionarioDTO> ListarPorId(int id)
         {
-            string script = @"select * from Funcionario where Id_Funcionario like @Id_Funcionario";
+            string script = @"select * from tb_funcionario where Id_Funcionario like @Id_Funcionario";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Funcionario", id));
             Database db = new Database();
@@ -191,7 +191,7 @@ namespace prototipos.DB.Funcionario
         }
         public List<FuncionarioDTO> ConsultarporNome(string Nome)
         {
-            string script = @"select * from Funcionario where Id_Funcionario like @Id_Funcionario";
+            string script = @"select * from tb_funcionario where Id_Funcionario like @Id_Funcionario";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Funcionario", Nome + "%"));
             Database db = new Database();

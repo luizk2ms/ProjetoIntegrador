@@ -16,6 +16,7 @@ namespace prototipos.DB.Cliente
         public int tl_empresa { get; set; }
         public int cel_celular { get; set; }
         public string em_email { get; set; }
+        public int fk_id_funcionario_cliente{ get; set; }
 
 
 

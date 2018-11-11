@@ -44,8 +44,6 @@
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label13 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
@@ -147,9 +145,7 @@
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.dateTimePicker1);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.maskedTextBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.maskedTextBox2);
@@ -275,24 +271,6 @@
             this.button5.Text = "Buscar";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(10, 219);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(227, 20);
-            this.dateTimePicker1.TabIndex = 99;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label13.Location = new System.Drawing.Point(7, 198);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(118, 18);
-            this.label13.TabIndex = 125;
-            this.label13.Text = "Data de Cadastro";
-            // 
             // maskedTextBox1
             // 
             this.maskedTextBox1.Location = new System.Drawing.Point(507, 32);
@@ -364,7 +342,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(10, 265);
+            this.textBox5.Location = new System.Drawing.Point(9, 224);
             this.textBox5.MaxLength = 50;
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
@@ -409,7 +387,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label21.Location = new System.Drawing.Point(7, 246);
+            this.label21.Location = new System.Drawing.Point(6, 205);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(50, 18);
             this.label21.TabIndex = 120;
@@ -448,7 +426,7 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(10, 308);
+            this.textBox7.Location = new System.Drawing.Point(9, 267);
             this.textBox7.MaxLength = 50;
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
@@ -457,7 +435,7 @@
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(9, 348);
+            this.textBox8.Location = new System.Drawing.Point(8, 307);
             this.textBox8.Multiline = true;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(191, 19);
@@ -508,7 +486,7 @@
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label26.Location = new System.Drawing.Point(7, 287);
+            this.label26.Location = new System.Drawing.Point(6, 246);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(33, 18);
             this.label26.TabIndex = 115;
@@ -530,7 +508,7 @@
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label28.Location = new System.Drawing.Point(6, 333);
+            this.label28.Location = new System.Drawing.Point(5, 292);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(62, 18);
             this.label28.TabIndex = 113;
@@ -628,8 +606,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;

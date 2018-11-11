@@ -31,7 +31,7 @@ namespace prototipos.DB.Funcionario
             return db.Listar();
         }
 
-        public List<FuncionarioDTO> ConsultarporNome(int nome)
+        public List<FuncionarioDTO> ConsultarporNome(string nome)
         {
             FuncionarioDatabase db = new FuncionarioDatabase();
             return db.ConsultarFuncionario(nome);

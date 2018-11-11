@@ -27,7 +27,7 @@ namespace Avilabombonieri.Controle_funcionarios
         {
             Cadastrar_Funcionario cadastrarfuncionario = new Cadastrar_Funcionario();
             Hide();
-           cadastrarfuncionario.ShowDialog();
+            cadastrarfuncionario.ShowDialog();
             Show();
         }
 

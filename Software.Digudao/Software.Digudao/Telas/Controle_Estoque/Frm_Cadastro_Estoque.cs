@@ -21,7 +21,7 @@ namespace Software.Digudao.Controle_Estoque
         {
             EstoqueDTO dto = new EstoqueDTO();
             dto.Id_Estoque = int.Parse(textBox8.Text);
-            dto.id_produto_id = int.Parse(textBox1.Text);
+            dto.fk_id_produto_estoque = int.Parse(textBox1.Text);
             dto.kl_kilo = decimal.Parse(textBox2.Text);
             dto.nm_nome = textBox4.Text;
             dto.pc_preçoporcaixa = decimal.Parse(textBox5.Text);

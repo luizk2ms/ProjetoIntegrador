@@ -1,4 +1,5 @@
 ﻿using prototipos.DB.Produto;
+using Software.Digudao.DB.Produto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,10 +20,10 @@ namespace Software.Digudao.DB.db
         }
         private void SalvarProduto()
         {
-            Produto_Compra dto = new Produto_Compra();
+            ProdutoDTO dto = new ProdutoDTO();
             ProdutoBusiness business = new ProdutoBusiness();
             dto.Nm_Nome = textBox8.Text;
-            dto.Pc_Preco = decimal.Parse(textBox2.Text);
+            dto.pç_preço = decimal.Parse(textBox2.Text);
             dto.Ql_Quantidade = int.Parse(textBox3.Text);
             dto.Tm_Tamanho = textBox1.Text;
 

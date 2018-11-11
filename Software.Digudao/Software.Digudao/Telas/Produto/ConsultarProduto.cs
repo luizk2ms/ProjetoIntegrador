@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Software.Digudao.DB.Produto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,15 @@ namespace Software.Digudao.Telas.Produto
         public ConsultarProduto()
         {
             InitializeComponent();
+            dgvFolha.AutoGenerateColumns = false;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            ProdutoBusiness Estoque = new ProdutoBusiness();
+            List<ProdutoDTO> view = Estoque.ConsultarporNome(txtCPF.Text);
+            ProdutoDTO dto = view[0];
+            dgvFolha.DataSource = view;
         }
     }
 }

@@ -35,7 +35,7 @@ namespace Software.Digudao.Controle_Funcionario
             dto.dt_datadeentrada = DateTime.Parse(dateTimePicker2.Text);
             dto.dt_datasaida = DateTime.Parse(dateTimePicker1.Text);
 
-            Funcionario.Salvar(dto);
+            Funcionario.Cadastrar(dto);
 
 
         }
@@ -53,6 +53,11 @@ namespace Software.Digudao.Controle_Funcionario
             Hide();
             iniciar.ShowDialog();
             Show();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -12,22 +12,19 @@ namespace prototipos.DB.Pedido
     {
         public int Salvar(PedidoDTO dto)
         {
-            string Script = @"INSERT INTO Tb_Pedido (Id_Pedido,
-                                                     Cliente_id_cliente,
+            string Script = @"INSERT INTO Tb_Pedido (Cliente_id_cliente,
                                                      qn_quantidade,
                                                      Tm_tamanho_tamanho,
                                                      pc_preçoporcaixa_caixa,
                                                      pedidoid_produto)
                                                      VALUES 
-                                                     (@Id_Pedido,
-                                                     @Cliente_id_cliente,
+                                                     (@Cliente_id_cliente,
                                                      @qn_quantidade,
                                                      @Tm_tamanho_tamanho,
                                                      @pc_preçoporcaixa_caixa,
                                                      @pedidoid_produto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Pedido", dto.Id_Pedido));
             parms.Add(new MySqlParameter("Cliente_id_cliente", dto.Cliente_id_cliente));
             parms.Add(new MySqlParameter("qn_quantidade", dto.qn_quantidade));
             parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Tm_tamanho_tamanho));
@@ -39,19 +36,13 @@ namespace prototipos.DB.Pedido
         }
         public void Alterar(PedidoDTO dto)
         {
-            string Script = @"UPDATE INTO Tb_Pedido (Id_Pedido,
-                                                     Cliente_id_cliente,
-                                                     qn_quantidade,
-                                                     Tm_tamanho_tamanho,
-                                                     pc_preçoporcaixa_caixa,
-                                                     pedidoid_produto)
-                                                     VALUES 
-                                                     (@Id_Pedido,
-                                                     @Cliente_id_cliente,
-                                                     @qn_quantidade,
-                                                     @Tm_tamanho_tamanho,
-                                                     @pc_preçoporcaixa_caixa,
-                                                     @pedidoid_produto)";
+            string Script = @"UPDATE INTO Tb_Pedido Cliente_id_cliente = @Cliente_id_cliente,
+                                                     qn_quantidade = @qn_quantidade,
+                                                     Tm_tamanho_tamanho = @Tm_tamanho_tamanho,
+                                                     pc_preçoporcaixa_caixa = @pc_preçoporcaixa_caixa,
+                                                     pedidoid_produto = @pedidoid_produto,
+                                                     WHERE Id_Pedido = @Id_Pedido";
+                                                     
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Pedido", dto.Id_Pedido));

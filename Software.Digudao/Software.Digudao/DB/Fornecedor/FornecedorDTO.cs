@@ -19,5 +19,6 @@ namespace prototipos.DB.Fornecedor
         public string el_email { get; set; }
         public int Nm_numero { get; set; }
         public string Nm_nome { get; set; }
+        public int fk_ID_Funcionario { get; set; }
     }
 }

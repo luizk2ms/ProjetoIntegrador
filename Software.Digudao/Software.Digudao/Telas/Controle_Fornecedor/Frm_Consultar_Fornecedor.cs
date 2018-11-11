@@ -16,6 +16,7 @@ namespace Software.Digudao.Controle_Fornecedor
         public Frm_Consultar_Fornecedor()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
 
@@ -23,34 +24,14 @@ namespace Software.Digudao.Controle_Fornecedor
         {
             FornecedorBusiness Cliente = new FornecedorBusiness();
             List<FornecedorDTO> View = Cliente.ConsultarporNome(txtfornecedor.Text);
-            FornecedorViewDTO dto = View[0];
+            FornecedorDTO dto = View[0];
             dgvfornecedor.DataSource = View;
         }
 
 
         private void dgvfornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 2)
-            {
-                Frm_Alterar_Fornecedor alterarFornecedor = new Frm_Alterar_Fornecedor();
-                FornecedorViewDTO dto = dgvfornecedor.CurrentRow.DataBoundItem as FornecedorViewDTO;
-                int Id_Fornecedor = dto.Id_Fornecedor;
-                string Nm_Nome;
-                Id_Fornecedor = dto.Id_Fornecedor;
-                Nm_Nome = dto.Nm_nome;
-                alterarFornecedor.LoadScreen(Id_Fornecedor, Nm_Nome);
-                alterarFornecedor.Show();
-
-            }
-            if (e.ColumnIndex == 8)
-            {
-                FornecedorBusiness Fornecedor = new FornecedorViewDTO();
-                FornecedorViewDTO dto = dgvfornecedor.CurrentRow.DataBoundItem as FornecedorViewDTO;
-                Fornecedor.Remover(dto.Id_Fornecedor);
-                ();
-
-
-            }
+            
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

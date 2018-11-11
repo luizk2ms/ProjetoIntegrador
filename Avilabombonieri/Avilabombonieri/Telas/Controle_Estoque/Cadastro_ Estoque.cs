@@ -1,4 +1,5 @@
 ﻿using Avilabombonieri.DB.Estoque;
+using prototipos.DB.Estoque;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,14 +24,14 @@ namespace Avilabombonieri.Telas.Controle_Estoque
             EstoqueDTO dto = new EstoqueDTO();
             dto.Id_Estoque = int.Parse(IdProduto.Text);
             dto.nm_nome = NomeProd.Text;
-            dto.Qn_Quantidade = Quantidade.Text;
+            dto.Qn_Quantidade = int.Parse(Quantidade.Text);
             dto.Tm_tamanho = Tamanho.Text;
-            dto.Qn_QuantidadeEmKg = QuantidadeEmKg.Text;
-            dto.dt_data = DateTime.Parse(DatadeValidade.Text);
-            dto.Pc_preco = decimal.Parse(Preco.Text);
+            dto.kl_kilo = decimal.Parse(QuantidadeEmKg.Text);
+            dto.dt_datavl = DateTime.Parse(DatadeValidade.Text);
+            dto.pc_preçoporcaixa = decimal.Parse(Preco.Text);
 
             EstoqueBusiness bussines = new EstoqueBusiness();
-            bussines.Cadastrar(dto);
+            bussines.SalvarEstoque(dto);
         }
     }
 }

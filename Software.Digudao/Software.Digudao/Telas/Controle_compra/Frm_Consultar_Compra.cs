@@ -23,7 +23,7 @@ namespace Software.Digudao.Controle_compra
         private void button10_Click(object sender, EventArgs e)
         {
             PedidoBusiness Pedido = new PedidoBusiness();
-            List<PedidoDTO> View = Pedido.ConsultarporNome(textBox2.Text);
+            List<PedidoDTO> View = Pedido.ConsultarpoID(textBox2.Text);
             dataGridView1.DataSource = View;
         }
 

@@ -142,9 +142,9 @@
             this.label1.ForeColor = System.Drawing.Color.Indigo;
             this.label1.Location = new System.Drawing.Point(4, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 24);
+            this.label1.Size = new System.Drawing.Size(152, 24);
             this.label1.TabIndex = 58;
-            this.label1.Text = "Insira o CNPJ ou CPF :";
+            this.label1.Text = "Insira o Nome :";
             // 
             // panel2
             // 

@@ -13,12 +13,10 @@ namespace prototipos.DB.Fornecedor
     {
         public void Salvar(FornecedorDTO dto)
         {
-            string Script = @"INSERT tb_fonecedor(Id_Fornecedor,en_endereço,cnpj,tel_contem,cel_celular,uf_uf,ds_descricao,el_email,Nm_numero,Nm_nome,fk_ID_Funcionario)
-                                          VALUES(@Id_Fornecedor,@en_endereço,@cnpj,@tel_contem,@cel_celular,@uf_uf,@ds_descricao,@el_email,@Nm_numero,@Nm_nome,@fk_ID_Funcionario)";
+            string Script = @"INSERT tb_fonecedor(Nm_nome,Nm_numero,tel_contem,uf_uf,cel_celular,cnpj,ds_descricao,el_email,en_endereço,fk_ID_Funcionario)
+                                          VALUES(@Nm_nome,@Nm_numero,@tel_contem,@uf_uf,@cel_celular,@cnpj,@ds_descricao,@el_email,@en_endereço,@fk_ID_Funcionario)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Usuario", dto.Id_Fornecedor));
-            parms.Add(new MySqlParameter("id_produto", dto.id_produto));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
             parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
             parms.Add(new MySqlParameter("tel_contem", dto.tel_contem));
@@ -28,6 +26,7 @@ namespace prototipos.DB.Fornecedor
             parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
             parms.Add(new MySqlParameter("el_email", dto.el_email));
             parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
+            parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
 
 
 
@@ -57,6 +56,7 @@ namespace prototipos.DB.Fornecedor
                 dto.ds_descricao = reader.GetString("ds_descricao");
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
+                dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
 
 
 
@@ -90,6 +90,8 @@ namespace prototipos.DB.Fornecedor
                                                        Nm_numero = @Nm_numero,
                                                        Nm_nome =@Nm_nome,
                                                        id_produto = @id_produto,
+                                                       fk_ID_Funcionario = @fk_ID_Funcionario
+
                                                        WHERE Id_Fornecedor = @Id_Fornecedor";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -103,6 +105,7 @@ namespace prototipos.DB.Fornecedor
             parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
             parms.Add(new MySqlParameter("id_produto", dto.id_produto));
+            parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
 
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
@@ -131,6 +134,7 @@ namespace prototipos.DB.Fornecedor
                 dto.ds_descricao = reader.GetString("ds_descricao");
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
+                dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
 
 
                 lista.Add(dto);
@@ -141,7 +145,7 @@ namespace prototipos.DB.Fornecedor
         }
         public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
-            string script = @"select * from Tb_Fonecedor where nm_nome like @nm_nome";
+            string script = @"select * from tb_fonecedor where Nm_nome like @Nm_nome";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("nm_nome", Nome + "%"));
             Database db = new Database();
@@ -161,6 +165,7 @@ namespace prototipos.DB.Fornecedor
                 dto.ds_descricao = reader.GetString("ds_descricao");
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
+                dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
 
 
 

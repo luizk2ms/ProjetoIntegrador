@@ -1,5 +1,6 @@
 ﻿using Avilabombonieri.Controle_Usuario;
 using Avilabombonieri.Tela_inicio;
+using prototipos.DB.Funcionario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,6 +42,16 @@ namespace Avilabombonieri.Controle_funcionarios
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FuncionarioBusiness Funcionario = new FuncionarioBusiness();
+            List<FuncionarioDTO> view = Funcionario.ConsultarporNome(textBox2.Text);
+            FuncionarioDTO dto = view[0];
+            DataGridw
+            
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
         {
 
         }

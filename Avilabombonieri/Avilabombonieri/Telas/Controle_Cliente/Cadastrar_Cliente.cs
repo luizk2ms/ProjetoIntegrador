@@ -2,6 +2,7 @@
 using Avilabombonieri.Controle_Usuario;
 using Avilabombonieri.DB.Cliente;
 using Avilabombonieri.Tela_inicio;
+using prototipos.DB.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -76,48 +77,25 @@ namespace Avilabombonieri.Controle_Cliente
             ClienteDTO dto = new ClienteDTO();
             dto.Id_Cliente = int.Parse(id_cliente.Text);
             dto.Nm_Nome = Nomecliente.Text;
-            dto.CNPJ = Cnpj.Text;
-            dto.CPF = Cpf.Text;
-            dto.Em_Email = Email.Text;
-            dto.Ed_endereco = Endereco.Text;
-            dto.Nm_numero = decimal.Parse(Numero.Text);
-
+            dto.cpf_cpf = int.Parse(Cpf.Text);
+            dto.em_email = Email.Text;
+            dto.ds_endereço = Endereco.Text;
+            dto.tl_empresa = int.Parse(Numero.Text);
             ClienteBusiness bussines = new ClienteBusiness();
-            bussines.Cadastrar
-                (dto);
+            bussines.Salvar(dto);
+            
 
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            ClienteDTO dto = new ClienteDTO();
-            dto.Id_Cliente = int.Parse(id_cliente.Text);
-            dto.Nm_Nome = Nomecliente.Text;
-            dto.CNPJ = Cnpj.Text;
-            dto.CPF = Cpf.Text;
-            dto.Em_Email = Email.Text;
-            dto.Ed_endereco = Endereco.Text;
-            dto.Nm_numero = decimal.Parse(Numero.Text);
-
-            ClienteBusiness bussines = new ClienteBusiness();
-            bussines.Consultar(dto);
+           
 
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            ClienteDTO dto = new ClienteDTO();
-            dto.Id_Cliente = int.Parse(id_cliente.Text);
-            dto.Nm_Nome = Nomecliente.Text;
-            dto.CNPJ = Cnpj.Text;
-            dto.CPF = Cpf.Text;
-            dto.Em_Email = Email.Text;
-            dto.Ed_endereco = Endereco.Text;
-            dto.Nm_numero = decimal.Parse(Numero.Text);
-
-            ClienteBusiness bussines = new ClienteBusiness();
-            bussines.Alterar(dto);
-
+            
         }
     }
 }

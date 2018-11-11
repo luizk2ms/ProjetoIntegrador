@@ -17,7 +17,6 @@ namespace prototipos.DB.Funcionario
                                           VALUES(@Login, @Nm_Nome, @Data_nascimento, @CPF, @RG, @Endereco, @Complemento, @Cargo, @observacao)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Funcionario", dto.Id_Funcionario));
             parms.Add(new MySqlParameter("lg_login", dto.lg_login));
             parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
             parms.Add(new MySqlParameter("nm_numero", dto.nm_numero));
@@ -89,15 +88,15 @@ namespace prototipos.DB.Funcionario
 
         public int AlterarFuncionario(FuncionarioDTO dto)
         {
-            string script = @"UPDATE Funcionario SET Usuario = @Usuario,
-                                                       NomeF = @Nm_Nome,
-                                             Data_nascimento = @Data_nascimento,
-                                                         CPF = @CPF,
-                                                          RG = @RG,
-                                                    Endereco = @Endereco,
-                                                 Complemento = @Complemento,
-                                                       Cargo = @Cargo,
-                                                  observacao = @observacao
+            string script = @"UPDATE Funcionario SET Login = @Login,
+                                                     Nm_Nome = @Nm_Nome,
+                                                     Data_nascimento = @Data_nascimento,
+                                                     CPF = @CPF,
+                                                     RG = @RG,
+                                                     Endereco = @Endereco,
+                                                     Complemento = @Complemento,
+                                                     Cargo = @Cargo,
+                                                     observacao = @observacao
 
                                          WHERE Id_Funcionario = @Id_Funcionario";
 

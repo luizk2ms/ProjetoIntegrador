@@ -64,14 +64,15 @@
     <Compile Include="DB\Pedido\PedidoBusiness.cs" />
     <Compile Include="DB\Pedido\PedidoDatabase.cs" />
     <Compile Include="DB\Pedido\PedidoDTO.cs" />
+    <Compile Include="DB\Produto\ProdutoBusiness.cs" />
+    <Compile Include="DB\Produto\ProdutoDatabase.cs" />
+    <Compile Include="DB\Produto\ProdutoDTO.cs" />
     <Compile Include="Telas\Controle_compra\Frm_Cadastro_Compra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Telas\Controle_compra\Frm_Cadastro_Compra.Designer.cs">
       <DependentUpon>Frm_Cadastro_Compra.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Controle_compra\ProdutoBusiness.cs" />
-    <Compile Include="Telas\Controle_compra\Produto_Compra_DTO.cs" />
     <Compile Include="Telas\Controle_Usuario\Frm_UsuarioAlterar.cs">
       <SubType>Form</SubType>
     </Compile>

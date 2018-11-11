@@ -12,26 +12,21 @@ namespace prototipos.DB.Pedido
     {
         public int Salvar(PedidoDTO dto)
         {
-            string Script = @"INSERT INTO Tb_Pedido (Id_Pedido,
-                                                     Cliente_id_cliente,
-                                                     qn_quantidade,
+            string Script = @"INSERT INTO tb_pedido (qn_quantidade,
                                                      Tm_tamanho_tamanho,
-                                                     pc_preçoporcaixa_caixa,
+                                                     FK_preço,
                                                      pedidoid_produto)
                                                      VALUES 
-                                                     (@Id_Pedido,
-                                                     @Cliente_id_cliente,
+                                                     (@Cliente_id_cliente,
                                                      @qn_quantidade,
                                                      @Tm_tamanho_tamanho,
-                                                     @pc_preçoporcaixa_caixa,
+                                                     @FK_preço,
                                                      @pedidoid_produto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Pedido", dto.Id_Pedido));
-            parms.Add(new MySqlParameter("Cliente_id_cliente", dto.Cliente_id_cliente));
             parms.Add(new MySqlParameter("qn_quantidade", dto.qn_quantidade));
             parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Tm_tamanho_tamanho));
-            parms.Add(new MySqlParameter("pc_preçoporcaixa_caixa", dto.pc_preçoporcaixa_caixa));
+            parms.Add(new MySqlParameter("FK_preço", dto.FK_preço));
             parms.Add(new MySqlParameter("pedidoid_produto", dto.pedidoid_produto));
 
             Database db = new Database();
@@ -39,18 +34,18 @@ namespace prototipos.DB.Pedido
         }
         public void Alterar(PedidoDTO dto)
         {
-            string Script = @"UPDATE INTO Tb_Pedido (Id_Pedido,
+            string Script = @"UPDATE INTO tb_pedido (Id_Pedido,
                                                      Cliente_id_cliente,
                                                      qn_quantidade,
                                                      Tm_tamanho_tamanho,
-                                                     pc_preçoporcaixa_caixa,
+                                                     FK_preço,
                                                      pedidoid_produto)
                                                      VALUES 
                                                      (@Id_Pedido,
                                                      @Cliente_id_cliente,
                                                      @qn_quantidade,
                                                      @Tm_tamanho_tamanho,
-                                                     @pc_preçoporcaixa_caixa,
+                                                     @FK_preço,
                                                      @pedidoid_produto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -58,7 +53,7 @@ namespace prototipos.DB.Pedido
             parms.Add(new MySqlParameter("Cliente_id_cliente", dto.Cliente_id_cliente));
             parms.Add(new MySqlParameter("qn_quantidade", dto.qn_quantidade));
             parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Tm_tamanho_tamanho));
-            parms.Add(new MySqlParameter("pc_preçoporcaixa_caixa", dto.pc_preçoporcaixa_caixa));
+            parms.Add(new MySqlParameter("FK_preço", dto.FK_preço));
             parms.Add(new MySqlParameter("pedidoid_produto", dto.pedidoid_produto));
 
             Database db = new Database();
@@ -66,7 +61,7 @@ namespace prototipos.DB.Pedido
         }
         public void Remover(int id)
         {
-            string Script = @"SELECT FROM Tb_Pedido WHERE Id_Pedido = @Id_Pedido ";
+            string Script = @"SELECT FROM tb_pedido WHERE Id_Pedido = @Id_Pedido ";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Pedido", id));
             Database db = new Database();
@@ -86,7 +81,7 @@ namespace prototipos.DB.Pedido
                 dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
                 dto.qn_quantidade = reader.GetInt32("qn_quantidade");
                 dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
-                dto.pc_preçoporcaixa_caixa = reader.GetInt32("pc_preçoporcaixa_caixa");
+                dto.FK_preço = reader.GetInt32("FK_preço");
                 dto.pedidoid_produto = reader.GetInt32("pedidoid_produto");
 
                 lista.Add(dto);
@@ -98,7 +93,7 @@ namespace prototipos.DB.Pedido
    
         public List<PedidoDTO> ConsultarpoID(int id)
         {
-            string script = @"select * from Tb_Pedido where Id_Pedido like @Id_Pedido";
+            string script = @"select * from tb_pedido where Id_Pedido like @Id_Pedido";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Tb_Pedido", id));
             Database db = new Database();
@@ -111,7 +106,7 @@ namespace prototipos.DB.Pedido
                 dto.Cliente_id_cliente = reader.GetInt32("Cliente_id_cliente");
                 dto.qn_quantidade = reader.GetInt32("qn_quantidade");
                 dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
-                dto.pc_preçoporcaixa_caixa = reader.GetInt32("pc_preçoporcaixa_caixa");
+                dto.FK_preço = reader.GetInt32("FK_preço");
                 dto.pedidoid_produto = reader.GetInt32("pedidoid_produto");
 
                 lista.Add(dto);

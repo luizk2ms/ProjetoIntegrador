@@ -15,6 +15,6 @@ namespace prototipos.DB.Estoque
         public string nm_nome { get; set; }
         public decimal pc_preçoporcaixa { get; set; }
         public decimal kl_kilo { get; set; }
-        public int id_produto_id { get; set; }
+        public int fk_id_produto_estoque { get; set; }
     }
 }

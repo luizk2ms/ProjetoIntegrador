@@ -34,5 +34,10 @@ namespace Avilabombonieri.Controle_Estoque
             Inicio.ShowDialog();
             Show();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

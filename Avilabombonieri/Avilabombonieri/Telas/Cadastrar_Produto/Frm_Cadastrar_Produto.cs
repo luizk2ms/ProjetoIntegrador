@@ -36,7 +36,7 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
             dto.Lt_litros = decimal.Parse(litros.Text);
 
             ProdutoBusiness bussines = new ProdutoBusiness();
-            bussines.Cadastrar(dto);
+            bussines.Salvar(dto);
 
         }
 
