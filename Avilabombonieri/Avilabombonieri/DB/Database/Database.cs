@@ -7,69 +7,71 @@ using System.Threading.Tasks;
 namespace Avilabombonieri.DB.Database
 {
     class Database
-    {
-        public void ExecuteInsertScript(string Script, List<MySqlParameter> parameters)
+
         {
-            Connection conn = new Connection();
-            MySqlConnection connection = conn.Create();
-
-            MySqlCommand command = connection.CreateCommand();
-            command.CommandText = Script;
-
-            if (parameters != null)
+            public void ExecuteInsertScript(string Script, List<MySqlParameter> parameters)
             {
-                foreach (MySqlParameter param in parameters)
+                Connection conn = new Connection();
+                MySqlConnection connection = conn.Create();
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = Script;
+
+                if (parameters != null)
                 {
-                    command.Parameters.Add(param);
+                    foreach (MySqlParameter param in parameters)
+                    {
+                        command.Parameters.Add(param);
+                    }
                 }
+
+                command.ExecuteNonQuery();
+                connection.Close();
             }
 
-            command.ExecuteNonQuery();
-            connection.Close();
-        }
-
-        public int ExecuteInsertScriptWithPk(string Script, List<MySqlParameter> parameters)
-        {
-            Connection conn = new Connection();
-            MySqlConnection connection = conn.Create();
-
-            MySqlCommand command = connection.CreateCommand();
-            command.CommandText = Script;
-
-            if (parameters != null)
+            public int ExecuteInsertScriptWithPk(string Script, List<MySqlParameter> parameters)
             {
-                foreach (MySqlParameter param in parameters)
+                Connection conn = new Connection();
+                MySqlConnection connection = conn.Create();
+
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = Script;
+
+                if (parameters != null)
                 {
-                    command.Parameters.Add(param);
+                    foreach (MySqlParameter param in parameters)
+                    {
+                        command.Parameters.Add(param);
+                    }
                 }
+
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                int id = Convert.ToInt32(command.LastInsertedId);
+                return id;
             }
 
-            command.ExecuteNonQuery();
-            connection.Close();
-
-            int id = Convert.ToInt32(command.LastInsertedId);
-            return id;
-        }
-
-        public MySqlDataReader ExecuteSelectScript(string Script, List<MySqlParameter> parameters)
-        {
-            Connection conn = new Connection();
-            MySqlConnection connection = conn.Create();
-
-            MySqlCommand command = connection.CreateCommand();
-            command.CommandText = Script;
-
-            if (parameters != null)
+            public MySqlDataReader ExecuteSelectScript(string Script, List<MySqlParameter> parameters)
             {
-                foreach (MySqlParameter param in parameters)
-                {
-                    command.Parameters.Add(param);
-                }
-            }
+                Connection conn = new Connection();
+                MySqlConnection connection = conn.Create();
 
-            MySqlDataReader reader =
-                 command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
-            return reader;
-        }
+                MySqlCommand command = connection.CreateCommand();
+                command.CommandText = Script;
+
+                if (parameters != null)
+                {
+                    foreach (MySqlParameter param in parameters)
+                    {
+                        command.Parameters.Add(param);
+                    }
+                }
+
+                MySqlDataReader reader =
+                     command.ExecuteReader(System.Data.CommandBehavior.CloseConnection);
+                return reader;
+            }
+        
     }
 }

@@ -9,12 +9,11 @@ namespace prototipos.DB.Estoque
     class EstoqueDTO
     {
         public int Id_Estoque { get; set; }
-        public int Qn_Quantidade { get; set; }
+        public string Qn_QuantidadeEmKg { get; set; }
         public string Tm_tamanho { get; set; }
-        public DateTime dt_datavl { get; set; }
-        public string nm_nome { get; set; }
-        public decimal pc_preçoporcaixa { get; set; }
-        public decimal kl_kilo { get; set; }
-        public int id_produto_id { get; set; }
+        public DateTime dt_data { get; set; }
+        public string Pc_preco { get; set; }
+        public int fk_id_produto_estoque { get; set; }
+        public string Qn_Quantidade { get; set; }
     }
 }

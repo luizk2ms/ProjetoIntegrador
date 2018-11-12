@@ -35,23 +35,27 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnRemover = new System.Windows.Forms.Button();
-            this.btnVisualisar = new System.Windows.Forms.Button();
-            this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.btnRemover = new System.Windows.Forms.Button();
+            this.btnVisualisar = new System.Windows.Forms.Button();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvproduto = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproduto)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -137,6 +141,37 @@
             this.button4.Text = "Inicio";
             this.button4.UseVisualStyleBackColor = false;
             // 
+            // button2
+            // 
+            this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
+            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button2.Location = new System.Drawing.Point(615, 9);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(33, 23);
+            this.button2.TabIndex = 43;
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.BackgroundImage = global::Avilabombonieri.Properties.Resources.Maximize;
+            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button3.Location = new System.Drawing.Point(654, 9);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(26, 23);
+            this.button3.TabIndex = 44;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::Avilabombonieri.Properties.Resources.close;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(686, 9);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(28, 23);
+            this.button1.TabIndex = 42;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -175,34 +210,6 @@
             this.btnVisualisar.UseVisualStyleBackColor = false;
             this.btnVisualisar.Click += new System.EventHandler(this.btnVisualisar_Click);
             // 
-            // dgvProdutos
-            // 
-            this.dgvProdutos.BackgroundColor = System.Drawing.Color.White;
-            this.dgvProdutos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Sunken;
-            this.dgvProdutos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgvProdutos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2});
-            this.dgvProdutos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvProdutos.Location = new System.Drawing.Point(26, 94);
-            this.dgvProdutos.Name = "dgvProdutos";
-            this.dgvProdutos.RowHeadersVisible = false;
-            this.dgvProdutos.Size = new System.Drawing.Size(650, 284);
-            this.dgvProdutos.TabIndex = 48;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.DataPropertyName = "nm_Produto";
-            this.Column1.HeaderText = "Produto";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "vl_Venda";
-            this.Column2.HeaderText = "Valor";
-            this.Column2.Name = "Column2";
-            // 
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(69, 386);
@@ -224,37 +231,6 @@
             this.label9.TabIndex = 85;
             this.label9.Text = "ID:";
             // 
-            // button2
-            // 
-            this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Location = new System.Drawing.Point(615, 9);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 23);
-            this.button2.TabIndex = 43;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImage = global::Avilabombonieri.Properties.Resources.Maximize;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.Location = new System.Drawing.Point(654, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 23);
-            this.button3.TabIndex = 44;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Avilabombonieri.Properties.Resources.close;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(686, 9);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(28, 23);
-            this.button1.TabIndex = 42;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // pictureBox9
             // 
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
@@ -275,18 +251,89 @@
             this.pictureBox1.TabIndex = 87;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvproduto
+            // 
+            this.dgvproduto.AllowUserToAddRows = false;
+            this.dgvproduto.AllowUserToDeleteRows = false;
+            this.dgvproduto.ColumnHeadersHeight = 40;
+            this.dgvproduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgvproduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column6,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            this.dgvproduto.Location = new System.Drawing.Point(16, 100);
+            this.dgvproduto.Name = "dgvproduto";
+            this.dgvproduto.ReadOnly = true;
+            this.dgvproduto.RowHeadersVisible = false;
+            this.dgvproduto.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dgvproduto.RowTemplate.Height = 30;
+            this.dgvproduto.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvproduto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvproduto.Size = new System.Drawing.Size(699, 280);
+            this.dgvproduto.TabIndex = 88;
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "Id_Produto";
+            this.Column1.HeaderText = "ID";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Nm_Nome";
+            this.Column6.HeaderText = "Nome Produto";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "pç_preço";
+            this.Column2.HeaderText = "Preço";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.DataPropertyName = "Tm_Tamanho";
+            this.Column3.HeaderText = "Tamanho";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.DataPropertyName = "Ql_Quantidade";
+            this.Column4.HeaderText = "Quantidade";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.DataPropertyName = "NomeFornecedor";
+            this.Column5.HeaderText = "Nome Fornecedor";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
             // Frm_Consultar_Produto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(720, 428);
+            this.Controls.Add(this.dgvproduto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnRemover);
             this.Controls.Add(this.btnVisualisar);
-            this.Controls.Add(this.dgvProdutos);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox9);
@@ -294,9 +341,9 @@
             this.Name = "Frm_Consultar_Produto";
             this.Text = "Frm_Consultar_Produto";
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvproduto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -316,12 +363,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnRemover;
         private System.Windows.Forms.Button btnVisualisar;
-        private System.Windows.Forms.DataGridView dgvProdutos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridView dgvproduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

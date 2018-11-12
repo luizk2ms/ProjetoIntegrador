@@ -20,7 +20,10 @@ namespace Avilabombonieri.Telas.Cadastrar_Produto
 
         private void btnVisualisar_Click(object sender, EventArgs e)
         {
-         
+            ProdutoBusiness produto = new ProdutoBusiness();
+            List<ViewConsultarProdutosDTO> view = produto.ConsultarporNomeView(textBox4.Text);
+            dgvproduto.AutoGenerateColumns = false;
+            dgvproduto.DataSource = view;
         }
 
         private void btnRemover_Click(object sender, EventArgs e)

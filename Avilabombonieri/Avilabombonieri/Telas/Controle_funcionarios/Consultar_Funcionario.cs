@@ -41,19 +41,12 @@ namespace Avilabombonieri.Controle_funcionarios
             Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            FuncionarioBusiness Funcionario = new FuncionarioBusiness();
-            List<FuncionarioDTO> view = Funcionario.ConsultarporNome(textBox2.Text);
-            FuncionarioDTO dto = view[0];
-            DataGridw
-            
-
-        }
-
         private void button8_Click(object sender, EventArgs e)
         {
-
+            FuncionarioBusiness funcionario = new FuncionarioBusiness();
+            List<FuncionarioDTO> View = funcionario.ConsultarporNome(textBox2.Text);
+            //FuncionarioDTO dto = View[0];
+            dgvfuncionario.DataSource = View;
         }
     }
 }

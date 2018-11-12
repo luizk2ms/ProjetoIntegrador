@@ -1,5 +1,6 @@
 ﻿using Avilabombonieri.Controle_Usuario;
 using Avilabombonieri.Tela_inicio;
+using prototipos.DB.Estoque;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,13 @@ namespace Avilabombonieri.Controle_Estoque
         public Consultar_Estoque()
         {
             InitializeComponent();
+        }
+        private void CarregarDadosEstoque()
+        {
+            EstoqueBusiness Estoque = new EstoqueBusiness();
+            List<EstoqueDTO> view = Estoque.ConsultarporNome(textBox2.Text);
+            EstoqueDTO dto = view[0];
+            dataGridView1.DataSource = view;
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -37,7 +45,7 @@ namespace Avilabombonieri.Controle_Estoque
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            CarregarDadosEstoque();
         }
     }
 }

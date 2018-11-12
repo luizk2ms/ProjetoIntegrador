@@ -1,4 +1,6 @@
-﻿namespace Software.Digudao.Controle_Estoque
+﻿using System;
+
+namespace Software.Digudao.Controle_Estoque
 {
     partial class Frm_Cadastro_Estoque
     {
@@ -350,6 +352,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Frm_Cadastro_Estoque_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

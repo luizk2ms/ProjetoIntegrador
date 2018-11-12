@@ -39,6 +39,8 @@
             this.HoraEntrada = new System.Windows.Forms.Label();
             this.Celular = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.Empresa = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.HoraSaída = new System.Windows.Forms.Label();
@@ -52,6 +54,8 @@
             this.NomeFuncionario = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.button11 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -69,20 +73,18 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Indigo;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.Salario);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.dateTimePicker2);
@@ -92,6 +94,10 @@
             this.panel1.Controls.Add(this.HoraEntrada);
             this.panel1.Controls.Add(this.Celular);
             this.panel1.Controls.Add(this.textBox11);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.Empresa);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.HoraSaída);
@@ -105,6 +111,8 @@
             this.panel1.Controls.Add(this.NomeFuncionario);
             this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox9);
             this.panel1.Controls.Add(this.button11);
             this.panel1.Controls.Add(this.button10);
             this.panel1.Controls.Add(this.button8);
@@ -121,13 +129,12 @@
             // Salario
             // 
             this.Salario.AutoSize = true;
-            this.Salario.BackColor = System.Drawing.Color.Indigo;
             this.Salario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Salario.ForeColor = System.Drawing.Color.White;
             this.Salario.Location = new System.Drawing.Point(397, 176);
             this.Salario.Name = "Salario";
             this.Salario.Size = new System.Drawing.Size(62, 20);
-            this.Salario.TabIndex = 134;
+            this.Salario.TabIndex = 159;
             this.Salario.Text = "Salario:";
             // 
             // textBox3
@@ -135,14 +142,14 @@
             this.textBox3.Location = new System.Drawing.Point(462, 178);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(144, 20);
-            this.textBox3.TabIndex = 133;
+            this.textBox3.TabIndex = 158;
             // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Location = new System.Drawing.Point(461, 252);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(223, 20);
-            this.dateTimePicker2.TabIndex = 132;
+            this.dateTimePicker2.TabIndex = 157;
             // 
             // dateTimePicker1
             // 
@@ -150,49 +157,46 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(461, 209);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(223, 20);
-            this.dateTimePicker1.TabIndex = 131;
+            this.dateTimePicker1.TabIndex = 156;
             // 
             // Cargo
             // 
             this.Cargo.AutoSize = true;
-            this.Cargo.BackColor = System.Drawing.Color.Indigo;
             this.Cargo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cargo.ForeColor = System.Drawing.Color.White;
-            this.Cargo.Location = new System.Drawing.Point(75, 253);
+            this.Cargo.Location = new System.Drawing.Point(78, 232);
             this.Cargo.Name = "Cargo";
             this.Cargo.Size = new System.Drawing.Size(60, 20);
-            this.Cargo.TabIndex = 130;
+            this.Cargo.TabIndex = 155;
             this.Cargo.Text = "Cargo :";
             // 
             // textBox10
             // 
-            this.textBox10.Location = new System.Drawing.Point(135, 254);
+            this.textBox10.Location = new System.Drawing.Point(138, 233);
             this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(69, 20);
-            this.textBox10.TabIndex = 129;
+            this.textBox10.Size = new System.Drawing.Size(140, 20);
+            this.textBox10.TabIndex = 154;
             // 
             // HoraEntrada
             // 
             this.HoraEntrada.AutoSize = true;
-            this.HoraEntrada.BackColor = System.Drawing.Color.Indigo;
             this.HoraEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoraEntrada.ForeColor = System.Drawing.Color.White;
             this.HoraEntrada.Location = new System.Drawing.Point(346, 254);
             this.HoraEntrada.Name = "HoraEntrada";
             this.HoraEntrada.Size = new System.Drawing.Size(113, 20);
-            this.HoraEntrada.TabIndex = 128;
+            this.HoraEntrada.TabIndex = 153;
             this.HoraEntrada.Text = "Hora Entrada :";
             // 
             // Celular
             // 
             this.Celular.AutoSize = true;
-            this.Celular.BackColor = System.Drawing.Color.Indigo;
             this.Celular.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Celular.ForeColor = System.Drawing.Color.White;
             this.Celular.Location = new System.Drawing.Point(393, 103);
             this.Celular.Name = "Celular";
             this.Celular.Size = new System.Drawing.Size(66, 20);
-            this.Celular.TabIndex = 127;
+            this.Celular.TabIndex = 152;
             this.Celular.Text = "Celular :";
             // 
             // textBox11
@@ -200,61 +204,75 @@
             this.textBox11.Location = new System.Drawing.Point(462, 101);
             this.textBox11.Name = "textBox11";
             this.textBox11.Size = new System.Drawing.Size(144, 20);
-            this.textBox11.TabIndex = 126;
+            this.textBox11.TabIndex = 151;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(54, 271);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 20);
+            this.label1.TabIndex = 150;
+            this.label1.Text = "Numero :";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(133, 272);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(144, 20);
+            this.textBox5.TabIndex = 149;
             // 
             // Empresa
             // 
             this.Empresa.AutoSize = true;
-            this.Empresa.BackColor = System.Drawing.Color.Indigo;
             this.Empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Empresa.ForeColor = System.Drawing.Color.White;
-            this.Empresa.Location = new System.Drawing.Point(55, 206);
+            this.Empresa.Location = new System.Drawing.Point(54, 191);
             this.Empresa.Name = "Empresa";
             this.Empresa.Size = new System.Drawing.Size(81, 20);
-            this.Empresa.TabIndex = 125;
+            this.Empresa.TabIndex = 150;
             this.Empresa.Text = "Empresa :";
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 207);
+            this.textBox2.Location = new System.Drawing.Point(133, 192);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(144, 20);
-            this.textBox2.TabIndex = 124;
+            this.textBox2.TabIndex = 149;
             // 
             // HoraSaída
             // 
             this.HoraSaída.AutoSize = true;
-            this.HoraSaída.BackColor = System.Drawing.Color.Indigo;
             this.HoraSaída.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HoraSaída.ForeColor = System.Drawing.Color.White;
             this.HoraSaída.Location = new System.Drawing.Point(365, 209);
             this.HoraSaída.Name = "HoraSaída";
             this.HoraSaída.Size = new System.Drawing.Size(97, 20);
-            this.HoraSaída.TabIndex = 123;
+            this.HoraSaída.TabIndex = 148;
             this.HoraSaída.Text = "Hora Saída :";
             // 
             // Endereco
             // 
             this.Endereco.AutoSize = true;
-            this.Endereco.BackColor = System.Drawing.Color.Indigo;
             this.Endereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Endereco.ForeColor = System.Drawing.Color.White;
             this.Endereco.Location = new System.Drawing.Point(52, 103);
             this.Endereco.Name = "Endereco";
             this.Endereco.Size = new System.Drawing.Size(86, 20);
-            this.Endereco.TabIndex = 122;
+            this.Endereco.TabIndex = 147;
             this.Endereco.Text = "Endereço :";
             // 
             // CPF
             // 
             this.CPF.AutoSize = true;
-            this.CPF.BackColor = System.Drawing.Color.Indigo;
             this.CPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPF.ForeColor = System.Drawing.Color.White;
             this.CPF.Location = new System.Drawing.Point(82, 154);
             this.CPF.Name = "CPF";
             this.CPF.Size = new System.Drawing.Size(48, 20);
-            this.CPF.TabIndex = 121;
+            this.CPF.TabIndex = 146;
             this.CPF.Text = "CPF :";
             // 
             // textBox7
@@ -262,25 +280,24 @@
             this.textBox7.Location = new System.Drawing.Point(134, 154);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(144, 20);
-            this.textBox7.TabIndex = 120;
+            this.textBox7.TabIndex = 145;
             // 
             // textBox8
             // 
             this.textBox8.Location = new System.Drawing.Point(134, 104);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(197, 20);
-            this.textBox8.TabIndex = 119;
+            this.textBox8.TabIndex = 144;
             // 
             // Cep
             // 
             this.Cep.AutoSize = true;
-            this.Cep.BackColor = System.Drawing.Color.Indigo;
             this.Cep.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cep.ForeColor = System.Drawing.Color.White;
             this.Cep.Location = new System.Drawing.Point(415, 142);
             this.Cep.Name = "Cep";
             this.Cep.Size = new System.Drawing.Size(46, 20);
-            this.Cep.TabIndex = 118;
+            this.Cep.TabIndex = 143;
             this.Cep.Text = "Cep :";
             // 
             // textBox6
@@ -288,30 +305,28 @@
             this.textBox6.Location = new System.Drawing.Point(462, 140);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(144, 20);
-            this.textBox6.TabIndex = 117;
+            this.textBox6.TabIndex = 142;
             // 
             // IDFuncionario
             // 
             this.IDFuncionario.AutoSize = true;
-            this.IDFuncionario.BackColor = System.Drawing.Color.Indigo;
             this.IDFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IDFuncionario.ForeColor = System.Drawing.Color.White;
             this.IDFuncionario.Location = new System.Drawing.Point(8, 61);
             this.IDFuncionario.Name = "IDFuncionario";
             this.IDFuncionario.Size = new System.Drawing.Size(121, 20);
-            this.IDFuncionario.TabIndex = 116;
+            this.IDFuncionario.TabIndex = 141;
             this.IDFuncionario.Text = "ID Funcionario :";
             // 
             // NomeFuncionario
             // 
             this.NomeFuncionario.AutoSize = true;
-            this.NomeFuncionario.BackColor = System.Drawing.Color.Indigo;
             this.NomeFuncionario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomeFuncionario.ForeColor = System.Drawing.Color.White;
             this.NomeFuncionario.Location = new System.Drawing.Point(319, 59);
             this.NomeFuncionario.Name = "NomeFuncionario";
             this.NomeFuncionario.Size = new System.Drawing.Size(146, 20);
-            this.NomeFuncionario.TabIndex = 115;
+            this.NomeFuncionario.TabIndex = 140;
             this.NomeFuncionario.Text = "Nome Funcionario :";
             // 
             // textBox4
@@ -319,14 +334,34 @@
             this.textBox4.Location = new System.Drawing.Point(462, 59);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(182, 20);
-            this.textBox4.TabIndex = 114;
+            this.textBox4.TabIndex = 139;
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(134, 61);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(69, 20);
-            this.textBox1.TabIndex = 113;
+            this.textBox1.TabIndex = 138;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(476, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(208, 61);
+            this.pictureBox1.TabIndex = 136;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(12, -6);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(208, 61);
+            this.pictureBox9.TabIndex = 135;
+            this.pictureBox9.TabStop = false;
             // 
             // button11
             // 
@@ -550,25 +585,23 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pictureBox9
+            // textBox9
             // 
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(12, -6);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(208, 61);
-            this.pictureBox9.TabIndex = 135;
-            this.pictureBox9.TabStop = false;
+            this.textBox9.Location = new System.Drawing.Point(133, 302);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(144, 20);
+            this.textBox9.TabIndex = 149;
             // 
-            // pictureBox1
+            // label2
             // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(476, -8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(208, 61);
-            this.pictureBox1.TabIndex = 136;
-            this.pictureBox1.TabStop = false;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(54, 301);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(79, 20);
+            this.label2.TabIndex = 150;
+            this.label2.Text = "Telefone :";
             // 
             // Cadastrar_Funcionario
             // 
@@ -586,9 +619,9 @@
             this.Text = "Cadastrar_Funcionario";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -614,6 +647,8 @@
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.Label Salario;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -623,6 +658,8 @@
         private System.Windows.Forms.Label HoraEntrada;
         private System.Windows.Forms.Label Celular;
         private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label Empresa;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label HoraSaída;
@@ -636,7 +673,7 @@
         private System.Windows.Forms.Label NomeFuncionario;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox9;
     }
 }

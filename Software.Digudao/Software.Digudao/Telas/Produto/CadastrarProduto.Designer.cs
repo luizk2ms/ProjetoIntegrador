@@ -1,4 +1,6 @@
-﻿namespace Software.Digudao.DB.db
+﻿using System;
+
+namespace Software.Digudao.DB.db
 {
     partial class CadastrarProduto
     {
@@ -263,6 +265,16 @@
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

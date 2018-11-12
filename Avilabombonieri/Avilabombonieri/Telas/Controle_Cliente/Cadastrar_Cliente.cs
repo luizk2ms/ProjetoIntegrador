@@ -1,6 +1,5 @@
 ﻿using Avilabombonieri.Controle_funcionarios;
 using Avilabombonieri.Controle_Usuario;
-using Avilabombonieri.DB.Cliente;
 using Avilabombonieri.Tela_inicio;
 using prototipos.DB.Cliente;
 using System;
@@ -75,21 +74,26 @@ namespace Avilabombonieri.Controle_Cliente
         private void button7_Click(object sender, EventArgs e)
         {
             ClienteDTO dto = new ClienteDTO();
-            dto.Id_Cliente = int.Parse(id_cliente.Text);
-            dto.Nm_Nome = Nomecliente.Text;
-            dto.cpf_cpf = int.Parse(Cpf.Text);
-            dto.em_email = Email.Text;
-            dto.ds_endereço = Endereco.Text;
-            dto.tl_empresa = int.Parse(Numero.Text);
-            ClienteBusiness bussines = new ClienteBusiness();
-            bussines.Salvar(dto);
-            
+            dto.Nm_Nome = textBox5.Text;
+            dto.Ed_endereco = textBox8.Text;
+            dto.Em_Email = textBox3.Text;
+            dto.Nm_numero = textBox2.Text;
+            dto.CNPJ = textBox7.Text;
+            dto.CPF = textBox9.Text;
+
+            ClienteBusiness cliente = new ClienteBusiness();
+            cliente.Salvar(dto);
+            MessageBox.Show("Seu cliente foi cadastrado com sucesso.", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
 
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-           
+            Consultar_Cliente consultarCliente = new Consultar_Cliente();
+            Hide();
+            consultarCliente.ShowDialog();
+            Show();
 
         }
 

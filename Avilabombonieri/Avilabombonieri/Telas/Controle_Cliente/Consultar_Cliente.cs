@@ -1,5 +1,6 @@
 ﻿using Avilabombonieri.Controle_Usuario;
 using Avilabombonieri.Tela_inicio;
+using prototipos.DB.Cliente;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -37,7 +38,9 @@ namespace Avilabombonieri.Controle_Cliente
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            ClienteBusiness Cliente = new ClienteBusiness();
+            List<ClienteDTO> View = Cliente.Listar();
+            dataGridView1.DataSource = View;
         }
     }
 }

@@ -7,40 +7,48 @@ using System.Threading.Tasks;
 namespace Avilabombonieri.DB.Produto
 {
     class ProdutoBusiness
-     {
-        public int Salvar(ProdutoDTO dto)
-        {
-            ProdutoDatabase db = new ProdutoDatabase();
-            return db.Salvar(dto);
-        }
+    {
 
-        public void Alterar(ProdutoDTO dto)
-        {
-            ProdutoDatabase db = new ProdutoDatabase();
-            db.Alterar(dto);
-        }
-        public void Remover(int ID)
-        {
-            ProdutoDatabase db = new ProdutoDatabase();
-            db.Remover(ID);
-        }
+            public void Salvar(ProdutoDTO dto)
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                db.Salvar(dto);
+            }
 
-        public List<ProdutoViewDTO> Listar()
-        {
-            ProdutoDatabase db = new ProdutoDatabase();
-            return db.Listar();
-        }
+            public void Alterar(ProdutoDTO dto)
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                db.Alterar(dto);
+            }
+            public void Remover(int ID)
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                db.Remover(ID);
+            }
 
-        public List<ProdutoViewDTO> ConsultarporNome(string nome)
-        {
-            ProdutoDatabase db = new ProdutoDatabase();
-            return db.ConsultarporNome(nome);
-        }
+            public List<ProdutoDTO> Listar()
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                return db.Listar();
+            }
 
-        public List<ProdutoViewDTO> ConsultarpoId(int ID)
-        {
-            ProdutoDatabase db = new ProdutoDatabase]();
-            return db.ConsultarporId(ID);
+
+
+            public List<ProdutoDTO> ConsultarpoID(int id)
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                return db.ConsultarpoID(id);
+            }
+            public List<ProdutoDTO> ConsultarporNome(string Nome)
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                return db.ConsultarporNome(Nome);
+            }
+
+            public List<ViewConsultarProdutosDTO> ConsultarporNomeView(string Nome)
+            {
+                ProdutoDataBase db = new ProdutoDataBase();
+                return db.ConsultarporNomeView(Nome);
+            }
         }
     }
-}

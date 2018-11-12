@@ -52,28 +52,7 @@ namespace Avilabombonieri.DB.Cardapio
             Cardapio_DATABASE db = new Cardapio_DATABASE();
             db.Remover(ID);
         }
-
-        internal List<EstoqueViewDTo> ListarEstoqueView()
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Cardapio_DTO> Listar()
-        {
-            Cardapio_DATABASE db = new Cardapio_DATABASE();
-            return db.Listar();
-        }
-
-        public List<Cardapio_DTO> ConsultarporNome(string produto)
-        {
-            Cardapio_DATABASE db = new Cardapio_DATABASE();
-            return db.ConsultarporNome(produto);
-        }
-
-        public List<Cardapio_DTO> ConsultarporId(int ID)
-        {
-            Cardapio_DATABASE db = new Cardapio_DATABASE();
-            return db.ConsultarporId(ID);
-        }
     }
 }
+
+      

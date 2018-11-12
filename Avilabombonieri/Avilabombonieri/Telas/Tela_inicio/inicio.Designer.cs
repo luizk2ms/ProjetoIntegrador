@@ -38,6 +38,8 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,6 +49,8 @@
             this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button12);
+            this.panel2.Controls.Add(this.button6);
+            this.panel2.Controls.Add(this.button1);
             this.panel2.Controls.Add(this.button13);
             this.panel2.Controls.Add(this.button14);
             this.panel2.Controls.Add(this.button15);
@@ -66,11 +70,11 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.Indigo;
-            this.button12.Location = new System.Drawing.Point(291, 6);
+            this.button12.Location = new System.Drawing.Point(262, 6);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(104, 23);
+            this.button12.Size = new System.Drawing.Size(73, 23);
             this.button12.TabIndex = 52;
-            this.button12.Text = "Fornecedor";
+            this.button12.Text = "Cliente";
             this.button12.UseVisualStyleBackColor = false;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
@@ -80,11 +84,11 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.Indigo;
-            this.button13.Location = new System.Drawing.Point(405, 6);
+            this.button13.Location = new System.Drawing.Point(341, 6);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(154, 23);
+            this.button13.Size = new System.Drawing.Size(95, 23);
             this.button13.TabIndex = 51;
-            this.button13.Text = "Folha Pagamento";
+            this.button13.Text = "Produto";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -96,7 +100,7 @@
             this.button14.ForeColor = System.Drawing.Color.Indigo;
             this.button14.Location = new System.Drawing.Point(171, 6);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(113, 23);
+            this.button14.Size = new System.Drawing.Size(85, 23);
             this.button14.TabIndex = 50;
             this.button14.Text = "Funcionários";
             this.button14.UseVisualStyleBackColor = false;
@@ -171,6 +175,35 @@
             this.pictureBox1.Size = new System.Drawing.Size(756, 417);
             this.pictureBox1.TabIndex = 93;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Indigo;
+            this.button1.Location = new System.Drawing.Point(442, 6);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 23);
+            this.button1.TabIndex = 51;
+            this.button1.Text = "Fornecedor";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.White;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Indigo;
+            this.button6.Location = new System.Drawing.Point(543, 6);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(95, 23);
+            this.button6.TabIndex = 51;
+            this.button6.Text = "Estoque";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button13_Click);
             // 
             // inicio
             // 
@@ -202,5 +235,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button1;
     }
 }

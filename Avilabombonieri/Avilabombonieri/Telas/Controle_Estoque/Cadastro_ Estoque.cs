@@ -1,13 +1,7 @@
-﻿using Avilabombonieri.DB.Estoque;
+﻿using Avilabombonieri.Controle_Estoque;
+using Avilabombonieri.Tela_inicio;
 using prototipos.DB.Estoque;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avilabombonieri.Telas.Controle_Estoque
@@ -18,20 +12,35 @@ namespace Avilabombonieri.Telas.Controle_Estoque
         {
             InitializeComponent();
         }
+        private void SalvarEstoque()
+        {
+            EstoqueDTO dto = new EstoqueDTO();
+            //dto.Id_Estoque = int.Parse(textBox8.Text);
+            dto.fk_id_produto_estoque = int.Parse(textBox1.Text);
+            dto.Qn_QuantidadeEmKg = textBox2.Text;
+            dto.Pc_preco = textBox5.Text;
+            dto.Qn_Quantidade = textBox3.Text;
+            dto.Tm_tamanho = textBox6.Text;
+            EstoqueBusiness business = new EstoqueBusiness();
+            business.SalvarEstoque(dto);
+
+        }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            EstoqueDTO dto = new EstoqueDTO();
-            dto.Id_Estoque = int.Parse(IdProduto.Text);
-            dto.nm_nome = NomeProd.Text;
-            dto.Qn_Quantidade = int.Parse(Quantidade.Text);
-            dto.Tm_tamanho = Tamanho.Text;
-            dto.kl_kilo = decimal.Parse(QuantidadeEmKg.Text);
-            dto.dt_datavl = DateTime.Parse(DatadeValidade.Text);
-            dto.pc_preçoporcaixa = decimal.Parse(Preco.Text);
+            SalvarEstoque();
+            MessageBox.Show("Estoque criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            EstoqueBusiness bussines = new EstoqueBusiness();
-            bussines.SalvarEstoque(dto);
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+            inicio gerar = new inicio();
+            Hide();
+            gerar.ShowDialog();
+            Show();
         }
     }
 }

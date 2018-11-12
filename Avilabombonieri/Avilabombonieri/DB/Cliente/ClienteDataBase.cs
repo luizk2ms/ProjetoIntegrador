@@ -1,72 +1,68 @@
-﻿using MySql.Data.MySqlClient;
-using Software.Digudao.DB.db;
-using System;
+﻿using Software.Digudao.DB.db;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace prototipos.DB.Cliente
 {
     class ClienteDatabase
     {
-        public int Salvar(ClienteDTO dto)
+        public void Salvar(ClienteDTO dto)
         {
-            string Script = @"INSERT INTO Tb_Cliente (Nm_Nome,
-                                                     ds_endereço,
-                                                     cp_cep,
-                                                     cpf_cpf,
-                                                     tl_empresa,
-                                                     cel_celular,
-                                                     em_email)
+            string Script = @"INSERT INTO tb_cliente (Nm_Nome,
+                                                     Ed_endereco,
+                                                     CNPJ,
+                                                     CPF,
+                                                     Em_Email,
+                                                     Nm_numero
+                                                     )
                                                      VALUES 
                                                      (@Nm_Nome,
-                                                     @ds_endereço,
-                                                     @cp_cep,
-                                                     @cpf_cpf,
-                                                     @tl_empresa,
-                                                     @cel_celular,
-                                                     @em_email)";
+                                                     @Ed_endereco,
+                                                     @CNPJ,
+                                                     @CPF,
+                                                     @Em_Email,
+                                                     @Nm_numero
+                                                     )";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
-            parms.Add(new MySqlParameter("ds_endereço", dto.ds_endereço));
-            parms.Add(new MySqlParameter("cp_cep", dto.cp_cep));
-            parms.Add(new MySqlParameter("cpf_cpf", dto.cpf_cpf));
-            parms.Add(new MySqlParameter("tl_empresa", dto.tl_empresa));
-            parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
-            parms.Add(new MySqlParameter("em_email", dto.em_email));
+            parms.Add(new MySqlParameter("Ed_endereco", dto.Ed_endereco));
+            parms.Add(new MySqlParameter("CNPJ", dto.CNPJ));
+            parms.Add(new MySqlParameter("CPF", dto.CPF));
+            parms.Add(new MySqlParameter("Em_Email", dto.Em_Email));
+            parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
 
             Database db = new Database();
-            return db.ExecuteInsertScriptWithPk(Script, parms);
+            db.ExecuteInsertScriptWithPk(Script, parms);
         }
         public void Alterar(ClienteDTO dto)
         {
-            string Script = @"UPDATE Tb_Cliente SET Nm_Nome = @Nm_Nome,
-                                                    ds_endereço = @ds_endereço,
-                                                    cp_cep = @cp_cep,
-                                                    cpf_cpf = @cpf_cpf,
-                                                    tl_empresa = @tl_empresa,
-                                                    cel_celular = @cel_celular,
-                                                    em_email = @em_email,
+            string Script = @"UPDATE tb_cliente SET Nm_Nome = @Nm_Nome,
+                                                    Ed_endereco = @Ed_endereco,
+                                                    CNPJ = @CNPJ,
+                                                    CPF = @CPF,
+                                                    Em_Email = @Em_Email,
+                                                    Nm_numero = @Nm_numero,
                                               WHERE Id_Cliente = @Id_Cliente";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
-            parms.Add(new MySqlParameter("ds_endereço", dto.ds_endereço));
-            parms.Add(new MySqlParameter("cp_cep", dto.cp_cep));
-            parms.Add(new MySqlParameter("cpf_cpf", dto.cpf_cpf));
-            parms.Add(new MySqlParameter("tl_empresa", dto.tl_empresa));
-            parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
-            parms.Add(new MySqlParameter("em_email", dto.em_email));
+            parms.Add(new MySqlParameter("Ed_endereco", dto.Ed_endereco));
+            parms.Add(new MySqlParameter("CNPJ", dto.CNPJ));
+            parms.Add(new MySqlParameter("CPF", dto.CPF));
+            parms.Add(new MySqlParameter("Em_Email", dto.Em_Email));
+            parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
             parms.Add(new MySqlParameter("Id_Cliente", dto.Id_Cliente));
+            parms.Add(new MySqlParameter("Id_Cliente", dto.Id_Cliente));
+
+
+
 
             Database db = new Database();
             db.ExecuteInsertScript(Script, parms);
         }
         public void Remover(int id)
         {
-            string Script = @"SELECT FROM Tb_Cliente WHERE Id_Cliente = @Id_Cliente ";
+            string Script = @"DELETE FROM tb_cliente WHERE Id_Cliente = @Id_Cliente ";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Cliente", id));
             Database db = new Database();
@@ -74,7 +70,7 @@ namespace prototipos.DB.Cliente
         }
         public List<ClienteDTO> Listar()
         {
-            string Script = @"SELECT *FROM Tb_Cliente";
+            string Script = @"SELECT *FROM tb_cliente";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
@@ -84,22 +80,24 @@ namespace prototipos.DB.Cliente
                 ClienteDTO dto = new ClienteDTO();
                 dto.Id_Cliente = reader.GetInt32("Id_Cliente");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.tl_empresa = reader.GetInt32("tl_empresa");
-                dto.cel_celular = reader.GetInt32("cel_celular");
-                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
-                dto.cp_cep = reader.GetInt32("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereço");
-                dto.em_email = reader.GetString("em_email");
+                dto.Nm_numero = reader.GetString("Nm_numero");
+                dto.CNPJ = reader.GetString("CNPJ");
+                dto.CPF = reader.GetString("CPF");
+                dto.Ed_endereco = reader.GetString("Ed_endereco");
+                dto.Em_Email = reader.GetString("Em_Email");
+                //dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente");
+
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
 
         }
         public List<ClienteDTO> ConsultarporNome(string Nome)
         {
-            string script = @"select * from Tb_Cliente where Nm_Nome like @Nm_Nome";
+            string script = @"select * from tb_cliente where Nm_Nome like @Nm_Nome";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Nm_Nome", Nome + "%"));
             Database db = new Database();
@@ -110,21 +108,22 @@ namespace prototipos.DB.Cliente
                 ClienteDTO dto = new ClienteDTO();
                 dto.Id_Cliente = reader.GetInt32("Id_Cliente");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.tl_empresa = reader.GetInt32("tl_empresa");
-                dto.cel_celular = reader.GetInt32("cel_celular");
-                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
-                dto.cp_cep = reader.GetInt32("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereço");
-                dto.em_email = reader.GetString("em_email");
+                dto.Nm_numero = reader.GetString("Nm_numero");
+                dto.CNPJ = reader.GetString("CNPJ");
+                dto.CPF = reader.GetString("CPF");
+                dto.Ed_endereco = reader.GetString("Ed_endereco");
+                dto.Em_Email = reader.GetString("Em_Email");
+                dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente ");
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
         }
         public List<ClienteDTO> ConsultarpoID(int id)
         {
-            string script = @"select * from Tb_Cliente where Id_Cliente like @Id_Cliente";
+            string script = @"select * from tb_cliente where Id_Cliente like @Id_Cliente";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Cliente", id));
             Database db = new Database();
@@ -135,16 +134,18 @@ namespace prototipos.DB.Cliente
                 ClienteDTO dto = new ClienteDTO();
                 dto.Id_Cliente = reader.GetInt32("Id_Cliente");
                 dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.tl_empresa = reader.GetInt32("tl_empresa");
-                dto.cel_celular = reader.GetInt32("cel_celular");
-                dto.cpf_cpf = reader.GetInt32("cpf_cpf");
-                dto.cp_cep = reader.GetInt32("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereço");
-                dto.em_email = reader.GetString("em_email");
+                dto.Nm_numero = reader.GetString("Nm_numero");
+                dto.CNPJ = reader.GetString("CNPJ");
+                dto.CPF = reader.GetString("CPF");
+                dto.Ed_endereco = reader.GetString("Ed_endereco");
+                dto.Em_Email = reader.GetString("Em_Email");
+                dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente ");
+
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
 
         }
