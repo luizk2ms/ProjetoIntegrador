@@ -1,14 +1,7 @@
 ﻿using Avilabombonieri.Controle_Usuario;
-using Avilabombonieri.DB.Cliente;
 using Avilabombonieri.Tela_inicio;
+using prototipos.DB.Cliente;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Avilabombonieri.Controle_Cliente
@@ -18,6 +11,10 @@ namespace Avilabombonieri.Controle_Cliente
         public Alterar_Cliente()
         {
             InitializeComponent();
+        }
+        public void RemoverCliente()
+        {
+            
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -56,7 +53,7 @@ namespace Avilabombonieri.Controle_Cliente
             dto.CPF = Cpf.Text;
             dto.Em_Email = Email.Text;
             dto.Ed_endereco = Endereco.Text;
-            dto.Nm_numero = decimal.Parse(Numero.Text);
+            dto.Nm_numero = Numero.Text;
 
             ClienteBusiness bussines = new ClienteBusiness();
             bussines.Alterar(dto);
@@ -64,17 +61,7 @@ namespace Avilabombonieri.Controle_Cliente
 
         private void button9_Click(object sender, EventArgs e)
         {
-            ClienteDTO dto = new ClienteDTO();
-            dto.Id_Cliente = int.Parse(id_cliente.Text);
-            dto.Nm_Nome = Nomecliente.Text;
-            dto.CNPJ = Cnpj.Text;
-            dto.CPF = Cpf.Text;
-            dto.Em_Email = Email.Text;
-            dto.Ed_endereco = Endereco.Text;
-            dto.Nm_numero = decimal.Parse(Numero.Text);
-
-            ClienteBusiness bussines = new ClienteBusiness();
-            bussines.Remover(dto);
+           
 
         }
     }

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MySql.Data, Version=8.0.13.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.10.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -56,8 +56,6 @@
     <Compile Include="DB\Controle_de_Usuario\UsuarioDatabase.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioDTO.cs" />
     <Compile Include="DB\Controle_de_Usuario\UsuarioPermisoes.cs" />
-    <Compile Include="DB\Database\Connection.cs" />
-    <Compile Include="DB\Database\Database.cs" />
     <Compile Include="DB\Cardapio\Cardapio_BUSSINES.cs" />
     <Compile Include="DB\Cardapio\Cardapio_DATABASE.cs" />
     <Compile Include="DB\Cardapio\Cardapio_DTO.cs" />
@@ -195,9 +193,7 @@
     <Compile Include="Telas\Fluxo_Caixa\Frm_Consultar_Fluxo.Designer.cs">
       <DependentUpon>Frm_Consultar_Fluxo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Telas\Fluxo_Caixa\Frm_Fluxo_Caixa.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="Telas\Fluxo_Caixa\Frm_Fluxo_Caixa.cs" />
     <Compile Include="Telas\Fluxo_Caixa\Frm_Fluxo_Caixa.Designer.cs">
       <DependentUpon>Frm_Fluxo_Caixa.cs</DependentUpon>
     </Compile>

@@ -66,5 +66,10 @@ namespace Avilabombonieri.Telas.Controle_funcionarios
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

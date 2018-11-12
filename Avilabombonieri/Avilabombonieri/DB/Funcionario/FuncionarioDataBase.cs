@@ -1,4 +1,5 @@
 ﻿using Avilabombonieri.DB.Connection;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 
@@ -8,11 +9,11 @@ namespace prototipos.DB.Funcionario
     {
         public void Cadastrar(FuncionarioDTO dto)
         {
-            string Script = @"INSERT tb_funcionario( nm_nomefunci, nm_numero, tl_telefone, cel_celular,cr_cargo, ds_endereco, cpf_cpf,cp_cep,dt_datadeentrada,dt_datasaida,nm_empresa)
-                                          VALUES(@nm_nomefunci,@nm_numero,@tl_telefone,@cel_celular,@cr_cargo,@ds_endereco,@cpf_cpf,@cp_cep,@dt_datadeentrada,@dt_datasaida,@nm_empresa)";
+            string Script = @"INSERT tb_funcionario( nm_numero, tl_telefone, cel_celular,cr_cargo, ds_endereco, cpf_cpf,cp_cep,dt_datadeentrada,dt_datasaida,nm_empresa)
+                                          VALUES(@nm_numero,@tl_telefone,@cel_celular,@cr_cargo,@ds_endereco,@cpf_cpf,@cp_cep,@dt_datadeentrada,@dt_datasaida,@nm_empresa)";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             //parms.Add(new MySqlParameter("lg_login", dto.lg_login));
-            parms.Add(new MySqlParameter("nm_nomefunci", dto.Nm_Nome));
+            
             parms.Add(new MySqlParameter("nm_numero", dto.nm_numero));
             //parms.Add(new MySqlParameter("sn_senha", dto.sn_senha));
             parms.Add(new MySqlParameter("tl_telefone", dto.tl_empresa));
@@ -165,7 +166,6 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
                 dto.tl_empresa = reader.GetString("tl_empresa");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");
@@ -199,7 +199,6 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
                 dto.tl_empresa = reader.GetString("tl_telefone");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");
@@ -234,7 +233,6 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
                 dto.tl_empresa = reader.GetString("tl_telefone");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");

@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using Avilabombonieri.DB.Connection;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
 
 namespace prototipos.DB.Estoque

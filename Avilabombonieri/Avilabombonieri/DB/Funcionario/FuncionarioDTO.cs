@@ -10,7 +10,6 @@ namespace prototipos.DB.Funcionario
     {
 
         public int Id_Funcionario { get; set; }
-        public string Nm_Nome { get; set; }
         public string lg_login { get; set; }
         public string Nomedaempresa { get; set; }
         public string sn_senha { get; set; }

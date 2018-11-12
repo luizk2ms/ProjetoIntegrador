@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Avilabombonieri.DB.Connection;
+using MySql.Data.MySqlClient;
+using System.Collections.Generic;
 
 namespace Avilabombonieri.DB.Produto
 {

@@ -99,7 +99,10 @@ namespace Avilabombonieri.Controle_Cliente
 
         private void button9_Click(object sender, EventArgs e)
         {
-            
+            Alterar_Cliente alterarcliente = new Alterar_Cliente();
+            Hide();
+            alterarcliente.ShowDialog();
+            Show();
         }
     }
 }

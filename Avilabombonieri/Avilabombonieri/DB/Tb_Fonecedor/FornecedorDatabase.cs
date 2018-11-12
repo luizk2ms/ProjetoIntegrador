@@ -1,11 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using prototipos.DB.Estoque;
-using Software.Digudao.DB.db;
-using System;
+﻿using Avilabombonieri.DB.Connection;
+using MySql.Data.MySqlClient;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace prototipos.DB.Fornecedor
 {
