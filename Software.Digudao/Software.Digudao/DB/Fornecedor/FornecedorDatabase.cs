@@ -13,19 +13,23 @@ namespace prototipos.DB.Fornecedor
     {
         public void Salvar(FornecedorDTO dto)
         {
-            string Script = @"INSERT tb_fonecedor(Nm_nome,en_endereço,tel_telefone,uf_uf,cel_celular,cnpj,ds_descricao,el_email,en_endereço,fk_ID_Funcionario)
-                                          VALUES(Nm_nome,@en_endereço,@tel_telefone,@uf_uf,@cel_celular,@cnpj,@ds_descricao,@el_email,@en_endereço,@fk_ID_Funcionario)";
+            string Script = @"INSERT tb_fonecedor(Nm_nome,en_endereco,tel_telefone,br_bairro,cd_cidade,nr_numero,CEP,pr_preco_unitario ,uf_uf,cel_celular,cnpj,ds_descricao,email,fk_ID_Funcionario)
+                                          VALUES(@Nm_nome,@en_endereco,@tel_telefone,@br_bairro,@cd_cidade,@nr_numero,@CEP,@pr_preco_unitario,@uf_uf,@cel_celular,@cnpj,@ds_descricao,@email,@fk_ID_Funcionario)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
-            parms.Add(new MySqlParameter("el_email", dto.el_email));
+            parms.Add(new MySqlParameter("en_endereco", dto.en_endereço));
+            parms.Add(new MySqlParameter("email", dto.el_email));
             parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
             parms.Add(new MySqlParameter("cnpj", dto.cnpj));
             parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
             parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
             parms.Add(new MySqlParameter("tel_telefone", dto.tel_telefone));
-            parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
-            parms.Add(new MySqlParameter("id_produto", dto.id_produto));
+            parms.Add(new MySqlParameter("br_bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("cd_cidade", dto.Cidade));
+            parms.Add(new MySqlParameter("nr_numero", dto.Numero));
+            parms.Add(new MySqlParameter("CEP", dto.CEP));
+            parms.Add(new MySqlParameter("pr_preco_unitario", dto.PrecoUnitario));
+
             parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
 
@@ -81,7 +85,7 @@ namespace prototipos.DB.Fornecedor
 
         public void Alterar(FornecedorDTO dto)
         {
-            string Script = @"UPDATE tb_fonecedor SET en_endereço = @en_endereço ,
+            string Script = @"UPDATE tb_fonecedor SET en_endereco = @en_endereco ,
                                                        cnpj = @cnpj,
                                                        tel_contem = @tel_contem,
                                                        cel_celular = @cel_celular,
@@ -95,7 +99,7 @@ namespace prototipos.DB.Fornecedor
                                                        WHERE Id_Fornecedor = @Id_Fornecedor";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
+            parms.Add(new MySqlParameter("en_endereco", dto.en_endereço));
             parms.Add(new MySqlParameter("el_email", dto.el_email));
             parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
             parms.Add(new MySqlParameter("cnpj", dto.cnpj));
@@ -115,33 +119,42 @@ namespace prototipos.DB.Fornecedor
 
         public List<FornecedorDTO> Listar()
         {
-            string Script = @"SELECT *FROM tb_fonecedor";
+            string script = @"select * from tb_fonecedor";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             Database db = new Database();
-            MySqlDataReader reader = db.ExecuteSelectScript(Script, parms);
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<FornecedorDTO> lista = new List<FornecedorDTO>();
             while (reader.Read())
             {
                 FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
-                dto.id_produto = reader.GetInt32("id_produto");
-                dto.tel_telefone = reader.GetString("tel_contem");
+                dto.tel_telefone = reader.GetString("tel_telefone");
                 dto.uf_uf = reader.GetString("uf_uf");
                 dto.cnpj = reader.GetString("cnpj");
                 dto.ds_descricao = reader.GetString("ds_descricao");
-                dto.el_email = reader.GetString("el_email");
-                dto.en_endereço = reader.GetString("en_endereço");
+                dto.el_email = reader.GetString("email");
+                dto.en_endereço = reader.GetString("en_endereco");
                 dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
-                dto.cel_celular = reader.GetString("fk_ID_Funcionario");
+                dto.cel_celular = reader.GetString("cel_celular");
                 dto.Nm_nome = reader.GetString("Nm_nome");
+
+                dto.Bairro = reader.GetString("br_bairro");
+                dto.Cidade = reader.GetString("cd_cidade");
+                dto.Numero = reader.GetString("nr_numero");
+                dto.CEP = reader.GetString("CEP");
+                dto.PrecoUnitario = reader.GetDecimal("pr_preco_unitario");
+
+
 
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
-
         }
+
+
         public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
             string script = @"select * from tb_fonecedor where Nm_nome like @Nm_nome";
@@ -154,25 +167,31 @@ namespace prototipos.DB.Fornecedor
             {
                 FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
-                dto.id_produto = reader.GetInt32("id_produto");
-                dto.tel_telefone = reader.GetString("tel_contem");
+                dto.tel_telefone = reader.GetString("tel_telefone");
                 dto.uf_uf = reader.GetString("uf_uf");
                 dto.cnpj = reader.GetString("cnpj");
                 dto.ds_descricao = reader.GetString("ds_descricao");
-                dto.el_email = reader.GetString("el_email");
-                dto.en_endereço = reader.GetString("en_endereço");
+                dto.el_email = reader.GetString("email");
+                dto.en_endereço = reader.GetString("en_endereco");
                 dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
-                dto.cel_celular = reader.GetString("fk_ID_Funcionario");
+                dto.cel_celular = reader.GetString("cel_celular");
                 dto.Nm_nome = reader.GetString("Nm_nome");
+
+                dto.Bairro = reader.GetString("br_bairro");
+                dto.Cidade = reader.GetString("cd_cidade");
+                dto.Numero = reader.GetString("nr_numero");
+                dto.CEP = reader.GetString("CEP");
+                dto.PrecoUnitario = reader.GetDecimal("pr_preco_unitario");
 
 
 
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
         }
-    }
-}
+}  }
+
     
 

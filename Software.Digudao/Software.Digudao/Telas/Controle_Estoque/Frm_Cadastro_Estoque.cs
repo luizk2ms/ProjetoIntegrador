@@ -20,7 +20,6 @@ namespace Software.Digudao.Controle_Estoque
         private void SalvarEstoque()
         {
             EstoqueDTO dto = new EstoqueDTO();
-            dto.Id_Estoque = int.Parse(textBox8.Text);
             dto.fk_id_produto_estoque = int.Parse(textBox1.Text);
             dto.Qn_QuantidadeEmKg = textBox2.Text;
             dto.Pc_preco = textBox5.Text;
@@ -51,6 +50,11 @@ namespace Software.Digudao.Controle_Estoque
             Frm_Consultar_Estoque consultarEstoque = new Frm_Consultar_Estoque();
             consultarEstoque.Show();
             this.Close();
+        }
+
+        private void Frm_Cadastro_Estoque_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

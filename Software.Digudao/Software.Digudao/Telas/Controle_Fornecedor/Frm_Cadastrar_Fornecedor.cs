@@ -1,4 +1,5 @@
 ﻿using prototipos.DB.Fornecedor;
+using prototipos.DB.Funcionario;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,21 +18,36 @@ namespace Software.Digudao.Controle_Fornecedor
         {
             InitializeComponent();
         }
+
+        int pk;
+        private void PegarIdFuncionario()
+        {
+            FuncionarioBusiness funcionario = new FuncionarioBusiness();
+            List<FuncionarioDTO>lista=funcionario.ConsultarporCPF(mktcpf.Text);
+            FuncionarioDTO dto = lista[0];
+            pk = dto.Id_Funcionario;
+        }
         private void SalvarFornecedor()
         {
+            PegarIdFuncionario();
             FornecedorBusiness business = new FornecedorBusiness();
             FornecedorDTO dto = new FornecedorDTO();
 
-            dto.Id_Fornecedor = int.Parse(textBox11.Text);
-            dto.id_produto = Convert.ToInt32(textBox12.Text);
+            
             dto.Nm_nome = txtnome.Text;
             dto.tel_telefone = maskedTextBox1.Text;
             dto.uf_uf = txtuf.Text;
             dto.cnpj = maskedTextBox3.Text;
             dto.ds_descricao = textBox2.Text;
             dto.el_email = textBox3.Text;
-            dto.en_endereço = textBox5.Text;
-
+            dto.en_endereço = txtendereco.Text;
+            dto.Bairro = txtbairo.Text;
+            dto.Cidade = txtcidade.Text;
+            dto.Numero = txtnumerocasa.Text;
+            dto.PrecoUnitario = decimal.Parse(txtprecounitario.Text);
+            dto.CEP = mktcep.Text;
+            dto.fk_ID_Funcionario = pk;
+            dto.cel_celular = mktcelular.Text;
             business.Salvar(dto);
 
 
@@ -46,7 +62,7 @@ namespace Software.Digudao.Controle_Fornecedor
         private void button1_Click(object sender, EventArgs e)
         {
             SalvarFornecedor();
-            MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Fornecedor cadastrado com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -62,6 +78,22 @@ namespace Software.Digudao.Controle_Fornecedor
         private void button2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            Frm_Consultar_Fornecedor fornecedor = new Frm_Consultar_Fornecedor();
+            fornecedor.Show();
         }
     }
 }

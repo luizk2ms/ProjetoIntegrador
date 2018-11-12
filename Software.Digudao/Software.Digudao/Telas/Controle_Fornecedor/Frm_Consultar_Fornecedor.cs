@@ -24,7 +24,6 @@ namespace Software.Digudao.Controle_Fornecedor
         {
             FornecedorBusiness Cliente = new FornecedorBusiness();
             List<FornecedorDTO> View = Cliente.ConsultarporNome(txtfornecedor.Text);
-            FornecedorDTO dto = View[0];
             dgvfornecedor.DataSource = View;
         }
 

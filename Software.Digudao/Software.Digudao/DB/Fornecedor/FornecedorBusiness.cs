@@ -25,12 +25,6 @@ namespace prototipos.DB.Fornecedor
             return db.RemoverFornecedor(id);
         }
 
-        public List<FornecedorDTO> Listar()
-        {
-            FornecedorDatabase db = new FornecedorDatabase();
-            return db.Listar();
-        }
-
         public List<FornecedorDTO> ConsultarporNome(string Nome)
         {
             FornecedorDatabase db = new FornecedorDatabase();
@@ -41,6 +35,12 @@ namespace prototipos.DB.Fornecedor
         {
             FornecedorDatabase db = new FornecedorDatabase();
             return db.ConsultarFornecedor(id);
+        }
+
+        public List<FornecedorDTO> Listar()
+        {
+            FornecedorDatabase db = new FornecedorDatabase();
+            return db.Listar();
         }
     }
 }

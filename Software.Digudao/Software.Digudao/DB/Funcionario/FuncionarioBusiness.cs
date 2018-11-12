@@ -42,5 +42,12 @@ namespace prototipos.DB.Funcionario
             FuncionarioDatabase db = new FuncionarioDatabase();
             return db.ListarPorId(ID);
         }
+
+        public List<FuncionarioDTO> ConsultarporCPF(string CPF)
+        {
+            FuncionarioDatabase db = new FuncionarioDatabase();
+            return db.ConsultarporCPF(CPF);
+        }
+
     }
 }

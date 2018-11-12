@@ -12,44 +12,48 @@ namespace Software.Digudao.DB.Produto
     {
         public void Salvar(ProdutoDTO dto)
         {
-            string Script = @"INSERT INTO tb_produto (Nm_Nome,
+            string Script = @"INSERT INTO tb_produto (Nm_Nomepro,
                                                      Tm_Tamanho,
                                                      Ql_Quantidade,
-                                                     pç_preço,
-                                                     fk_id_funcionario_produto)
+                                                     pc_preco,
+                                                      fk_id_fonrcedor,
+                                                      fk_id_funcionario_produto)
                                                      VALUES 
-                                                     (@Nm_Nome,
+                                                     (@Nm_Nomepro,
                                                      @Tm_Tamanho,
                                                      @Ql_Quantidade,
-                                                     @pç_preço,
+                                                     @pc_preco,
+                                                     @fk_id_fonrcedor,
                                                      @fk_id_funcionario_produto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
-            parms.Add(new MySqlParameter("pç_preço", dto.pç_preço));
+            parms.Add(new MySqlParameter("Nm_Nomepro", dto.Nm_Nome));
+            parms.Add(new MySqlParameter("pc_preco", dto.pç_preço));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
             parms.Add(new MySqlParameter("fk_id_funcionario_produto", dto.fk_id_funcionario_produto));
+            parms.Add(new MySqlParameter("fk_id_fonrcedor", dto.FkFornecedor));
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
         }
         public void Alterar(ProdutoDTO dto)
         {
-            string Script = @"UPDATE tb_produto SET Nm_Nome = @Nm_Nome,
+            string Script = @"UPDATE tb_produto SET Nm_Nomepro = @Nm_Nomepro,
                                                     Tm_Tamanho = @Tm_Tamanho,
                                                     Ql_Quantidade = @Ql_Quantidade,
-                                                    pç_preço = @pç_preço,
+                                                    pc_preco = @pc_preco,
                                                     fk_id_funcionario_produto = @fk_id_funcionario_produto,
+                                                    fk_id_fonrcedor=@fk_id_fonrcedor
                                               WHERE Id_Produto = @Id_Produto";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Nm_Nome", dto.Nm_Nome));
-            parms.Add(new MySqlParameter("pç_preço", dto.pç_preço));
+            parms.Add(new MySqlParameter("Nm_Nomepro", dto.Nm_Nome));
+            parms.Add(new MySqlParameter("pc_preco", dto.pç_preço));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
             parms.Add(new MySqlParameter("fk_id_funcionario_produto", dto.fk_id_funcionario_produto));
             parms.Add(new MySqlParameter("Id_Produto", dto.Id_Produto));
-
+            parms.Add(new MySqlParameter("fk_id_fonrcedor", dto.FkFornecedor));
 
 
 
@@ -76,8 +80,8 @@ namespace Software.Digudao.DB.Produto
             {
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.pç_preço = reader.GetString("pç_preço");
+                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
+                dto.pç_preço = reader.GetString("pc_preco");
                 dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
@@ -95,9 +99,9 @@ namespace Software.Digudao.DB.Produto
         }
         public List<ProdutoDTO> ConsultarporNome(string Nome)
         {
-            string script = @"select * from tb_produto where Nm_Nome like @Nm_Nome";
+            string script = @"select * from tb_produto where Nm_Nomepro like @Nm_Nomepro";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Nm_Nome", Nome + "%"));
+            parms.Add(new MySqlParameter("Nm_Nomepro", Nome + "%"));
             Database db = new Database();
             MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
             List<ProdutoDTO> lista = new List<ProdutoDTO>();
@@ -105,8 +109,8 @@ namespace Software.Digudao.DB.Produto
             {
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.pç_preço = reader.GetString("pç_preço");
+                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
+                dto.pç_preço = reader.GetString("pc_preco");
                 dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
@@ -129,11 +133,37 @@ namespace Software.Digudao.DB.Produto
             {
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nome");
-                dto.pç_preço = reader.GetString("pç_preço");
+                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
+                dto.pç_preço = reader.GetString("pc_preco");
                 dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
+
+                lista.Add(dto);
+
+            }
+            reader.Close();
+            return lista;
+        }
+
+        public List<ViewConsultarProdutosDTO> ConsultarporNomeView(string Nome)
+        {
+            string script = @"select * from consultar_produtos where Nm_Nomepro like @Nm_Nomepro";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Nm_Nomepro", Nome + "%"));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<ViewConsultarProdutosDTO> lista = new List<ViewConsultarProdutosDTO>();
+            while (reader.Read())
+            {
+                ViewConsultarProdutosDTO dto = new ViewConsultarProdutosDTO();
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
+                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
+                dto.pç_preço = reader.GetString("pc_preco");
+                dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
+                dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
+                dto.Nome_id_funcionario_produto = reader.GetString("nm_nomefunci");
+                dto.NomeFornecedor = reader.GetString("Nm_nome");
 
                 lista.Add(dto);
 

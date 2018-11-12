@@ -16,15 +16,15 @@ namespace Software.Digudao.Telas.Produto
         public ConsultarProduto()
         {
             InitializeComponent();
-            dgvFolha.AutoGenerateColumns = false;
+            dgvproduto.AutoGenerateColumns = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            ProdutoBusiness Estoque = new ProdutoBusiness();
-            List<ProdutoDTO> view = Estoque.ConsultarporNome(txtCPF.Text);
-            ProdutoDTO dto = view[0];
-            dgvFolha.DataSource = view;
+            ProdutoBusiness produto = new ProdutoBusiness();
+            List<ViewConsultarProdutosDTO> view =produto.ConsultarporNomeView(txtnome.Text);
+            dgvproduto.AutoGenerateColumns = false;
+            dgvproduto.DataSource = view;
         }
 
         private void button1_Click(object sender, EventArgs e)

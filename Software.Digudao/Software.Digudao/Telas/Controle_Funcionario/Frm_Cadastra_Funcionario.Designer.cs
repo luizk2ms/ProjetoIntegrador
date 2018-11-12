@@ -48,7 +48,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
@@ -67,6 +66,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
+            this.mktcpf = new System.Windows.Forms.MaskedTextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -87,6 +87,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.mktcpf);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.dateTimePicker2);
@@ -105,7 +106,6 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.textBox7);
             this.panel1.Controls.Add(this.textBox8);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.textBox6);
@@ -291,13 +291,6 @@
             this.label7.Size = new System.Drawing.Size(48, 20);
             this.label7.TabIndex = 123;
             this.label7.Text = "CPF :";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(138, 105);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(99, 20);
-            this.textBox7.TabIndex = 122;
             // 
             // textBox8
             // 
@@ -501,6 +494,14 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
+            // mktcpf
+            // 
+            this.mktcpf.Location = new System.Drawing.Point(134, 107);
+            this.mktcpf.Mask = "000.000.000-00";
+            this.mktcpf.Name = "mktcpf";
+            this.mktcpf.Size = new System.Drawing.Size(121, 20);
+            this.mktcpf.TabIndex = 141;
+            // 
             // Frm_Cadastra_Funcionario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -553,7 +554,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox6;
@@ -563,5 +563,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.MaskedTextBox mktcpf;
     }
 }

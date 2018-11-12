@@ -33,6 +33,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.mktcelular = new System.Windows.Forms.MaskedTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.mktcpf = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -43,27 +48,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mktcep = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtprecounitario = new System.Windows.Forms.TextBox();
+            this.txtbairo = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtendereco = new System.Windows.Forms.TextBox();
+            this.txtnumerocasa = new System.Windows.Forms.TextBox();
+            this.txtcidade = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.label28 = new System.Windows.Forms.Label();
@@ -72,7 +75,6 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.btnInicio = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +112,10 @@
             // 
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.mktcelular);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.mktcpf);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.textBox11);
             this.panel1.Controls.Add(this.label3);
@@ -121,28 +127,26 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
             this.panel1.Controls.Add(this.maskedTextBox1);
-            this.panel1.Controls.Add(this.maskedTextBox2);
+            this.panel1.Controls.Add(this.mktcep);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.maskedTextBox3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.txtprecounitario);
+            this.panel1.Controls.Add(this.txtbairo);
             this.panel1.Controls.Add(this.label18);
             this.panel1.Controls.Add(this.label19);
             this.panel1.Controls.Add(this.label20);
             this.panel1.Controls.Add(this.label21);
             this.panel1.Controls.Add(this.label22);
             this.panel1.Controls.Add(this.label23);
-            this.panel1.Controls.Add(this.textBox6);
-            this.panel1.Controls.Add(this.textBox7);
-            this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.textBox9);
+            this.panel1.Controls.Add(this.txtendereco);
+            this.panel1.Controls.Add(this.txtnumerocasa);
+            this.panel1.Controls.Add(this.txtcidade);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.textBox10);
-            this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label26);
             this.panel1.Controls.Add(this.label27);
             this.panel1.Controls.Add(this.label28);
@@ -151,6 +155,59 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(710, 379);
             this.panel1.TabIndex = 98;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // mktcelular
+            // 
+            this.mktcelular.Location = new System.Drawing.Point(259, 210);
+            this.mktcelular.Mask = "(00) 00000-0000";
+            this.mktcelular.Name = "mktcelular";
+            this.mktcelular.Size = new System.Drawing.Size(188, 20);
+            this.mktcelular.TabIndex = 145;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label5.Location = new System.Drawing.Point(259, 189);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 18);
+            this.label5.TabIndex = 146;
+            this.label5.Text = "Celular";
+            // 
+            // mktcpf
+            // 
+            this.mktcpf.Location = new System.Drawing.Point(262, 157);
+            this.mktcpf.Mask = "000.000.000-00";
+            this.mktcpf.Name = "mktcpf";
+            this.mktcpf.Size = new System.Drawing.Size(147, 20);
+            this.mktcpf.TabIndex = 144;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label4.Location = new System.Drawing.Point(259, 133);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 18);
+            this.label4.TabIndex = 143;
+            this.label4.Text = "CPF Funcionário";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // button2
+            // 
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.button2.Location = new System.Drawing.Point(603, 298);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(69, 28);
+            this.button2.TabIndex = 141;
+            this.button2.Text = "Consultar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
             // textBox11
             // 
@@ -252,13 +309,13 @@
             this.maskedTextBox1.Size = new System.Drawing.Size(188, 20);
             this.maskedTextBox1.TabIndex = 100;
             // 
-            // maskedTextBox2
+            // mktcep
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(262, 91);
-            this.maskedTextBox2.Mask = "00000-000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(87, 20);
-            this.maskedTextBox2.TabIndex = 106;
+            this.mktcep.Location = new System.Drawing.Point(262, 91);
+            this.mktcep.Mask = "00000-000";
+            this.mktcep.Name = "mktcep";
+            this.mktcep.Size = new System.Drawing.Size(87, 20);
+            this.mktcep.TabIndex = 106;
             // 
             // maskedTextBox3
             // 
@@ -305,29 +362,29 @@
             this.textBox3.Size = new System.Drawing.Size(189, 19);
             this.textBox3.TabIndex = 101;
             // 
-            // textBox4
+            // txtprecounitario
             // 
-            this.textBox4.Location = new System.Drawing.Point(504, 154);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(191, 19);
-            this.textBox4.TabIndex = 102;
+            this.txtprecounitario.Location = new System.Drawing.Point(504, 154);
+            this.txtprecounitario.Multiline = true;
+            this.txtprecounitario.Name = "txtprecounitario";
+            this.txtprecounitario.Size = new System.Drawing.Size(191, 19);
+            this.txtprecounitario.TabIndex = 102;
             // 
-            // textBox5
+            // txtbairo
             // 
-            this.textBox5.Location = new System.Drawing.Point(9, 224);
-            this.textBox5.MaxLength = 50;
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(191, 19);
-            this.textBox5.TabIndex = 108;
+            this.txtbairo.Location = new System.Drawing.Point(9, 224);
+            this.txtbairo.MaxLength = 50;
+            this.txtbairo.Multiline = true;
+            this.txtbairo.Name = "txtbairo";
+            this.txtbairo.Size = new System.Drawing.Size(191, 19);
+            this.txtbairo.TabIndex = 108;
             // 
             // label18
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label18.Location = new System.Drawing.Point(504, 11);
+            this.label18.Location = new System.Drawing.Point(507, 11);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(64, 18);
             this.label18.TabIndex = 123;
@@ -388,40 +445,31 @@
             this.label23.TabIndex = 118;
             this.label23.Text = "CEP";
             // 
-            // textBox6
+            // txtendereco
             // 
-            this.textBox6.Location = new System.Drawing.Point(256, 145);
-            this.textBox6.MaxLength = 150;
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(191, 79);
-            this.textBox6.TabIndex = 103;
+            this.txtendereco.Location = new System.Drawing.Point(9, 267);
+            this.txtendereco.MaxLength = 50;
+            this.txtendereco.Multiline = true;
+            this.txtendereco.Name = "txtendereco";
+            this.txtendereco.Size = new System.Drawing.Size(191, 19);
+            this.txtendereco.TabIndex = 109;
             // 
-            // textBox7
+            // txtnumerocasa
             // 
-            this.textBox7.Location = new System.Drawing.Point(9, 267);
-            this.textBox7.MaxLength = 50;
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(191, 19);
-            this.textBox7.TabIndex = 109;
+            this.txtnumerocasa.Location = new System.Drawing.Point(8, 307);
+            this.txtnumerocasa.Multiline = true;
+            this.txtnumerocasa.Name = "txtnumerocasa";
+            this.txtnumerocasa.Size = new System.Drawing.Size(191, 19);
+            this.txtnumerocasa.TabIndex = 110;
             // 
-            // textBox8
+            // txtcidade
             // 
-            this.textBox8.Location = new System.Drawing.Point(8, 307);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(191, 19);
-            this.textBox8.TabIndex = 110;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(259, 32);
-            this.textBox9.MaxLength = 50;
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(191, 19);
-            this.textBox9.TabIndex = 105;
+            this.txtcidade.Location = new System.Drawing.Point(259, 32);
+            this.txtcidade.MaxLength = 50;
+            this.txtcidade.Multiline = true;
+            this.txtcidade.Name = "txtcidade";
+            this.txtcidade.Size = new System.Drawing.Size(191, 19);
+            this.txtcidade.TabIndex = 105;
             // 
             // label24
             // 
@@ -442,17 +490,6 @@
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(191, 19);
             this.textBox10.TabIndex = 97;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label25.Location = new System.Drawing.Point(259, 124);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(99, 18);
-            this.label25.TabIndex = 116;
-            this.label25.Text = "Complemento";
             // 
             // label26
             // 
@@ -549,18 +586,6 @@
             this.btnInicio.UseVisualStyleBackColor = true;
             this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
-            // button2
-            // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Baskerville Old Face", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button2.Location = new System.Drawing.Point(603, 298);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(69, 28);
-            this.button2.TabIndex = 141;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // Frm_Cadastrar_Fornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,27 +614,25 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mktcep;
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtprecounitario;
+        private System.Windows.Forms.TextBox txtbairo;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtendereco;
+        private System.Windows.Forms.TextBox txtnumerocasa;
+        private System.Windows.Forms.TextBox txtcidade;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label28;
@@ -627,5 +650,9 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox mktcpf;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox mktcelular;
+        private System.Windows.Forms.Label label5;
     }
 }

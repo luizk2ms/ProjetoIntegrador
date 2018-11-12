@@ -37,13 +37,15 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbofonecedor = new System.Windows.Forms.ComboBox();
+            this.mktcpf = new System.Windows.Forms.MaskedTextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -126,7 +128,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button7.Location = new System.Drawing.Point(243, 148);
+            this.button7.Location = new System.Drawing.Point(243, 204);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 125;
@@ -134,23 +136,16 @@
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(138, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(103, 20);
-            this.textBox4.TabIndex = 123;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label5.Location = new System.Drawing.Point(15, 125);
+            this.label5.Location = new System.Drawing.Point(14, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 20);
+            this.label5.Size = new System.Drawing.Size(99, 20);
             this.label5.TabIndex = 124;
-            this.label5.Text = "Id Fornecedor :";
+            this.label5.Text = "Fornecedor :";
             // 
             // panel2
             // 
@@ -163,7 +158,7 @@
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(-1, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(385, 36);
+            this.panel2.Size = new System.Drawing.Size(455, 36);
             this.panel2.TabIndex = 136;
             // 
             // button12
@@ -207,47 +202,75 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.mktcpf);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.cbofonecedor);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox8);
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.textBox4);
             this.panel1.Controls.Add(this.textBox3);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(28, 57);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(328, 180);
+            this.panel1.Size = new System.Drawing.Size(389, 245);
             this.panel1.TabIndex = 137;
+            // 
+            // cbofonecedor
+            // 
+            this.cbofonecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbofonecedor.FormattingEnabled = true;
+            this.cbofonecedor.Location = new System.Drawing.Point(120, 121);
+            this.cbofonecedor.Name = "cbofonecedor";
+            this.cbofonecedor.Size = new System.Drawing.Size(121, 21);
+            this.cbofonecedor.TabIndex = 126;
+            // 
+            // mktcpf
+            // 
+            this.mktcpf.Location = new System.Drawing.Point(141, 158);
+            this.mktcpf.Mask = "000.000.000-00";
+            this.mktcpf.Name = "mktcpf";
+            this.mktcpf.Size = new System.Drawing.Size(147, 20);
+            this.mktcpf.TabIndex = 146;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.label6.Location = new System.Drawing.Point(17, 160);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(118, 18);
+            this.label6.TabIndex = 145;
+            this.label6.Text = "CPF Funcionário";
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button1.Location = new System.Drawing.Point(166, 148);
+            this.button1.Location = new System.Drawing.Point(162, 204);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 125;
+            this.button1.TabIndex = 147;
             this.button1.Text = "Consultar";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button7_Click);
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CadastrarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(384, 266);
+            this.ClientSize = new System.Drawing.Size(454, 344);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastrarProduto";
             this.Text = "CadastrarProduto";
+            this.Load += new System.EventHandler(this.CadastrarProduto_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -266,13 +289,15 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ComboBox cbofonecedor;
+        private System.Windows.Forms.MaskedTextBox mktcpf;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
     }
 }

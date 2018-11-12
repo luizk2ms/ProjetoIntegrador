@@ -67,6 +67,7 @@
     <Compile Include="DB\Produto\ProdutoBusiness.cs" />
     <Compile Include="DB\Produto\ProdutoDatabase.cs" />
     <Compile Include="DB\Produto\ProdutoDTO.cs" />
+    <Compile Include="DB\Produto\ViewConsultarProdutosDTO.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -19,5 +19,10 @@ namespace prototipos.DB.Fornecedor
         public string el_email { get; set; }
         public int fk_ID_Funcionario { get; set; }
         public string Nm_nome { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string Numero { get; set; }
+        public string CEP { get; set; }
+        public decimal PrecoUnitario { get; set; }
     }
 }

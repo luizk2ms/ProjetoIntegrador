@@ -27,7 +27,7 @@ namespace Software.Digudao.Controle_Funcionario
             dto.nm_numero = textBox5.Text;
             dto.tl_empresa = textBox9.Text;
             dto.cel_celular = textBox11.Text;
-            dto.cpf_cpf = textBox7.Text;
+            dto.cpf_cpf = mktcpf.Text;
             dto.cp_cep = textBox6.Text;
             dto.cr_cargo = textBox10.Text;
             dto.ds_endereço = textBox8.Text;

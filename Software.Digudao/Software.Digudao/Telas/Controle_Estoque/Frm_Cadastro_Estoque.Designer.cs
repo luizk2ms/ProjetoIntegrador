@@ -355,6 +355,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Cadastro_Estoque";
             this.Text = "Frm_Cadastro_Estoque";
+            this.Load += new System.EventHandler(this.Frm_Cadastro_Estoque_Load);
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
