@@ -24,7 +24,7 @@ namespace prototipos.DB.Funcionario
         public int id_FolhadePagamento { get; set; }
         public string uf_uf { get; set; }
         public string nm_numero { get; set; }
-
+        public string nm_nomefunci { get; set; }
 
 
     }

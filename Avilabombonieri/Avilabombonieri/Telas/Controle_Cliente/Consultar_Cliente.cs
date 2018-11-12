@@ -42,5 +42,10 @@ namespace Avilabombonieri.Controle_Cliente
             List<ClienteDTO> View = Cliente.Listar();
             dataGridView1.DataSource = View;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

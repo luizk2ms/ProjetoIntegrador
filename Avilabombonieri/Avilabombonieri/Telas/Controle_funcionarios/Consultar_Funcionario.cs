@@ -48,5 +48,10 @@ namespace Avilabombonieri.Controle_funcionarios
             //FuncionarioDTO dto = View[0];
             dgvfuncionario.DataSource = View;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }

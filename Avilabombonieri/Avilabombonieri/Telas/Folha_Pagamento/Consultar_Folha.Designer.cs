@@ -60,10 +60,10 @@
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -430,17 +430,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.label20);
-            this.panel5.ForeColor = System.Drawing.Color.Indigo;
-            this.panel5.Location = new System.Drawing.Point(406, 267);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(296, 132);
-            this.panel5.TabIndex = 92;
-            // 
             // button2
             // 
             this.button2.BackgroundImage = global::Avilabombonieri.Properties.Resources.minimize;
@@ -450,6 +439,7 @@
             this.button2.Size = new System.Drawing.Size(33, 23);
             this.button2.TabIndex = 43;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -471,6 +461,17 @@
             this.button5.Size = new System.Drawing.Size(28, 23);
             this.button5.TabIndex = 42;
             this.button5.UseVisualStyleBackColor = false;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel5.Controls.Add(this.label20);
+            this.panel5.ForeColor = System.Drawing.Color.Indigo;
+            this.panel5.Location = new System.Drawing.Point(406, 267);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(296, 132);
+            this.panel5.TabIndex = 92;
             // 
             // pictureBox4
             // 

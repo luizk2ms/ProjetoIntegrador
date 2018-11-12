@@ -108,5 +108,10 @@ namespace Avilabombonieri.Controle_Estoque
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
