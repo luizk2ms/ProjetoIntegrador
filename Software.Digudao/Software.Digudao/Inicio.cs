@@ -30,15 +30,17 @@ namespace Software.Digudao
         private void btncompras_Click(object sender, EventArgs e)
         {
             CadastrarProduto cadastra_Produto = new CadastrarProduto();
-            cadastra_Produto.Show();
+            ActiveForm.Hide();
+            cadastra_Produto.ShowDialog();
+            Show();
         }
 
         private void btnfuncionarios_Click(object sender, EventArgs e)
         {
             Frm_Cadastra_Funcionario cadastra_Funcionario = new Frm_Cadastra_Funcionario();
-            cadastra_Funcionario.Show();
-            
-
+            ActiveForm.Hide();
+            cadastra_Funcionario.ShowDialog();
+            Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -49,19 +51,30 @@ namespace Software.Digudao
         private void button1_Click(object sender, EventArgs e)
         {
             Frm_Cadastrar_Cliente cadastra_Cliente = new Frm_Cadastrar_Cliente();
-            cadastra_Cliente.Show();
+            ActiveForm.Hide();
+            cadastra_Cliente.ShowDialog();
+            Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             Frm_Cadastrar_Fornecedor cadastra_Fornecedor = new Frm_Cadastrar_Fornecedor();
-            cadastra_Fornecedor.Show();
+            ActiveForm.Hide();
+            cadastra_Fornecedor.ShowDialog();
+            Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             Frm_Cadastro_Estoque cadastra_Fornecedor = new Frm_Cadastro_Estoque();
-            cadastra_Fornecedor.Show();
+            ActiveForm.Hide();
+            cadastra_Fornecedor.ShowDialog();
+            Show();
+        }
+        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
         }
     }
 }

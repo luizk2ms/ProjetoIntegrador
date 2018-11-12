@@ -36,9 +36,6 @@ namespace prototipos.DB.Cliente
             parms.Add(new MySqlParameter("Em_Email", dto.Em_Email));
             parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
             
-
-
-
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
         }
@@ -70,7 +67,7 @@ namespace prototipos.DB.Cliente
         }
         public void Remover(int id)
         {
-            string Script = @"SELECT FROM tb_cliente WHERE Id_Cliente = @Id_Cliente ";
+            string Script = @"DELETE FROM tb_cliente WHERE Id_Cliente = @Id_Cliente ";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Cliente", id));
             Database db = new Database();
@@ -93,7 +90,7 @@ namespace prototipos.DB.Cliente
                 dto.CPF = reader.GetString("CPF");
                 dto.Ed_endereco = reader.GetString("Ed_endereco");
                 dto.Em_Email = reader.GetString("Em_Email");
-                dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente");
+                //dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente");
 
 
                 lista.Add(dto);

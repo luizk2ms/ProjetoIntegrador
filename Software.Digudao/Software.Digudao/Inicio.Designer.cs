@@ -38,7 +38,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.btnfuncionarios = new System.Windows.Forms.Button();
             this.btncompras = new System.Windows.Forms.Button();
-            this.btnInicio = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
@@ -59,7 +58,6 @@
             this.panel2.Controls.Add(this.button4);
             this.panel2.Controls.Add(this.btnfuncionarios);
             this.panel2.Controls.Add(this.btncompras);
-            this.panel2.Controls.Add(this.btnInicio);
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(0, -1);
             this.panel2.Name = "panel2";
@@ -77,6 +75,7 @@
             this.button2.Size = new System.Drawing.Size(33, 23);
             this.button2.TabIndex = 58;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -97,7 +96,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
             this.button1.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Location = new System.Drawing.Point(435, 6);
+            this.button1.Location = new System.Drawing.Point(354, 6);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 55;
@@ -135,7 +134,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button5.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
             this.button5.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button5.Location = new System.Drawing.Point(354, 6);
+            this.button5.Location = new System.Drawing.Point(273, 6);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 23);
             this.button5.TabIndex = 9;
@@ -148,7 +147,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button4.Location = new System.Drawing.Point(262, 6);
+            this.button4.Location = new System.Drawing.Point(181, 6);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(86, 23);
             this.button4.TabIndex = 8;
@@ -161,7 +160,7 @@
             this.btnfuncionarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnfuncionarios.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
             this.btnfuncionarios.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnfuncionarios.Location = new System.Drawing.Point(168, 6);
+            this.btnfuncionarios.Location = new System.Drawing.Point(87, 6);
             this.btnfuncionarios.Name = "btnfuncionarios";
             this.btnfuncionarios.Size = new System.Drawing.Size(88, 23);
             this.btnfuncionarios.TabIndex = 7;
@@ -174,26 +173,13 @@
             this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btncompras.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
             this.btncompras.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btncompras.Location = new System.Drawing.Point(87, 6);
+            this.btncompras.Location = new System.Drawing.Point(6, 6);
             this.btncompras.Name = "btncompras";
             this.btncompras.Size = new System.Drawing.Size(75, 23);
             this.btncompras.TabIndex = 6;
             this.btncompras.Text = "Produtos";
             this.btncompras.UseVisualStyleBackColor = true;
             this.btncompras.Click += new System.EventHandler(this.btncompras_Click);
-            // 
-            // btnInicio
-            // 
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInicio.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.btnInicio.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnInicio.Location = new System.Drawing.Point(6, 6);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(75, 23);
-            this.btnInicio.TabIndex = 5;
-            this.btnInicio.Text = "Inicio";
-            this.btnInicio.UseVisualStyleBackColor = true;
-            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // label1
             // 
@@ -244,7 +230,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button btnfuncionarios;
         private System.Windows.Forms.Button btncompras;
-        private System.Windows.Forms.Button btnInicio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

@@ -24,8 +24,7 @@ namespace Software.Digudao.Controle_Cliente
         private void CarregarDadosClientes()
         {
             ClienteBusiness Cliente = new ClienteBusiness();
-            List<ClienteDTO> View = Cliente.ConsultarporNome(textBox2.Text);
-            ClienteDTO dto = View[0];
+            List<ClienteDTO> View = Cliente.Listar();
             dataGridView1.DataSource = View;
 
         }
@@ -52,6 +51,28 @@ namespace Software.Digudao.Controle_Cliente
             Hide();
             iniciar.ShowDialog();
             Show();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            ClienteDTO dto = dataGridView1.CurrentRow.DataBoundItem as ClienteDTO;
+
+            ClienteBusiness business = new ClienteBusiness();
+            business.Remover(dto.Id_Cliente);
+
+            MessageBox.Show("Cliente Removido!");
+            CarregarDadosClientes();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ActiveForm.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

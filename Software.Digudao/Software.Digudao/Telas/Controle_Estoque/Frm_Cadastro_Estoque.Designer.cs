@@ -32,7 +32,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
@@ -98,19 +97,6 @@
             this.button9.Text = "Alterar";
             this.button9.UseVisualStyleBackColor = true;
             // 
-            // button11
-            // 
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button11.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Bold);
-            this.button11.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.button11.Location = new System.Drawing.Point(9, 5);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(75, 23);
-            this.button11.TabIndex = 5;
-            this.button11.Text = "Inicio";
-            this.button11.UseVisualStyleBackColor = true;
-            this.button11.Click += new System.EventHandler(this.button11_Click);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Aquamarine;
@@ -118,7 +104,6 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.button12);
             this.panel2.Controls.Add(this.button14);
-            this.panel2.Controls.Add(this.button11);
             this.panel2.ForeColor = System.Drawing.SystemColors.Desktop;
             this.panel2.Location = new System.Drawing.Point(-3, 0);
             this.panel2.Name = "panel2";
@@ -136,6 +121,7 @@
             this.button12.Size = new System.Drawing.Size(33, 23);
             this.button12.TabIndex = 56;
             this.button12.UseVisualStyleBackColor = true;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
             // button14
             // 
@@ -149,6 +135,7 @@
             this.button14.Size = new System.Drawing.Size(28, 23);
             this.button14.TabIndex = 55;
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // panel1
             // 
@@ -369,7 +356,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel1;
