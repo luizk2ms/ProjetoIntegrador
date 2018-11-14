@@ -29,8 +29,6 @@ namespace prototipos.DB.Fornecedor
             parms.Add(new MySqlParameter("nr_numero", dto.Numero));
             parms.Add(new MySqlParameter("CEP", dto.CEP));
             parms.Add(new MySqlParameter("pr_preco_unitario", dto.PrecoUnitario));
-
-            parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
 
 
@@ -62,10 +60,13 @@ namespace prototipos.DB.Fornecedor
                 dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
                 dto.cel_celular = reader.GetString("fk_ID_Funcionario");
                 dto.Nm_nome = reader.GetString("Nm_nome");
-
-
-
-
+                dto.Bairro = reader.GetString("Bairro");
+                dto.cel_celular = reader.GetString("cel_celular");
+                dto.CEP = reader.GetString("CEP");
+                dto.Cidade = reader.GetString("Cidade");
+                dto.Numero = reader.GetString("Numero");
+                dto.PrecoUnitario = reader.GetString("PrecoUnitario");
+            
                 lista.Add(dto);
             }
             return lista;
@@ -110,6 +111,7 @@ namespace prototipos.DB.Fornecedor
             parms.Add(new MySqlParameter("id_produto", dto.id_produto));
             parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
+            parms.Add(new MySqlParameter("",dto.))
 
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
