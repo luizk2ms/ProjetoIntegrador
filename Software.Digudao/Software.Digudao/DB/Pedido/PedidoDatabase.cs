@@ -26,9 +26,7 @@ namespace prototipos.DB.Pedido
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("qn_quantidade", dto.qn_quantidade));
             parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Tm_tamanho_tamanho));
-            parms.Add(new MySqlParameter("FK_preço", dto.FK_preço));
-            parms.Add(new MySqlParameter("pedidoid_produto", dto.pedidoid_produto));
-
+            parms.Add(new MySqlParameter("tl_total", dto.tl_total));
             Database db = new Database();
             return db.ExecuteInsertScriptWithPk(Script, parms);
         }
@@ -39,6 +37,7 @@ namespace prototipos.DB.Pedido
                                                      qn_quantidade,
                                                      Tm_tamanho_tamanho,
                                                      FK_preço,
+                                                     tl_total,
                                                      pedidoid_produto)
                                                      VALUES 
                                                      (@Id_Pedido,
@@ -46,6 +45,7 @@ namespace prototipos.DB.Pedido
                                                      @qn_quantidade,
                                                      @Tm_tamanho_tamanho,
                                                      @FK_preço,
+                                                     @tl_total,
                                                      @pedidoid_produto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -55,6 +55,7 @@ namespace prototipos.DB.Pedido
             parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Tm_tamanho_tamanho));
             parms.Add(new MySqlParameter("FK_preço", dto.FK_preço));
             parms.Add(new MySqlParameter("pedidoid_produto", dto.pedidoid_produto));
+            parms.Add(new MySqlParameter("tl_total", dto.tl_total));
 
             Database db = new Database();
             db.ExecuteInsertScript(Script, parms);
@@ -83,6 +84,7 @@ namespace prototipos.DB.Pedido
                 dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
                 dto.FK_preço = reader.GetInt32("FK_preço");
                 dto.pedidoid_produto = reader.GetInt32("pedidoid_produto");
+                dto.tl_total = reader.GetString("tl_total");
 
                 lista.Add(dto);
 
@@ -90,7 +92,7 @@ namespace prototipos.DB.Pedido
             return lista;
 
         }
-   
+
         public List<PedidoDTO> ConsultarpoID(int id)
         {
             string script = @"select * from tb_pedido where Id_Pedido like @Id_Pedido";
@@ -108,11 +110,12 @@ namespace prototipos.DB.Pedido
                 dto.Tm_tamanho_tamanho = reader.GetString("Tm_tamanho_tamanho");
                 dto.FK_preço = reader.GetInt32("FK_preço");
                 dto.pedidoid_produto = reader.GetInt32("pedidoid_produto");
-
+                dto.tl_total = reader.GetString("tl_total");
                 lista.Add(dto);
 
             }
             return lista;
+        
         }
     }
 }

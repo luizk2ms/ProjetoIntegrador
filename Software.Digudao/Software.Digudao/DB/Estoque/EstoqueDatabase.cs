@@ -5,7 +5,7 @@ namespace prototipos.DB.Estoque
 {
     class EstoqueDatabase
     {
-        public void SalvarEstoque (EstoqueDTO dto)
+        public void SalvarEstoque(EstoqueDTO dto)
         {
             string Script = @"INSERT INTO tb_estoque(Qn_Quantidade,
                                                      Tm_tamanho,
@@ -15,20 +15,21 @@ namespace prototipos.DB.Estoque
                                                      Qn_QuantidadeEmKg)
                                                      VALUES(@Qn_Quantidade,
                                                      @Tm_tamanho,
-                                                     @dt_datavl,
+                                                     @dt_data,
                                                      @Pc_preco,
                                                      @fk_id_produto_estoque,
                                                      @Qn_QuantidadeEmKg)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Qn_Quantidade", dto.Qn_Quantidade));
-            parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
             parms.Add(new MySqlParameter("dt_data", dto.dt_data));
             parms.Add(new MySqlParameter("Pc_preco", dto.Pc_preco));
             parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
             parms.Add(new MySqlParameter("Qn_QuantidadeEmKg", dto.Qn_QuantidadeEmKg));
             parms.Add(new MySqlParameter("fk_id_produto_estoque", dto.fk_id_produto_estoque));
-            parms.Add(new MySqlParameter("Id_Estoque", dto.Id_Estoque));
+
+
+
 
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
@@ -63,7 +64,7 @@ namespace prototipos.DB.Estoque
         {
             string Script = @"SELECT FROM tb_estoque WHERE Id_Estoque = @Id_Estoque";
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Id_Estoque", id ));
+            parms.Add(new MySqlParameter("Id_Estoque", id));
             Database db = new Database();
             db.ExecuteInsertScript(Script, parms);
         }
@@ -80,11 +81,10 @@ namespace prototipos.DB.Estoque
                 dto.Id_Estoque = reader.GetInt32("Id_Estoque");
                 dto.Pc_preco = reader.GetString("Pc_preco");
                 dto.fk_id_produto_estoque = reader.GetInt32("fk_id_produto_estoque");
-                dto.Qn_Quantidade = reader.GetString("Qn_QuantidadeEmKg");
-                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
-                dto.dt_data = reader.GetDateTime("dt_data");
                 dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
+                dto.dt_data = reader.GetDateTime("dt_data");
+                dto.Qn_QuantidadeEmKg = reader.GetString("Qn_QuantidadeEmKg");
 
 
                 lista.Add(dto);
@@ -107,11 +107,10 @@ namespace prototipos.DB.Estoque
                 dto.Id_Estoque = reader.GetInt32("Id_Estoque");
                 dto.Pc_preco = reader.GetString("Pc_preco");
                 dto.fk_id_produto_estoque = reader.GetInt32("fk_id_produto_estoque");
-                dto.Qn_Quantidade = reader.GetString("Qn_QuantidadeEmKg");
+                dto.Qn_QuantidadeEmKg = reader.GetString("Qn_QuantidadeEmKg");
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
                 dto.dt_data = reader.GetDateTime("dt_data");
                 dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
-                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
 
                 lista.Add(dto);
 
@@ -132,16 +131,16 @@ namespace prototipos.DB.Estoque
                 dto.Id_Estoque = reader.GetInt32("Id_Estoque");
                 dto.Pc_preco = reader.GetString("Pc_preco");
                 dto.fk_id_produto_estoque = reader.GetInt32("fk_id_produto_estoque");
-                dto.Qn_Quantidade = reader.GetString("Qn_QuantidadeEmKg");
+                dto.Qn_QuantidadeEmKg = reader.GetString("Qn_QuantidadeEmKg");
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
                 dto.dt_data = reader.GetDateTime("dt_data");
                 dto.Qn_Quantidade = reader.GetString("Qn_Quantidade");
-                dto.Tm_tamanho = reader.GetString("Tm_tamanho");
 
             }
             return lista;
-            
+
         }
-        
+
+
     }
 }

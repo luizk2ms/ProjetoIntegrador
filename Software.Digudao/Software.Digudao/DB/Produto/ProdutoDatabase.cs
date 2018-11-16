@@ -171,5 +171,29 @@ namespace Software.Digudao.DB.Produto
             reader.Close();
             return lista;
         }
+        public List<ProdutoDTO> ConsultarpoTamanho(string Tamanho)
+        {
+            string script = @"select * from tb_produto where Tm_Tamanho like @Tm_Tamanho";
+            List<MySqlParameter> parms = new List<MySqlParameter>();
+            parms.Add(new MySqlParameter("Tm_Tamanho", Tamanho + "%"));
+            Database db = new Database();
+            MySqlDataReader reader = db.ExecuteSelectScript(script, parms);
+            List<ProdutoDTO> lista = new List<ProdutoDTO>();
+            while (reader.Read())
+            {
+                ProdutoDTO dto = new ProdutoDTO();
+                dto.Id_Produto = reader.GetInt32("Id_Produto");
+                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
+                dto.pç_preço = reader.GetString("pc_preco");
+                dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
+                dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
+                dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
+
+                lista.Add(dto);
+
+            }
+            reader.Close();
+            return lista;
+        }
     }
 }

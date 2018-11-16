@@ -13,23 +13,26 @@ namespace prototipos.DB.Fornecedor
     {
         public void Salvar(FornecedorDTO dto)
         {
-            string Script = @"INSERT tb_fonecedor(Nm_nome,en_endereco,tel_telefone,br_bairro,cd_cidade,nr_numero,CEP,pr_preco_unitario ,uf_uf,cel_celular,cnpj,ds_descricao,email,fk_ID_Funcionario)
-                                          VALUES(@Nm_nome,@en_endereco,@tel_telefone,@br_bairro,@cd_cidade,@nr_numero,@CEP,@pr_preco_unitario,@uf_uf,@cel_celular,@cnpj,@ds_descricao,@email,@fk_ID_Funcionario)";
+            string Script = @"INSERT tb_fonecedor(id_produto,en_endereço,cnpj,tel_telefone,cel_celular,uf_uf,ds_descricao,el_email,fk_ID_Funcionario ,Nm_nome,Bairro,Cidade,Numero,CEP,PrecoUnitario)
+                                      VALUES     (@id_produto,@en_endereço,@cnpj,@tel_telefone,@cel_celular,@uf_uf,@ds_descricao,@el_email,@fk_ID_Funcionario,@Nm_nome,@Bairro,@Cidade,@Numero,@CEP,@PrecoUnitario)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("en_endereco", dto.en_endereço));
-            parms.Add(new MySqlParameter("email", dto.el_email));
-            parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
-            parms.Add(new MySqlParameter("cnpj", dto.cnpj));
+            parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
+            parms.Add(new MySqlParameter("Bairro", dto.Bairro));
             parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
-            parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
-            parms.Add(new MySqlParameter("tel_telefone", dto.tel_telefone));
-            parms.Add(new MySqlParameter("br_bairro", dto.Bairro));
-            parms.Add(new MySqlParameter("cd_cidade", dto.Cidade));
-            parms.Add(new MySqlParameter("nr_numero", dto.Numero));
             parms.Add(new MySqlParameter("CEP", dto.CEP));
-            parms.Add(new MySqlParameter("pr_preco_unitario", dto.PrecoUnitario));
+            parms.Add(new MySqlParameter("Cidade", dto.Cidade));
+            parms.Add(new MySqlParameter("cnpj", dto.cnpj));
+            parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
+            parms.Add(new MySqlParameter("el_email", dto.el_email));
+            parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
+            parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
+            parms.Add(new MySqlParameter("id_produto", dto.id_produto));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
+            parms.Add(new MySqlParameter("Numero", dto.Numero));
+            parms.Add(new MySqlParameter("PrecoUnitario", dto.PrecoUnitario));
+            parms.Add(new MySqlParameter("tel_telefone", dto.tel_telefone));
+            parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
 
 
 
@@ -58,7 +61,6 @@ namespace prototipos.DB.Fornecedor
                 dto.el_email = reader.GetString("el_email");
                 dto.en_endereço = reader.GetString("en_endereço");
                 dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
-                dto.cel_celular = reader.GetString("fk_ID_Funcionario");
                 dto.Nm_nome = reader.GetString("Nm_nome");
                 dto.Bairro = reader.GetString("Bairro");
                 dto.cel_celular = reader.GetString("cel_celular");
@@ -66,7 +68,7 @@ namespace prototipos.DB.Fornecedor
                 dto.Cidade = reader.GetString("Cidade");
                 dto.Numero = reader.GetString("Numero");
                 dto.PrecoUnitario = reader.GetString("PrecoUnitario");
-            
+
                 lista.Add(dto);
             }
             return lista;
@@ -96,22 +98,32 @@ namespace prototipos.DB.Fornecedor
                                                        id_produto = @id_produto,
                                                        fk_ID_Funcionario = @fk_ID_Funcionario,
                                                        Nm_nome = @Nm_nome,
-
+                                                       PrecoUnitario = @PrecoUnitario,
+                                                       CEP = @CEP,
+                                                       Numero = @Numero,
+                                                       Cidade = @Cidade,
+                                                       Bairro = @Bairro
                                                        WHERE Id_Fornecedor = @Id_Fornecedor";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("en_endereco", dto.en_endereço));
-            parms.Add(new MySqlParameter("el_email", dto.el_email));
-            parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
+            parms.Add(new MySqlParameter("Bairro", dto.Bairro));
+            parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
+            parms.Add(new MySqlParameter("CEP", dto.CEP));
+            parms.Add(new MySqlParameter("Cidade", dto.Cidade));
             parms.Add(new MySqlParameter("cnpj", dto.cnpj));
-            parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
-            parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
-            parms.Add(new MySqlParameter("tel_telefone", dto.tel_telefone));
-            parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
-            parms.Add(new MySqlParameter("id_produto", dto.id_produto));
+            parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
+            parms.Add(new MySqlParameter("el_email", dto.el_email));
+            parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
             parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
+            parms.Add(new MySqlParameter("Id_Fornecedor", dto.Id_Fornecedor));
+            parms.Add(new MySqlParameter("id_produto", dto.id_produto));
             parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
-            parms.Add(new MySqlParameter("",dto.))
+            parms.Add(new MySqlParameter("Numero", dto.Numero));
+            parms.Add(new MySqlParameter("PrecoUnitario", dto.PrecoUnitario));
+            parms.Add(new MySqlParameter("tel_telefone", dto.tel_telefone));
+            parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
+            parms.Add(new MySqlParameter("Cidade", dto.Cidade));
+            parms.Add(new MySqlParameter("Bairro", dto.Bairro));
 
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
@@ -129,24 +141,24 @@ namespace prototipos.DB.Fornecedor
             while (reader.Read())
             {
                 FornecedorDTO dto = new FornecedorDTO();
-                dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
-                dto.tel_telefone = reader.GetString("tel_telefone");
-                dto.uf_uf = reader.GetString("uf_uf");
-                dto.cnpj = reader.GetString("cnpj");
-                dto.ds_descricao = reader.GetString("ds_descricao");
-                dto.el_email = reader.GetString("email");
-                dto.en_endereço = reader.GetString("en_endereco");
-                dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
-                dto.cel_celular = reader.GetString("cel_celular");
-                dto.Nm_nome = reader.GetString("Nm_nome");
-
-                dto.Bairro = reader.GetString("br_bairro");
-                dto.Cidade = reader.GetString("cd_cidade");
-                dto.Numero = reader.GetString("nr_numero");
-                dto.CEP = reader.GetString("CEP");
-                dto.PrecoUnitario = reader.GetDecimal("pr_preco_unitario");
-
-
+                parms.Add(new MySqlParameter("Bairro", dto.Bairro));
+                parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
+                parms.Add(new MySqlParameter("CEP", dto.CEP));
+                parms.Add(new MySqlParameter("Cidade", dto.Cidade));
+                parms.Add(new MySqlParameter("cnpj", dto.cnpj));
+                parms.Add(new MySqlParameter("ds_descricao", dto.ds_descricao));
+                parms.Add(new MySqlParameter("el_email", dto.el_email));
+                parms.Add(new MySqlParameter("en_endereço", dto.en_endereço));
+                parms.Add(new MySqlParameter("fk_ID_Funcionario", dto.fk_ID_Funcionario));
+                parms.Add(new MySqlParameter("Id_Fornecedor", dto.Id_Fornecedor));
+                parms.Add(new MySqlParameter("id_produto", dto.id_produto));
+                parms.Add(new MySqlParameter("Nm_nome", dto.Nm_nome));
+                parms.Add(new MySqlParameter("Numero", dto.Numero));
+                parms.Add(new MySqlParameter("PrecoUnitario", dto.PrecoUnitario));
+                parms.Add(new MySqlParameter("tel_telefone", dto.tel_telefone));
+                parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
+                parms.Add(new MySqlParameter("Cidade", dto.Cidade));
+                parms.Add(new MySqlParameter("Bairro", dto.Bairro));
 
 
                 lista.Add(dto);
@@ -170,20 +182,23 @@ namespace prototipos.DB.Fornecedor
                 FornecedorDTO dto = new FornecedorDTO();
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.tel_telefone = reader.GetString("tel_telefone");
-                dto.uf_uf = reader.GetString("uf_uf");
+                dto.Bairro = reader.GetString("Bairro");
+                dto.cel_celular = reader.GetString("cel_celular");
+                dto.CEP = reader.GetString("CEP");
+                dto.Cidade = reader.GetString("Cidade");
                 dto.cnpj = reader.GetString("cnpj");
                 dto.ds_descricao = reader.GetString("ds_descricao");
-                dto.el_email = reader.GetString("email");
-                dto.en_endereço = reader.GetString("en_endereco");
+                dto.el_email = reader.GetString("el_email");
+                dto.en_endereço = reader.GetString("en_endereço");
                 dto.fk_ID_Funcionario = reader.GetInt32("fk_ID_Funcionario");
-                dto.cel_celular = reader.GetString("cel_celular");
+                dto.id_produto = reader.GetInt32("id_produto");
                 dto.Nm_nome = reader.GetString("Nm_nome");
+                dto.Numero = reader.GetString("Numero");
+                dto.PrecoUnitario = reader.GetDecimal("PrecoUnitario");
+                dto.tel_telefone = reader.GetString("tel_telefone");
+                dto.uf_uf = reader.GetString("uf_uf");
 
-                dto.Bairro = reader.GetString("br_bairro");
-                dto.Cidade = reader.GetString("cd_cidade");
-                dto.Numero = reader.GetString("nr_numero");
-                dto.CEP = reader.GetString("CEP");
-                dto.PrecoUnitario = reader.GetDecimal("pr_preco_unitario");
+
 
 
 
@@ -193,7 +208,8 @@ namespace prototipos.DB.Fornecedor
             reader.Close();
             return lista;
         }
-}  }
+    }
+}
 
     
 
