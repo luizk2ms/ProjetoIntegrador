@@ -203,9 +203,6 @@ namespace prototipos.DB.Funcionario
                 dto.cp_cep = reader.GetString("cp_cep");
                 dto.ds_endereço = reader.GetString("ds_endereco");
                 dto.nm_numero = reader.GetString("nm_numero");
-                //dto.lg_login = reader.GetString("lg_login");
-                //dto.sn_senha = reader.GetString("sn_senha");
-                //dto.uf_uf = reader.GetString("uf_uf");
                 dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dto.cr_cargo = reader.GetString("cr_cargo");
@@ -237,9 +234,6 @@ namespace prototipos.DB.Funcionario
                 dto.cp_cep = reader.GetString("cp_cep");
                 dto.ds_endereço = reader.GetString("ds_endereco");
                 dto.nm_numero = reader.GetString("nm_numero");
-                //dto.lg_login = reader.GetString("lg_login");
-                //dto.sn_senha = reader.GetString("sn_senha");
-                //dto.uf_uf = reader.GetString("uf_uf");
                 dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dto.cr_cargo = reader.GetString("cr_cargo");

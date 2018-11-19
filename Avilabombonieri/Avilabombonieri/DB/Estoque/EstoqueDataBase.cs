@@ -29,7 +29,7 @@ namespace prototipos.DB.Estoque
             parms.Add(new MySqlParameter("Tm_tamanho", dto.Tm_tamanho));
             parms.Add(new MySqlParameter("Qn_QuantidadeEmKg", dto.Qn_QuantidadeEmKg));
             parms.Add(new MySqlParameter("fk_id_produto_estoque", dto.fk_id_produto_estoque));
-            parms.Add(new MySqlParameter("Id_Estoque", dto.Id_Estoque));
+            
 
             Database db = new Database();
             db.ExecuteInsertScriptWithPk(Script, parms);
@@ -91,6 +91,7 @@ namespace prototipos.DB.Estoque
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
 
         }
@@ -117,6 +118,7 @@ namespace prototipos.DB.Estoque
                 lista.Add(dto);
 
             }
+            reader.Close();
             return lista;
         }
         public List<EstoqueDTO> ConsultarpoID(int id)
@@ -140,6 +142,7 @@ namespace prototipos.DB.Estoque
                 dto.Tm_tamanho = reader.GetString("Tm_tamanho");
 
             }
+            reader.Close();
             return lista;
         }
         

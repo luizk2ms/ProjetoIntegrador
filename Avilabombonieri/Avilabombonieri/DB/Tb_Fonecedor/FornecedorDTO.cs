@@ -9,7 +9,7 @@ namespace prototipos.DB.Fornecedor
     class FornecedorDTO
     {
         public int Id_Fornecedor { get; set; }
-        public int id_produto { get; set; }
+        public int FK_produto { get; set; }
         public string en_endereço { get; set; }
         public int cnpj { get; set; }
         public int tel_contem { get; set; }

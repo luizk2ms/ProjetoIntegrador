@@ -23,8 +23,8 @@ namespace Avilabombonieri.DB.Produto
                                                      @fk_id_funcionario_produto)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Nm_Nomepro", dto.Nm_Nome));
-            parms.Add(new MySqlParameter("pc_preco", dto.pç_preço));
+            parms.Add(new MySqlParameter("Nm_Nomepro", dto.Nm_Nomepro));
+            parms.Add(new MySqlParameter("pc_preco", dto.pc_preco));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
             parms.Add(new MySqlParameter("fk_id_funcionario_produto", dto.fk_id_funcionario_produto));
@@ -44,8 +44,8 @@ namespace Avilabombonieri.DB.Produto
                                               WHERE Id_Produto = @Id_Produto";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("Nm_Nomepro", dto.Nm_Nome));
-            parms.Add(new MySqlParameter("pc_preco", dto.pç_preço));
+            parms.Add(new MySqlParameter("Nm_Nomepro", dto.Nm_Nomepro));
+            parms.Add(new MySqlParameter("pc_preco", dto.pc_preco));
             parms.Add(new MySqlParameter("Ql_Quantidade", dto.Ql_Quantidade));
             parms.Add(new MySqlParameter("Tm_Tamanho", dto.Tm_Tamanho));
             parms.Add(new MySqlParameter("fk_id_funcionario_produto", dto.fk_id_funcionario_produto));
@@ -77,8 +77,8 @@ namespace Avilabombonieri.DB.Produto
             {
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
-                dto.pç_preço = reader.GetString("pc_preco");
+                dto.Nm_Nomepro = reader.GetString("Nm_Nomepro");
+                dto.pc_preco = reader.GetString("pc_preco");
                 dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
@@ -106,8 +106,8 @@ namespace Avilabombonieri.DB.Produto
             {
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
-                dto.pç_preço = reader.GetString("pc_preco");
+                dto.Nm_Nomepro = reader.GetString("Nm_Nomepro");
+                dto.pc_preco = reader.GetString("pc_preco");
                 dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");
@@ -130,8 +130,8 @@ namespace Avilabombonieri.DB.Produto
             {
                 ProdutoDTO dto = new ProdutoDTO();
                 dto.Id_Produto = reader.GetInt32("Id_Produto");
-                dto.Nm_Nome = reader.GetString("Nm_Nomepro");
-                dto.pç_preço = reader.GetString("pc_preco");
+                dto.Nm_Nomepro = reader.GetString("Nm_Nomepro");
+                dto.pc_preco = reader.GetString("pc_preco");
                 dto.Ql_Quantidade = reader.GetString("Ql_Quantidade");
                 dto.Tm_Tamanho = reader.GetString("Tm_Tamanho");
                 dto.fk_id_funcionario_produto = reader.GetInt32("fk_id_funcionario_produto");

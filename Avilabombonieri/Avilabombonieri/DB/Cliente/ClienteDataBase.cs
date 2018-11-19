@@ -42,7 +42,7 @@ namespace prototipos.DB.Cliente
                                                     CNPJ = @CNPJ,
                                                     CPF = @CPF,
                                                     Em_Email = @Em_Email,
-                                                    Nm_numero = @Nm_numero,
+                                                    Nm_numero = @Nm_numero
                                               WHERE Id_Cliente = @Id_Cliente";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
@@ -53,8 +53,7 @@ namespace prototipos.DB.Cliente
             parms.Add(new MySqlParameter("Em_Email", dto.Em_Email));
             parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
             parms.Add(new MySqlParameter("Id_Cliente", dto.Id_Cliente));
-            parms.Add(new MySqlParameter("Id_Cliente", dto.Id_Cliente));
-
+      
 
 
 
@@ -86,7 +85,7 @@ namespace prototipos.DB.Cliente
                 dto.CPF = reader.GetString("CPF");
                 dto.Ed_endereco = reader.GetString("Ed_endereco");
                 dto.Em_Email = reader.GetString("Em_Email");
-                //dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente");
+     
 
 
                 lista.Add(dto);
@@ -140,7 +139,7 @@ namespace prototipos.DB.Cliente
                 dto.CPF = reader.GetString("CPF");
                 dto.Ed_endereco = reader.GetString("Ed_endereco");
                 dto.Em_Email = reader.GetString("Em_Email");
-                dto.fk_id_funcionario_cliente = reader.GetInt32("fk_id_funcionario_cliente ");
+              
 
 
                 lista.Add(dto);
