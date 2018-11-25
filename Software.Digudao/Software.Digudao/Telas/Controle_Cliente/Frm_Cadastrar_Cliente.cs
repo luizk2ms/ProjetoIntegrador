@@ -80,5 +80,10 @@ namespace Software.Digudao.Controle_Cliente
         {
             Close();
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

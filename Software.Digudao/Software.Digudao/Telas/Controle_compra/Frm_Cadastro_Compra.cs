@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Software.Digudao.DB.Produto;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,23 @@ namespace Software.Digudao.Telas.Controle_compra
         public Frm_Cadastro_Compra()
         {
             InitializeComponent();
+            CarregarEstoque();
+            CarregarTamanho();
+
+        }
+        private void CarregarTamanho()
+        {
+            ProdutoBusiness Estoque = new ProdutoBusiness();
+            comboBox1.DisplayMember = nameof(ProdutoDTO.Tm_Tamanho);
+
+            comboBox1.DataSource = Estoque.Listar();
+        }
+        private void CarregarEstoque()
+        {
+            ProdutoBusiness Estoque = new ProdutoBusiness();
+            cboProdutos.DisplayMember = nameof(ProdutoDTO.Nm_Nome);
+
+            cboProdutos.DataSource = Estoque.Listar();
         }
 
         private void Frm_Cadastro_Compra_Load(object sender, EventArgs e)

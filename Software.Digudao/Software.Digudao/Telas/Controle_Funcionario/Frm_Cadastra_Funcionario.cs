@@ -33,9 +33,8 @@ namespace Software.Digudao.Controle_Funcionario
             dto.ds_endereço = textBox8.Text;
             dto.dt_datadeentrada = DateTime.Parse(dateTimePicker2.Text);
             dto.dt_datasaida = DateTime.Parse(dateTimePicker1.Text);
-            dto.Nomedaempresa = txtnomeempresa.Text;
+            dto.Nomedaempresa = textBox2.Text;
             Funcionario.Cadastrar(dto);
-
 
         }
 
@@ -43,7 +42,7 @@ namespace Software.Digudao.Controle_Funcionario
         private void button7_Click(object sender, EventArgs e)
         {
             CarregarFuncionario();
-            MessageBox.Show("Folha de Pagamento criada com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Funcionario cadastrado com sucesso!", "digudão", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnInicio_Click(object sender, EventArgs e)

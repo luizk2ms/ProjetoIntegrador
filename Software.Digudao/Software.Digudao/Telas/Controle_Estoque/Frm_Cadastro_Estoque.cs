@@ -1,4 +1,5 @@
 ﻿using prototipos.DB.Estoque;
+using Software.Digudao.DB.Produto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,12 @@ namespace Software.Digudao.Controle_Estoque
         public Frm_Cadastro_Estoque()
         {
             InitializeComponent();
+            CarregarEstoque();
         }
         private void SalvarEstoque()
         {
             EstoqueDTO dto = new EstoqueDTO();
             //dto.Id_Estoque = int.Parse(textBox8.Text);
-            dto.fk_id_produto_estoque = int.Parse(textBox1.Text);
             dto.Qn_QuantidadeEmKg = textBox2.Text;
             dto.Pc_preco = textBox5.Text;
             dto.Qn_Quantidade = textBox3.Text;
@@ -29,6 +30,14 @@ namespace Software.Digudao.Controle_Estoque
             EstoqueBusiness business = new EstoqueBusiness();
             business.SalvarEstoque(dto);
 
+        }
+
+        private void CarregarEstoque()
+        {
+            ProdutoBusiness Estoque = new ProdutoBusiness();
+            comboBox1.DisplayMember = nameof(ProdutoDTO.Nm_Nome);
+
+            comboBox1.DataSource = Estoque.Listar();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -62,6 +71,16 @@ namespace Software.Digudao.Controle_Estoque
         private void button14_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

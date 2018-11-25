@@ -44,10 +44,10 @@ namespace Software.Digudao.DB.db
             this.button12 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cbofonecedor = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.mktcpf = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cbofonecedor = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -210,14 +210,15 @@ namespace Software.Digudao.DB.db
             this.panel1.Size = new System.Drawing.Size(389, 245);
             this.panel1.TabIndex = 137;
             // 
-            // cbofonecedor
+            // button1
             // 
-            this.cbofonecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbofonecedor.FormattingEnabled = true;
-            this.cbofonecedor.Location = new System.Drawing.Point(120, 121);
-            this.cbofonecedor.Name = "cbofonecedor";
-            this.cbofonecedor.Size = new System.Drawing.Size(121, 21);
-            this.cbofonecedor.TabIndex = 126;
+            this.button1.Location = new System.Drawing.Point(162, 204);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 147;
+            this.button1.Text = "Consultar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // mktcpf
             // 
@@ -238,15 +239,15 @@ namespace Software.Digudao.DB.db
             this.label6.TabIndex = 145;
             this.label6.Text = "CPF Funcionário";
             // 
-            // button1
+            // cbofonecedor
             // 
-            this.button1.Location = new System.Drawing.Point(162, 204);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 147;
-            this.button1.Text = "Consultar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cbofonecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbofonecedor.FormattingEnabled = true;
+            this.cbofonecedor.Location = new System.Drawing.Point(120, 121);
+            this.cbofonecedor.Name = "cbofonecedor";
+            this.cbofonecedor.Size = new System.Drawing.Size(121, 21);
+            this.cbofonecedor.TabIndex = 126;
+            this.cbofonecedor.SelectedIndexChanged += new System.EventHandler(this.cbofonecedor_SelectedIndexChanged);
             // 
             // CadastrarProduto
             // 

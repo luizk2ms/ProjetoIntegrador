@@ -78,5 +78,10 @@ namespace Software.Digudao.DB.db
             consultarProduto.Show();
             this.Close();
         }
+
+        private void cbofonecedor_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
