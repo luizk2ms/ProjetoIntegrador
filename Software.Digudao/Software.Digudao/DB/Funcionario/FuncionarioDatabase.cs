@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
 
@@ -8,15 +9,16 @@ namespace prototipos.DB.Funcionario
     {
         public void Cadastrar(FuncionarioDTO dto)
         {
-            string Script = @"INSERT tb_funcionario( nm_nomefunci, ds_endereco, cp_cep, cpf_cpf,tl_telefone, cel_celular, cr_cargo,dt_datadeentrada,dt_datasaida,nm_numero,nm_empresa)
-                                     VALUES(@nm_nomefunci,@ds_endereco,@cp_cep,@cpf_cpf,@tl_telefone,@cel_celular,@cr_cargo,@cp_cep,@dt_datadeentrada,@dt_datasaida,@nm_numero,@nm_empresa)";
+            string Script = @"INSERT tb_funcionario( nm_nomefunci, ds_endereco, cp_cep, cpf_cpf, tl_telefone, cel_celular, cr_cargo, dt_datadeentrada, dt_datasaida, nm_numero, nm_empresa)
+                                     VALUES        ( @nm_nomefunci, @ds_endereco, @cp_cep, @cpf_cpf, @tl_telefone, @cel_celular, @cr_cargo, @dt_datadeentrada, @dt_datasaida, @nm_numero, @nm_empresa)";
+
+
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            //parms.Add(new MySqlParameter("lg_login", dto.lg_login));
+
+
             parms.Add(new MySqlParameter("nm_nomefunci", dto.nm_nomefunci));
             parms.Add(new MySqlParameter("nm_numero", dto.nm_numero));
-            //parms.Add(new MySqlParameter("sn_senha", dto.sn_senha));
             parms.Add(new MySqlParameter("tl_telefone", dto.tl_telefone));
-            //parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
             parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
             parms.Add(new MySqlParameter("cr_cargo", dto.cr_cargo));
             parms.Add(new MySqlParameter("ds_endereco", dto.ds_endereco));
@@ -24,7 +26,7 @@ namespace prototipos.DB.Funcionario
             parms.Add(new MySqlParameter("cp_cep", dto.cp_cep));
             parms.Add(new MySqlParameter("dt_datadeentrada", dto.dt_datadeentrada));
             parms.Add(new MySqlParameter("dt_datasaida", dto.dt_datasaida));
-            parms.Add(new MySqlParameter("nm_empresa", dto.Nomedaempresa));
+            parms.Add(new MySqlParameter("nm_empresa", dto.nm_empresa));
 
 
             Database db = new Database();

@@ -66,12 +66,13 @@ namespace Software.Digudao
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Frm_Cadastro_Estoque cadastra_Fornecedor = new Frm_Cadastro_Estoque();
+            Frm_Cadastro_Estoque cadastra_Estoque = new Frm_Cadastro_Estoque();
             ActiveForm.Hide();
-            cadastra_Fornecedor.ShowDialog();
+            cadastra_Estoque.ShowDialog();
             Show();
         }
-        
+       
+
         private void button2_Click(object sender, EventArgs e)
         {
             ActiveForm.WindowState = FormWindowState.Minimized;

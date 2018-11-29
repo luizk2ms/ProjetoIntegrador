@@ -1,4 +1,6 @@
-﻿namespace Software.Digudao.DB.db
+﻿using MySql.Data.MySqlClient;
+
+namespace Software.Digudao.DB.db
 {
     class Connection
     {

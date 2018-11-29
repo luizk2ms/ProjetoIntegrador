@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System.Collections.Generic;
 
 namespace prototipos.DB.Fornecedor
@@ -7,8 +8,8 @@ namespace prototipos.DB.Fornecedor
     {
         public void Salvar(FornecedorDTO dto)
         {
-            string Script = @"INSERT tb_fonecedor(en_endereço,Nm_nome,cnpj,tel_telefone,cel_celular,uf_uf,ds_descricao,email ,br_bairro,cd_cidade,nr_numero,CEP,pr_preco_unitario)
-                                      VALU(@en_endereço,@Nm_nome,@cnpj,@tel_telefone,@cel_celular,@uf_uf,@ds_descricao,@email,@br_bairro,@cd_cidade,@nr_numero,@CEP,@pr_preco_unitario)";
+            string Script = @"INSERT tb_fonecedor(en_endereço, Nm_nome, cnpj, tel_telefone, cel_celular, uf_uf, ds_descricao, email, br_bairro, cd_cidade, nr_numero, CEP, pr_preco_unitario)
+                                             VALU(@en_endereço, @Nm_nome, @cnpj , @tel_telefone, @cel_celular, @uf_uf, @ds_descricao, @email, @br_bairro, @cd_cidade, @nr_numero, @CEP, @pr_preco_unitario)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("en_endereco", dto.en_endereco));
@@ -53,7 +54,7 @@ namespace prototipos.DB.Fornecedor
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.Nm_nome = reader.GetString("Nm_nome");
                 dto.nr_numero = reader.GetString("nr_numero");
-                dto.pr_preco_unitario = reader.GetString("pr_preco_unitario");
+                dto.pr_preco_unitario = reader.GetDecimal("pr_preco_unitario");
                 dto.tel_telefone = reader.GetString("tel_telefone");
                 dto.uf_uf = reader.GetString("uf_uf");
 
@@ -175,7 +176,7 @@ namespace prototipos.DB.Fornecedor
                 dto.Id_Fornecedor = reader.GetInt32("Id_Fornecedor");
                 dto.Nm_nome = reader.GetString("Nm_nome");
                 dto.nr_numero = reader.GetString("nr_numero");
-                dto.pr_preco_unitario = reader.GetString("pr_preco_unitario");
+                dto.pr_preco_unitario = reader.GetDecimal("pr_preco_unitario");
                 dto.tel_telefone = reader.GetString("tel_telefone");
                 dto.uf_uf = reader.GetString("uf_uf");
                

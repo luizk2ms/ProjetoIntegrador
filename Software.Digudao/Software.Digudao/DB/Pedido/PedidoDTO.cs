@@ -13,7 +13,7 @@ namespace prototipos.DB.Pedido
         public int Pedido_id_Pedido { get; set; }
         public int Funcionario_id_Funcionario { get; set; }
         public int Cm_Cadastro { get; set; }
-        public int data { get; set; }
+        public DateTime data { get; set; }
         
        
 

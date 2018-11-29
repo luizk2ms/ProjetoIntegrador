@@ -10,7 +10,7 @@ namespace prototipos.DB.Funcionario
     {
         public int Id_Funcionario { get; set; }
         public string nm_nomefunci { get; set; }
-        public int ds_endereco { get; set; }
+        public string ds_endereco { get; set; }
         public string cp_cep { get; set; }
         public string cpf_cpf { get; set; }
         public string tl_telefone { get; set; }

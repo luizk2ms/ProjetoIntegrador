@@ -38,12 +38,8 @@
             this.mktcpf = new System.Windows.Forms.MaskedTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
             this.txtuf = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
@@ -117,12 +113,8 @@
             this.panel1.Controls.Add(this.mktcpf);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.textBox11);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.textBox12);
             this.panel1.Controls.Add(this.txtuf);
             this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtnome);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.button5);
@@ -209,35 +201,6 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // textBox11
-            // 
-            this.textBox11.Location = new System.Drawing.Point(38, 21);
-            this.textBox11.MaxLength = 50;
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(96, 19);
-            this.textBox11.TabIndex = 140;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label3.Location = new System.Drawing.Point(507, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 18);
-            this.label3.TabIndex = 139;
-            this.label3.Text = "ID Produto";
-            // 
-            // textBox12
-            // 
-            this.textBox12.Location = new System.Drawing.Point(594, 205);
-            this.textBox12.MaxLength = 50;
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(96, 19);
-            this.textBox12.TabIndex = 138;
-            // 
             // txtuf
             // 
             this.txtuf.Location = new System.Drawing.Point(6, 111);
@@ -257,17 +220,6 @@
             this.label15.Size = new System.Drawing.Size(29, 18);
             this.label15.TabIndex = 137;
             this.label15.Text = "UF";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Baskerville Old Face", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(6, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 18);
-            this.label1.TabIndex = 134;
-            this.label1.Text = "ID";
             // 
             // txtnome
             // 
@@ -639,14 +591,10 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox txtuf;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnInicio;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button2;

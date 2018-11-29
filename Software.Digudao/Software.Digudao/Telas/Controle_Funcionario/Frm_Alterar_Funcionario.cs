@@ -23,14 +23,14 @@ namespace Software.Digudao.Controle_Funcionario
             FuncionarioBusiness Funcionario = new FuncionarioBusiness();
             FuncionarioDTO dto = new FuncionarioDTO();
 
-            dto.Nm_Nome = textBox4.Text;
+            dto.nm_nomefunci = textBox4.Text;
             dto.nm_numero = textBox5.Text;
-            dto.tl_empresa = textBox9.Text;
+            dto.tl_telefone = textBox9.Text;
             dto.cel_celular = textBox11.Text;
             dto.cpf_cpf = mktcpf.Text;
             dto.cp_cep = textBox6.Text;
             dto.cr_cargo = textBox10.Text;
-            dto.ds_endereço = textBox8.Text;
+            dto.ds_endereco = textBox8.Text;
             dto.dt_datadeentrada = DateTime.Parse(dateTimePicker2.Text);
             dto.dt_datasaida = DateTime.Parse(dateTimePicker1.Text);
 

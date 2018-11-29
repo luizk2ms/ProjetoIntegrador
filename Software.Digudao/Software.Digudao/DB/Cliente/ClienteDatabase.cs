@@ -1,4 +1,5 @@
-﻿using Software.Digudao.DB.db;
+﻿using MySql.Data.MySqlClient;
+using Software.Digudao.DB.db;
 using System.Collections.Generic;
 
 namespace prototipos.DB.Cliente
@@ -30,7 +31,7 @@ namespace prototipos.DB.Cliente
             parms.Add(new MySqlParameter("CPF", dto.CPF));
             parms.Add(new MySqlParameter("Em_Email", dto.Em_Email));
             parms.Add(new MySqlParameter("Nm_numero", dto.Nm_numero));
-            parms.Add(new MySqlParameter("fk_id_funcionario_cliente", dto.fk_id_funcionario_cliente));
+            
 
 
             Database db = new Database();
