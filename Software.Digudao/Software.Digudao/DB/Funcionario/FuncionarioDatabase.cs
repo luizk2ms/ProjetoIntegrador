@@ -1,11 +1,6 @@
-﻿using MySql.Data.MySqlClient;
-using prototipos.DB.Fornecedor;
-using Software.Digudao.DB.db;
+﻿using Software.Digudao.DB.db;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace prototipos.DB.Funcionario
 {
@@ -13,18 +8,18 @@ namespace prototipos.DB.Funcionario
     {
         public void Cadastrar(FuncionarioDTO dto)
         {
-            string Script = @"INSERT tb_funcionario( nm_nomefunci, nm_numero, tl_telefone, cel_celular,cr_cargo, ds_endereco, cpf_cpf,cp_cep,dt_datadeentrada,dt_datasaida,nm_empresa)
-                                          VALUES(@nm_nomefunci,@nm_numero,@tl_telefone,@cel_celular,@cr_cargo,@ds_endereco,@cpf_cpf,@cp_cep,@dt_datadeentrada,@dt_datasaida,@nm_empresa)";
+            string Script = @"INSERT tb_funcionario( nm_nomefunci, ds_endereco, cp_cep, cpf_cpf,tl_telefone, cel_celular, cr_cargo,dt_datadeentrada,dt_datasaida,nm_numero,nm_empresa)
+                                     VALUES(@nm_nomefunci,@ds_endereco,@cp_cep,@cpf_cpf,@tl_telefone,@cel_celular,@cr_cargo,@cp_cep,@dt_datadeentrada,@dt_datasaida,@nm_numero,@nm_empresa)";
             List<MySqlParameter> parms = new List<MySqlParameter>();
             //parms.Add(new MySqlParameter("lg_login", dto.lg_login));
-            parms.Add(new MySqlParameter("nm_nomefunci", dto.Nm_Nome));
+            parms.Add(new MySqlParameter("nm_nomefunci", dto.nm_nomefunci));
             parms.Add(new MySqlParameter("nm_numero", dto.nm_numero));
             //parms.Add(new MySqlParameter("sn_senha", dto.sn_senha));
-            parms.Add(new MySqlParameter("tl_telefone", dto.tl_empresa));
+            parms.Add(new MySqlParameter("tl_telefone", dto.tl_telefone));
             //parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
             parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
             parms.Add(new MySqlParameter("cr_cargo", dto.cr_cargo));
-            parms.Add(new MySqlParameter("ds_endereco", dto.ds_endereço));
+            parms.Add(new MySqlParameter("ds_endereco", dto.ds_endereco));
             parms.Add(new MySqlParameter("cpf_cpf", dto.cpf_cpf));
             parms.Add(new MySqlParameter("cp_cep", dto.cp_cep));
             parms.Add(new MySqlParameter("dt_datadeentrada", dto.dt_datadeentrada));
@@ -55,19 +50,15 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dados = new FuncionarioDTO();
                 dados.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dados.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
-                dados.Nm_Nome = reader.GetString("nm_nomefunci");
+                dados.nm_nomefunci = reader.GetString("nm_nomefunci");
                 dados.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dados.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dados.cpf_cpf = reader.GetString("cpf_cpf");
                 dados.cp_cep = reader.GetString("cp_cep");
-                dados.ds_endereço = reader.GetString("ds_endereco");
+                dados.ds_endereco = reader.GetString("ds_endereco");
                 dados.cr_cargo = reader.GetString("cr_cargo");
-                dados.lg_login = reader.GetString("lg_login");
                 dados.nm_numero = reader.GetString("nm_numero");
-                dados.sn_senha = reader.GetString("sn_senha");
-                dados.tl_empresa = reader.GetString("tl_empresa");
-                dados.uf_uf = reader.GetString("uf_uf");
+                dados.tl_telefone = reader.GetString("tl_empresa");
                 Funcionarios.Add(dados);
             }
 
@@ -104,20 +95,16 @@ namespace prototipos.DB.Funcionario
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
             parms.Add(new MySqlParameter("Id_Funcionario", dto.Id_Funcionario));
-            parms.Add(new MySqlParameter("lg_login", dto.lg_login));
-            parms.Add(new MySqlParameter("nm_nomefunci", dto.Nm_Nome));
+            parms.Add(new MySqlParameter("nm_nomefunci", dto.nm_nomefunci));
             parms.Add(new MySqlParameter("nm_numero", dto.nm_numero));
-            parms.Add(new MySqlParameter("sn_senha", dto.sn_senha));
-            parms.Add(new MySqlParameter("tl_empresa", dto.tl_empresa));
-            parms.Add(new MySqlParameter("uf_uf", dto.uf_uf));
+            parms.Add(new MySqlParameter("tl_telefone", dto.tl_telefone));
             parms.Add(new MySqlParameter("cel_celular", dto.cel_celular));
             parms.Add(new MySqlParameter("cr_cargo", dto.cr_cargo));
-            parms.Add(new MySqlParameter("ds_endereco", dto.ds_endereço));
+            parms.Add(new MySqlParameter("ds_endereco", dto.ds_endereco));
             parms.Add(new MySqlParameter("cpf_cpf", dto.cpf_cpf));
             parms.Add(new MySqlParameter("cp_cep", dto.cp_cep));
             parms.Add(new MySqlParameter("dt_datadeentrada", dto.dt_datadeentrada));
             parms.Add(new MySqlParameter("dt_datasaida", dto.dt_datasaida));
-            parms.Add(new MySqlParameter("id_FolhadePagamento", dto.id_FolhadePagamento));
 
             Database db = new Database();
              db.ExecuteInsertScript(script, parms);
@@ -134,20 +121,16 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
-                dto.tl_empresa = reader.GetString("tl_empresa");
+                dto.nm_nomefunci = reader.GetString("nm_nomefunci");
+                dto.tl_telefone = reader.GetString("tl_telefone");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");
                 dto.cp_cep = reader.GetString("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereco");
+                dto.ds_endereco = reader.GetString("ds_endereco");
                 dto.nm_numero = reader.GetString("nm_numero");
-                dto.lg_login = reader.GetString("lg_login");
-                dto.sn_senha = reader.GetString("sn_senha");
-                dto.uf_uf = reader.GetString("uf_uf");
                 dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dto.cr_cargo = reader.GetString("cr_cargo");
-                dto.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
 
                 lista.Add(dto);
 
@@ -170,21 +153,17 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
-                dto.tl_empresa = reader.GetString("tl_empresa");
+                dto.nm_nomefunci = reader.GetString("nm_nomefunci");
+                dto.tl_telefone = reader.GetString("tl_telefone");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");
                 dto.cp_cep = reader.GetString("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereco");
+                dto.ds_endereco = reader.GetString("ds_endereco");
                 dto.nm_numero = reader.GetString("nm_numero");
-                dto.lg_login = reader.GetString("lg_login");
-                dto.sn_senha = reader.GetString("sn_senha");
-                dto.uf_uf = reader.GetString("uf_uf");
                 dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dto.cr_cargo = reader.GetString("cr_cargo");
-                dto.id_FolhadePagamento = reader.GetInt32("id_FolhadePagamento");
-
+              
                 lista.Add(dto);
 
             }
@@ -204,20 +183,17 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
-                dto.tl_empresa = reader.GetString("tl_telefone");
+                dto.nm_nomefunci = reader.GetString("nm_nomefunci");
+                dto.tl_telefone = reader.GetString("tl_telefone");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");
                 dto.cp_cep = reader.GetString("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereco");
+                dto.ds_endereco = reader.GetString("ds_endereco");
                 dto.nm_numero = reader.GetString("nm_numero");
-                //dto.lg_login = reader.GetString("lg_login");
-                //dto.sn_senha = reader.GetString("sn_senha");
-                //dto.uf_uf = reader.GetString("uf_uf");
                 dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dto.cr_cargo = reader.GetString("cr_cargo");
-                dto.Nomedaempresa = reader.GetString("nm_empresa");
+                dto.nm_empresa = reader.GetString("nm_empresa");
 
 
                 lista.Add(dto);
@@ -239,20 +215,17 @@ namespace prototipos.DB.Funcionario
             {
                 FuncionarioDTO dto = new FuncionarioDTO();
                 dto.Id_Funcionario = reader.GetInt32("Id_Funcionario");
-                dto.Nm_Nome = reader.GetString("nm_nomefunci");
-                dto.tl_empresa = reader.GetString("tl_telefone");
+                dto.nm_nomefunci = reader.GetString("nm_nomefunci");
+                dto.tl_telefone = reader.GetString("tl_telefone");
                 dto.cel_celular = reader.GetString("cel_celular");
                 dto.cpf_cpf = reader.GetString("cpf_cpf");
                 dto.cp_cep = reader.GetString("cp_cep");
-                dto.ds_endereço = reader.GetString("ds_endereco");
+                dto.ds_endereco = reader.GetString("ds_endereco");
                 dto.nm_numero = reader.GetString("nm_numero");
-                //dto.lg_login = reader.GetString("lg_login");
-                //dto.sn_senha = reader.GetString("sn_senha");
-                //dto.uf_uf = reader.GetString("uf_uf");
                 dto.dt_datasaida = reader.GetDateTime("dt_datasaida");
                 dto.dt_datadeentrada = reader.GetDateTime("dt_datadeentrada");
                 dto.cr_cargo = reader.GetString("cr_cargo");
-                dto.Nomedaempresa = reader.GetString("nm_empresa");
+                dto.nm_empresa = reader.GetString("nm_empresa");
 
 
                 lista.Add(dto);

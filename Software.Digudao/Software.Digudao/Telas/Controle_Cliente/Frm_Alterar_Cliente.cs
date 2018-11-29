@@ -24,10 +24,24 @@ namespace Software.Digudao.Controle_Cliente
             ClienteDTO dto = lista[0];
 
         }
+        private void AlterarClientes()
+        {
+            ClienteDTO dto = new ClienteDTO();
+            dto.Nm_Nome = textBox14.Text;
+            dto.Ed_endereco = textBox11.Text;
+            dto.Em_Email = textBox15.Text;
+            dto.Nm_numero = textBox17.Text;
+            dto.CNPJ = textBox18.Text;
+            dto.CPF = textBox10.Text;
+
+            ClienteBusiness cliente = new ClienteBusiness();
+            cliente.Alterar(dto);
+
+        }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            AlterarDadosCliente();
+          
         }
         private void AlterarDadosCliente()
         {
@@ -56,8 +70,8 @@ namespace Software.Digudao.Controle_Cliente
 
         private void button9_Click(object sender, EventArgs e)
         {
-         
-
+            AlterarClientes();
+            
 
         }
 

@@ -8,13 +8,13 @@ namespace prototipos.DB.Pedido
 {
     class PedidoDTO
     {
-        public int Id_Pedido { get; set; }
-        public int Cliente_id_cliente { get; set; }
-        public string qn_quantidade { get; set; }
-        public string Tm_tamanho_tamanho { get; set; }
-        public decimal FK_preço { get; set; }
-        public int pedidoid_produto { get; set; }
-        public string tl_total { get; set; }
+        public int Id_PedidoItem { get; set; }
+        public int Produto_id_Produto { get; set; }
+        public int Pedido_id_Pedido { get; set; }
+        public int Funcionario_id_Funcionario { get; set; }
+        public int Cm_Cadastro { get; set; }
+        public int data { get; set; }
+        
        
 
     }

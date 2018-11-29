@@ -37,7 +37,7 @@ namespace Software.Digudao.Controle_Cliente
             dto.Ed_endereco = textBox8.Text;
             dto.Em_Email = textBox3.Text;
             dto.Nm_numero = textBox2.Text;
-            dto.CNPJ = textBox7.Text;
+            dto.CNPJ = textBox1.Text;
             dto.CPF = textBox9.Text;
 
             ClienteBusiness cliente = new ClienteBusiness();

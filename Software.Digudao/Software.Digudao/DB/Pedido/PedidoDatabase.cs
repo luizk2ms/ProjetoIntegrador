@@ -1,10 +1,5 @@
-﻿using MySql.Data.MySqlClient;
-using Software.Digudao.DB.db;
-using System;
+﻿using Software.Digudao.DB.db;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace prototipos.DB.Pedido
 {
@@ -12,21 +7,23 @@ namespace prototipos.DB.Pedido
     {
         public int Salvar(PedidoDTO dto)
         {
-            string Script = @"INSERT INTO tb_pedido (qn_quantidade,
-                                                     Tm_tamanho_tamanho,
-                                                     FK_preço,
-                                                     pedidoid_produto)
+            string Script = @"INSERT INTO tb_pedido (Produto_id_Produto,
+                                                     Pedido_id_Pedido,
+                                                     Funcionario_id_Funcionario,
+                                                     Cm_Cadastro,
+                                                     data)
                                                      VALUES 
-                                                     (@Cliente_id_cliente,
-                                                     @qn_quantidade,
-                                                     @Tm_tamanho_tamanho,
-                                                     @FK_preço,
-                                                     @pedidoid_produto)";
+                                                     (@Produto_id_Produto,
+                                                     @Pedido_id_Pedido,
+                                                     @Funcionario_id_Funcionario,
+                                                     @Cm_Cadastro,
+                                                     @data)";
 
             List<MySqlParameter> parms = new List<MySqlParameter>();
-            parms.Add(new MySqlParameter("qn_quantidade", dto.qn_quantidade));
-            parms.Add(new MySqlParameter("Tm_tamanho_tamanho", dto.Tm_tamanho_tamanho));
-            parms.Add(new MySqlParameter("tl_total", dto.tl_total));
+            parms.Add(new MySqlParameter("Produto_id_Produto", dto.Produto_id_Produto));
+            parms.Add(new MySqlParameter("Pedido_id_Pedido", dto.Pedido_id_Pedido));
+            parms.Add(new MySqlParameter("Funcionario_id_Funcionario", dto.Funcionario_id_Funcionario));
+            parms.Add(new MySqlParameter("Cm_Cadastro", dto.Cm_Cadastro));
             Database db = new Database();
             return db.ExecuteInsertScriptWithPk(Script, parms);
         }
